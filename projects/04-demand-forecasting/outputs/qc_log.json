@@ -1,0 +1,11 @@
+{
+  "weeks in the series": 156,
+  "weeks with no media row (treated as zero spend)": 0,
+  "order lines outside the 156 complete weeks": 0,
+  "series at total level": 1,
+  "series at category level": 8,
+  "series at store level": 60,
+  "series at store x category level": 480,
+  "series x week rows with no demand at all": 0,
+  "weeks where category revenue does not reconcile to the total (tolerance $1)": 0
+}

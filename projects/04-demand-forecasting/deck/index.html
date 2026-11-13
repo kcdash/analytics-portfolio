@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Demand forecasting · Maple & Main · Krish Dash</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/css/deck.css">
+</head>
+<body>
+<div class="deck-bar"><span>Demand forecasting · Maple &amp; Main</span><a href="deck.pdf">Download PDF</a><a href="../demo/">Open the explorer</a><a href="../../../">Portfolio</a></div>
+
+<section class="slide title-slide">
+  <div class="kicker">Maple &amp; Main · Demand planning</div>
+  <h1>A forecast is only worth the ordering decision it improves</h1>
+  <p>Weekly demand forecast at four planning levels, tested the way a buying team would use it, and priced in markdown and lost margin.</p>
+  <div class="foot"><span>Krish Dash · Personal demonstration portfolio</span><span>Synthetic data. No client, employer or proprietary information.</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">Executive summary</div>
+  <h2>Forecast error costs <span data-v="costPct"></span> of store revenue. Most of it is unavoidable; <span data-v="savingTotal"></span> a year is not.</h2>
+  <div class="body cols-3" style="margin-top:50px;flex:0 0 auto">
+    <div class="stat"><b data-v="naiveSaving"></b><span>a year saved by forecasting properly rather than repeating last year, measured as markdown plus lost margin on store-level ordering.</span></div>
+    <div class="stat"><b data-v="quantileSaving"></b><span>a year more from ordering to the right service level instead of to the forecast itself. The forecast is the middle of a range, not the plan.</span></div>
+    <div class="stat"><b data-v="wapeTotal"></b><span>error at company level and <span data-v="wapeSxc"></span> at store and category level. Accuracy is a property of the level you plan at, not of the model.</span></div>
+  </div>
+  <div class="callout" style="margin-top:54px;font-size:19px;padding:22px 26px"><b>Recommendation:</b> run a different method at each level rather than one model for everything, publish a range rather than a number, and set order quantities from the <span data-v="serviceLevel"></span> service level the margin and markdown rates imply.</div>
+  <div class="foot"><span>Demand forecasting</span><span>2</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">Approach</div>
+  <h2>Tested the way the business would use it</h2>
+  <p class="sub">Ten forecasts made four weeks apart, each judged up to thirteen weeks ahead: the lead time a buying team works to. <span data-v="btDates"></span>.</p>
+  <div class="body" style="margin-top:28px">
+    <div class="flow" style="grid-template-columns:repeat(4,1fr)">
+      <div><b>1. Four planning levels</b>Company, category, store, and store by category: <span data-v="nSeries"></span> weekly series in all.<small>SQL · 156 weeks</small></div>
+      <div><b>2. Benchmarks first</b>Repeat last week, repeat last year, and repeat last year adjusted for the current level. A model has to beat these.<small>Three benchmarks</small></div>
+      <div><b>3. Only what is known</b>Trend, seasonality, the trading calendar and the media plan. No input that would not be available on the day.<small>No peeking</small></div>
+      <div><b>4. Priced, not just scored</b>Error converted to markdown and lost margin, and the ordering rule optimised against it.<small>Newsvendor economics</small></div>
+    </div>
+    <table class="t" style="margin-top:6px">
+      <tr><th>Data used</th><th>Checks before modelling</th><th>How results were validated</th></tr>
+      <tr><td>Every order line for three years, aggregated to Monday weeks, with the media plan and the trading calendar</td>
+          <td>Category revenue reconciles to the company total to the dollar; no missing weeks; no lines outside the window</td>
+          <td>Rolling-origin backtest on ten origins; intervals fitted on the first five origins and tested on the last five</td></tr>
+    </table>
+  </div>
+  <div class="foot"><span>Demand forecasting</span><span>3</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">Where accuracy goes</div>
+  <h2>Error roughly doubles at every step down the hierarchy</h2>
+  <div class="body cols-2">
+    <div>
+      <div class="chart-title">Forecast error by planning level, best method at each</div>
+      <div id="levelChart"></div>
+      <p class="chart-note">Weighted absolute percentage error across the backtest. Dark bars: best method. Light bars: repeating the same week last year.</p>
+    </div>
+    <div>
+      <table class="t">
+        <tr><th>Level</th><th class="n">Series</th><th class="n">Error</th><th class="n">Benchmark</th></tr>
+        <tbody id="levelTable"></tbody>
+      </table>
+      <div class="callout" style="margin-top:16px">Aggregation hides noise. A company forecast is accurate because individual weeks cancel out, not because the model understands the business better. Quote accuracy with the level attached, or it means nothing.</div>
+    </div>
+  </div>
+  <div class="foot"><span>Demand forecasting</span><span>4</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">Method selection</div>
+  <h2>No single method wins everywhere, and the most complex one wins nowhere</h2>
+  <div class="body cols-2" style="grid-template-columns:1.35fr 1fr">
+    <div>
+      <table class="t">
+        <tr><th>Method</th><th class="n">Company</th><th class="n">Category</th><th class="n">Store</th><th class="n">Store x category</th></tr>
+        <tbody id="methodTable"></tbody>
+      </table>
+      <p class="chart-note">Weighted absolute percentage error. The best figure in each column is highlighted.</p>
+    </div>
+    <div>
+      <ul style="font-size:15.5px">
+        <li><b>At company and category level</b>, last year's shape with the level reset to the last eight weeks is hard to beat. Three years of history is only two full seasonal cycles, and a regression cannot learn the holiday peak better than simply looking at it.</li>
+        <li><b>At store and store-by-category level</b>, the regression wins: individual series are too noisy for last year's actual to be a reliable guide.</li>
+        <li><b>The boosted model is worst at every level.</b> With 150 weekly observations per series there is nothing for it to learn that the simpler models have not already taken.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot"><span>Demand forecasting</span><span>5</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">What is worth knowing</div>
+  <h2>The trading calendar is worth more than the media plan</h2>
+  <div class="body cols-2">
+    <div>
+      <div class="chart-title">Error as each kind of knowledge is added, company level</div>
+      <div id="ladderChart"></div>
+      <p class="chart-note">Same model and same backtest throughout; only the inputs change.</p>
+    </div>
+    <div>
+      <table class="t">
+        <tr><th>Inputs</th><th class="n">Company</th><th class="n">Category</th><th class="n">Store x category</th></tr>
+        <tbody id="ladderTable"></tbody>
+      </table>
+      <div class="callout" style="margin-top:16px">Knowing <b>when</b> the flyer drops cuts company-level error by <span data-v="calGain"></span>. Knowing <b>how much</b> is being spent on each channel adds nothing beyond that, and at store level it makes things slightly worse. Spend plans are a weak signal next to the trading calendar they accompany.</div>
+    </div>
+  </div>
+  <div class="foot"><span>Demand forecasting</span><span>6</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">Lead time</div>
+  <h2>Thirteen weeks out is barely worse than one week out</h2>
+  <div class="body cols-2">
+    <div>
+      <div class="chart-title">Error by weeks ahead, company level</div>
+      <div id="horizonChart"></div>
+      <p class="chart-note">Best method against the benchmark that only knows where demand was last week.</p>
+    </div>
+    <div>
+      <p style="font-size:16px">Demand here is driven by things known months in advance: the season, the holiday peak, the flyer schedule. A forecast built only from those does not decay as the horizon lengthens.</p>
+      <p style="font-size:16px">A forecast built from recent demand gains nothing from being made late either: repeating last week is about <span data-v="naiveRatio"></span> times worse than the best method at every horizon, one week out and thirteen.</p>
+      <div class="callout">This is the practical point for planning. Buying decisions made a quarter ahead are not penalised by being made early, so the lead time is a supply-chain constraint, not a forecasting one.</div>
+    </div>
+  </div>
+  <div class="foot"><span>Demand forecasting</span><span>7</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">Honest ranges</div>
+  <h2>A number with no range cannot be ordered against</h2>
+  <div class="body cols-2">
+    <div>
+      <div class="chart-title">Where demand actually lands, as a share of the forecast</div>
+      <div id="bandChart"></div>
+      <p class="chart-note">The 80% range at each level. Bars show the 10th and 90th percentiles of actual divided by forecast.</p>
+    </div>
+    <div>
+      <table class="t">
+        <tr><th>Level</th><th class="n">80% range</th><th class="n">Weeks inside it</th></tr>
+        <tbody id="bandTable"></tbody>
+      </table>
+      <p class="chart-note">Ranges estimated on the first five forecast origins and tested on the last five, so the check is out of sample.</p>
+      <div class="callout" style="margin-top:14px">Next week's company forecast of <span data-v="exTotal"></span> means demand between <span data-v="exTotalLo"></span> and <span data-v="exTotalHi"></span>. The same forecast for one category in one store can be out by a third in either direction. Both are usable; only one can be ordered against without a buffer.</div>
+    </div>
+  </div>
+  <div class="foot"><span>Demand forecasting</span><span>8</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">Hierarchy</div>
+  <h2>Forecast each level directly. Do not split and do not stack.</h2>
+  <div class="body cols-2">
+    <div>
+      <div class="chart-title">Category-level error, by how the forecast is produced</div>
+      <div id="reconChart"></div>
+      <p class="chart-note">Measured on the five forecast origins held back from fitting the ranges.</p>
+    </div>
+    <div>
+      <ul style="font-size:16px">
+        <li><b>Splitting the company forecast</b> by last year's category shares is <span data-v="topdownWorse"></span> times worse. Categories peak at different times of year, and a single share flattens that.</li>
+        <li><b>Adding up store-by-category forecasts</b> is better but still worse than forecasting categories directly: the noise in 480 thin series does not fully cancel.</li>
+        <li><b>Direct forecasts disagree with each other</b>, so a reconciliation step is still needed before the numbers are published. Reconcile the published figures; do not let one level generate another.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot"><span>Demand forecasting</span><span>9</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">The decision</div>
+  <h2>Ordering to the forecast is a <span data-v="quantileSaving"></span> mistake</h2>
+  <div class="body cols-2">
+    <div>
+      <div class="chart-title">Cost of a week's ordering, by service level</div>
+      <div id="costChart"></div>
+      <p class="chart-note">Lost margin plus markdown across 480 store-and-category combinations, in CAD. Demand is measured as revenue at full price.</p>
+    </div>
+    <div>
+      <p style="font-size:16px">A unit short costs the <span data-v="marginRate"></span> margin it would have earned. A unit over costs the <span data-v="markdownRate"></span> markdown needed to clear it. Being short hurts more, so the right order is above the forecast, at the <span data-v="serviceLevel"></span> point of its range.</p>
+      <table class="t">
+        <tr><th>Ordering rule</th><th class="n">Cost a year</th><th class="n">Fill rate</th></tr>
+        <tbody id="orderTable"></tbody>
+      </table>
+      <div class="callout" style="margin-top:14px">Total cost of forecast uncertainty is <span data-v="annualCost"></span> a year, or <span data-v="costPct"></span> of revenue at this level. Halving the remaining error would be worth <span data-v="halfValue"></span> a year, which is the budget any further forecasting work has to earn.</div>
+    </div>
+  </div>
+  <div class="foot"><span>Demand forecasting</span><span>10</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">Recommendations</div>
+  <h2>Four actions</h2>
+  <div class="body" style="gap:0;margin-top:18px;display:block">
+    <div class="act"><i>1</i><div><b>Run a method per level, not a model for everything</b><span>Last year adjusted to the current level at company and category; the calendar regression at store and store-by-category. Re-run the comparison every year; the winner can change.</span></div><em><span data-v="naiveSaving"></span> a year</em></div>
+    <div class="act"><i>2</i><div><b>Order to the service level, not to the forecast</b><span>Set order quantities at the <span data-v="serviceLevel"></span> point of the forecast range. It is a one-line change to the ordering rule and needs no new model.</span></div><em><span data-v="quantileSaving"></span> a year</em></div>
+    <div class="act"><i>3</i><div><b>Publish the range with every number</b><span>A company forecast is good to within a few points; a store and category forecast can be a third out either way. Planners who see only the midpoint will treat the two as equally firm.</span></div><em>Prevents false confidence</em></div>
+    <div class="act"><i>4</i><div><b>Spend the next effort on the trading calendar, not the algorithm</b><span>Knowing the promotion plan earlier and more precisely beat every modelling change tested here. A cleaner events calendar is worth more than a better model.</span></div><em>Up to <span data-v="halfValue"></span> a year</em></div>
+  </div>
+  <div class="foot"><span>Demand forecasting</span><span>11</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">Appendix</div>
+  <h2>Method, assumptions and limits</h2>
+  <div class="body cols-even" style="font-size:14.5px;gap:48px">
+    <div>
+      <p><b>Data.</b> 156 complete Monday weeks, from 6 November 2023 to 1 November 2026, aggregated from every order line. Store-level series count in-store sales only.</p>
+      <p><b>Backtest.</b> Ten origins four weeks apart from week 104, each forecasting thirteen weeks. Every model is refitted at every origin on data available at that point.</p>
+      <p><b>Methods.</b> Three benchmarks; ridge regression on log demand with trend, five Fourier harmonics, trading-calendar flags and media spend; a boosted model pooled across series; and a simple average of the two best.</p>
+      <p><b>Ranges.</b> Empirical quantiles of actual divided by forecast, estimated on the first five origins and tested on the last five.</p>
+    </div>
+    <div>
+      <p><b>Assumed, not measured.</b> A <span data-v="marginRate"></span> gross margin and a <span data-v="markdownRate"></span> markdown to clear overstock. Both are adjustable in the explorer, and the optimal service level moves with them.</p>
+      <p><b>Limits.</b> The ordering model treats each week independently: there is no inventory carried between weeks, no lead time and no minimum order quantity. A real replenishment system would soften both the shortfalls and the markdowns, so the cost figures are an upper bound on the benefit of accuracy.</p>
+      <p><b>Not tested.</b> Price elasticity and cannibalisation between categories. Demand is forecast as it happened under the actual price and promotion plan, not as a response to a changed one.</p>
+      <p><b>Synthetic data.</b> Maple &amp; Main is fictional. Figures illustrate the method, not any real company.</p>
+      <p><b>Code.</b> SQL, Python and SAS, with a model card and QC log, are in the project repository.</p>
+    </div>
+  </div>
+  <div class="foot"><span>Demand forecasting</span><span>12</span></div>
+</section>
+
+<script src="../outputs/report_data.js"></script>
+<script src="../../../assets/js/charts.js"></script>
+<script>
+const P = window.P4, n0 = v => Math.round(v).toLocaleString("en-CA"), O = P.ordering, L = P.levels;
+const SHORT = { "Total": "Company", "Category": "Category", "Store": "Store", "Store x Category": "Store x category" };
+const pct1 = v => (v * 100).toFixed(1) + "%";
+const sum = P.summary, byMethod = [...new Set(sum.map(s => s.method))];
+const get = (lvl, m) => sum.find(s => s.level === lvl && s.method === m).wape;
+const naiveH = P.by_horizon.filter(r => r.level === "Total" && r.method === "Last week repeated");
+const champH0 = P.champion_by_horizon.filter(r => r.level === "Total");
+const V = {
+  costPct: pct1(O.cost_as_share_of_revenue), savingTotal: "$" + ((O.saving_vs_seasonal_naive_annualised + O.saving_vs_forecast_annualised) / 1e6).toFixed(1) + "M",
+  naiveSaving: "$" + (O.saving_vs_seasonal_naive_annualised / 1e6).toFixed(1) + "M", quantileSaving: MM.cadK(O.saving_vs_forecast_annualised),
+  wapeTotal: pct1(P.winner_wape.Total), wapeSxc: pct1(P.winner_wape["Store x Category"]),
+  serviceLevel: Math.round(O.optimal_service_level_theory * 100) + "%",
+  btDates: P.backtest_dates[0] + " to " + P.backtest_dates[1],
+  nSeries: n0(Object.values(P.series_counts).reduce((a, b) => a + b, 0)),
+  calGain: pct1(1 - P.knowledge_ladder.Total["plus trading calendar"] / P.knowledge_ladder.Total["seasonality only"]),
+  naiveRatio: (naiveH.reduce((a, r) => a + r.wape, 0) / champH0.reduce((a, r) => a + r.wape, 0)).toFixed(0),
+  marginRate: Math.round(P.assumptions.margin_rate * 100) + "%", markdownRate: Math.round(P.assumptions.markdown_rate * 100) + "%",
+  annualCost: "$" + (O.annual_cost_of_uncertainty / 1e6).toFixed(1) + "M",
+  halfValue: "$" + (O.value_of_halving_error_annualised / 1e6).toFixed(1) + "M",
+  topdownWorse: (P.reconciliation.wape["Split the company forecast"] / P.reconciliation.wape["Forecast each category directly"]).toFixed(1),
+  bandTotal: pct1(P.intervals.Total.band[0] - 1).replace("-", "minus ") + " to +" + pct1(P.intervals.Total.band[1] - 1),
+  bandSxc: pct1(P.intervals["Store x Category"].band[0] - 1).replace("-", "minus ") + " to +" + pct1(P.intervals["Store x Category"].band[1] - 1),
+};
+const ex = P.forecasts.Total.series[0], k = P.forecasts.Total.history_weeks;
+V.exTotal = MM.cad(ex.forecast[0]); V.exTotalLo = MM.cad(ex.lo[0]); V.exTotalHi = MM.cad(ex.hi[0]);
+document.querySelectorAll("[data-v]").forEach(e => { e.textContent = V[e.dataset.v] ?? "?"; });
+
+MM.bars("#levelChart", { width: 600, height: 340, fmt: v => (v * 100).toFixed(0) + "%", maxBar: 46,
+  data: L.flatMap(l => [{ label: SHORT[l], value: P.winner_wape[l], color: MM.C.focus,
+      tip: `<b>${SHORT[l]}</b><br>${pct1(P.winner_wape[l])} with ${P.champion[l]}` },
+    { label: "", value: P.seasonal_naive_wape[l], color: MM.C.context, tip: `Same week last year: ${pct1(P.seasonal_naive_wape[l])}` }]) });
+document.getElementById("levelTable").innerHTML = L.map(l =>
+  `<tr><td>${SHORT[l]}</td><td class="n">${n0(P.series_counts[l])}</td><td class="n">${pct1(P.winner_wape[l])}</td><td class="n">${pct1(P.seasonal_naive_wape[l])}</td></tr>`).join("");
+
+const order = ["Last week repeated", "Same week last year", "Same week last year, level adjusted", "Seasonality only (ridge)",
+               "Seasonality and trading calendar (ridge)", "Calendar and media plan (ridge)", "Last year and calendar combined",
+               "Calendar and media, level anchored (boosted)"];
+const nice = { "Calendar and media, level anchored (boosted)": "Boosted model, all inputs", "Seasonality only (ridge)": "Regression: trend and season",
+               "Seasonality and trading calendar (ridge)": "Regression: plus trading calendar", "Calendar and media plan (ridge)": "Regression: plus media plan",
+               "Last year and calendar combined": "Last year and regression, averaged" };
+document.getElementById("methodTable").innerHTML = order.map(m =>
+  `<tr>${["<td>" + (nice[m] || m) + "</td>"].concat(L.map(l =>
+    `<td class="n" ${P.champion[l] === m ? 'style="background:#fdf6e7;font-weight:700"' : ""}>${pct1(get(l, m))}</td>`)).join("")}</tr>`).join("");
+
+const lad = P.knowledge_ladder.Total, ladKeys = ["seasonality only", "plus trading calendar", "plus media plan", "plus recent level"];
+MM.bars("#ladderChart", { width: 600, height: 340, fmt: v => (v * 100).toFixed(1) + "%", maxBar: 70,
+  data: ladKeys.map((kk, i) => ({ label: kk.replace("plus ", "+ ").replace(" ", "\n"), value: lad[kk],
+    color: i === 1 ? MM.C.accent : MM.C.context, tip: `<b>${kk}</b><br>${pct1(lad[kk])}` })) });
+document.getElementById("ladderTable").innerHTML = ladKeys.map(kk =>
+  `<tr><td>${kk[0].toUpperCase() + kk.slice(1)}</td>` + ["Total", "Category", "Store x Category"].map(l =>
+    `<td class="n">${pct1(P.knowledge_ladder[l][kk])}</td>`).join("") + "</tr>").join("");
+
+const champH = P.champion_by_horizon.filter(r => r.level === "Total");
+MM.lines("#horizonChart", { width: 600, height: 340, rightPad: 150, xFmt: v => "wk " + v, yFmt: v => (v * 100).toFixed(0) + "%",
+  xTitle: "Weeks ahead",
+  series: [{ name: "Best method", color: MM.C.focus, points: champH.map(r => [r.horizon, r.wape]) },
+           { name: "Last week repeated", color: MM.C.accent, points: naiveH.map(r => [r.horizon, r.wape]) }] });
+
+MM.bars("#bandChart", { width: 600, height: 340, fmt: v => (v * 100).toFixed(0) + "%", maxBar: 60,
+  data: L.map(l => ({ label: SHORT[l], value: P.intervals[l].band[1] - P.intervals[l].band[0],
+    color: MM.C.focus, tip: `<b>${SHORT[l]}</b><br>80% range: ${pct1(P.intervals[l].band[0])} to ${pct1(P.intervals[l].band[1])} of the forecast` })) });
+document.getElementById("bandTable").innerHTML = L.map(l =>
+  `<tr><td>${SHORT[l]}</td><td class="n">${Math.round(P.intervals[l].band[0] * 100)}% to ${Math.round(P.intervals[l].band[1] * 100)}%</td><td class="n">${pct1(P.intervals[l].coverage["80%"])}</td></tr>`).join("");
+
+MM.bars("#reconChart", { width: 600, height: 340, fmt: v => (v * 100).toFixed(1) + "%", maxBar: 90,
+  data: Object.entries(P.reconciliation.wape).sort((a, b) => a[1] - b[1]).map(([kk, v]) => ({
+    label: kk.replace("Forecast each category ", "Forecast\n").replace("Add up store x category", "Add up\nstore x category").replace("Split the company forecast", "Split the\ncompany forecast"),
+    value: v, color: kk === P.reconciliation.best ? MM.C.focus : MM.C.context, tip: `<b>${kk}</b><br>${pct1(v)}` })) });
+
+const perYear = v => v / O.weeks_evaluated * 52;
+MM.lines("#costChart", { width: 600, height: 340, rightPad: 140, xFmt: v => Math.round(v * 100) + "%", yFmt: MM.cadK,
+  xTitle: "Service level the order is set to", mark: O.optimal_service_level_theory, markLabel: "right level",
+  series: [{ name: "Total cost", color: MM.C.focus, points: O.curve.map(c => [c.service_level, perYear(c.total)]) },
+           { name: "Lost margin", color: MM.C.accent, points: O.curve.map(c => [c.service_level, perYear(c.lost_margin)]) },
+           { name: "Markdown", color: "#7a8699", points: O.curve.map(c => [c.service_level, perYear(c.markdown)]) }] });
+document.getElementById("orderTable").innerHTML = [
+  ["Repeat last year", O.order_on_seasonal_naive], ["Order to the forecast", O.order_to_forecast],
+  ["Order to the service level", O.order_to_theoretical_quantile]].map(([n, c], i) =>
+  `<tr class="${i === 2 ? "hl" : ""}"><td>${n}</td><td class="n">${MM.cadK(perYear(c.total))}</td><td class="n">${pct1(c.fill_rate)}</td></tr>`).join("");
+</script>
+</body>
+</html>

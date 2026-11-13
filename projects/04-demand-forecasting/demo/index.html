@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Forecast explorer · Maple & Main · Krish Dash</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/css/site.css">
+<style>
+  .demo-head { background: linear-gradient(160deg, var(--navy), var(--navy-2)); color: #fff; padding: 44px 0 36px; }
+  .demo-head h1 { font-size: clamp(1.8rem, 4vw, 2.5rem); }
+  .demo-head p { color: #cbd5e1; max-width: 70ch; margin: 12px 0 0; }
+  .panel { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; }
+  .sim { display: grid; grid-template-columns: 320px 1fr; gap: 20px; align-items: start; }
+  .ctl label { display: block; font-weight: 600; font-size: .9rem; margin: 16px 0 6px; }
+  .ctl label:first-child { margin-top: 0; }
+  .ctl select, .ctl input[type=range] { width: 100%; }
+  .ctl select { padding: 9px 10px; border: 1px solid #cbd5e1; border-radius: 8px; font: inherit; background: #fff; }
+  .ctl output { float: right; font-weight: 600; color: var(--navy); }
+  .ctl small { display: block; color: var(--slate); font-size: .8rem; margin-top: 4px; line-height: 1.4; }
+  .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 16px; }
+  .kpi { background: var(--bg-alt); border-radius: 8px; padding: 14px; }
+  .kpi span { display: block; font-size: .78rem; color: var(--slate); }
+  .kpi b { display: block; font-size: 1.3rem; margin-top: 2px; font-variant-numeric: tabular-nums; }
+  .kpi.main { background: var(--navy); } .kpi.main span { color: #cbd5e1; } .kpi.main b { color: var(--accent); }
+  .ct { font-weight: 600; font-size: .95rem; } .cn { color: var(--slate); font-size: .8rem; margin-top: 6px; }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  table.t2 { width: 100%; border-collapse: collapse; font-size: .9rem; }
+  table.t2 th { text-align: left; font-size: .74rem; text-transform: uppercase; letter-spacing: .05em; color: var(--slate); border-bottom: 2px solid var(--line); padding: 8px; }
+  table.t2 td { padding: 8px; border-bottom: 1px solid var(--line); } table.t2 .n { text-align: right; font-variant-numeric: tabular-nums; }
+  table.t2 tr.hl td { background: #fdf6e7; font-weight: 600; }
+  h2.sec { margin-top: 0; }
+  @media (max-width: 900px) { .sim, .two { grid-template-columns: 1fr; } .kpis { grid-template-columns: 1fr 1fr; } }
+</style>
+</head>
+<body>
+<header class="nav"><div class="wrap nav-in"><a class="brand" href="../../../">Krish Dash</a>
+  <nav><a href="../deck/">Deck</a><a href="https://github.com/kcdash/analytics-portfolio/tree/main/projects/04-demand-forecasting">Code</a><a class="btn btn-sm" href="../../../#work">All projects</a></nav></div></header>
+
+<section class="demo-head"><div class="wrap">
+  <p class="eyebrow">Project 4 · Demand forecasting</p>
+  <h1>Forecast explorer</h1>
+  <p>See the last forecast against what actually happened, at any planning level, and set the ordering rule against your own margin and markdown rates.</p>
+</div></section>
+
+<main>
+<section class="section" style="padding-top:36px"><div class="wrap">
+  <h2 class="sec">The forecast</h2>
+  <div class="sim">
+    <div class="panel ctl">
+      <label for="level">Planning level</label><select id="level"></select>
+      <label for="sid">Series</label><select id="sid"></select>
+      <small id="champNote"></small>
+      <label><input type="checkbox" id="showBand" checked> Show the 80% range</label>
+      <small>The range comes from how wrong this level's forecasts were at earlier origins, not from the model's own confidence.</small>
+    </div>
+    <div>
+      <div class="kpis">
+        <div class="kpi main"><span>Error over 13 weeks</span><b id="k_wape"></b></div>
+        <div class="kpi"><span>Forecast, next 13 weeks</span><b id="k_fc"></b></div>
+        <div class="kpi"><span>Actual, next 13 weeks</span><b id="k_act"></b></div>
+        <div class="kpi"><span>Weeks inside the range</span><b id="k_cov"></b></div>
+      </div>
+      <div class="panel">
+        <div class="ct" id="chartTitle"></div>
+        <div id="chart"></div>
+        <div class="cn">Grey line: actual weekly demand. Navy: the forecast made at the vertical line, using only what was known then.</div>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<section class="section alt"><div class="wrap">
+  <h2 class="sec">The ordering decision</h2>
+  <div class="sim">
+    <div class="panel ctl">
+      <label for="margin">Gross margin on a unit sold <output id="o_margin"></output></label><input type="range" id="margin" min="20" max="60" step="1">
+      <label for="markdown">Markdown needed to clear an overstock <output id="o_markdown"></output></label><input type="range" id="markdown" min="5" max="50" step="1">
+      <label for="sl">Service level the order is set to <output id="o_sl"></output></label><input type="range" id="sl" min="40" max="95" step="5">
+      <small>The right service level is the margin divided by margin plus markdown. Move the first two sliders and the target moves with them.</small>
+      <div class="cn" id="target"></div>
+    </div>
+    <div>
+      <div class="kpis">
+        <div class="kpi main"><span>Cost a year at your setting</span><b id="c_total"></b></div>
+        <div class="kpi"><span>Lost margin</span><b id="c_short"></b></div>
+        <div class="kpi"><span>Markdown</span><b id="c_over"></b></div>
+        <div class="kpi"><span>Fill rate</span><b id="c_fill"></b></div>
+      </div>
+      <div class="panel">
+        <div class="ct">Cost of a year's ordering, by service level</div>
+        <div id="cost"></div>
+        <div class="cn">Across 480 store-and-category combinations. Demand is measured as revenue at full price, so costs are in CAD. The marker is your setting.</div>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<section class="section"><div class="wrap">
+  <h2 class="sec">How the methods compare</h2>
+  <p class="section-lead">Weighted absolute percentage error across the backtest. The winner differs by level, which is the main finding of the project.</p>
+  <div class="panel" style="overflow-x:auto"><table class="t2" style="min-width:620px"><thead><tr><th>Method</th><th class="n">Company</th><th class="n">Category</th><th class="n">Store</th><th class="n">Store x category</th></tr></thead><tbody id="methods"></tbody></table></div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <p>Personal demonstration portfolio. All projects use synthetic data created to illustrate methods and contain no client, employer or proprietary information. Not affiliated with or endorsed by any current or former employer or client.</p>
+  <p>© 2026 Krish Dash</p>
+</div></footer>
+
+<script src="../outputs/report_data.js"></script>
+<script src="../../../assets/js/charts.js"></script>
+<script>
+const P = window.P4, $ = id => document.getElementById(id), pct1 = v => (v * 100).toFixed(1) + "%";
+const SHORT = { "Total": "Company", "Category": "Category", "Store": "Store", "Store x Category": "Store x category" };
+
+/* ---- forecast chart ---- */
+$("level").innerHTML = P.levels.map(l => `<option value="${l}">${SHORT[l]}</option>`).join("");
+function fillSeries() {
+  const f = P.forecasts[$("level").value];
+  $("sid").innerHTML = f.series.map((s, i) => `<option value="${i}">${s.id}</option>`).join("");
+  $("champNote").textContent = "Method used at this level: " + f.champion + ".";
+  draw();
+}
+function draw() {
+  const f = P.forecasts[$("level").value], s = f.series[+$("sid").value], k = f.history_weeks;
+  const band = $("showBand").checked;
+  const n = s.history.length + s.actual.length;
+  const xs = Array.from({ length: n }, (_, i) => i);
+  const actual = s.history.concat(s.actual);
+  const fc = s.history.map(() => null).concat(s.forecast);
+  const series = [{ name: "Actual", color: "#7a8699", points: xs.map(i => [i, actual[i]]) },
+                  { name: "Forecast", color: MM.C.focus, points: xs.slice(k).map(i => [i, fc[i]]) }];
+  if (band) {
+    series.push({ name: "80% range", color: "#cbd5e1", points: xs.slice(k).map((i, j) => [i, s.lo[j]]) });
+    series.push({ name: "", color: "#cbd5e1", points: xs.slice(k).map((i, j) => [i, s.hi[j]]) });
+  }
+  MM.lines("#chart", { width: 760, height: 360, rightPad: 130, xTitle: "Week", yFmt: MM.cadK, mark: k - 0.5, markLabel: "forecast made here",
+    xFmt: i => (f.weeks[Math.round(i)] || "").slice(5), series });
+  const af = s.actual.reduce((a, b) => a + b, 0), ff = s.forecast.reduce((a, b) => a + b, 0);
+  const err = s.actual.reduce((a, v, i) => a + Math.abs(v - s.forecast[i]), 0) / af;
+  const inside = s.actual.filter((v, i) => v >= s.lo[i] && v <= s.hi[i]).length;
+  $("k_wape").textContent = pct1(err); $("k_fc").textContent = MM.cad(ff); $("k_act").textContent = MM.cad(af);
+  $("k_cov").textContent = inside + " of " + s.actual.length;
+  $("chartTitle").textContent = SHORT[$("level").value] + (s.id === "All" ? "" : ": " + s.id) + ", weekly demand";
+}
+["level"].forEach(id => $(id).addEventListener("change", fillSeries));
+["sid", "showBand"].forEach(id => $(id).addEventListener("change", draw));
+fillSeries();
+
+/* ---- ordering ---- */
+const O = P.ordering, curve = O.curve, perYear = v => v / O.weeks_evaluated * 52;
+$("margin").value = Math.round(P.assumptions.margin_rate * 100);
+$("markdown").value = Math.round(P.assumptions.markdown_rate * 100);
+$("sl").value = Math.round(O.optimal_service_level_theory * 20) * 5;
+function order() {
+  const m = +$("margin").value / 100, d = +$("markdown").value / 100, sl = +$("sl").value / 100;
+  $("o_margin").textContent = $("margin").value + "%"; $("o_markdown").textContent = $("markdown").value + "%";
+  $("o_sl").textContent = $("sl").value + "%";
+  const target = m / (m + d);
+  $("target").innerHTML = `Right service level for these rates: <b>${Math.round(target * 100)}%</b>.`;
+  // the backtest stored each point's shortfall and overage at the original rates, so rescale
+  const pts = curve.map(c => ({ sl: c.service_level, fill: c.fill_rate,
+    short: c.lost_margin / P.assumptions.margin_rate * m, over: c.markdown / P.assumptions.markdown_rate * d }));
+  pts.forEach(p => p.total = p.short + p.over);
+  const here = pts.reduce((b, p) => Math.abs(p.sl - sl) < Math.abs(b.sl - sl) ? p : b);
+  $("c_total").textContent = MM.cad(perYear(here.total)); $("c_short").textContent = MM.cad(perYear(here.short));
+  $("c_over").textContent = MM.cad(perYear(here.over)); $("c_fill").textContent = pct1(here.fill);
+  MM.lines("#cost", { width: 760, height: 340, rightPad: 140, xFmt: v => Math.round(v * 100) + "%", yFmt: MM.cadK,
+    xTitle: "Service level the order is set to", mark: sl, markLabel: "your setting",
+    series: [{ name: "Total cost", color: MM.C.focus, points: pts.map(p => [p.sl, perYear(p.total)]) },
+             { name: "Lost margin", color: MM.C.accent, points: pts.map(p => [p.sl, perYear(p.short)]) },
+             { name: "Markdown", color: "#7a8699", points: pts.map(p => [p.sl, perYear(p.over)]) }] });
+}
+["margin", "markdown", "sl"].forEach(id => $(id).addEventListener("input", order));
+order();
+
+/* ---- method table ---- */
+const get = (l, m) => P.summary.find(s => s.level === l && s.method === m).wape;
+const order2 = ["Last week repeated", "Same week last year", "Same week last year, level adjusted", "Seasonality only (ridge)",
+                "Seasonality and trading calendar (ridge)", "Calendar and media plan (ridge)", "Last year and calendar combined",
+                "Calendar and media, level anchored (boosted)"];
+$("methods").innerHTML = order2.map(m => `<tr><td>${m}</td>` + P.levels.map(l =>
+  `<td class="n" ${P.champion[l] === m ? 'style="background:#fdf6e7;font-weight:700"' : ""}>${pct1(get(l, m))}</td>`).join("") + "</tr>").join("");
+</script>
+</body>
+</html>
