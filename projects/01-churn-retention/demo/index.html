@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Retention simulator · Maple & Main · Krish Dash</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/css/site.css">
+<style>
+  .demo-head { background: linear-gradient(160deg, var(--navy), var(--navy-2)); color: #fff; padding: 44px 0 36px; }
+  .demo-head h1 { font-size: clamp(1.8rem, 4vw, 2.5rem); }
+  .demo-head p { color: #cbd5e1; max-width: 70ch; margin: 12px 0 0; }
+  .panel { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; }
+  .sim { display: grid; grid-template-columns: 320px 1fr; gap: 20px; align-items: start; }
+  .ctl label { display: block; font-weight: 600; font-size: .9rem; margin: 18px 0 6px; }
+  .ctl label:first-child { margin-top: 0; }
+  .ctl select, .ctl input[type=range] { width: 100%; }
+  .ctl select { padding: 9px 10px; border: 1px solid #cbd5e1; border-radius: 8px; font: inherit; background: #fff; }
+  .ctl output { float: right; font-weight: 600; color: var(--navy); }
+  .ctl small { display: block; color: var(--slate); font-size: .8rem; margin-top: 4px; line-height: 1.4; }
+  .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 16px; }
+  .kpi { background: var(--bg-alt); border-radius: 8px; padding: 14px; }
+  .kpi span { display: block; font-size: .78rem; color: var(--slate); }
+  .kpi b { display: block; font-size: 1.35rem; margin-top: 2px; font-variant-numeric: tabular-nums; }
+  .kpi.main { background: var(--navy); }
+  .kpi.main span { color: #cbd5e1; } .kpi.main b { color: var(--accent); }
+  .ct { font-weight: 600; font-size: .95rem; }
+  .cn { color: var(--slate); font-size: .8rem; margin-top: 6px; }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  table.list { width: 100%; border-collapse: collapse; font-size: .88rem; }
+  table.list th { text-align: left; font-size: .74rem; text-transform: uppercase; letter-spacing: .05em; color: var(--slate); border-bottom: 2px solid var(--line); padding: 8px; cursor: pointer; white-space: nowrap; }
+  table.list td { padding: 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  table.list td.n { text-align: right; font-variant-numeric: tabular-nums; }
+  .pill { display: inline-block; padding: 2px 9px; border-radius: 999px; font-size: .74rem; font-weight: 600; background: #eef2f7; color: var(--slate); white-space: nowrap; }
+  .pill.go { background: #e3ecf8; color: #1f3a5f; } .pill.no { background: #fdeee2; color: #9a4a0c; }
+  .filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 16px; }
+  .filters button { font: inherit; font-size: .85rem; padding: 6px 12px; border-radius: 999px; border: 1px solid #cbd5e1; background: #fff; cursor: pointer; }
+  .filters button.on { background: var(--navy); color: #fff; border-color: var(--navy); }
+  .scroll { max-height: 460px; overflow: auto; }
+  h2 { margin-top: 0; }
+  @media (max-width: 900px) { .sim, .two { grid-template-columns: 1fr; } .kpis { grid-template-columns: 1fr 1fr; } }
+</style>
+</head>
+<body>
+<header class="nav"><div class="wrap nav-in"><a class="brand" href="../../../">Krish Dash</a>
+  <nav><a href="../deck/">Deck</a><a href="https://github.com/kcdash/analytics-portfolio/tree/main/projects/01-churn-retention">Code</a><a class="btn btn-sm" href="../../../#work">All projects</a></nav></div></header>
+
+<section class="demo-head"><div class="wrap">
+  <p class="eyebrow">Project 1 · Churn &amp; retention value</p>
+  <h1>Retention simulator</h1>
+  <p>Choose how the offer audience is picked and how many customers to contact. Every result comes from measured treated-versus-holdout differences in nine campaigns the models never saw.</p>
+</div></section>
+
+<main>
+<section class="section" style="padding-top:36px"><div class="wrap">
+  <div class="sim">
+    <div class="panel ctl">
+      <label for="strategy">How is the audience chosen?</label>
+      <select id="strategy"></select>
+      <label for="share">Share of eligible customers contacted <output id="shareOut"></output></label>
+      <input type="range" id="share" min="5" max="100" step="5" value="30">
+      <small>About 79,000 customers are eligible per campaign. 30% is close to today's 25,000 contacts.</small>
+      <label for="offer">Offer generosity <output id="offerOut"></output></label>
+      <input type="range" id="offer" min="0" max="200" step="10" value="100">
+      <small>100% is the offer cost assumed in the deck (4% to 20% of the basket). Response is held fixed, so use this to test the cost assumption, not to design offers.</small>
+      <label for="cost">Contact cost <output id="costOut"></output></label>
+      <input type="range" id="cost" min="50" max="300" step="10" value="100">
+      <small>100% is the recorded cost: $0.02 email, $0.06 SMS, $0.95 direct mail.</small>
+    </div>
+    <div>
+      <div class="kpis">
+        <div class="kpi main"><span>Net profit a year</span><b id="kNet"></b></div>
+        <div class="kpi"><span>Versus a random draw</span><b id="kVs"></b></div>
+        <div class="kpi"><span>Contacts a year</span><b id="kContacts"></b></div>
+        <div class="kpi"><span>Extra orders a year</span><b id="kOrders"></b></div>
+        <div class="kpi"><span>Incremental margin</span><b id="kMargin"></b></div>
+        <div class="kpi"><span>Offer cost</span><b id="kOffer"></b></div>
+        <div class="kpi"><span>Contact cost</span><b id="kContact"></b></div>
+        <div class="kpi"><span>Net profit per contact</span><b id="kPer"></b></div>
+      </div>
+      <div class="panel">
+        <div class="ct">Net profit a year, by share of eligible customers contacted</div>
+        <div id="curve"></div>
+        <div class="cn">CAD, 13 campaigns a year. The vertical line is your selection. The simulator pools the nine test campaigns, so figures differ slightly from the deck, which selects within each campaign. Profit keeps rising with volume because the average contact pays back; the effect of contacting the same customers more often is not modelled.</div>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<section class="section alt"><div class="wrap">
+  <h2>Why churn risk is the wrong ranking</h2>
+  <p class="section-lead">Customers are grouped into ten bands by predicted churn risk. Band 1 is the highest risk. The offer changes the most minds in the middle.</p>
+  <div class="two">
+    <div class="panel"><div class="ct">Extra customers who order because of the offer</div><div id="upl"></div><div class="cn">Percentage points, treated minus holdout. Bars show 95% intervals.</div></div>
+    <div class="panel"><div class="ct">Churn rate by risk band</div><div id="lift"></div><div class="cn">Share with no order in the following 180 days, May 2026 test snapshot.</div></div>
+  </div>
+</div></section>
+
+<section class="section"><div class="wrap">
+  <h2>Customer action list</h2>
+  <p class="section-lead">A sample of 400 active customers scored in May 2026. Each gets a churn risk, the value at stake, the best channel for a 10% offer, and the reasons behind the score. All customers are synthetic.</p>
+  <div class="filters" id="filters"></div>
+  <div class="panel scroll"><table class="list"><thead><tr>
+    <th data-k="id">Customer</th><th data-k="segment">Segment</th><th data-k="risk" class="n">Churn risk</th><th data-k="margin" class="n">12-month margin</th>
+    <th data-k="uplift" class="n">Offer uplift</th><th data-k="net" class="n">Net value of contact</th><th data-k="action">Action</th><th>Why at risk</th></tr></thead><tbody id="people"></tbody></table></div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <p>Personal demonstration portfolio. All projects use synthetic data created to illustrate methods and contain no client, employer or proprietary information. Not affiliated with or endorsed by any current or former employer or client.</p>
+  <p>© 2026 Krish Dash</p>
+</div></footer>
+
+<script src="../outputs/report_data.js"></script>
+<script src="../../../assets/js/charts.js"></script>
+<script>
+const P = window.P1, $ = id => document.getElementById(id), names = Object.keys(P.curves);
+const pool = Object.values(P.eligible_pool).reduce((a, b) => a + b, 0) / 3, perYear = P.campaigns_per_year;
+$("strategy").innerHTML = names.map(n => `<option>${n}</option>`).join("");
+$("strategy").value = "Highest net uplift value";
+
+function econ(pt, offerScale, costScale) {
+  const contacts = pool * pt.share / 100 * perYear;
+  const margin = pt.uplift * pt.margin_per_response, offer = pt.treated_response * pt.basket_per_response * pt.offer_rate * offerScale, cost = pt.contact_cost * costScale;
+  return { contacts, orders: contacts * pt.uplift, margin: contacts * margin, offer: contacts * offer, cost: contacts * cost, per: margin - offer - cost, net: contacts * (margin - offer - cost) };
+}
+function draw() {
+  const share = +$("share").value, os = $("offer").value / 100, cs = $("cost").value / 100, strat = $("strategy").value;
+  $("shareOut").textContent = share + "%"; $("offerOut").textContent = $("offer").value + "%"; $("costOut").textContent = $("cost").value + "%";
+  const at = n => econ(P.curves[n].find(p => p.share === share), os, cs), e = at(strat), base = at(names[0]);
+  $("kNet").textContent = MM.cad(e.net); $("kVs").textContent = (e.net - base.net >= 0 ? "+" : "") + MM.cad(e.net - base.net);
+  $("kContacts").textContent = Math.round(e.contacts).toLocaleString("en-CA"); $("kOrders").textContent = Math.round(e.orders).toLocaleString("en-CA");
+  $("kMargin").textContent = MM.cad(e.margin); $("kOffer").textContent = MM.cad(e.offer); $("kContact").textContent = MM.cad(e.cost);
+  $("kPer").textContent = (e.per < 0 ? "-$" : "$") + Math.abs(e.per).toFixed(2);
+  MM.lines("#curve", { width: 760, height: 340, rightPad: 170, xFmt: v => v + "%", yFmt: MM.cadK, xTitle: "Share of eligible customers contacted", mark: share,
+    series: names.map(n => ({ name: n.replace(" (current practice)", " (random draw)"), points: P.curves[n].map(p => [p.share, econ(p, os, cs).net]) })) });
+}
+["strategy", "share", "offer", "cost"].forEach(id => $(id).addEventListener("input", draw));
+draw();
+
+const rd = P.risk_deciles;
+MM.bars("#upl", { width: 520, height: 280, fmt: v => (v * 100).toFixed(1), xTitle: "Risk band",
+  data: rd.map(d => ({ label: d.decile, value: d.uplift, lo: d.uplift - 1.96 * d.uplift_se, hi: d.uplift + 1.96 * d.uplift_se, color: d.decile === 1 || d.decile === 10 ? MM.C.accent : MM.C.context,
+    tip: `<b>Risk band ${d.decile}</b><br>Treated ${MM.pct(d.treated_response)} · holdout ${MM.pct(d.holdout_response)}<br>Net $${d.net.toFixed(2)} per contact` })) });
+MM.bars("#lift", { width: 520, height: 280, fmt: v => MM.pct(v, 0), xTitle: "Risk band",
+  data: P.lift.map(d => ({ label: d.decile, value: d.churn_rate, color: d.decile === 1 || d.decile === 10 ? MM.C.accent : MM.C.context })) });
+
+let seg = "All", sortK = "net", sortDir = -1;
+const segs = ["All", ...new Set(P.people.map(p => p.segment))];
+function people() {
+  $("filters").innerHTML = segs.map(s => `<button class="${s === seg ? "on" : ""}">${s} (${s === "All" ? P.people.length : P.people.filter(p => p.segment === s).length})</button>`).join("");
+  [...$("filters").children].forEach((b, i) => b.onclick = () => { seg = segs[i]; people(); });
+  const rows = P.people.filter(p => seg === "All" || p.segment === seg).sort((a, b) => (a[sortK] > b[sortK] ? 1 : -1) * sortDir);
+  $("people").innerHTML = rows.map(p => `<tr><td style="white-space:nowrap">${p.id}<br><span style="color:#64748b;font-size:.78rem">${p.tier} · ${p.province}</span></td><td>${p.segment}</td>
+    <td class="n">${MM.pct(p.risk, 0)}</td><td class="n">${MM.cad(p.margin)}</td><td class="n">${(p.uplift * 100).toFixed(1)} pts</td><td class="n">${(p.net < 0 ? "-$" : "$") + Math.abs(p.net).toFixed(2)}</td>
+    <td><span class="pill ${p.action === "Do not contact" ? "no" : "go"}">${p.action}</span></td><td>${p.reasons.join("; ")}</td></tr>`).join("");
+}
+document.querySelectorAll("table.list th[data-k]").forEach(th => th.onclick = () => { sortDir = sortK === th.dataset.k ? -sortDir : -1; sortK = th.dataset.k; people(); });
+people();
+</script>
+</body>
+</html>

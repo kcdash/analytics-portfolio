@@ -1,0 +1,30 @@
+{
+  "found": {
+    "customers: duplicate rows removed": 800,
+    "customers: province spelled out, recoded": 2125,
+    "customers: postal FSA still missing after de-duplication": 5937,
+    "transactions: duplicate rows removed": 2327,
+    "transactions: order_date in DD/MM/YYYY, re-parsed": 46318,
+    "transactions: order_date could not be parsed": 0,
+    "transactions: negative net amount, replaced from order lines": 1384,
+    "transactions: amount 100x the order lines, replaced from order lines": 690,
+    "transactions: orders with no order lines": 0
+  },
+  "planted": {
+    "customers_duplicate_rows": 800,
+    "customers_missing_postal_fsa": 5984,
+    "customers_province_full_name_instead_of_code": 2125,
+    "transactions_order_date_in_dd_mm_yyyy": 46318,
+    "transactions_outlier_baskets_x100": 690,
+    "transactions_negative_net_amount": 1384,
+    "transactions_duplicate_rows": 2327,
+    "loyalty_events_tier_codes_B_S_G_before_2025_03_01": 229488,
+    "media_spend_weekly_missing_display_weeks": 2
+  },
+  "row_counts": {
+    "customers": 200000,
+    "orders": 2327481,
+    "churn_abt": 628171,
+    "uplift_abt": 625000
+  }
+}

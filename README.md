@@ -9,7 +9,7 @@ Python, a README with model card or QC log, and an interactive or live demo.
 
 | # | Project | Pillar | Status |
 |---|---|---|---|
-| 1 | Churn & retention value | Predictive Modelling | In build |
+| 1 | [Churn & retention value](projects/01-churn-retention/) | Predictive Modelling | Live |
 | 2 | Acquisition propensity & look-alike | Predictive Modelling | Planned |
 | 3 | Segmentation & personas | Customer & Marketing Science | Planned |
 | 4 | Demand forecasting | Forecasting & Optimization | Planned |
@@ -22,7 +22,7 @@ Python, a README with model card or QC log, and an interactive or live demo.
 
 ## Repository layout
 
-- `index.html`, `assets/` : portfolio site (GitHub Pages)
+- `index.html`, `assets/` : portfolio site (GitHub Pages), shared deck template and chart helpers
 - `data/` : synthetic data generator, data dictionary and a 1% sample
 - `projects/` : one folder per project
 

@@ -1,0 +1,388 @@
+{
+  "rows": {
+    "train": 409773,
+    "validate": 105452,
+    "test": 112946
+  },
+  "churn_rate": {
+    "train": 0.17427453736580986,
+    "validate": 0.1566968857868983,
+    "test": 0.16938182848440847
+  },
+  "recency_rule": {
+    "auc": 0.6897580076015833,
+    "pr_auc": 0.319331489603705,
+    "brier": 0.2799300566519721,
+    "top_decile_lift": 2.3704141957888774,
+    "capture_top_20pct": 0.4071402435837123
+  },
+  "logistic": {
+    "auc": 0.809453221279273,
+    "pr_auc": 0.49801785339388166,
+    "brier": 0.11182841906095699,
+    "top_decile_lift": 3.294013288172327,
+    "capture_top_20pct": 0.5227641001515865
+  },
+  "logistic_coefficients": {
+    "web_sessions_3m": -0.8718,
+    "loyalty_tier_Gold": -0.8525,
+    "loyalty_tier_Silver": -0.6235,
+    "web_sessions_1m": -0.2315,
+    "web_sessions_prev_3m": -0.2141,
+    "min_csat_180d": -0.1497,
+    "orders_90d": -0.1492,
+    "orders_365d": -0.141,
+    "crm_contacts_365d": -0.1073,
+    "age_band_55-64": -0.0958,
+    "province_PE": -0.0889,
+    "province_NL": -0.085,
+    "age_band_65+": -0.0806,
+    "age_band_45-54": -0.0658,
+    "age_band_35-44": -0.063,
+    "province_BC": -0.055,
+    "orders_prev_90d": -0.0537,
+    "age_band_25-34": -0.0491,
+    "email_opt_in": -0.0392,
+    "missingindicator_avg_gap_days": -0.0362,
+    "province_QC": -0.0344,
+    "province_SK": -0.0297,
+    "province_NB": -0.0269,
+    "crm_opens_365d": -0.0262,
+    "spend_90d": -0.0246,
+    "province_ON": -0.0232,
+    "crm_clicks_365d": -0.0139,
+    "province_MB": -0.0134,
+    "acquisition_channel_Store": -0.0097,
+    "province_NS": -0.0095,
+    "discount_share_365d": -0.0074,
+    "tenure_days": -0.0053,
+    "avg_categories_per_order": -0.0021,
+    "spend_365d": -0.0007,
+    "avg_basket_365d": 0.0038,
+    "promo_line_share_365d": 0.0042,
+    "abandoned_carts_3m": 0.0063,
+    "acquisition_channel_Partner": 0.0087,
+    "redemptions_365d": 0.0094,
+    "service_contacts_90d": 0.0124,
+    "sms_opt_in": 0.0156,
+    "acquisition_channel_Referral": 0.0191,
+    "overdue_ratio": 0.0211,
+    "avg_gap_days": 0.0432,
+    "missingindicator_overdue_ratio": 0.0516,
+    "service_contacts_365d": 0.0594,
+    "missingindicator_min_csat_180d": 0.0602,
+    "acquisition_channel_Paid Search": 0.0771,
+    "unresolved_180d": 0.1335,
+    "complaints_180d": 0.1654,
+    "acquisition_channel_Paid Social": 0.2033,
+    "recency_days": 0.2854,
+    "digital_order_share_365d": 0.3068
+  },
+  "gbm": {
+    "auc": 0.8276505717975147,
+    "pr_auc": 0.5450078982852323,
+    "brier": 0.10596975990169022,
+    "top_decile_lift": 3.606061198841778,
+    "capture_top_20pct": 0.5475929120275992,
+    "brier_uncalibrated": 0.10577120687700232,
+    "score_psi_train_vs_test": 0.0035192182079035843,
+    "lift_table": [
+      {
+        "decile": 1,
+        "customers": 11295,
+        "churners": 6899,
+        "avg_score": 0.605,
+        "churn_rate": 0.6108,
+        "lift": 3.6061,
+        "cum_capture": 0.3606
+      },
+      {
+        "decile": 2,
+        "customers": 11294,
+        "churners": 3577,
+        "avg_score": 0.2955,
+        "churn_rate": 0.3167,
+        "lift": 1.8698,
+        "cum_capture": 0.5476
+      },
+      {
+        "decile": 3,
+        "customers": 11295,
+        "churners": 2750,
+        "avg_score": 0.2175,
+        "churn_rate": 0.2435,
+        "lift": 1.4374,
+        "cum_capture": 0.6913
+      },
+      {
+        "decile": 4,
+        "customers": 11294,
+        "churners": 2120,
+        "avg_score": 0.1633,
+        "churn_rate": 0.1877,
+        "lift": 1.1082,
+        "cum_capture": 0.8022
+      },
+      {
+        "decile": 5,
+        "customers": 11295,
+        "churners": 1467,
+        "avg_score": 0.1171,
+        "churn_rate": 0.1299,
+        "lift": 0.7668,
+        "cum_capture": 0.8788
+      },
+      {
+        "decile": 6,
+        "customers": 11294,
+        "churners": 1084,
+        "avg_score": 0.0833,
+        "churn_rate": 0.096,
+        "lift": 0.5666,
+        "cum_capture": 0.9355
+      },
+      {
+        "decile": 7,
+        "customers": 11295,
+        "churners": 642,
+        "avg_score": 0.0511,
+        "churn_rate": 0.0568,
+        "lift": 0.3356,
+        "cum_capture": 0.9691
+      },
+      {
+        "decile": 8,
+        "customers": 11294,
+        "churners": 377,
+        "avg_score": 0.0287,
+        "churn_rate": 0.0334,
+        "lift": 0.1971,
+        "cum_capture": 0.9888
+      },
+      {
+        "decile": 9,
+        "customers": 11295,
+        "churners": 170,
+        "avg_score": 0.0124,
+        "churn_rate": 0.0151,
+        "lift": 0.0889,
+        "cum_capture": 0.9976
+      },
+      {
+        "decile": 10,
+        "customers": 11295,
+        "churners": 45,
+        "avg_score": 0.0035,
+        "churn_rate": 0.004,
+        "lift": 0.0235,
+        "cum_capture": 1.0
+      }
+    ],
+    "calibration": [
+      {
+        "predicted": 0.0009,
+        "actual": 0.0023
+      },
+      {
+        "predicted": 0.0061,
+        "actual": 0.0057
+      },
+      {
+        "predicted": 0.0092,
+        "actual": 0.0133
+      },
+      {
+        "predicted": 0.0156,
+        "actual": 0.0168
+      },
+      {
+        "predicted": 0.023,
+        "actual": 0.0262
+      },
+      {
+        "predicted": 0.0344,
+        "actual": 0.0406
+      },
+      {
+        "predicted": 0.043,
+        "actual": 0.0491
+      },
+      {
+        "predicted": 0.0592,
+        "actual": 0.0646
+      },
+      {
+        "predicted": 0.0732,
+        "actual": 0.0854
+      },
+      {
+        "predicted": 0.0934,
+        "actual": 0.1066
+      },
+      {
+        "predicted": 0.1074,
+        "actual": 0.1195
+      },
+      {
+        "predicted": 0.1268,
+        "actual": 0.1402
+      },
+      {
+        "predicted": 0.1488,
+        "actual": 0.1725
+      },
+      {
+        "predicted": 0.1778,
+        "actual": 0.2029
+      },
+      {
+        "predicted": 0.2058,
+        "actual": 0.2316
+      },
+      {
+        "predicted": 0.2292,
+        "actual": 0.2553
+      },
+      {
+        "predicted": 0.2689,
+        "actual": 0.292
+      },
+      {
+        "predicted": 0.322,
+        "actual": 0.3414
+      },
+      {
+        "predicted": 0.4473,
+        "actual": 0.4478
+      },
+      {
+        "predicted": 0.7626,
+        "actual": 0.7737
+      }
+    ],
+    "importance": [
+      {
+        "feature": "web_sessions_3m",
+        "label": "Web sessions, last 3 months",
+        "auc_drop": 0.06508
+      },
+      {
+        "feature": "loyalty_tier",
+        "label": "Loyalty tier",
+        "auc_drop": 0.03833
+      },
+      {
+        "feature": "recency_days",
+        "label": "Days since last order",
+        "auc_drop": 0.0245
+      },
+      {
+        "feature": "digital_order_share_365d",
+        "label": "Share of orders online",
+        "auc_drop": 0.01514
+      },
+      {
+        "feature": "orders_365d",
+        "label": "Orders, last 12 months",
+        "auc_drop": 0.01102
+      },
+      {
+        "feature": "web_sessions_1m",
+        "label": "Web sessions, last month",
+        "auc_drop": 0.007
+      },
+      {
+        "feature": "web_sessions_prev_3m",
+        "label": "Web sessions, prior 3 months",
+        "auc_drop": 0.00611
+      },
+      {
+        "feature": "complaints_180d",
+        "label": "Complaints, last 6 months",
+        "auc_drop": 0.00286
+      },
+      {
+        "feature": "min_csat_180d",
+        "label": "Lowest satisfaction score",
+        "auc_drop": 0.00212
+      },
+      {
+        "feature": "service_contacts_90d",
+        "label": "Service contacts, last 90 days",
+        "auc_drop": 0.00192
+      },
+      {
+        "feature": "unresolved_180d",
+        "label": "Unresolved service issues",
+        "auc_drop": 0.00117
+      },
+      {
+        "feature": "tenure_days",
+        "label": "Tenure",
+        "auc_drop": 0.00099
+      }
+    ]
+  },
+  "ground_truth": {
+    "true_churn_rate": 0.14482141908522655,
+    "label_precision": 0.575192096597146,
+    "label_recall": 0.6727394999082962,
+    "gbm_auc_vs_true_churn": 0.7785124643276861,
+    "logistic_auc_vs_true_churn": 0.7647328405790816,
+    "recency_auc_vs_true_churn": 0.6792455010399214,
+    "false_alarm_by_frequency": [
+      {
+        "freq_band": "1-2 orders",
+        "size": 6122,
+        "mean": 0.4322
+      },
+      {
+        "freq_band": "3-5 orders",
+        "size": 8338,
+        "mean": 0.4532
+      },
+      {
+        "freq_band": "6-10 orders",
+        "size": 3996,
+        "mean": 0.3911
+      },
+      {
+        "freq_band": "11+ orders",
+        "size": 675,
+        "mean": 0.2059
+      }
+    ]
+  },
+  "definition_test": [
+    {
+      "window_days": 60,
+      "labelled_churn_rate": 0.35758449341880666,
+      "precision": 0.2216770976981012,
+      "recall": 0.8903919897741798
+    },
+    {
+      "window_days": 90,
+      "labelled_churn_rate": 0.2697625459924895,
+      "precision": 0.31057756529686786,
+      "recall": 0.8214783821478382
+    },
+    {
+      "window_days": 120,
+      "labelled_churn_rate": 0.21467587148655312,
+      "precision": 0.40864917395529643,
+      "recall": 0.7478577202910267
+    },
+    {
+      "window_days": 180,
+      "labelled_churn_rate": 0.1566968857868983,
+      "precision": 0.5873275236020334,
+      "recall": 0.6496853661802116
+    },
+    {
+      "window_days": 240,
+      "labelled_churn_rate": 0.12865569168910973,
+      "precision": 0.7349450873442913,
+      "recall": 0.5632378692876914
+    }
+  ]
+}

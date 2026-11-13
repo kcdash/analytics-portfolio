@@ -82,6 +82,8 @@ a { color: inherit; }
 .status.live { background: #dcfce7; color: #166534; }
 .card h3 { font-size: 1.15rem; }
 .card p { color: var(--slate); font-size: 0.95rem; }
+.card .links { display: flex; gap: 16px; margin: 4px 0 14px; }
+.card .links a { color: var(--navy); font-weight: 600; font-size: 0.9rem; text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 2px; text-underline-offset: 4px; }
 .card .stack { margin: auto 0 0; padding-top: 12px; border-top: 1px solid var(--line); font-size: 0.82rem; color: var(--slate-light); font-weight: 500; }
 
 /* pillars */

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Churn & retention value · Maple & Main · Krish Dash</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/css/deck.css">
+</head>
+<body>
+<div class="deck-bar"><span>Churn &amp; retention value · Maple &amp; Main</span><a href="deck.pdf">Download PDF</a><a href="../demo/">Open the simulator</a><a href="../../../">Portfolio</a></div>
+
+<section class="slide title-slide">
+  <div class="kicker">Maple &amp; Main · Customer retention</div>
+  <h1>Save the right customers. Stop paying the wrong ones.</h1>
+  <p>A churn model, a measured view of who responds to retention offers, and a plan that lifts CRM profit by <span data-v="gainPct"></span> on the same budget.</p>
+  <div class="foot"><span>Krish Dash · Personal demonstration portfolio</span><span>Synthetic data. No client, employer or proprietary information.</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">Executive summary</div>
+  <h2>The churn model works. Using it to pick who gets an offer does not.</h2>
+  <div class="body cols-3" style="margin-top:56px;flex:0 0 auto">
+    <div class="stat"><b data-v="mar"></b><span>of annual margin sits with the <span data-v="expChurn"></span> active customers we expect to lapse in the next six months.</span></div>
+    <div class="stat"><b data-v="lift"></b><span>The model's top 10% churn at <span data-v="lift"></span> the average rate. But the highest-risk customers respond to offers at less than half the rate of mid-risk customers.</span></div>
+    <div class="stat"><b data-v="gain"></b><span>more profit a year from the same <span data-v="contacts"></span> contacts, by ranking on value at risk and uplift instead of sending at random.</span></div>
+  </div>
+  <div class="callout" style="margin-top:64px;font-size:19px;padding:22px 26px"><b>Recommendation:</b> keep the churn model for sizing and early warning, pick offer audiences by measured uplift and value, and stop sending discounts to the most loyal 10% of customers, who cost <span data-v="d10loss"></span> a year in offers they did not need.</div>
+  <div class="foot"><span>Churn &amp; retention value</span><span>2</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">Approach</div>
+  <h2>Four questions, answered in order</h2>
+  <p class="sub">Most churn projects stop at the second box. The money is in the third and fourth.</p>
+  <div class="body" style="margin-top:34px">
+    <div class="flow" style="grid-template-columns:repeat(4,1fr)">
+      <div><b>1. What counts as churn?</b>Maple &amp; Main has no contracts, so churn has to be inferred from silence. We tested five inactivity windows.<small>SQL · 2.3M orders</small></div>
+      <div><b>2. Who is at risk?</b>A model scores every active customer using only what was known on the scoring date, tested on a later period.<small>SQL features · Python and SAS models</small></div>
+      <div><b>3. Who can be persuaded?</b>Past campaigns kept a 10% holdout. That lets us measure what an offer changes, not just who buys.<small>Uplift model · 625,000 contacts</small></div>
+      <div><b>4. What is it worth?</b>Incremental margin, less the discount given to every responder, less contact cost. Compared across targeting rules.<small>Back-test on nine later campaigns</small></div>
+    </div>
+    <table class="t" style="margin-top:6px">
+      <tr><th>Data used</th><th>Checks before modelling</th><th>How results were validated</th></tr>
+      <tr><td>200,000 loyalty members, three years of orders, web activity, service contacts, 38 CRM campaigns</td>
+          <td>Seven data-quality issues found and fixed, including <span data-v="qcDates"></span> mixed-format dates and <span data-v="qcDups"></span> duplicate orders</td>
+          <td>Out-of-time test, randomised holdouts, and the generator's hidden ground truth</td></tr>
+    </table>
+  </div>
+  <div class="foot"><span>Churn &amp; retention value</span><span>3</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">Defining churn</div>
+  <h2>180 days of silence is the working definition, and it is wrong <span data-v="labelFalse"></span> of the time</h2>
+  <div class="body cols-2">
+    <div>
+      <table class="t">
+        <tr><th>No order for</th><th class="n">Flagged as churned</th><th class="n">Flagged who truly left</th><th class="n">True leavers caught</th></tr>
+        <tbody id="defTable"></tbody>
+      </table>
+      <p class="chart-note">Active customers on 3 November 2025. "Truly left" uses the hidden churn date in the synthetic data, which a real project would not have.</p>
+    </div>
+    <div>
+      <p>A short window flags quickly but mostly catches customers who were only between purchases. A long window is accurate but arrives too late to act.</p>
+      <p><b>180 days</b> is the compromise: about six in ten flagged customers have really gone, and two thirds of real leavers are caught.</p>
+      <div class="callout">Infrequent buyers drive the false alarms. Treat a "churned" flag as a probability, not a fact, and never write customers off on the flag alone.</div>
+    </div>
+  </div>
+  <div class="foot"><span>Churn &amp; retention value</span><span>4</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">Model performance</div>
+  <h2>The top 20% of scores contain <span data-v="cap20"></span> of the customers who go quiet</h2>
+  <div class="body cols-2">
+    <div>
+      <div class="chart-title">Churn rate by risk decile, May 2026 test snapshot</div>
+      <div id="liftChart"></div>
+      <p class="chart-note">Decile 1 is the highest predicted risk. Average churn rate is <span data-v="churnRate"></span> across <span data-v="active"></span> active customers.</p>
+    </div>
+    <div>
+      <table class="t">
+        <tr><th>Approach</th><th class="n">AUC</th><th class="n">Top-decile lift</th></tr>
+        <tr><td>Recency rule (longest since last order)</td><td class="n" data-v="aucRec"></td><td class="n" data-v="liftRec"></td></tr>
+        <tr><td>Logistic scorecard (SQL + SAS)</td><td class="n" data-v="aucLogit"></td><td class="n" data-v="liftLogit"></td></tr>
+        <tr class="hl"><td>Gradient boosting, calibrated</td><td class="n" data-v="auc"></td><td class="n" data-v="lift"></td></tr>
+      </table>
+      <ul style="margin-top:18px;font-size:15.5px">
+        <li>Trained on four snapshots from 2024 and 2025, tested once on a snapshot nine months later.</li>
+        <li>Predicted and actual churn rates agree within three points in every score band.</li>
+        <li>Score distribution is stable between training and test (PSI <span data-v="psi"></span>).</li>
+        <li>Against the hidden truth the model scores <span data-v="aucTruth"></span>: it finds real leavers, not just quiet customers.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot"><span>Churn &amp; retention value</span><span>5</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">Drivers and value</div>
+  <h2>Fading web activity is the earliest warning, and risk is concentrated in a small group</h2>
+  <div class="body cols-even">
+    <div>
+      <div class="chart-title">What the model relies on most</div>
+      <div id="impChart"></div>
+      <p class="chart-note">Loss in AUC when each input is shuffled. Loyalty tier is a current-state field here; a production build would use tier history.</p>
+    </div>
+    <div>
+      <div class="stat" style="margin-bottom:22px"><b data-v="mar"></b><span>12-month margin at risk, out of <span data-v="marTotal"></span> from active customers.</span></div>
+      <div class="stat"><b data-v="top10"></b><span>of that margin at risk sits with just 10% of customers. Risk alone does not find them: value has to be in the ranking.</span></div>
+    </div>
+  </div>
+  <div class="foot"><span>Churn &amp; retention value</span><span>6</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">The finding that changes the plan</div>
+  <h2>Offers work best on mid-risk customers and lose money on the most loyal</h2>
+  <div class="body cols-even">
+    <div>
+      <div class="chart-title">Extra customers who order because of the offer, by churn risk</div>
+      <div id="upliftChart"></div>
+      <p class="chart-note">Percentage points, treated minus holdout, nine campaigns from February to October 2026. Bars show 95% intervals. Decile 1 is the highest risk.</p>
+    </div>
+    <div>
+      <div class="chart-title">Net profit per contact, by churn risk</div>
+      <div id="netChart"></div>
+      <p class="chart-note">Incremental margin less offer cost less contact cost, CAD. Offer cost is an assumption: 4% to 20% of the basket depending on the offer.</p>
+    </div>
+  </div>
+  <div class="callout" style="margin-top:10px">The highest-risk customers have mostly decided already: an offer moves <span data-v="uD1"></span> points of them, against <span data-v="uMid"></span> in the middle. The lowest-risk customers were going to buy anyway, so the discount is simply given away: <span data-v="netD10"></span> per contact.</div>
+  <div class="foot"><span>Churn &amp; retention value</span><span>7</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">A limit worth knowing</div>
+  <h2>Offers buy an order. They do not buy loyalty.</h2>
+  <div class="body cols-even" style="margin-top:36px">
+    <div>
+      <div class="stat" style="margin-bottom:26px"><b data-v="retT"></b><span>of customers who received an offer were still buying in the following six months.</span></div>
+      <div class="stat"><b data-v="retH"></b><span>of the holdout customers, who received nothing, were too.</span></div>
+    </div>
+    <div>
+      <p>Across 19 campaigns with a full follow-up window, the difference is <span data-v="retDiff"></span> points, with a margin of error of <span data-v="retSe"></span>. That is no measurable effect.</p>
+      <p>So this business case counts only the margin from the extra order in the 14-day response window. It assumes nothing about customers staying longer.</p>
+      <div class="callout">If retention is the goal, discounts are the wrong tool. The service data points somewhere else: complaints and unresolved issues are among the model's top warning signs, and they are fixable.</div>
+    </div>
+  </div>
+  <div class="foot"><span>Churn &amp; retention value</span><span>8</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">Business case</div>
+  <h2>Same contacts, better list: <span data-v="gain"></span> more profit a year</h2>
+  <div class="body cols-2">
+    <div>
+      <div class="chart-title">Annual net profit from CRM offers, by how the audience is chosen</div>
+      <div id="stratChart"></div>
+      <p class="chart-note">CAD. 25,000 contacts per campaign, 13 campaigns a year. Measured on nine held-out campaigns and scaled to a year. Bars show 95% intervals.</p>
+    </div>
+    <div>
+      <ul style="font-size:16px">
+        <li><b>Ranking by churn risk is no better than picking at random.</b> The difference is inside the margin of error.</li>
+        <li><b>Risk multiplied by customer value does just as well</b> and needs no extra model. Start there.</li>
+        <li><b>The uplift model performs the same</b> and adds one thing the simple ranking cannot: a do-not-contact list.</li>
+      </ul>
+      <div class="callout" style="margin-top:14px">Honest scale: the gain is <span data-v="gainShare"></span> of annual margin. It is real and costs nothing to capture, but offers alone will not move retention.</div>
+      <p class="chart-note" style="margin-top:12px">Contacting more of the base would also add profit, since the average contact pays back. That depends on customers tolerating more frequent offers, which this data cannot show, so any volume increase should be tested with a holdout.</p>
+    </div>
+  </div>
+  <div class="foot"><span>Churn &amp; retention value</span><span>9</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">Recommendations</div>
+  <h2>Three actions, in order of effort</h2>
+  <div class="body" style="gap:0;margin-top:22px;display:block">
+    <div class="act"><i>1</i><div><b>Stop sending offers to the most loyal 10%</b><span>They buy at the same rate with or without a discount. A suppression rule in the campaign tool is enough.</span></div><em><span data-v="d10save"></span> a year</em></div>
+    <div class="act"><i>2</i><div><b>Choose audiences by value at risk, then by uplift</b><span>Score the whole eligible base each month and take the top 25,000, instead of a random draw. Keep the 10% holdout so the result stays measurable.</span></div><em><span data-v="gain"></span> a year</em></div>
+    <div class="act"><i>3</i><div><b>Test a service-recovery play for high-risk customers</b><span>Offers do not hold them. Fast resolution of open complaints might. Run it as an experiment with its own holdout before scaling.</span></div><em>To be measured</em></div>
+  </div>
+  <p class="chart-note" style="margin-top:14px">The first two overlap: the better list already leaves out most of the loyal 10%, so the two figures should not be added together.</p>
+  <div class="foot"><span>Churn &amp; retention value</span><span>10</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">Appendix</div>
+  <h2>Method, assumptions and limits</h2>
+  <div class="body cols-even" style="font-size:14.5px;gap:48px">
+    <div>
+      <p><b>Population.</b> Customers who joined at least 30 days before the snapshot and ordered in the prior 180 days.</p>
+      <p><b>Features.</b> 33 inputs built in SQL from data dated before the snapshot: purchase recency, frequency and value, web activity, service contacts, CRM history, profile.</p>
+      <p><b>Validation.</b> Train on four snapshots (Nov 2024 to Aug 2025), calibrate on Nov 2025, test on May 2026.</p>
+      <p><b>Uplift.</b> Single gradient-boosting model with the treatment flag as an input, chosen over a two-model design on earlier campaigns. Predicted uplift tracks the true uplift built into the data (correlation <span data-v="upCorr"></span>).</p>
+      <p><b>Back-test.</b> Each targeting rule is scored only on measured treated-versus-holdout differences in nine campaigns the models never saw.</p>
+    </div>
+    <div>
+      <p><b>Assumed, not measured.</b> Offer cost as a share of the responder's basket: 10% off 10%, bonus points 4%, $15 off $75 12%, free shipping 5%, win-back 20% off 20%. The simulator lets you change it.</p>
+      <p><b>Limits.</b> Contacting the same top customers every month may tire them; this is not modelled. Loyalty tier is not point-in-time. Intervals reflect holdout sampling only.</p>
+      <p><b>Synthetic data.</b> Maple &amp; Main is fictional. The data was generated with known churn, uplift and media mechanisms, which is why results can be checked against ground truth. Figures illustrate the method, not any real company.</p>
+      <p><b>Code.</b> SQL, Python and SAS, with a model card and QC log, are in the project repository.</p>
+    </div>
+  </div>
+  <div class="foot"><span>Churn &amp; retention value</span><span>11</span></div>
+</section>
+
+<script src="../outputs/report_data.js"></script>
+<script src="../../../assets/js/charts.js"></script>
+<script>
+const P = window.P1, sb = P.same_budget, rd = P.risk_deciles, n0 = v => Math.round(v).toLocaleString("en-CA");
+const E = sb["Everyone (current practice)"], U = sb["Highest net uplift value"], gain = U.annual_net - E.annual_net;
+const d10 = rd[9], mid = rd.slice(3, 8).reduce((a, d) => a + d.uplift, 0) / 5, re = P.retention_effect, qc = P.qc.found;
+const V = {
+  gainPct: MM.pct(gain / E.annual_net, 0), gain: MM.cadK(gain), contacts: n0(P.annual_contacts),
+  mar: "$" + (P.value_at_risk.margin_at_risk / 1e6).toFixed(1) + "M", marTotal: "$" + (P.value_at_risk.margin_12m_total / 1e6).toFixed(1) + "M",
+  expChurn: n0(Math.round(P.value_at_risk.expected_churners / 100) * 100), top10: MM.pct(P.value_at_risk.top10pct_share_of_margin_at_risk, 0),
+  lift: P.models.gbm.top_decile_lift.toFixed(1) + "x", liftRec: P.models.recency_rule.top_decile_lift.toFixed(1) + "x", liftLogit: P.models.logistic.top_decile_lift.toFixed(1) + "x",
+  auc: P.models.gbm.auc.toFixed(2), aucRec: P.models.recency_rule.auc.toFixed(2), aucLogit: P.models.logistic.auc.toFixed(2),
+  cap20: MM.pct(P.models.gbm.capture_top_20pct, 0), churnRate: MM.pct(P.churn_rate.test), active: n0(P.rows.test), psi: P.psi.toFixed(3),
+  aucTruth: P.ground_truth.gbm_auc_vs_true_churn.toFixed(2), labelFalse: MM.pct(1 - P.ground_truth.label_precision, 0),
+  d10loss: MM.cadK(-d10.net * P.annual_contacts / 10), d10save: MM.cadK(-d10.net * P.annual_contacts / 10),
+  uD1: (rd[0].uplift * 100).toFixed(1), uMid: (mid * 100).toFixed(1), netD10: "-$" + Math.abs(d10.net).toFixed(2),
+  retT: MM.pct(re.treated_active_next_180d), retH: MM.pct(re.holdout_active_next_180d),
+  retDiff: (re.difference * 100).toFixed(2), retSe: "±" + (1.96 * re.se * 100).toFixed(2),
+  gainShare: MM.pct(gain / P.value_at_risk.margin_12m_total, 1), upCorr: P.uplift_model.corr_with_true_uplift.toFixed(2),
+  qcDates: n0(qc["transactions: order_date in DD/MM/YYYY, re-parsed"]), qcDups: n0(qc["transactions: duplicate rows removed"]),
+};
+document.querySelectorAll("[data-v]").forEach(e => { e.textContent = V[e.dataset.v] ?? "?"; });
+
+document.getElementById("defTable").innerHTML = P.definition_test.map(d =>
+  `<tr class="${d.window_days === 180 ? "hl" : ""}"><td>${d.window_days} days</td><td class="n">${MM.pct(d.labelled_churn_rate, 0)}</td><td class="n">${MM.pct(d.precision, 0)}</td><td class="n">${MM.pct(d.recall, 0)}</td></tr>`).join("");
+
+MM.bars("#liftChart", { width: 640, height: 400, fmt: v => MM.pct(v, 0), xTitle: "Risk decile",
+  data: P.lift.map(d => ({ label: d.decile, value: d.churn_rate, color: d.decile <= 2 ? MM.C.focus : MM.C.context,
+    tip: `<b>Decile ${d.decile}</b><br>Churn rate ${MM.pct(d.churn_rate)}<br>${d.lift.toFixed(1)}x average<br>Cumulative capture ${MM.pct(d.cum_capture, 0)}` })) });
+MM.hbars("#impChart", { width: 540, row: 34, labelWidth: 230, fmt: v => v.toFixed(3), data: P.importance.map(d => ({ label: d.label, value: d.auc_drop })) });
+MM.bars("#upliftChart", { width: 540, height: 310, fmt: v => (v * 100).toFixed(1), xTitle: "Risk decile",
+  data: rd.map(d => ({ label: d.decile, value: d.uplift, lo: d.uplift - 1.96 * d.uplift_se, hi: d.uplift + 1.96 * d.uplift_se,
+    color: d.decile === 1 || d.decile === 10 ? MM.C.accent : MM.C.context,
+    tip: `<b>Risk decile ${d.decile}</b><br>Treated ${MM.pct(d.treated_response)} · holdout ${MM.pct(d.holdout_response)}<br>Uplift ${(d.uplift * 100).toFixed(1)} pts` })) });
+MM.bars("#netChart", { width: 540, height: 310, fmt: v => (v < 0 ? "-$" : "$") + Math.abs(v).toFixed(2), xTitle: "Risk decile",
+  data: rd.map(d => ({ label: d.decile, value: d.net, color: d.decile === 1 || d.decile === 10 ? MM.C.accent : MM.C.context })) });
+MM.bars("#stratChart", { width: 640, height: 420, maxBar: 90, fmt: MM.cadK,
+  data: Object.entries(sb).map(([k, d]) => ({ label: k.replace(" (current practice)", "\n(random draw)").replace("Highest ", "Highest\n"), value: d.annual_net,
+    lo: d.annual_net - 1.96 * d.annual_net_se, hi: d.annual_net + 1.96 * d.annual_net_se,
+    color: k.includes("uplift") || k.includes("value at") ? MM.C.focus : MM.C.context,
+    tip: `<b>${k}</b><br>${MM.cad(d.annual_net)} a year<br>$${d.net.toFixed(2)} per contact<br>Uplift ${(d.uplift * 100).toFixed(1)} pts` })) });
+</script>
+</body>
+</html>

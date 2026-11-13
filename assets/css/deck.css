@@ -1,0 +1,56 @@
+/* Client-style deck template. Each .slide is a 16:9 page; prints one slide per PDF page. */
+:root { --navy: #0f1e33; --navy-2: #172a45; --slate: #475569; --muted: #64748b; --line: #e2e8f0; --ink: #0f172a; --accent: #e8a33d; --bg: #eef1f5; }
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.5 Inter, system-ui, -apple-system, "Segoe UI", sans-serif; -webkit-font-smoothing: antialiased; }
+.deck-bar { position: sticky; top: 0; z-index: 5; background: var(--navy); color: #cbd5e1; font-size: 14px; padding: 10px 24px; display: flex; gap: 20px; align-items: center; }
+.deck-bar a { color: #fff; text-decoration: none; font-weight: 600; }
+.deck-bar span { margin-right: auto; }
+.slide { width: 1280px; height: 720px; margin: 28px auto; background: #fff; position: relative; padding: 56px 72px 60px; box-shadow: 0 10px 30px rgba(15, 30, 51, .12); overflow: hidden; display: flex; flex-direction: column; }
+.slide h1, .slide h2 { font-family: Fraunces, Georgia, serif; font-weight: 600; letter-spacing: -.01em; margin: 0; line-height: 1.15; }
+.slide h2 { font-size: 34px; max-width: 1050px; }
+.slide .kicker { color: #9a6410; font-size: 13px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; margin-bottom: 10px; }
+.slide .sub { color: var(--slate); font-size: 18px; margin: 12px 0 0; max-width: 1000px; }
+.slide .body { flex: 1; display: grid; gap: 40px; margin-top: 28px; min-height: 0; align-items: start; }
+.cols-2 { grid-template-columns: 1.25fr 1fr; }
+.cols-even { grid-template-columns: 1fr 1fr; }
+.cols-3 { grid-template-columns: repeat(3, 1fr); }
+.slide ul { margin: 0; padding-left: 20px; }
+.slide li { margin-bottom: 10px; }
+.slide p { margin: 0 0 12px; }
+.foot { position: absolute; left: 72px; right: 72px; bottom: 22px; display: flex; justify-content: space-between; font-size: 11.5px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 8px; }
+.stat { border-top: 4px solid var(--accent); padding-top: 14px; }
+.stat b { display: block; font-family: Fraunces, Georgia, serif; font-size: 46px; line-height: 1.05; color: var(--navy); }
+.stat > span { display: block; color: var(--slate); font-size: 16px; margin-top: 8px; }
+.callout { background: #f5f7fa; border-left: 4px solid var(--accent); padding: 16px 20px; border-radius: 0 8px 8px 0; font-size: 16.5px; }
+.callout b { color: var(--navy); }
+.chart-title { font-weight: 600; font-size: 15px; margin-bottom: 2px; }
+.chart-note { color: var(--muted); font-size: 12.5px; margin-top: 6px; }
+table.t { border-collapse: collapse; width: 100%; font-size: 15px; }
+table.t th { text-align: left; color: var(--muted); font-weight: 600; font-size: 12.5px; text-transform: uppercase; letter-spacing: .05em; border-bottom: 2px solid var(--line); padding: 8px 10px; }
+table.t td { border-bottom: 1px solid var(--line); padding: 9px 10px; }
+table.t td.n, table.t th.n { text-align: right; font-variant-numeric: tabular-nums; }
+table.t tr.hl td { background: #fdf6e7; font-weight: 600; }
+.flow { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; }
+.flow div { background: #f5f7fa; border-radius: 8px; padding: 16px 14px; font-size: 14.5px; border-top: 4px solid var(--navy); }
+.flow b { display: block; font-size: 15.5px; margin-bottom: 6px; }
+.flow small { display: block; color: var(--muted); font-size: 12px; margin-top: 8px; }
+.title-slide { background: linear-gradient(160deg, var(--navy), var(--navy-2)); color: #fff; justify-content: center; }
+.title-slide h1 { font-size: 58px; max-width: 900px; }
+.title-slide p { color: #cbd5e1; font-size: 21px; max-width: 800px; margin-top: 22px; }
+.title-slide .kicker { color: var(--accent); }
+.title-slide .foot { color: #94a3b8; border-color: rgba(255, 255, 255, .15); }
+.num { counter-increment: step; }
+.act { display: grid; grid-template-columns: 44px 1fr 170px; gap: 18px; align-items: start; padding: 14px 0; border-bottom: 1px solid var(--line); }
+.act i { font-style: normal; font-family: Fraunces, Georgia, serif; font-size: 30px; color: #9a6410; line-height: 1; }
+.act b { display: block; font-size: 18px; }
+.act span { color: var(--slate); font-size: 15px; }
+.act em { font-style: normal; font-weight: 700; color: var(--navy); text-align: right; font-size: 17px; }
+@media screen and (max-width: 1320px) { .slide { zoom: .72; } }
+@media screen and (max-width: 960px) { .slide { zoom: .46; } }
+@media screen and (max-width: 620px) { .slide { zoom: .28; } }
+@media print {
+  @page { size: 1280px 720px; margin: 0; }
+  html, body { background: #fff; }
+  .deck-bar { display: none; }
+  .slide { margin: 0; box-shadow: none; page-break-after: always; break-after: page; zoom: 1 !important; }
+}
