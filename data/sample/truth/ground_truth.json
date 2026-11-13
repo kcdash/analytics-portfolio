@@ -50,9 +50,27 @@
     }
   },
   "demand_index_note": "weekly orders are proportional to trend x seasonality x (1 + sum of media lifts)",
+  "archetypes": {
+    "types": [
+      "Home & Garden",
+      "Tech & Gadgets",
+      "Family Everyday",
+      "Fashion & Beauty",
+      "Active Outdoors"
+    ],
+    "shares": [
+      0.22,
+      0.18,
+      0.22,
+      0.2,
+      0.18
+    ],
+    "strength_distribution": "Beta(2.0, 2.2)",
+    "note": "category choice is month seasonality times the customer's affinity"
+  },
   "churn": {
     "definition": "latent churn date; customer places no orders afterwards",
-    "share_churned_in_window": 0.38,
+    "share_churned_in_window": 0.3685,
     "hazard_log_coefficients": {
       "engagement": -0.55,
       "acq_paid_social": 0.45,
@@ -82,32 +100,32 @@
     }
   },
   "acquisition": {
-    "conversion_rate": 0.08133333333333333,
+    "conversion_rate": 0.09066666666666667,
     "logit": "-3.1 +0.55 referral +0.35 web lead -0.60 purchased list +0.16 web visits (cap 8) -0.025 km +0.12 income band +0.30 age 25-44 +0.25 children +0.65 email engaged"
   },
   "planted_issues": {
     "customers_duplicate_rows": 8,
-    "customers_missing_postal_fsa": 69,
-    "customers_province_full_name_instead_of_code": 14,
-    "transactions_order_date_in_dd_mm_yyyy": 515,
+    "customers_missing_postal_fsa": 70,
+    "customers_province_full_name_instead_of_code": 21,
+    "transactions_order_date_in_dd_mm_yyyy": 464,
     "transactions_outlier_baskets_x100": 5,
-    "transactions_negative_net_amount": 25,
+    "transactions_negative_net_amount": 8,
     "transactions_duplicate_rows": 24,
-    "loyalty_events_tier_codes_B_S_G_before_2025_03_01": 2299,
+    "loyalty_events_tier_codes_B_S_G_before_2025_03_01": 2311,
     "media_spend_weekly_missing_display_weeks": 2
   },
   "row_counts": {
     "customers": 2008,
-    "transactions": 23650,
-    "order_items": 59070,
+    "transactions": 23576,
+    "order_items": 58622,
     "products": 1200,
     "stores": 60,
     "campaigns": 38,
     "campaign_contacts": 9500,
     "media_spend_weekly": 934,
-    "web_activity_monthly": 21978,
-    "service_contacts": 1382,
-    "loyalty_events": 4420,
+    "web_activity_monthly": 22108,
+    "service_contacts": 1390,
+    "loyalty_events": 4339,
     "prospects": 1500
   }
 }

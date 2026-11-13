@@ -1,0 +1,10 @@
+{
+  "customers active at the current snapshot": 96371,
+  "customers active at the prior snapshot": 90669,
+  "active at both snapshots (stability test)": 71259,
+  "category shares that do not sum to 1, or are missing (tolerance 0.001)": 0,
+  "channel shares that do not sum to 1, or are missing (tolerance 0.001)": 0,
+  "missing value in any clustering input": 0,
+  "category unit counts that do not add up to the total": 0,
+  "orders counted outside the 12-month window": 0
+}

@@ -1,9 +1,9 @@
 {
   "prospects in raw file": 150000,
   "duplicate prospect_id": 0,
-  "dropped: first contact before 2024-01-01 (converters only)": 8138,
-  "dropped: first contact after 2026-09-15 (conversion window still open)": 2492,
-  "kept for modelling": 139370,
+  "dropped: first contact before 2024-01-01 (converters only)": 8050,
+  "dropped: first contact after 2026-09-15 (conversion window still open)": 2593,
+  "kept for modelling": 139357,
   "missing value in any model input": 0,
   "distance below 0 or above 150 km": 0,
   "converted flag without a customer id": 0,

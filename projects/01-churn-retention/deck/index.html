@@ -22,7 +22,7 @@
   <h2>The churn model works. Using it to pick who gets an offer does not.</h2>
   <div class="body cols-3" style="margin-top:56px;flex:0 0 auto">
     <div class="stat"><b data-v="mar"></b><span>of annual margin sits with the <span data-v="expChurn"></span> active customers we expect to lapse in the next six months.</span></div>
-    <div class="stat"><b data-v="lift"></b><span>The model's top 10% churn at <span data-v="lift"></span> the average rate. But the highest-risk customers respond to offers at less than half the rate of mid-risk customers.</span></div>
+    <div class="stat"><b data-v="lift"></b><span>The model's top 10% churn at <span data-v="lift"></span> the average rate. But the highest-risk customers respond to offers at about half the rate of mid-risk customers.</span></div>
     <div class="stat"><b data-v="gain"></b><span>more profit a year from the same <span data-v="contacts"></span> contacts, by ranking on value at risk and uplift instead of sending at random.</span></div>
   </div>
   <div class="callout" style="margin-top:64px;font-size:19px;padding:22px 26px"><b>Recommendation:</b> keep the churn model for sizing and early warning, pick offer audiences by measured uplift and value, and stop sending discounts to the most loyal 10% of customers, who cost <span data-v="d10loss"></span> a year in offers they did not need.</div>
@@ -88,7 +88,7 @@
       </table>
       <ul style="margin-top:18px;font-size:15.5px">
         <li>Trained on four snapshots from 2024 and 2025, tested once on a snapshot nine months later.</li>
-        <li>Predicted and actual churn rates agree within three points in every score band.</li>
+        <li>Predicted and actual churn rates agree within four points in every score band.</li>
         <li>Score distribution is stable between training and test (PSI <span data-v="psi"></span>).</li>
         <li>Against the hidden truth the model scores <span data-v="aucTruth"></span>: it finds real leavers, not just quiet customers.</li>
       </ul>
@@ -161,9 +161,9 @@
     </div>
     <div>
       <ul style="font-size:16px">
-        <li><b>Ranking by churn risk is no better than picking at random.</b> The difference is inside the margin of error.</li>
-        <li><b>Risk multiplied by customer value does just as well</b> and needs no extra model. Start there.</li>
-        <li><b>The uplift model performs the same</b> and adds one thing the simple ranking cannot: a do-not-contact list.</li>
+        <li><b>A random draw is the worst option.</b> Every rule that uses what the data already knows beats it.</li>
+        <li><b>Risk multiplied by customer value captures most of the gain</b> and needs no extra model. Start there.</li>
+        <li><b>The uplift model edges ahead</b> and adds one thing the simple ranking cannot: a do-not-contact list. The two are within each other's margin of error.</li>
       </ul>
       <div class="callout" style="margin-top:14px">Honest scale: the gain is <span data-v="gainShare"></span> of annual margin. It is real and costs nothing to capture, but offers alone will not move retention.</div>
       <p class="chart-note" style="margin-top:12px">Contacting more of the base would also add profit, since the average contact pays back. That depends on customers tolerating more frequent offers, which this data cannot show, so any volume increase should be tested with a holdout.</p>

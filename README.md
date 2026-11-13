@@ -11,7 +11,7 @@ Python, a README with model card or QC log, and an interactive or live demo.
 |---|---|---|---|
 | 1 | [Churn & retention value](projects/01-churn-retention/) | Predictive Modelling | Live |
 | 2 | [Acquisition propensity & look-alike](projects/02-acquisition-propensity/) | Predictive Modelling | Live |
-| 3 | Segmentation & personas | Customer & Marketing Science | Planned |
+| 3 | [Segmentation & personas](projects/03-segmentation-personas/) | Customer & Marketing Science | Live |
 | 4 | Demand forecasting | Forecasting & Optimization | Planned |
 | 5 | Marketing mix model & budget optimizer | Customer & Marketing Science | Planned |
 | 6 | Executive KPI dashboard | BI & Decision Products | Planned |

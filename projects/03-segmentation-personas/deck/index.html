@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Segmentation & personas · Maple & Main · Krish Dash</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/css/deck.css">
+<style>
+  .mixbar { display: flex; height: 22px; border-radius: 4px; overflow: hidden; margin: 4px 0 2px; }
+  .mixbar i { display: block; }
+  .legend { display: flex; flex-wrap: wrap; gap: 10px 18px; font-size: 12px; color: var(--slate); margin-top: 10px; }
+  .legend span { display: flex; align-items: center; gap: 6px; }
+  .legend b { width: 10px; height: 10px; border-radius: 2px; display: block; }
+  .pcard { border: 1px solid var(--line); border-radius: 8px; padding: 14px 16px; }
+  .pcard h3 { font-size: 17px; margin-bottom: 2px; }
+  .pcard .meta { color: var(--muted); font-size: 12.5px; margin-bottom: 8px; }
+  .pcard dl { display: grid; grid-template-columns: auto auto; gap: 2px 10px; margin: 8px 0 0; font-size: 13px; }
+  .pcard dt { color: var(--slate); } .pcard dd { margin: 0; text-align: right; font-weight: 600; font-variant-numeric: tabular-nums; }
+</style>
+</head>
+<body>
+<div class="deck-bar"><span>Segmentation &amp; personas · Maple &amp; Main</span><a href="deck.pdf">Download PDF</a><a href="../demo/">Open the explorer</a><a href="../../../">Portfolio</a></div>
+
+<section class="slide title-slide">
+  <div class="kicker">Maple &amp; Main · Customer segmentation</div>
+  <h1>Five personas worth acting on, and the four customers in five we cannot label yet</h1>
+  <p>A needs-based segmentation that is reproducible, stable and checked against what customers actually bought next, with an honest account of where it does not reach.</p>
+  <div class="foot"><span>Krish Dash · Personal demonstration portfolio</span><span>Synthetic data. No client, employer or proprietary information.</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">Executive summary</div>
+  <h2>The personas are real. The problem is how few customers have enough history to earn one.</h2>
+  <div class="body cols-3" style="margin-top:50px;flex:0 0 auto">
+    <div class="stat"><b data-v="lift"></b><span>more of next year's spending lands in a persona's own aisles than the average customer's. Personas fixed in May 2025, purchases measured over the following year.</span></div>
+    <div class="stat"><b data-v="assigned"></b><span>of active customers have a basket clear enough to label. Two years of history instead of one raises that to <span data-v="assigned24"></span>.</span></div>
+    <div class="stat"><b data-v="spread"></b><span>difference in offer response between the five personas, against a margin of error of <span data-v="spreadSe"></span>. Personas tell you what to say, not who to contact.</span></div>
+  </div>
+  <div class="callout" style="margin-top:54px;font-size:19px;padding:22px 26px"><b>Recommendation:</b> use personas for merchandising and message, not for audience selection; label on two years of purchases rather than one; and leave the <span data-v="unassigned"></span> of customers without a clear persona on general content rather than guessing.</div>
+  <div class="foot"><span>Segmentation &amp; personas</span><span>2</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">Approach</div>
+  <h2>Two questions, kept apart, and four ways to break the answer</h2>
+  <p class="sub">"What does this customer want?" and "how do they like to shop?" are different questions. One clustering of every variable answers only the second.</p>
+  <div class="body" style="margin-top:28px">
+    <div class="flow" style="grid-template-columns:repeat(4,1fr)">
+      <div><b>1. Build</b>Personas from the aisles a customer buys from. Channel habit is kept as a separate attribute.<small>SQL · <span data-v="rows"></span> active customers</small></div>
+      <div><b>2. Assign with care</b>A persona is given only when the basket explains it at least <span data-v="odds"></span> times better than the average shopper.<small>Multinomial likelihood</small></div>
+      <div><b>3. Test</b>Reproducible on a fresh sample? Stable a year later? Or just value tiers with new names?<small>Three tests</small></div>
+      <div><b>4. Prove it is useful</b>Does the label predict next year's shopping, and does it change what we should do?<small>Out-of-time and campaign holdouts</small></div>
+    </div>
+    <table class="t" style="margin-top:6px">
+      <tr><th>Data used</th><th>Checks before modelling</th><th>How results were validated</th></tr>
+      <tr><td>Twelve months of orders and order lines for every active customer, measured twice a year apart</td>
+          <td>Category and channel shares verified to add up; unit counts reconciled to totals; no missing model inputs</td>
+          <td>Split-half test, twelve-month stability, next-year purchases, and the latent shopper types the data was generated from</td></tr>
+    </table>
+  </div>
+  <div class="foot"><span>Segmentation &amp; personas</span><span>3</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">Why one clustering is not enough</div>
+  <h2>Put every variable in one model and it hands back a channel report</h2>
+  <div class="body cols-2">
+    <div>
+      <div class="chart-title">What a single clustering of all behaviour separates</div>
+      <div id="naiveChart"></div>
+      <p class="chart-note">Share of the variation in each kind of behaviour that the groups explain. Five groups, all 22 behaviour measures.</p>
+    </div>
+    <div>
+      <table class="t">
+        <tr><th>Group</th><th>What defines it</th></tr>
+        <tbody id="naiveTable"></tbody>
+      </table>
+      <div class="callout" style="margin-top:16px">Channel use is close to all-or-nothing, so it dominates the distances. The result is useful for contact strategy and useless for merchandising, which is the question that was asked.</div>
+    </div>
+  </div>
+  <div class="foot"><span>Segmentation &amp; personas</span><span>4</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">The personas</div>
+  <h2>Five needs-based groups, named after the aisles they over-index on</h2>
+  <div class="body" style="margin-top:20px">
+    <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:14px" id="personaCards"></div>
+    <div>
+      <div class="chart-title">Where each persona's units come from, against the average customer</div>
+      <div id="mixRows"></div>
+      <div class="legend" id="mixLegend"></div>
+    </div>
+  </div>
+  <div class="foot"><span>Segmentation &amp; personas</span><span>5</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">Evidence</div>
+  <h2>A label is only as good as the basket behind it</h2>
+  <div class="body cols-2">
+    <div>
+      <div class="chart-title">Share of customers given a persona, by items bought in the year</div>
+      <div id="evidenceChart"></div>
+      <p class="chart-note">A customer is labelled only when one persona explains their basket at least <span data-v="odds"></span> times better than the average shopper.</p>
+    </div>
+    <div>
+      <p>The median active customer buys <span data-v="medUnits"></span> items a year across six categories. That is not enough to tell a Home shopper from someone who bought a kettle.</p>
+      <p>Rather than label everyone and hope, the rule leaves <span data-v="unassigned"></span> of customers unlabelled. They are not a persona called "Other": they are customers we do not yet know.</p>
+      <div class="callout"><b>The cheapest fix is more history, not a better algorithm.</b> Looking back two years instead of one lifts the labelled share from <span data-v="assigned"></span> to <span data-v="assigned24"></span>, because the median customer then has <span data-v="medUnits24"></span> items on file.</div>
+    </div>
+  </div>
+  <div class="foot"><span>Segmentation &amp; personas</span><span>6</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">The three tests</div>
+  <h2>Reproducible, stable, and not value tiers in disguise</h2>
+  <div class="body cols-3" style="margin-top:30px">
+    <div>
+      <h3 style="font-size:19px">1. Reproducible</h3>
+      <p class="stat" style="border:0;padding:0;margin:10px 0 0"><b style="font-size:40px" data-v="ari"></b></p>
+      <p style="font-size:15px">Agreement between segmentations built independently on two halves of the customer base. The same five groups appear both times.</p>
+      <p class="chart-note">Adjusted Rand index, where 1 is identical and 0 is chance.</p>
+    </div>
+    <div>
+      <h3 style="font-size:19px">2. Stable</h3>
+      <p class="stat" style="border:0;padding:0;margin:10px 0 0"><b style="font-size:40px" data-v="stay"></b></p>
+      <p style="font-size:15px">of customers labelled in both years keep the same persona, against <span data-v="stayRandom"></span> if labels were shuffled. Classic RFM segments keep only <span data-v="rfmStay"></span>.</p>
+      <p class="chart-note">Same customers, segmented in May 2025 and May 2026.</p>
+    </div>
+    <div>
+      <h3 style="font-size:19px">3. Not value tiers</h3>
+      <p class="stat" style="border:0;padding:0;margin:10px 0 0"><b style="font-size:40px" data-v="spendVar"></b></p>
+      <p style="font-size:15px">of the variation in spend is explained by persona, against <span data-v="rfmSpendVar"></span> for RFM. Every persona contains high and low spenders.</p>
+      <p class="chart-note">Which is the point: value belongs in a score, not a persona.</p>
+    </div>
+  </div>
+  <div class="callout" style="margin-top:36px">RFM is the opposite trade: it explains half the variation in spend and almost none of the variation in what people buy (<span data-v="rfmCatVar"></span>, against <span data-v="catVar"></span> here). The two answer different questions and both have a place.</div>
+  <div class="foot"><span>Segmentation &amp; personas</span><span>7</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">Checked against the truth</div>
+  <h2>Where the labels are confident, three in four are right</h2>
+  <div class="body cols-2">
+    <div>
+      <div class="chart-title">Latent shopper type of the customers in each persona</div>
+      <table class="t" style="margin-top:8px">
+        <tr><th>Persona</th><th>Matching shopper type</th><th class="n">Share</th></tr>
+        <tbody id="purityTable"></tbody>
+      </table>
+      <p class="chart-note">The synthetic data was built from five hidden shopper types. A real project never sees these, which is what makes this check worth doing here.</p>
+    </div>
+    <div>
+      <ul style="font-size:16px">
+        <li><b><span data-v="purity"></span></b> of confidently labelled customers belong to the type their persona points at. Chance would give <span data-v="purityRandom"></span>.</li>
+        <li>Agreement with the hidden types is <b><span data-v="ariConf"></span></b> among labelled customers and <b><span data-v="ariAll"></span></b> if every customer is force-labelled.</li>
+        <li>Customers who get a label have genuinely stronger tastes: average type strength <span data-v="strA"></span> against <span data-v="strU"></span>.</li>
+      </ul>
+      <div class="callout" style="margin-top:14px">The stability test and the truth agree. That matters: on real data only the stability test is available, and this says it can be trusted.</div>
+    </div>
+  </div>
+  <div class="foot"><span>Segmentation &amp; personas</span><span>8</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">Does it predict anything?</div>
+  <h2>A persona points at the right aisle a year later. An unlabelled customer does not.</h2>
+  <div class="body cols-2">
+    <div>
+      <div class="chart-title">Share of next year's items bought in the persona's own aisle</div>
+      <div id="forwardChart"></div>
+      <p class="chart-note">Dark bars: customers with that persona. Light bars: the average customer. Personas fixed in May 2025; purchases measured over the following twelve months for <span data-v="fwdN"></span> customers.</p>
+    </div>
+    <div>
+      <table class="t">
+        <tr><th>Persona</th><th class="n">Next year's top aisle is the persona's</th><th class="n">Base rate</th></tr>
+        <tbody id="forwardTable"></tbody>
+      </table>
+      <div class="callout" style="margin-top:16px">For customers left unlabelled, next year's spending lands in each aisle at <b><span data-v="unassignedLift"></span></b> of the base rate: exactly no signal. The confidence rule is separating knowledge from noise, not throwing away data.</div>
+    </div>
+  </div>
+  <div class="foot"><span>Segmentation &amp; personas</span><span>9</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">What personas do not do</div>
+  <h2>They do not tell you who to contact, and they are scarcest where you need them</h2>
+  <div class="body cols-even">
+    <div>
+      <div class="chart-title">Extra customers who order because of an offer, by persona</div>
+      <div id="responseChart"></div>
+      <p class="chart-note">Percentage points, treated minus holdout, <span data-v="campN"></span> campaigns over twelve months. Bars show 95% intervals.</p>
+    </div>
+    <div>
+      <p style="font-size:16px">The gap between the best and worst persona is <b><span data-v="spread"></span></b>, with a margin of error of <span data-v="spreadSe"></span>. On this evidence, persona is not a basis for choosing an audience. Project 1 answers that question.</p>
+      <table class="t">
+        <tr><th></th><th class="n">Has a persona</th><th class="n">Average churn risk</th></tr>
+        <tr><td>All active customers</td><td class="n" data-v="p1All"></td><td class="n" data-v="riskAll"></td></tr>
+        <tr class="hl"><td>Top 30% by value at risk</td><td class="n" data-v="p1Pri"></td><td class="n">n/a</td></tr>
+        <tr><td>Customers with a persona</td><td class="n">100%</td><td class="n" data-v="riskPersona"></td></tr>
+      </table>
+      <div class="callout" style="margin-top:14px">Labels come from buying a lot, so the customers we know best are the ones least likely to leave. Among the customers project 1 would contact first, only <span data-v="p1Pri"></span> can be personalised this way.</div>
+    </div>
+  </div>
+  <div class="foot"><span>Segmentation &amp; personas</span><span>10</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">Recommendations</div>
+  <h2>Four actions</h2>
+  <div class="body" style="gap:0;margin-top:18px;display:block">
+    <div class="act"><i>1</i><div><b>Use personas for content, not for audience</b><span>Pick who to contact with the value-at-risk score from project 1, then let the persona choose the aisle in the message. A persona-led offer is <span data-v="relevance"></span> more relevant than a generic one.</span></div><em>No new data needed</em></div>
+    <div class="act"><i>2</i><div><b>Label on two years of purchases</b><span>The single cheapest improvement: it nearly doubles the share of customers who can be personalised, with no change to the method.</span></div><em><span data-v="assigned"></span> &rarr; <span data-v="assigned24"></span> of customers</em></div>
+    <div class="act"><i>3</i><div><b>Leave unlabelled customers on general content</b><span>Guessing a persona for them would be guessing: their next-year buying matches the average exactly. Browsing and wish-list data would help here more than any model.</span></div><em>Protects <span data-v="unassigned"></span> from bad targeting</em></div>
+    <div class="act"><i>4</i><div><b>Test the persona-led message against a holdout</b><span>Relevance is measured; incremental revenue is not. Run persona-led content against a random-content control for a quarter before rolling it out.</span></div><em>Decides the roll-out</em></div>
+  </div>
+  <div class="foot"><span>Segmentation &amp; personas</span><span>11</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">Appendix</div>
+  <h2>Method, assumptions and limits</h2>
+  <div class="body cols-even" style="font-size:14.5px;gap:48px">
+    <div>
+      <p><b>Population.</b> Customers of at least a year's standing with two or more orders in the twelve months before the snapshot: <span data-v="rows"></span> at May 2026.</p>
+      <p><b>Personas.</b> K-means on category unit shares, shrunk toward the average shopper by <span data-v="shrink"></span> items so a small basket cannot look like a specialist. Five groups, chosen for reproducibility and stability rather than fit.</p>
+      <p><b>Assignment.</b> Each customer's items are scored against every persona and against the average shopper, using a multinomial likelihood. The persona is given only when it beats the runner-up by <span data-v="odds"></span> times.</p>
+      <p><b>Channel.</b> Treated as a separate attribute: store-first, web-first, app-first, or no single channel. In this data it is uncorrelated with persona, so the two carry different information.</p>
+    </div>
+    <div>
+      <p><b>Fit statistics are weak, and that is expected.</b> The silhouette score is <span data-v="sil"></span>. Shopping behaviour has no natural gaps; segments are built, not discovered. Reproducibility, stability and prediction are the tests that matter.</p>
+      <p><b>Limits.</b> Relevance is measured; the revenue effect of acting on it is not. Personas describe the past year and lapse when a customer buys less: of those labelled in 2025, <span data-v="kept"></span> still qualified in 2026.</p>
+      <p><b>Synthetic data.</b> Maple &amp; Main is fictional. Its customers were generated from five latent shopper types with varying strength, which is why the personas can be scored for accuracy. Figures illustrate the method, not any real company.</p>
+      <p><b>Code.</b> SQL, Python and SAS, with a segmentation card and QC log, are in the project repository.</p>
+    </div>
+  </div>
+  <div class="foot"><span>Segmentation &amp; personas</span><span>12</span></div>
+</section>
+
+<script src="../outputs/report_data.js"></script>
+<script src="../../../assets/js/charts.js"></script>
+<script>
+const P = window.P3, n0 = v => Math.round(v).toLocaleString("en-CA"), A = P.assignment, G = P.ground_truth, NY = P.next_year, OR = P.offer_response;
+const CATCOL = {"Apparel": "#2a78d6", "Home": "#eb6834", "Outdoor & Garden": "#1baf7a", "Electronics": "#eda100",
+                "Beauty & Wellness": "#e87ba4", "Grocery & Pantry": "#008300", "Toys & Seasonal": "#6250d6", "Sports & Fitness": "#7a8699"};
+const V = {
+  lift: NY.weighted_lift.toFixed(2) + "x", assigned: MM.pct(A.share_with_persona, 0), assigned24: MM.pct(A.share_with_persona_24m, 0),
+  unassigned: MM.pct(1 - A.share_with_persona, 0), spread: (OR.spread_between_personas * 100).toFixed(1) + " points",
+  spreadSe: "±" + (1.96 * OR.spread_se * 100).toFixed(1), rows: n0(P.rows.current), odds: Math.round(Math.exp(P.settings.min_log_odds)),
+  medUnits: n0(A.median_units_12m), medUnits24: n0(A.median_units_24m), ari: P.reproducibility.adjusted_rand_index.toFixed(2),
+  stay: MM.pct(P.stability.stayed_when_both_confident, 0), stayRandom: MM.pct(P.stability.stayed_if_random, 0),
+  rfmStay: MM.pct(P.rfm.stayed, 0), spendVar: MM.pct(P.value_check.variance_in_spend_explained, 0),
+  rfmSpendVar: MM.pct(P.rfm.variance_in_spend_explained, 0), rfmCatVar: MM.pct(P.rfm.variance_in_category_mix_explained, 0),
+  catVar: MM.pct(P.value_check.variance_in_category_mix_explained, 0), purity: MM.pct(G.purity_overall, 0),
+  purityRandom: MM.pct(G.purity_if_random, 0), ariConf: G.ari_confident_only.toFixed(2), ariAll: G.ari_all.toFixed(2),
+  strA: G.mean_strength.assigned.toFixed(2), strU: G.mean_strength.not_assigned.toFixed(2),
+  fwdN: n0(NY.customers_tested), unassignedLift: (NY.unassigned_lift * 100).toFixed(0) + "%", campN: OR.campaigns,
+  relevance: P.relevance.weighted_lift.toFixed(1) + "x", shrink: P.settings.shrinkage_units,
+  sil: P.category_clustering.silhouette.toFixed(2), kept: MM.pct(P.stability.kept_a_persona, 0),
+  p1All: P.with_project_1 ? MM.pct(P.with_project_1.share_with_persona_overall, 0) : "n/a",
+  p1Pri: P.with_project_1 ? MM.pct(P.with_project_1.share_with_persona_in_priority_group, 0) : "n/a",
+  riskAll: P.with_project_1 ? MM.pct(P.with_project_1.churn_prob_overall, 0) : "n/a",
+  riskPersona: P.with_project_1 ? MM.pct(P.with_project_1.churn_prob_with_persona, 0) : "n/a",
+};
+document.querySelectorAll("[data-v]").forEach(e => { e.textContent = V[e.dataset.v] ?? "?"; });
+
+MM.bars("#naiveChart", { width: 600, height: 330, fmt: v => MM.pct(v, 0), maxBar: 110,
+  data: [{ label: "Which channel\nthey use", value: P.everything_clustering.variance_explained_channel, color: MM.C.focus,
+           tip: "Share of the variation in store, web and app use that the five groups explain" },
+         { label: "What they buy\n(category mix)", value: P.everything_clustering.variance_explained_category_mix, color: MM.C.accent,
+           tip: "Share of the variation in category mix that the same groups explain" }] });
+document.getElementById("naiveTable").innerHTML = P.everything_clustering.groups
+  .sort((a, b) => b.share - a.share)
+  .map(g => `<tr><td>${MM.pct(g.share, 0)} of customers</td><td>${g.distinctive.slice(0, 2).map(d => `${d.label} ${d.z > 0 ? "high" : "low"}`).join(", ")}</td></tr>`).join("");
+
+const cards = P.profiles.map(p => `<div class="pcard"><h3>${p.persona}</h3>
+  <div class="meta">${MM.pct(p.share_of_assigned, 0)} of labelled customers</div>
+  <dl><dt>Spend a year</dt><dd>${MM.cad(p.spend_365d)}</dd><dt>Orders</dt><dd>${p.orders_365d.toFixed(1)}</dd>
+  <dt>Items</dt><dd>${p.units_total.toFixed(0)}</dd><dt>Gold tier</dt><dd>${MM.pct(p.gold_share, 0)}</dd>
+  <dt>Typical age</dt><dd>${p.top_age_band}</dd></dl></div>`).join("");
+document.getElementById("personaCards").innerHTML = cards;
+const mixHtml = [...P.profiles.map(p => [p.persona, p.mix]), ["Average customer", P.base_mix]].map(([name, mix]) =>
+  `<div style="display:grid;grid-template-columns:150px 1fr;gap:12px;align-items:center;margin-bottom:4px">
+     <div style="font-size:13px;text-align:right;${name === "Average customer" ? "color:#64748b;font-style:italic" : "font-weight:600"}">${name}</div>
+     <div class="mixbar">${P.categories.map(c => `<i style="width:${(mix[c] * 100).toFixed(2)}%;background:${CATCOL[c]}"></i>`).join("")}</div></div>`).join("");
+document.getElementById("mixRows").innerHTML = mixHtml;
+document.getElementById("mixLegend").innerHTML = P.categories.map(c => `<span><b style="background:${CATCOL[c]}"></b>${c}</span>`).join("");
+
+MM.bars("#evidenceChart", { width: 600, height: 330, fmt: v => MM.pct(v, 0), xTitle: "Items bought in the last twelve months",
+  data: A.share_with_persona_by_units.map(d => ({ label: d.units_band, value: d.assigned,
+    color: d.assigned >= 0.3 ? MM.C.focus : MM.C.context,
+    tip: `<b>${d.units_band} items</b><br>${n0(d.customers)} customers<br>${MM.pct(d.assigned, 0)} given a persona` })) });
+
+document.getElementById("purityTable").innerHTML = Object.entries(G.purity_by_persona)
+  .sort((a, b) => b[1] - a[1])
+  .map(([p, v]) => `<tr><td>${p}</td><td>${G.persona_to_true_type[p]}</td><td class="n">${MM.pct(v, 0)}</td></tr>`).join("");
+
+MM.bars("#forwardChart", { width: 600, height: 330, fmt: v => MM.pct(v, 0), maxBar: 46,
+  data: NY.by_persona.flatMap(d => [{ label: d.persona.split(" & ")[0], value: d.share_in_leading_category, color: MM.C.focus,
+      tip: `<b>${d.persona}</b><br>${MM.pct(d.share_in_leading_category)} of next year's items in ${P.leading_category[d.persona]}<br>Average customer: ${MM.pct(d.base_share)}<br>${d.lift.toFixed(2)}x` },
+    { label: "", value: d.base_share, color: MM.C.context, tip: `Average customer: ${MM.pct(d.base_share)}` }]) });
+document.getElementById("forwardTable").innerHTML = NY.by_persona.map(d =>
+  `<tr><td>${d.persona}</td><td class="n">${MM.pct(d.top_category_is_leading, 0)}</td><td class="n">${MM.pct(d.base_top_rate, 0)}</td></tr>`).join("");
+
+MM.bars("#responseChart", { width: 540, height: 320, fmt: v => (v * 100).toFixed(1), xTitle: "Persona",
+  data: OR.by_persona.map(d => ({ label: d.persona.split(" & ")[0], value: d.uplift, lo: d.uplift - 1.96 * d.uplift_se, hi: d.uplift + 1.96 * d.uplift_se,
+    color: MM.C.context, tip: `<b>${d.persona}</b><br>Treated ${MM.pct(d.treated_response)} · holdout ${MM.pct(d.holdout_response)}<br>Uplift ${(d.uplift * 100).toFixed(1)} points` })) });
+</script>
+</body>
+</html>

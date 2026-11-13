@@ -1,1383 +1,1391 @@
 contact_id,customer_id,contact_date,contact_channel,reason,resolved_flag,csat_score
-1,100992,2023-11-06,Chat,Billing,1,4
-2,100041,2023-11-06,Phone,Delivery,1,2
-3,100197,2023-11-06,In-store,Delivery,1,
-4,100224,2023-11-06,Phone,Product quality,0,2
-5,100233,2023-11-06,Phone,Product quality,1,3
-6,100933,2023-11-06,Chat,General inquiry,1,
-7,100933,2023-11-06,Chat,Delivery,1,2
-8,100976,2023-11-06,Email,Product quality,1,2
-9,101349,2023-11-06,Phone,Delivery,1,4
-10,101421,2023-11-06,Email,Delivery,1,5
-11,101709,2023-11-06,In-store,Delivery,0,1
-12,101709,2023-11-06,Phone,Product quality,0,
-13,101712,2023-11-06,Email,Product quality,1,3
-14,101772,2023-11-06,Chat,Delivery,0,3
-15,100157,2023-11-07,Phone,Product quality,1,2
-16,100237,2023-11-07,Chat,General inquiry,1,4
-17,101066,2023-11-08,In-store,Product quality,1,1
-18,100559,2023-11-09,Phone,Product quality,1,4
-19,100307,2023-11-09,Email,Delivery,1,1
-20,101356,2023-11-10,Email,General inquiry,1,5
-21,100041,2023-11-11,Phone,General inquiry,1,5
-22,101604,2023-11-12,Chat,Billing,1,3
-23,101671,2023-11-12,Email,Product quality,0,4
-24,101271,2023-11-13,Chat,General inquiry,1,
-25,101934,2023-11-15,In-store,Delivery,1,1
-26,100876,2023-11-17,Chat,Product quality,1,3
-27,100832,2023-11-19,Email,Return/Refund,0,
-28,100811,2023-11-21,Phone,Return/Refund,0,
-29,100124,2023-11-22,Phone,General inquiry,0,
-30,100254,2023-11-22,Email,General inquiry,0,5
-31,101298,2023-11-22,Chat,Delivery,1,
-32,101847,2023-11-22,In-store,Delivery,1,4
-33,100933,2023-11-22,Phone,Product quality,1,
-34,101832,2023-11-24,Phone,Delivery,1,
-35,100309,2023-11-25,Phone,General inquiry,1,1
-36,100118,2023-11-26,Chat,General inquiry,1,3
-37,101990,2023-11-26,Phone,Billing,1,
-38,100280,2023-11-27,Email,Billing,1,2
-39,100103,2023-11-27,In-store,Loyalty points,1,
-40,101508,2023-11-28,Email,Product quality,1,4
-41,100545,2023-11-30,Email,General inquiry,1,3
-42,101990,2023-12-01,Email,Product quality,1,5
-43,101864,2023-12-02,Chat,Delivery,1,3
-44,100197,2023-12-03,Chat,Return/Refund,1,
-45,100488,2023-12-03,Chat,Loyalty points,1,3
-46,101400,2023-12-04,Email,General inquiry,1,
-47,101752,2023-12-04,Chat,Return/Refund,1,
-48,101417,2023-12-05,Email,General inquiry,1,
-49,100326,2023-12-06,Chat,Billing,1,
-50,101146,2023-12-07,Email,General inquiry,1,3
-51,100089,2023-12-08,Phone,Return/Refund,1,
-52,101650,2023-12-11,Email,Loyalty points,1,3
-53,101637,2023-12-13,Email,Return/Refund,0,
-54,101108,2023-12-13,In-store,Delivery,1,
-55,100599,2023-12-14,Phone,Product quality,1,5
-56,100925,2023-12-16,Email,Loyalty points,1,2
-57,101177,2023-12-16,Phone,General inquiry,1,
-58,100811,2023-12-16,Chat,Return/Refund,0,2
-59,101487,2023-12-18,Phone,Return/Refund,1,
-60,100874,2023-12-19,Email,General inquiry,1,
-61,100693,2023-12-20,Chat,Billing,0,
-62,101474,2023-12-20,Email,Delivery,1,
-63,101501,2023-12-21,Phone,Loyalty points,1,4
-64,100086,2023-12-23,Phone,Product quality,1,4
-65,101897,2023-12-23,Email,Return/Refund,1,5
-66,101413,2023-12-25,Phone,Product quality,0,5
-67,100929,2023-12-26,In-store,Billing,1,
-68,100020,2023-12-27,Email,Billing,1,
-69,101147,2023-12-27,Phone,Loyalty points,1,
-70,100498,2023-12-28,Chat,General inquiry,1,5
-71,101850,2023-12-30,In-store,Delivery,0,
-72,100983,2023-12-31,Phone,Delivery,1,
-73,101989,2023-12-31,Chat,Loyalty points,1,
-74,101080,2024-01-01,Chat,General inquiry,0,2
-75,100026,2024-01-02,Phone,Delivery,1,5
-76,101310,2024-01-03,In-store,Return/Refund,1,
-77,100023,2024-01-03,In-store,Product quality,0,2
-78,100479,2024-01-04,In-store,Billing,1,
-79,101910,2024-01-05,Phone,General inquiry,1,5
-80,101477,2024-01-06,Phone,General inquiry,1,
-81,101973,2024-01-06,Phone,Delivery,0,2
-82,100926,2024-01-07,Phone,Return/Refund,1,
-83,101954,2024-01-08,Phone,Delivery,0,
-84,100348,2024-01-09,Email,Return/Refund,1,4
-85,100012,2024-01-10,Phone,Product quality,1,5
-86,100975,2024-01-10,Phone,Return/Refund,1,
-87,101218,2024-01-11,Phone,Return/Refund,1,5
-88,100901,2024-01-11,Chat,Return/Refund,0,3
-89,101098,2024-01-13,Phone,Delivery,1,5
-90,100871,2024-01-14,Chat,Delivery,1,
-91,101039,2024-01-14,Email,Loyalty points,1,3
-92,101407,2024-01-14,Email,General inquiry,1,
-93,101332,2024-01-15,Email,General inquiry,1,1
-94,100038,2024-01-15,Chat,Billing,1,3
-95,100664,2024-01-15,In-store,Return/Refund,1,
-96,101368,2024-01-18,Phone,Loyalty points,1,1
-97,101108,2024-01-18,Phone,Return/Refund,1,1
-98,100902,2024-01-19,Email,General inquiry,0,4
-99,101173,2024-01-20,Phone,Delivery,0,
-100,101356,2024-01-20,Email,Billing,1,5
-101,100468,2024-01-21,Phone,Billing,1,4
-102,100129,2024-01-25,Phone,Loyalty points,1,
-103,100984,2024-01-25,Phone,Delivery,1,4
-104,101776,2024-01-26,Chat,Loyalty points,1,1
-105,101303,2024-01-27,In-store,General inquiry,1,
-106,101922,2024-01-28,In-store,General inquiry,1,3
-107,101902,2024-01-29,Chat,Return/Refund,1,1
-108,101934,2024-01-29,Chat,Billing,1,1
-109,100599,2024-01-31,Chat,Loyalty points,1,4
-110,101605,2024-02-01,Phone,Return/Refund,1,3
-111,101634,2024-02-01,Phone,Delivery,1,
-112,100522,2024-02-02,Phone,Loyalty points,1,2
-113,100815,2024-02-04,Email,Delivery,1,
-114,101452,2024-02-04,Chat,Loyalty points,1,1
-115,100133,2024-02-05,Phone,Billing,1,
-116,100831,2024-02-05,Email,Product quality,1,3
-117,101580,2024-02-08,Phone,General inquiry,1,5
-118,100926,2024-02-09,Phone,Loyalty points,1,
-119,100859,2024-02-10,In-store,Return/Refund,0,
-120,101473,2024-02-10,In-store,Return/Refund,0,4
-121,101916,2024-02-10,Phone,Loyalty points,1,3
-122,100931,2024-02-10,Phone,Product quality,0,2
-123,101163,2024-02-13,Email,Return/Refund,0,
-124,100902,2024-02-14,In-store,Delivery,1,1
-125,101061,2024-02-14,Phone,Delivery,1,1
-126,101127,2024-02-14,Chat,Return/Refund,1,
-127,101152,2024-02-14,Phone,Delivery,0,
-128,100757,2024-02-15,Phone,Loyalty points,1,1
-129,101119,2024-02-17,In-store,Billing,1,3
-130,101529,2024-02-18,In-store,Product quality,1,
-131,101015,2024-02-24,Email,Delivery,1,
-132,100105,2024-02-25,Email,Loyalty points,1,5
-133,101454,2024-02-26,Chat,Delivery,0,5
-134,100185,2024-02-28,Phone,Delivery,1,5
-135,100238,2024-02-28,Phone,Loyalty points,0,5
-136,101337,2024-02-28,Chat,Loyalty points,1,
-137,100786,2024-02-29,Phone,Delivery,1,3
-138,101289,2024-03-02,Chat,Loyalty points,0,2
-139,100926,2024-03-02,Email,Loyalty points,0,
-140,100926,2024-03-03,Phone,Product quality,1,
-141,101337,2024-03-04,Chat,Billing,1,
-142,100380,2024-03-04,Email,Return/Refund,0,
-143,101801,2024-03-05,Email,Return/Refund,1,4
-144,101397,2024-03-05,Phone,Return/Refund,1,2
-145,101650,2024-03-06,In-store,General inquiry,1,3
-146,101073,2024-03-07,Email,Loyalty points,1,
-147,101338,2024-03-08,Chat,Loyalty points,1,5
-148,101744,2024-03-08,Phone,General inquiry,1,
-149,101165,2024-03-10,Phone,Loyalty points,1,
-150,101820,2024-03-10,In-store,Return/Refund,0,4
-151,100975,2024-03-11,In-store,Product quality,1,
-152,101942,2024-03-12,Email,General inquiry,1,
-153,100862,2024-03-13,Phone,Loyalty points,1,2
-154,101273,2024-03-13,Phone,Billing,0,5
-155,101689,2024-03-14,Phone,Loyalty points,1,4
-156,101706,2024-03-14,Phone,Delivery,0,
-157,101017,2024-03-14,Phone,Product quality,0,2
-158,101628,2024-03-16,Phone,Delivery,1,5
-159,100557,2024-03-18,Chat,Delivery,1,4
-160,100931,2024-03-18,Email,Product quality,1,2
-161,101627,2024-03-18,Chat,Delivery,1,2
-162,101087,2024-03-19,Phone,Loyalty points,1,3
-163,100086,2024-03-19,Phone,Billing,0,1
-164,100266,2024-03-20,Email,Delivery,1,
-165,100222,2024-03-22,Phone,Product quality,1,4
-166,100246,2024-03-23,Chat,General inquiry,1,4
-167,101696,2024-03-25,Chat,Return/Refund,0,
-168,101265,2024-03-25,Chat,Return/Refund,0,3
-169,101868,2024-03-25,Email,Return/Refund,0,3
-170,100948,2024-03-26,Phone,Loyalty points,1,
-171,100944,2024-03-27,In-store,General inquiry,1,2
-172,101330,2024-03-28,Email,Return/Refund,0,4
-173,101343,2024-03-28,Phone,General inquiry,0,5
-174,101627,2024-03-28,Chat,Delivery,1,1
-175,100868,2024-03-30,In-store,Return/Refund,1,3
-176,100786,2024-03-31,Chat,Return/Refund,0,3
-177,101683,2024-04-01,Phone,General inquiry,1,5
-178,100463,2024-04-01,Chat,Loyalty points,0,1
-179,101861,2024-04-01,Phone,Delivery,0,
-180,100302,2024-04-08,Chat,Delivery,0,5
-181,100765,2024-04-09,Chat,Return/Refund,1,
-182,101017,2024-04-09,Chat,Delivery,0,3
-183,100326,2024-04-11,Phone,Loyalty points,1,2
-184,101828,2024-04-11,In-store,Billing,1,5
-185,101957,2024-04-11,Email,Return/Refund,0,2
-186,100369,2024-04-12,In-store,Product quality,1,
-187,100906,2024-04-12,Phone,Return/Refund,1,5
-188,101128,2024-04-12,Phone,Loyalty points,1,
-189,101220,2024-04-12,Chat,General inquiry,0,3
-190,100086,2024-04-12,Chat,Product quality,1,4
-191,100081,2024-04-13,Phone,Return/Refund,1,
-192,101902,2024-04-13,Chat,Product quality,1,5
-193,101962,2024-04-13,Email,Loyalty points,1,
-194,101183,2024-04-13,Phone,Product quality,0,
-195,100295,2024-04-14,Chat,General inquiry,1,
-196,101753,2024-04-14,Chat,Product quality,1,3
-197,100413,2024-04-15,Phone,Delivery,0,3
-198,100253,2024-04-17,Email,Loyalty points,1,
-199,101244,2024-04-17,Chat,General inquiry,1,
-200,101868,2024-04-17,Phone,Billing,0,1
-201,100349,2024-04-18,In-store,Return/Refund,1,3
-202,100219,2024-04-19,Phone,Delivery,1,1
-203,100687,2024-04-19,Chat,General inquiry,0,2
-204,101227,2024-04-20,Chat,Product quality,1,2
-205,101290,2024-04-20,Phone,Return/Refund,1,3
-206,101986,2024-04-21,Phone,General inquiry,1,5
-207,101380,2024-04-21,Email,Return/Refund,0,2
-208,100491,2024-04-22,Chat,Return/Refund,1,
-209,100222,2024-04-24,Phone,Return/Refund,0,5
-210,100114,2024-04-25,Phone,Loyalty points,1,4
-211,100868,2024-04-25,Email,Billing,1,
-212,100620,2024-04-26,In-store,Loyalty points,1,5
-213,100657,2024-04-28,In-store,Billing,1,3
-214,100054,2024-04-29,Phone,Loyalty points,1,3
-215,101841,2024-04-29,Phone,Product quality,1,4
-216,101588,2024-04-29,Phone,Billing,0,
-217,101015,2024-05-01,In-store,Return/Refund,1,
-218,101188,2024-05-01,Phone,Return/Refund,1,
-219,100869,2024-05-02,Phone,Return/Refund,0,
-220,101162,2024-05-03,Chat,Loyalty points,1,5
-221,101801,2024-05-05,Phone,Return/Refund,1,
-222,101716,2024-05-05,Phone,Delivery,1,2
-223,101369,2024-05-06,Phone,Loyalty points,1,3
-224,101724,2024-05-06,Phone,Billing,1,2
-225,100445,2024-05-08,Phone,Delivery,1,
-226,101547,2024-05-08,Email,General inquiry,1,5
-227,100956,2024-05-09,Phone,Delivery,1,4
-228,101361,2024-05-09,Chat,Delivery,1,4
-229,101765,2024-05-09,Phone,Loyalty points,1,
-230,100050,2024-05-12,Phone,Loyalty points,1,5
-231,101665,2024-05-13,Chat,Return/Refund,1,4
-232,101870,2024-05-14,Phone,Return/Refund,1,
-233,101801,2024-05-17,Phone,General inquiry,1,5
-234,101868,2024-05-18,Chat,Return/Refund,0,2
-235,101515,2024-05-19,Chat,Loyalty points,1,3
-236,100462,2024-05-20,Email,Return/Refund,1,3
-237,100614,2024-05-21,In-store,Return/Refund,1,
-238,101047,2024-05-21,Email,General inquiry,1,4
-239,101628,2024-05-21,In-store,Billing,1,1
-240,101782,2024-05-21,In-store,General inquiry,1,
-241,101706,2024-05-23,Phone,Return/Refund,1,
-242,101871,2024-05-23,Phone,Delivery,0,4
-243,100325,2024-05-24,Email,Return/Refund,1,
-244,100629,2024-05-24,Chat,General inquiry,0,
-245,101206,2024-05-26,Phone,Loyalty points,1,
-246,100698,2024-05-28,Email,Delivery,1,
-247,100348,2024-05-28,Chat,Product quality,0,
-248,101356,2024-05-29,Chat,Return/Refund,0,3
-249,100522,2024-05-30,Phone,Billing,1,
-250,101633,2024-05-30,Chat,Delivery,1,5
-251,100749,2024-06-01,Chat,General inquiry,1,4
-252,100975,2024-06-01,In-store,Delivery,1,5
-253,100072,2024-06-01,Phone,Product quality,1,
-254,100733,2024-06-02,Email,Return/Refund,1,1
-255,101851,2024-06-03,Phone,Delivery,1,3
-256,101873,2024-06-04,Phone,Product quality,1,4
-257,101015,2024-06-05,Email,Return/Refund,0,2
-258,100855,2024-06-07,Chat,Delivery,1,
-259,101425,2024-06-07,Phone,General inquiry,0,1
-260,101630,2024-06-07,Email,Delivery,1,
-261,100608,2024-06-09,Email,Product quality,1,1
-262,100630,2024-06-10,Phone,Delivery,1,
-263,101417,2024-06-11,Chat,Product quality,1,
-264,101897,2024-06-12,In-store,General inquiry,1,
-265,100580,2024-06-15,Chat,Loyalty points,0,
-266,100729,2024-06-15,In-store,Product quality,1,
-267,100796,2024-06-16,Phone,General inquiry,1,3
-268,100814,2024-06-18,Chat,Return/Refund,1,
-269,100965,2024-06-18,Chat,Return/Refund,1,
-270,101634,2024-06-18,In-store,Delivery,1,4
-271,100738,2024-06-19,Phone,Product quality,0,
-272,101211,2024-06-19,Phone,Return/Refund,1,4
-273,100604,2024-06-20,Chat,Delivery,1,
-274,101956,2024-06-20,Email,Delivery,1,1
-275,100727,2024-06-21,Chat,General inquiry,1,5
-276,101137,2024-06-21,Email,Loyalty points,0,4
-277,101752,2024-06-21,Chat,Billing,1,5
-278,101238,2024-06-21,Chat,Return/Refund,0,
-279,101281,2024-06-22,Email,General inquiry,0,
-280,100491,2024-06-22,Phone,Return/Refund,1,3
-281,100075,2024-06-24,Chat,Product quality,1,1
-282,101437,2024-06-24,Phone,Product quality,1,
-283,100608,2024-06-25,Chat,Return/Refund,1,
-284,100133,2024-06-26,Chat,Loyalty points,1,
-285,101530,2024-06-26,Phone,Loyalty points,1,4
-286,100163,2024-06-26,Chat,Loyalty points,1,
-287,101417,2024-06-26,Chat,Return/Refund,0,1
-288,101113,2024-06-27,Email,Return/Refund,0,4
-289,101461,2024-06-27,Email,Loyalty points,1,4
-290,101849,2024-06-27,In-store,Return/Refund,1,5
-291,100236,2024-06-28,Email,Delivery,1,4
-292,100450,2024-06-28,Email,General inquiry,1,3
-293,100843,2024-06-28,Phone,Delivery,1,5
-294,101433,2024-06-28,Chat,Delivery,0,
-295,100221,2024-07-03,Phone,Return/Refund,1,
-296,100259,2024-07-04,Phone,Return/Refund,1,
-297,101775,2024-07-04,Chat,General inquiry,1,
-298,101113,2024-07-05,Chat,Delivery,1,
-299,100363,2024-07-06,In-store,Return/Refund,1,5
-300,100101,2024-07-07,In-store,General inquiry,1,
-301,100491,2024-07-08,Phone,Product quality,1,
-302,100578,2024-07-09,In-store,Return/Refund,1,4
-303,101828,2024-07-10,Phone,General inquiry,1,
-304,100287,2024-07-11,Phone,General inquiry,1,3
-305,101304,2024-07-11,Chat,Return/Refund,1,2
-306,101461,2024-07-11,In-store,Delivery,1,4
-307,100244,2024-07-12,Chat,Loyalty points,1,3
-308,100280,2024-07-13,Phone,Loyalty points,1,
-309,100295,2024-07-16,Email,Return/Refund,1,1
-310,101015,2024-07-17,In-store,Delivery,0,2
-311,100057,2024-07-18,Chat,Loyalty points,1,4
-312,101490,2024-07-22,Chat,Delivery,1,
-313,101640,2024-07-22,In-store,Loyalty points,1,
-314,100494,2024-07-24,Phone,General inquiry,0,5
-315,101620,2024-07-24,Phone,Billing,1,
-316,100445,2024-07-25,Email,Delivery,1,
-317,101039,2024-07-25,Phone,Billing,1,
-318,101375,2024-07-25,Email,General inquiry,1,5
-319,101675,2024-07-25,Phone,General inquiry,1,4
-320,100287,2024-07-26,In-store,Return/Refund,1,5
-321,101620,2024-07-28,Chat,General inquiry,1,
-322,101752,2024-07-28,Phone,Product quality,1,1
-323,101896,2024-07-28,Email,Return/Refund,1,3
-324,100719,2024-07-28,Chat,Return/Refund,0,2
-325,101358,2024-07-28,Chat,Delivery,0,
-326,100552,2024-07-29,Phone,Loyalty points,1,
-327,101689,2024-07-29,Chat,General inquiry,1,
-328,101520,2024-07-30,Phone,Return/Refund,1,3
-329,101923,2024-08-01,Phone,Return/Refund,0,
-330,100030,2024-08-03,Chat,General inquiry,1,
-331,101363,2024-08-03,In-store,Product quality,1,
-332,100078,2024-08-03,Phone,Loyalty points,1,
-333,100672,2024-08-04,Chat,Billing,1,3
-334,101372,2024-08-04,Phone,General inquiry,1,
-335,101417,2024-08-05,Phone,Product quality,1,
-336,101282,2024-08-08,Chat,Return/Refund,1,1
-337,100416,2024-08-09,Email,General inquiry,1,
-338,101233,2024-08-09,Chat,Delivery,1,
-339,101273,2024-08-09,Phone,Delivery,1,4
-340,100521,2024-08-09,In-store,Product quality,1,4
-341,100869,2024-08-09,Phone,Return/Refund,0,5
-342,101512,2024-08-10,Phone,Return/Refund,0,
-343,100387,2024-08-10,Phone,Product quality,0,
-344,100632,2024-08-11,Phone,Return/Refund,1,
-345,100837,2024-08-13,In-store,Return/Refund,1,5
-346,101665,2024-08-13,In-store,Delivery,1,
-347,100950,2024-08-14,Chat,Delivery,1,1
-348,100198,2024-08-15,Email,Loyalty points,1,3
-349,100528,2024-08-16,Chat,Return/Refund,1,3
-350,100546,2024-08-16,Email,Delivery,0,
-351,101778,2024-08-16,Chat,Delivery,1,
-352,100213,2024-08-17,Phone,Return/Refund,1,3
-353,100475,2024-08-17,Chat,General inquiry,1,1
-354,101315,2024-08-18,In-store,Return/Refund,1,5
-355,100684,2024-08-19,In-store,Return/Refund,1,
-356,100645,2024-08-20,Phone,Billing,1,4
-357,100018,2024-08-21,Phone,General inquiry,1,3
-358,101791,2024-08-21,Email,Return/Refund,0,3
-359,100632,2024-08-21,In-store,Billing,1,
-360,100363,2024-08-22,Phone,General inquiry,1,
-361,101188,2024-08-23,Chat,General inquiry,1,3
-362,101634,2024-08-23,Phone,Loyalty points,1,5
-363,100020,2024-08-25,Chat,Loyalty points,1,5
-364,100908,2024-08-25,Chat,Delivery,1,
-365,101582,2024-08-26,In-store,Delivery,1,3
-366,100099,2024-08-27,Email,Loyalty points,1,5
-367,100730,2024-08-27,Phone,Return/Refund,0,4
-368,101050,2024-08-27,Phone,Return/Refund,1,2
-369,101889,2024-08-28,Phone,Delivery,1,
-370,101937,2024-08-28,Phone,Product quality,1,
-371,100917,2024-08-29,Email,Product quality,0,1
-372,101454,2024-08-30,Email,Return/Refund,1,1
-373,101190,2024-08-30,Phone,General inquiry,0,
-374,101402,2024-08-31,Chat,Loyalty points,1,
-375,101956,2024-09-03,In-store,Delivery,0,4
-376,100572,2024-09-05,Chat,Return/Refund,1,
-377,101597,2024-09-05,In-store,Delivery,0,
-378,100262,2024-09-07,Chat,General inquiry,1,2
-379,100079,2024-09-10,Chat,General inquiry,1,4
-380,100363,2024-09-10,Phone,Product quality,0,2
-381,100433,2024-09-11,Chat,Delivery,0,4
-382,101485,2024-09-11,Chat,Delivery,1,
-383,101990,2024-09-11,Phone,General inquiry,0,4
-384,100028,2024-09-11,Email,Delivery,0,5
-385,100756,2024-09-12,Email,Loyalty points,1,2
-386,101073,2024-09-12,Chat,Product quality,1,
-387,100412,2024-09-13,In-store,Billing,1,4
-388,100941,2024-09-16,In-store,General inquiry,1,
-389,101236,2024-09-16,In-store,Delivery,0,
-390,101659,2024-09-16,Email,Delivery,1,2
-391,101877,2024-09-19,Chat,General inquiry,1,4
-392,100631,2024-09-20,Phone,Loyalty points,0,2
-393,100560,2024-09-20,In-store,Loyalty points,1,5
-394,100522,2024-09-21,Phone,General inquiry,1,
-395,101967,2024-09-21,Phone,Return/Refund,1,2
-396,101455,2024-09-22,Email,Delivery,1,
-397,101532,2024-09-22,Chat,Return/Refund,1,2
-398,101641,2024-09-22,Email,Return/Refund,1,3
-399,100295,2024-09-23,Chat,General inquiry,0,5
-400,100853,2024-09-24,Phone,Delivery,1,
-401,101707,2024-09-24,Chat,Loyalty points,1,
-402,100505,2024-09-25,Phone,General inquiry,1,4
-403,100314,2024-09-26,In-store,General inquiry,1,
-404,100941,2024-09-26,Phone,Delivery,1,
-405,100884,2024-09-27,Phone,Return/Refund,1,3
-406,100644,2024-09-29,In-store,Loyalty points,1,2
-407,101348,2024-09-29,Phone,Return/Refund,1,
-408,100643,2024-09-30,Chat,Loyalty points,0,
-409,101794,2024-09-30,Email,Return/Refund,1,
-410,100020,2024-10-01,Chat,Delivery,1,
-411,100049,2024-10-01,In-store,General inquiry,1,
-412,101299,2024-10-01,Email,Product quality,1,5
-413,100157,2024-10-02,Email,Delivery,0,2
-414,101747,2024-10-09,Email,Return/Refund,1,4
-415,101557,2024-10-10,Phone,Billing,1,
-416,100837,2024-10-11,In-store,Loyalty points,1,5
-417,100326,2024-10-13,Phone,Loyalty points,1,
-418,101453,2024-10-13,Chat,Billing,1,
-419,100839,2024-10-15,Email,General inquiry,1,5
-420,101629,2024-10-16,Phone,General inquiry,1,5
-421,101348,2024-10-19,Chat,Return/Refund,1,
-422,101211,2024-10-20,Email,General inquiry,1,2
-423,101490,2024-10-20,Phone,Loyalty points,1,4
-424,100547,2024-10-21,In-store,Delivery,0,
-425,101986,2024-10-21,Chat,Delivery,1,5
-426,100614,2024-10-23,Chat,Delivery,1,5
-427,100816,2024-10-23,Chat,Loyalty points,1,
-428,101534,2024-10-23,Email,Loyalty points,1,4
-429,101512,2024-10-24,Chat,Return/Refund,0,
-430,100837,2024-10-25,Email,General inquiry,1,5
-431,100912,2024-10-26,Chat,Delivery,1,4
-432,101236,2024-10-26,Email,Return/Refund,1,3
-433,100848,2024-10-27,Phone,Return/Refund,0,5
-434,100643,2024-10-27,Email,Product quality,1,1
-435,101363,2024-10-29,Chat,Product quality,1,3
-436,101989,2024-10-29,Phone,Loyalty points,1,
-437,100363,2024-10-29,Phone,Product quality,0,4
-438,101820,2024-11-01,Phone,Product quality,1,
-439,100637,2024-11-01,Email,Delivery,1,
-440,100792,2024-11-02,Chat,Billing,1,
-441,100542,2024-11-02,Email,Return/Refund,1,2
-442,100590,2024-11-03,Chat,Return/Refund,1,
-443,101580,2024-11-04,Chat,General inquiry,1,5
-444,101620,2024-11-04,Chat,General inquiry,1,
-445,101662,2024-11-04,In-store,Loyalty points,0,1
-446,100709,2024-11-05,Phone,Loyalty points,0,3
-447,100363,2024-11-06,Phone,Delivery,1,4
-448,100207,2024-11-07,Phone,General inquiry,1,
-449,100781,2024-11-07,Phone,Return/Refund,1,
-450,100130,2024-11-08,Email,Return/Refund,1,4
-451,100591,2024-11-08,Email,Billing,1,4
-452,101899,2024-11-08,Phone,Delivery,1,1
-453,101182,2024-11-09,Chat,Product quality,1,4
-454,100781,2024-11-10,Chat,Delivery,1,5
-455,101715,2024-11-10,Chat,Loyalty points,1,2
-456,100768,2024-11-11,In-store,Delivery,1,
-457,100939,2024-11-11,Phone,Loyalty points,1,
-458,101500,2024-11-11,Phone,General inquiry,1,2
-459,100708,2024-11-13,Phone,General inquiry,1,5
-460,100260,2024-11-14,Email,Return/Refund,1,1
-461,100113,2024-11-15,Chat,Product quality,1,
-462,100642,2024-11-16,In-store,Delivery,0,5
-463,100894,2024-11-16,Phone,Return/Refund,1,4
-464,101580,2024-11-16,Phone,Loyalty points,1,
-465,101387,2024-11-17,Phone,Delivery,0,2
-466,100729,2024-11-18,Chat,General inquiry,1,2
-467,100848,2024-11-18,Email,Loyalty points,1,2
-468,100605,2024-11-20,Phone,General inquiry,1,2
-469,101264,2024-11-20,Chat,Delivery,1,4
-470,100819,2024-11-20,Chat,Loyalty points,1,
-471,101166,2024-11-21,Chat,Return/Refund,1,5
-472,100643,2024-11-21,Chat,Product quality,1,1
-473,100694,2024-11-21,Phone,Product quality,0,3
-474,100362,2024-11-22,Email,General inquiry,1,
-475,100548,2024-11-22,Chat,General inquiry,1,
-476,101927,2024-11-23,In-store,Return/Refund,1,
-477,100956,2024-11-24,Email,Return/Refund,0,
-478,101146,2024-11-24,Phone,General inquiry,1,3
-479,100761,2024-11-28,Chat,Delivery,1,
-480,101013,2024-11-29,Chat,Loyalty points,1,4
-481,101235,2024-11-29,Phone,Billing,1,5
-482,100239,2024-11-30,Chat,Return/Refund,1,4
-483,100697,2024-12-02,Chat,General inquiry,1,5
-484,100405,2024-12-04,In-store,General inquiry,1,4
-485,101978,2024-12-04,Phone,General inquiry,1,3
-486,100505,2024-12-04,Email,Billing,0,1
-487,101581,2024-12-05,Phone,Product quality,1,
-488,101991,2024-12-05,Phone,Product quality,0,1
-489,101263,2024-12-06,Chat,Loyalty points,0,5
-490,101773,2024-12-06,Phone,Billing,1,
-491,100402,2024-12-08,In-store,General inquiry,1,
-492,101310,2024-12-08,Chat,Delivery,1,
-493,100975,2024-12-09,In-store,Delivery,0,5
-494,100249,2024-12-10,Chat,Loyalty points,1,5
-495,101346,2024-12-10,Email,Delivery,1,5
-496,101521,2024-12-12,In-store,Loyalty points,1,
-497,101689,2024-12-14,Chat,General inquiry,1,4
-498,101997,2024-12-14,In-store,Delivery,1,
-499,100194,2024-12-15,Chat,Product quality,0,
-500,101385,2024-12-17,Phone,Delivery,1,2
-501,101039,2024-12-19,Phone,General inquiry,1,
-502,100095,2024-12-19,Phone,Billing,0,
-503,100621,2024-12-20,Email,Billing,0,
-504,101752,2024-12-21,Email,Loyalty points,1,
-505,101500,2024-12-22,Chat,Billing,1,3
-506,101594,2024-12-24,In-store,General inquiry,1,4
-507,101708,2024-12-24,Email,Return/Refund,1,
-508,101827,2024-12-24,Email,General inquiry,1,
-509,101237,2024-12-26,Phone,General inquiry,1,4
-510,101796,2024-12-26,Chat,Loyalty points,1,
-511,100781,2024-12-26,Chat,Billing,1,4
-512,100542,2024-12-27,Phone,Loyalty points,1,1
-513,100865,2024-12-27,Chat,Return/Refund,1,
-514,101274,2024-12-28,Phone,Return/Refund,0,2
-515,101836,2024-12-28,Chat,Return/Refund,1,5
-516,100095,2024-12-28,Email,Loyalty points,0,2
-517,100194,2024-12-28,Email,General inquiry,1,1
-518,100598,2024-12-29,Chat,Return/Refund,1,4
-519,101307,2024-12-30,Phone,General inquiry,1,4
-520,100364,2024-12-30,Email,Return/Refund,1,2
-521,100364,2024-12-30,In-store,Product quality,0,2
-522,101274,2024-12-31,Chat,Delivery,0,
-523,100005,2025-01-01,Email,Return/Refund,1,2
-524,101510,2025-01-01,Chat,General inquiry,1,
-525,100888,2025-01-01,Phone,Return/Refund,1,
-526,100738,2025-01-02,Phone,Delivery,1,4
-527,100806,2025-01-03,Phone,Loyalty points,1,
-528,100842,2025-01-05,Phone,Delivery,0,2
-529,100685,2025-01-06,Phone,Product quality,1,
-530,100805,2025-01-08,Email,Loyalty points,1,4
-531,100544,2025-01-09,Email,Return/Refund,1,4
-532,101839,2025-01-09,Phone,General inquiry,1,4
-533,101877,2025-01-09,Phone,Loyalty points,1,
-534,101997,2025-01-10,Phone,Product quality,0,
-535,100192,2025-01-13,In-store,Loyalty points,1,4
-536,101281,2025-01-13,Chat,Loyalty points,1,
-537,101794,2025-01-14,Phone,General inquiry,1,
-538,101550,2025-01-15,Phone,Loyalty points,1,1
-539,100489,2025-01-17,Phone,Loyalty points,1,5
-540,100779,2025-01-18,Chat,Return/Refund,1,3
-541,100194,2025-01-18,Chat,Return/Refund,0,
-542,100466,2025-01-18,Chat,Product quality,1,4
-543,101126,2025-01-20,In-store,Billing,1,
-544,101293,2025-01-20,In-store,Delivery,0,3
-545,100375,2025-01-21,Phone,Product quality,1,
-546,100298,2025-01-22,Phone,General inquiry,1,5
-547,100375,2025-01-23,Phone,General inquiry,1,5
-548,100734,2025-01-23,Email,Billing,0,5
-549,101169,2025-01-23,Chat,Delivery,1,
-550,101362,2025-01-23,In-store,Product quality,1,4
-551,101916,2025-01-26,Email,Billing,1,1
-552,101565,2025-01-27,Phone,Return/Refund,1,3
-553,100358,2025-01-29,Chat,Delivery,0,5
-554,101000,2025-01-29,Email,Delivery,1,4
-555,101308,2025-01-29,Chat,Billing,1,
-556,101247,2025-01-29,Phone,Billing,1,2
-557,100128,2025-01-31,Chat,Return/Refund,0,4
-558,102000,2025-02-02,Email,Return/Refund,0,
-559,100857,2025-02-03,Phone,Return/Refund,1,5
-560,100781,2025-02-03,Phone,Product quality,1,
-561,100757,2025-02-04,Email,Loyalty points,0,4
-562,100769,2025-02-04,Phone,Loyalty points,1,
-563,101961,2025-02-04,Email,Delivery,1,4
-564,101288,2025-02-05,In-store,Product quality,1,4
-565,100949,2025-02-05,In-store,Return/Refund,0,1
-566,101254,2025-02-07,Email,Loyalty points,1,2
-567,101255,2025-02-08,Chat,Delivery,1,4
-568,100888,2025-02-08,Email,Product quality,1,1
-569,101640,2025-02-09,Chat,Loyalty points,1,4
-570,101461,2025-02-10,Phone,Return/Refund,1,
-571,101253,2025-02-11,In-store,Delivery,1,4
-572,100371,2025-02-12,Phone,Loyalty points,0,4
-573,100186,2025-02-14,Email,Return/Refund,1,
-574,101466,2025-02-15,In-store,Loyalty points,1,
-575,101086,2025-02-16,In-store,General inquiry,1,5
-576,100261,2025-02-17,Phone,Return/Refund,1,5
-577,101167,2025-02-17,Phone,Delivery,1,5
-578,100801,2025-02-18,Phone,Billing,1,3
-579,100760,2025-02-19,Chat,Delivery,1,
-580,101373,2025-02-21,Email,Loyalty points,1,
-581,100800,2025-02-22,Email,General inquiry,1,5
-582,101432,2025-02-23,In-store,Delivery,1,2
-583,101456,2025-02-23,Chat,General inquiry,1,3
-584,101124,2025-02-25,Phone,General inquiry,1,5
-585,100844,2025-02-25,Phone,Return/Refund,1,
-586,100223,2025-02-27,In-store,General inquiry,1,2
-587,100558,2025-02-27,In-store,Delivery,1,5
-588,100784,2025-02-27,Chat,Loyalty points,1,
-589,101035,2025-02-27,Phone,General inquiry,1,1
-590,101741,2025-02-27,Phone,Delivery,1,3
-591,100370,2025-03-06,Chat,Delivery,1,1
-592,101373,2025-03-06,Email,Loyalty points,1,2
-593,100846,2025-03-07,Chat,General inquiry,1,
-594,101160,2025-03-07,Phone,Loyalty points,1,5
-595,101748,2025-03-08,Chat,Product quality,1,5
-596,101247,2025-03-08,Email,Delivery,1,
-597,101580,2025-03-10,Phone,General inquiry,1,4
-598,101851,2025-03-12,Phone,Product quality,1,4
-599,100070,2025-03-13,Phone,General inquiry,1,1
-600,101724,2025-03-13,Phone,Loyalty points,1,5
-601,100149,2025-03-13,Phone,Return/Refund,1,1
-602,101328,2025-03-16,Chat,Billing,1,4
-603,101921,2025-03-16,Phone,Product quality,1,5
-604,100843,2025-03-17,Chat,Delivery,1,
-605,100290,2025-03-18,Phone,Billing,1,4
-606,100035,2025-03-19,Phone,Billing,0,1
-607,100950,2025-03-20,Phone,Delivery,1,3
-608,101493,2025-03-23,Chat,Return/Refund,0,5
-609,101556,2025-03-23,In-store,General inquiry,1,2
-610,101728,2025-03-23,Phone,Return/Refund,1,3
-611,101624,2025-03-24,In-store,General inquiry,1,
-612,100302,2025-03-25,Phone,Return/Refund,1,
-613,100977,2025-03-25,Chat,Delivery,1,
-614,101719,2025-03-25,Email,Loyalty points,1,
-615,101095,2025-03-26,Email,Loyalty points,0,5
-616,100997,2025-03-26,In-store,Delivery,1,
-617,101493,2025-03-28,Chat,Delivery,0,3
-618,100984,2025-03-28,Chat,Delivery,1,
-619,100343,2025-03-29,Email,General inquiry,1,
-620,101224,2025-03-29,Chat,Delivery,1,5
-621,101504,2025-03-29,Phone,Loyalty points,1,2
-622,100370,2025-03-31,Chat,Product quality,1,4
-623,101593,2025-03-31,Phone,Product quality,0,1
-624,101117,2025-04-01,Phone,General inquiry,1,4
-625,101976,2025-04-01,Chat,General inquiry,1,
-626,100512,2025-04-02,Phone,General inquiry,0,
-627,100951,2025-04-03,Phone,Loyalty points,1,
-628,101373,2025-04-03,Chat,Loyalty points,1,
-629,100337,2025-04-03,Email,Return/Refund,1,2
-630,101728,2025-04-03,Chat,Return/Refund,0,
-631,100522,2025-04-04,Chat,Loyalty points,1,3
-632,100614,2025-04-04,Email,Delivery,1,
-633,101161,2025-04-04,Phone,Delivery,1,
-634,101620,2025-04-05,Email,Product quality,1,4
-635,100724,2025-04-06,Email,Product quality,1,2
-636,101385,2025-04-06,In-store,Loyalty points,0,4
-637,101377,2025-04-07,Phone,General inquiry,1,5
-638,100232,2025-04-07,Phone,Product quality,0,
-639,100196,2025-04-08,Email,Delivery,1,
-640,100439,2025-04-09,Phone,Product quality,0,4
-641,101669,2025-04-09,Chat,Delivery,1,5
-642,100426,2025-04-09,Phone,Delivery,0,
-643,101631,2025-04-11,Chat,Product quality,1,3
-644,100430,2025-04-12,Phone,Product quality,1,5
-645,100903,2025-04-12,Email,Product quality,1,
-646,100406,2025-04-13,Phone,Billing,0,
-647,100070,2025-04-14,Chat,General inquiry,1,4
-648,101264,2025-04-14,Phone,Billing,1,3
-649,101393,2025-04-14,Chat,Product quality,1,
-650,101848,2025-04-15,Phone,Return/Refund,1,2
-651,100714,2025-04-15,Phone,Product quality,1,
-652,101425,2025-04-17,Email,Loyalty points,0,3
-653,100370,2025-04-17,Phone,Return/Refund,1,
-654,101254,2025-04-17,In-store,Loyalty points,1,3
-655,101449,2025-04-19,Phone,Loyalty points,1,
-656,101883,2025-04-20,Phone,Delivery,1,1
-657,100616,2025-04-21,Chat,Billing,1,3
-658,100156,2025-04-22,In-store,General inquiry,1,
-659,100149,2025-04-22,In-store,Product quality,1,
-660,100370,2025-04-22,Chat,Delivery,1,4
-661,100692,2025-04-23,Email,Delivery,0,
-662,101286,2025-04-23,Phone,Delivery,1,1
-663,100053,2025-04-24,In-store,General inquiry,1,4
-664,100471,2025-04-24,Phone,Billing,1,5
-665,100734,2025-04-26,Phone,Product quality,1,3
-666,101045,2025-04-26,Chat,Return/Refund,1,
-667,100997,2025-04-26,Phone,Return/Refund,1,1
-668,101706,2025-04-27,Chat,Delivery,1,3
-669,101559,2025-04-28,Chat,Loyalty points,1,
-670,100915,2025-04-29,In-store,Return/Refund,1,5
-671,101014,2025-04-29,Phone,Return/Refund,0,
-672,100269,2025-04-30,Email,Product quality,1,
-673,101870,2025-04-30,In-store,Loyalty points,1,4
-674,101631,2025-04-30,Email,Billing,1,
-675,101728,2025-04-30,In-store,Return/Refund,0,1
-676,100050,2025-05-01,Chat,Loyalty points,1,
-677,100716,2025-05-02,In-store,Loyalty points,1,4
-678,101414,2025-05-04,Phone,General inquiry,0,3
-679,100322,2025-05-07,Chat,Billing,0,
-680,101560,2025-05-10,Phone,General inquiry,1,4
-681,101735,2025-05-10,Chat,Loyalty points,1,
-682,101624,2025-05-13,Chat,Billing,1,
-683,101344,2025-05-14,Email,Delivery,1,1
-684,101705,2025-05-15,Chat,Loyalty points,0,4
-685,101148,2025-05-16,Chat,Billing,1,
-686,101105,2025-05-17,Phone,Delivery,1,3
-687,100221,2025-05-17,Phone,Billing,0,
-688,100564,2025-05-18,Chat,General inquiry,1,
-689,100860,2025-05-21,Chat,Loyalty points,1,
-690,101649,2025-05-21,Email,Delivery,0,
-691,100945,2025-05-22,Email,Product quality,0,3
-692,100025,2025-05-23,Phone,Loyalty points,1,5
-693,100074,2025-05-23,Phone,General inquiry,1,
-694,101988,2025-05-24,Chat,Return/Refund,0,
-695,101414,2025-05-25,Chat,Billing,1,4
-696,101696,2025-05-25,Chat,Product quality,1,
-697,100873,2025-05-25,In-store,Billing,1,1
-698,101673,2025-05-26,Phone,Return/Refund,1,
-699,101925,2025-05-27,Chat,Product quality,1,
-700,101272,2025-05-28,Phone,Return/Refund,1,2
-701,101289,2025-05-28,Chat,Delivery,0,1
-702,100937,2025-05-30,Phone,General inquiry,1,5
-703,101239,2025-05-30,Chat,Return/Refund,1,4
-704,101695,2025-05-30,Email,Delivery,1,2
-705,100269,2025-05-31,Chat,Billing,1,3
-706,100657,2025-06-01,Phone,Return/Refund,1,1
-707,101621,2025-06-01,Chat,Product quality,1,3
-708,101873,2025-06-02,Email,General inquiry,1,
-709,100398,2025-06-03,Phone,Delivery,1,3
-710,101063,2025-06-03,Chat,Product quality,0,
-711,101883,2025-06-03,Phone,General inquiry,1,5
-712,100031,2025-06-04,Phone,Loyalty points,1,
-713,100426,2025-06-04,In-store,General inquiry,0,3
-714,101654,2025-06-05,Chat,Delivery,1,
-715,100143,2025-06-06,Email,Product quality,1,3
-716,100441,2025-06-06,Phone,General inquiry,1,1
-717,100627,2025-06-06,In-store,Billing,1,3
-718,101989,2025-06-06,Phone,Return/Refund,1,
-719,101620,2025-06-07,Email,Return/Refund,0,1
-720,100178,2025-06-08,Phone,Product quality,0,5
-721,100050,2025-06-09,Phone,Return/Refund,1,4
-722,100462,2025-06-09,Chat,Product quality,0,3
-723,101602,2025-06-11,Phone,General inquiry,1,5
-724,101794,2025-06-11,Chat,Delivery,0,1
-725,100432,2025-06-12,Phone,Delivery,0,5
-726,100445,2025-06-12,Email,Product quality,1,2
-727,100774,2025-06-14,In-store,General inquiry,1,
-728,101770,2025-06-14,Phone,Loyalty points,1,5
-729,101667,2025-06-14,Phone,Return/Refund,1,2
-730,101345,2025-06-15,In-store,Delivery,1,4
-731,101149,2025-06-16,Phone,Return/Refund,1,5
-732,101905,2025-06-16,Email,Product quality,1,
-733,100642,2025-06-19,Chat,Return/Refund,1,3
-734,100832,2025-06-21,Email,General inquiry,1,
-735,101009,2025-06-21,Chat,Loyalty points,1,
-736,100236,2025-06-23,Chat,Return/Refund,1,1
-737,101141,2025-06-23,Phone,Return/Refund,1,2
-738,101516,2025-06-23,Chat,Return/Refund,1,5
-739,100790,2025-06-24,Phone,Billing,1,
-740,100801,2025-06-24,Phone,Delivery,1,4
-741,100050,2025-06-25,Phone,Return/Refund,1,4
-742,101112,2025-06-25,Chat,General inquiry,1,5
-743,100070,2025-06-25,Phone,Loyalty points,0,3
-744,100459,2025-06-26,Chat,Delivery,1,3
-745,100576,2025-06-26,Phone,General inquiry,1,
-746,100192,2025-06-27,Chat,Delivery,1,
-747,101620,2025-06-28,Chat,Product quality,0,3
-748,101232,2025-06-29,Email,Billing,1,2
-749,101551,2025-06-29,Email,General inquiry,1,4
-750,100714,2025-06-29,Chat,Return/Refund,1,3
-751,101419,2025-06-29,Chat,Delivery,1,1
-752,100024,2025-07-01,Phone,Product quality,1,
-753,100930,2025-07-02,Email,Billing,1,2
-754,101505,2025-07-02,Chat,Loyalty points,0,5
-755,100651,2025-07-03,Email,General inquiry,1,4
-756,101419,2025-07-04,Phone,Return/Refund,1,4
-757,101730,2025-07-04,Chat,Loyalty points,1,
-758,101638,2025-07-05,Chat,Loyalty points,1,1
-759,100220,2025-07-06,In-store,Return/Refund,1,5
-760,100037,2025-07-07,Chat,Loyalty points,1,4
-761,100752,2025-07-07,Chat,General inquiry,1,
-762,100952,2025-07-07,Email,Delivery,1,3
-763,100358,2025-07-08,Chat,Delivery,1,
-764,100368,2025-07-08,Email,Product quality,1,
-765,101055,2025-07-08,Phone,Return/Refund,1,
-766,101782,2025-07-08,Chat,Product quality,1,2
-767,100659,2025-07-09,Phone,Product quality,1,5
-768,100653,2025-07-09,Phone,Return/Refund,1,1
-769,100881,2025-07-10,In-store,Loyalty points,1,
-770,101904,2025-07-12,In-store,Return/Refund,1,
-771,100050,2025-07-13,Email,Billing,1,3
-772,101764,2025-07-13,Phone,General inquiry,1,
-773,100192,2025-07-17,Chat,Billing,1,
-774,101304,2025-07-17,Chat,General inquiry,0,4
-775,100713,2025-07-19,Phone,Billing,1,
-776,101981,2025-07-19,Email,Billing,1,5
-777,100796,2025-07-22,Phone,Delivery,1,4
-778,101719,2025-07-23,In-store,Billing,1,
-779,101556,2025-07-24,In-store,Return/Refund,0,5
-780,100907,2025-07-25,In-store,General inquiry,1,4
-781,101489,2025-07-25,Phone,General inquiry,1,
-782,101900,2025-07-25,Phone,Loyalty points,1,
-783,100823,2025-07-25,Phone,Billing,1,
-784,101036,2025-07-26,Chat,Billing,1,4
-785,100522,2025-07-26,Chat,Product quality,1,
-786,100104,2025-07-27,Phone,Loyalty points,1,
-787,100326,2025-07-27,Chat,Delivery,1,3
-788,100042,2025-07-28,In-store,General inquiry,1,
-789,100743,2025-07-28,Chat,Product quality,1,5
-790,100295,2025-07-29,Email,General inquiry,1,4
-791,101372,2025-07-29,Chat,Delivery,1,5
-792,101272,2025-07-31,In-store,Return/Refund,1,
-793,101331,2025-07-31,Chat,Return/Refund,1,3
-794,101519,2025-07-31,Phone,Loyalty points,1,
-795,101139,2025-08-02,Email,Delivery,1,2
-796,101629,2025-08-03,Phone,Billing,1,3
-797,101847,2025-08-04,In-store,General inquiry,0,4
-798,100522,2025-08-05,Email,Billing,0,
-799,101049,2025-08-06,Chat,Delivery,1,4
-800,100545,2025-08-07,Phone,Return/Refund,1,5
-801,101434,2025-08-08,Chat,Product quality,1,4
-802,100020,2025-08-09,In-store,General inquiry,1,3
-803,101628,2025-08-09,In-store,Product quality,1,
-804,101782,2025-08-09,Email,Delivery,1,
-805,101799,2025-08-09,Chat,Loyalty points,0,
-806,101832,2025-08-10,Chat,Loyalty points,1,5
-807,100581,2025-08-11,Chat,General inquiry,1,1
-808,101084,2025-08-12,In-store,General inquiry,1,
-809,101090,2025-08-13,Email,General inquiry,1,4
-810,101352,2025-08-13,Chat,Return/Refund,0,
-811,101746,2025-08-14,Phone,General inquiry,1,4
-812,100450,2025-08-15,Chat,General inquiry,0,
-813,101031,2025-08-15,Phone,Return/Refund,1,
-814,101965,2025-08-16,Phone,Loyalty points,1,5
-815,101403,2025-08-17,Chat,Return/Refund,1,4
-816,101473,2025-08-17,Chat,Delivery,1,
-817,100840,2025-08-17,In-store,Delivery,1,
-818,100952,2025-08-17,Chat,Billing,0,5
-819,100070,2025-08-18,Phone,Delivery,1,
-820,100699,2025-08-18,Phone,Loyalty points,1,1
-821,100192,2025-08-18,Chat,General inquiry,1,
-822,100613,2025-08-19,Phone,Loyalty points,0,4
-823,101299,2025-08-19,Chat,Delivery,1,5
-824,100013,2025-08-20,Phone,General inquiry,0,
-825,100490,2025-08-20,Phone,General inquiry,1,
-826,100760,2025-08-20,In-store,Loyalty points,1,5
-827,101111,2025-08-21,Phone,Loyalty points,1,1
-828,101432,2025-08-21,Email,Return/Refund,1,3
-829,101766,2025-08-21,Phone,Delivery,0,5
-830,100682,2025-08-25,Email,Delivery,1,4
-831,101032,2025-08-25,Chat,Product quality,0,2
-832,100173,2025-08-26,Phone,Delivery,1,5
-833,101695,2025-08-27,Chat,Delivery,1,
-834,101084,2025-08-28,Chat,Product quality,1,1
-835,101613,2025-08-28,Chat,Return/Refund,1,
-836,100580,2025-08-29,Chat,Delivery,1,
-837,101071,2025-08-29,Chat,Product quality,1,
-838,101317,2025-08-29,Phone,Product quality,0,4
-839,100785,2025-08-29,Phone,Product quality,0,
-840,101069,2025-08-30,Chat,Product quality,1,
-841,101012,2025-09-01,Chat,Loyalty points,1,4
-842,101690,2025-09-01,Phone,General inquiry,1,
-843,100595,2025-09-01,Email,Delivery,0,3
-844,100544,2025-09-02,Email,General inquiry,1,
-845,101129,2025-09-03,Phone,Billing,1,
-846,100368,2025-09-04,Email,Billing,1,4
-847,101796,2025-09-05,In-store,General inquiry,1,
-848,100648,2025-09-05,In-store,Billing,0,1
-849,100261,2025-09-06,Chat,Product quality,1,4
-850,100392,2025-09-08,Chat,Loyalty points,0,
-851,100417,2025-09-08,Chat,Product quality,1,1
-852,100880,2025-09-10,Email,Billing,1,
-853,101049,2025-09-11,Chat,Return/Refund,0,4
-854,100644,2025-09-11,Email,Return/Refund,0,3
-855,100952,2025-09-12,Phone,Return/Refund,1,3
-856,101650,2025-09-14,Chat,Product quality,0,5
-857,101832,2025-09-14,Phone,Delivery,0,1
-858,100267,2025-09-15,Email,Billing,0,
-859,100267,2025-09-15,Phone,General inquiry,1,2
-860,100470,2025-09-16,Chat,Delivery,1,
-861,101989,2025-09-16,Email,General inquiry,1,
-862,100096,2025-09-17,Phone,General inquiry,1,
-863,101883,2025-09-17,Phone,Delivery,1,1
-864,101632,2025-09-18,Phone,Loyalty points,1,4
-865,101018,2025-09-19,Phone,Loyalty points,1,4
-866,100392,2025-09-20,Phone,General inquiry,1,5
-867,100909,2025-09-21,Email,General inquiry,1,4
-868,101111,2025-09-22,Chat,Loyalty points,1,
-869,101648,2025-09-22,Email,Loyalty points,0,
-870,101647,2025-09-24,Phone,Delivery,1,
-871,100498,2025-09-24,Phone,Return/Refund,0,3
-872,101971,2025-09-24,Email,Delivery,1,4
-873,100331,2025-09-26,Phone,General inquiry,1,5
-874,100740,2025-09-26,Chat,Loyalty points,1,3
-875,101059,2025-09-26,Email,Delivery,1,
-876,100045,2025-09-27,Phone,General inquiry,1,3
-877,101886,2025-09-29,Email,Loyalty points,1,
-878,100799,2025-09-30,Chat,General inquiry,1,
-879,100008,2025-10-01,Chat,Return/Refund,0,2
-880,101867,2025-10-04,Chat,Product quality,0,1
-881,101326,2025-10-07,Chat,Return/Refund,1,
-882,100192,2025-10-08,Phone,Delivery,1,4
-883,101526,2025-10-08,Chat,Loyalty points,1,4
-884,100595,2025-10-08,Email,Billing,1,3
-885,101516,2025-10-09,Phone,Product quality,1,
-886,100417,2025-10-09,Chat,Delivery,1,
-887,101131,2025-10-12,Phone,General inquiry,1,
-888,101634,2025-10-12,Chat,Return/Refund,1,4
-889,100213,2025-10-12,Chat,Return/Refund,0,1
-890,100721,2025-10-13,Chat,Product quality,1,
-891,100911,2025-10-13,Chat,Delivery,1,
-892,100711,2025-10-14,Chat,General inquiry,1,3
-893,101488,2025-10-14,Phone,Billing,1,1
-894,101574,2025-10-15,Chat,Return/Refund,1,2
-895,100239,2025-10-18,Email,Delivery,1,
-896,100320,2025-10-18,Phone,Loyalty points,1,
-897,100541,2025-10-18,Phone,General inquiry,1,5
-898,101272,2025-10-18,Phone,General inquiry,1,
-899,101719,2025-10-19,In-store,General inquiry,1,4
-900,101028,2025-10-21,Phone,Loyalty points,1,
-901,101755,2025-10-21,Chat,General inquiry,1,
-902,101266,2025-10-21,Chat,Product quality,1,2
-903,100032,2025-10-22,Email,Delivery,1,4
-904,100378,2025-10-23,Email,Loyalty points,1,
-905,101036,2025-10-23,Chat,Return/Refund,1,2
-906,101955,2025-10-25,Phone,General inquiry,1,3
-907,100970,2025-10-26,In-store,General inquiry,1,
-908,100073,2025-10-26,Chat,Return/Refund,1,
-909,100736,2025-10-26,Chat,Delivery,1,2
-910,100578,2025-10-27,Email,General inquiry,1,
-911,101954,2025-10-27,Phone,Product quality,1,5
-912,100137,2025-10-28,In-store,General inquiry,1,4
-913,101257,2025-10-28,Phone,Product quality,0,3
-914,101414,2025-10-28,Email,General inquiry,1,4
-915,100648,2025-10-28,Phone,Loyalty points,0,
-916,100393,2025-10-29,Email,Return/Refund,1,3
-917,100154,2025-10-30,Chat,Billing,1,5
-918,101431,2025-10-31,Phone,General inquiry,1,5
-919,101046,2025-10-31,Phone,Loyalty points,0,
-920,100740,2025-11-01,Phone,Return/Refund,1,
-921,101196,2025-11-01,Email,Return/Refund,1,4
-922,101613,2025-11-01,Phone,Return/Refund,0,3
-923,100814,2025-11-03,Chat,Billing,1,
-924,101008,2025-11-04,Phone,General inquiry,1,
-925,100234,2025-11-05,Phone,Loyalty points,1,5
-926,101217,2025-11-05,Chat,Loyalty points,1,
-927,100778,2025-11-07,Chat,General inquiry,1,2
-928,101369,2025-11-07,Phone,General inquiry,1,4
-929,101637,2025-11-07,In-store,Delivery,1,5
-930,100166,2025-11-09,Phone,General inquiry,1,
-931,101143,2025-11-09,Chat,Delivery,1,4
-932,101375,2025-11-09,Chat,General inquiry,1,
-933,101524,2025-11-09,Email,Billing,1,4
-934,101674,2025-11-10,In-store,Product quality,1,2
-935,100550,2025-11-10,Email,Billing,1,1
-936,101855,2025-11-10,Chat,Billing,0,
-937,100336,2025-11-11,Chat,General inquiry,1,3
-938,100961,2025-11-11,In-store,Return/Refund,1,4
-939,101553,2025-11-14,Phone,General inquiry,1,4
-940,100631,2025-11-16,Phone,Loyalty points,1,5
-941,100721,2025-11-18,Chat,Return/Refund,1,4
-942,100985,2025-11-18,Phone,Delivery,0,4
-943,100384,2025-11-18,Chat,Delivery,1,2
-944,101990,2025-11-23,Phone,Delivery,1,5
-945,100114,2025-11-23,In-store,Return/Refund,1,2
-946,100129,2025-11-24,Chat,General inquiry,1,
-947,100150,2025-11-24,Email,Loyalty points,1,5
-948,101056,2025-11-24,Phone,General inquiry,1,4
-949,101445,2025-11-24,Email,Delivery,1,
-950,101212,2025-11-25,Email,General inquiry,1,
-951,101255,2025-11-25,Phone,Billing,1,5
-952,101196,2025-11-25,Chat,Billing,1,
-953,100460,2025-11-26,Chat,Delivery,1,4
-954,100338,2025-11-27,Chat,Product quality,0,3
-955,100740,2025-11-27,Phone,Product quality,1,4
-956,101648,2025-11-28,Phone,Loyalty points,0,3
-957,100054,2025-11-29,Chat,Loyalty points,1,
-958,100046,2025-11-30,Chat,Delivery,1,
-959,100222,2025-12-01,In-store,Return/Refund,1,5
-960,101842,2025-12-01,Phone,Return/Refund,0,5
-961,100447,2025-12-02,Phone,Return/Refund,1,
-962,100533,2025-12-03,Chat,Delivery,1,
-963,101526,2025-12-04,In-store,Billing,1,4
-964,100736,2025-12-05,Chat,Return/Refund,0,5
-965,101027,2025-12-05,Chat,Loyalty points,1,4
-966,101138,2025-12-05,Email,Loyalty points,1,5
-967,101637,2025-12-05,Email,Product quality,1,2
-968,101784,2025-12-05,In-store,General inquiry,1,4
-969,100750,2025-12-07,Chat,Delivery,1,5
-970,100760,2025-12-08,Phone,Return/Refund,1,
-971,100199,2025-12-09,Email,Return/Refund,0,
-972,101443,2025-12-10,In-store,General inquiry,1,4
-973,101847,2025-12-11,In-store,General inquiry,1,
-974,101583,2025-12-13,Phone,Return/Refund,0,3
-975,101747,2025-12-14,Chat,Return/Refund,0,
-976,100097,2025-12-15,In-store,Delivery,1,5
-977,101473,2025-12-15,Email,General inquiry,1,
-978,101804,2025-12-15,Chat,Billing,1,3
-979,100983,2025-12-15,Email,Return/Refund,1,1
-980,101469,2025-12-15,Chat,Delivery,1,
-981,100260,2025-12-17,Email,Loyalty points,1,3
-982,101456,2025-12-17,Phone,Product quality,0,4
-983,100388,2025-12-19,Chat,Product quality,1,
-984,100469,2025-12-19,Email,General inquiry,1,3
-985,101733,2025-12-19,Email,General inquiry,1,4
-986,100530,2025-12-21,Chat,General inquiry,1,5
-987,100424,2025-12-22,Chat,Delivery,1,4
-988,101611,2025-12-23,Phone,Loyalty points,1,
-989,100383,2025-12-26,In-store,Product quality,1,
-990,101091,2025-12-27,In-store,General inquiry,1,5
-991,101388,2025-12-27,Email,Return/Refund,1,
-992,101998,2025-12-27,Chat,Return/Refund,1,
-993,100260,2025-12-27,Phone,Return/Refund,0,
-994,100708,2025-12-28,Phone,General inquiry,1,3
-995,101067,2025-12-28,Chat,Loyalty points,1,
-996,101224,2025-12-28,Chat,Loyalty points,1,4
-997,101128,2025-12-31,In-store,Return/Refund,1,5
-998,101999,2025-12-31,Phone,Delivery,1,5
-999,100731,2026-01-03,Email,Loyalty points,1,
-1000,101220,2026-01-03,In-store,Billing,1,5
-1001,101036,2026-01-03,Phone,Product quality,1,1
-1002,101998,2026-01-05,Phone,Product quality,1,5
-1003,100829,2026-01-06,Email,Loyalty points,1,
-1004,101656,2026-01-06,Email,General inquiry,1,3
-1005,101948,2026-01-07,Email,Loyalty points,1,5
-1006,100799,2026-01-08,Email,General inquiry,1,5
-1007,100081,2026-01-09,Chat,Return/Refund,1,
-1008,100433,2026-01-10,In-store,Return/Refund,1,4
-1009,100728,2026-01-12,Chat,General inquiry,1,
-1010,101566,2026-01-12,Chat,General inquiry,1,5
-1011,100729,2026-01-13,Phone,Product quality,1,
-1012,101107,2026-01-15,Chat,General inquiry,1,
-1013,100260,2026-01-16,In-store,Return/Refund,1,1
-1014,101080,2026-01-18,In-store,Loyalty points,1,
-1015,100318,2026-01-20,Email,Return/Refund,0,
-1016,101432,2026-01-20,Email,Delivery,1,5
-1017,100726,2026-01-21,Email,Billing,0,
-1018,101226,2026-01-21,Chat,Return/Refund,0,3
-1019,100371,2026-01-22,Chat,General inquiry,1,4
-1020,100120,2026-01-23,In-store,Delivery,1,5
-1021,100916,2026-01-23,Chat,General inquiry,1,3
-1022,100605,2026-01-25,Phone,Return/Refund,1,
-1023,101233,2026-01-25,Chat,Loyalty points,1,3
-1024,101469,2026-01-25,Chat,General inquiry,0,
-1025,101239,2026-01-26,Phone,Product quality,0,1
-1026,100365,2026-01-29,Email,General inquiry,1,2
-1027,100656,2026-01-29,Phone,Product quality,1,3
-1028,101024,2026-01-29,Chat,Billing,1,4
-1029,100983,2026-01-29,Email,Return/Refund,1,
-1030,101090,2026-02-03,Email,Loyalty points,1,4
-1031,101643,2026-02-03,Chat,General inquiry,1,
-1032,101425,2026-02-04,Phone,Product quality,1,
-1033,101873,2026-02-05,Chat,Return/Refund,1,
-1034,100950,2026-02-07,Chat,Loyalty points,1,
-1035,101978,2026-02-08,Phone,General inquiry,1,4
-1036,101425,2026-02-08,Email,Product quality,1,2
-1037,100082,2026-02-11,Chat,Delivery,0,
-1038,101531,2026-02-12,Phone,Product quality,1,3
-1039,100239,2026-02-13,In-store,Delivery,0,
-1040,100516,2026-02-14,Phone,Return/Refund,1,1
-1041,100699,2026-02-15,Phone,Delivery,0,
-1042,101553,2026-02-15,In-store,General inquiry,1,
-1043,101596,2026-02-16,In-store,Return/Refund,1,
-1044,100344,2026-02-17,In-store,Delivery,1,
-1045,100373,2026-02-17,Chat,Billing,0,
-1046,100907,2026-02-17,In-store,Loyalty points,1,5
-1047,100440,2026-02-17,Chat,Delivery,0,4
-1048,100477,2026-02-18,Chat,Loyalty points,1,4
-1049,100179,2026-02-21,Email,Product quality,1,
-1050,100813,2026-02-21,Chat,Product quality,0,
-1051,100013,2026-02-23,Chat,Delivery,1,4
-1052,100319,2026-02-23,Chat,General inquiry,1,
-1053,101432,2026-02-23,Chat,Delivery,1,
-1054,101325,2026-02-24,Email,General inquiry,1,
-1055,100010,2026-02-24,Chat,Delivery,0,
-1056,100290,2026-02-25,Phone,Delivery,1,
-1057,101375,2026-02-25,Chat,Return/Refund,0,
-1058,100045,2026-02-25,Phone,Product quality,0,
-1059,101987,2026-02-26,Phone,Delivery,0,2
-1060,101643,2026-02-27,Phone,Return/Refund,0,1
-1061,100820,2026-02-28,Phone,General inquiry,1,5
-1062,100690,2026-03-01,Phone,Product quality,0,
-1063,100437,2026-03-03,Email,General inquiry,1,
-1064,101622,2026-03-03,Phone,Delivery,1,
-1065,101809,2026-03-03,Email,General inquiry,1,
-1066,100308,2026-03-05,Phone,Loyalty points,1,3
-1067,100215,2026-03-06,Phone,Loyalty points,1,3
-1068,100755,2026-03-06,In-store,General inquiry,1,4
-1069,101404,2026-03-09,Phone,Product quality,1,
-1070,100277,2026-03-09,Chat,Product quality,1,
-1071,101005,2026-03-10,Phone,Loyalty points,1,
-1072,101944,2026-03-13,Phone,General inquiry,1,4
-1073,100394,2026-03-14,Chat,General inquiry,1,
-1074,101494,2026-03-14,Phone,General inquiry,0,2
-1075,101468,2026-03-15,Chat,Delivery,1,
-1076,101569,2026-03-15,In-store,General inquiry,1,
-1077,100016,2026-03-16,Email,General inquiry,1,
-1078,100358,2026-03-16,Email,Billing,1,4
-1079,100606,2026-03-16,Email,Delivery,1,3
-1080,101531,2026-03-16,Chat,Return/Refund,1,
-1081,100291,2026-03-16,In-store,Product quality,1,
-1082,100596,2026-03-16,Email,Delivery,1,2
-1083,100155,2026-03-17,Chat,Delivery,1,4
-1084,100422,2026-03-17,Chat,General inquiry,1,5
-1085,101273,2026-03-17,In-store,General inquiry,1,2
-1086,100373,2026-03-18,Email,General inquiry,1,
-1087,100734,2026-03-18,Phone,Product quality,1,1
-1088,101789,2026-03-18,Phone,Delivery,1,4
-1089,100032,2026-03-19,Email,Delivery,0,5
-1090,100594,2026-03-19,In-store,Delivery,1,5
-1091,100899,2026-03-20,Chat,Billing,0,2
-1092,101624,2026-03-21,Phone,Return/Refund,1,
-1093,100168,2026-03-21,Chat,General inquiry,0,
-1094,100176,2026-03-21,Chat,Delivery,1,
-1095,101541,2026-03-21,Chat,Delivery,0,1
-1096,100236,2026-03-22,Email,Loyalty points,1,
-1097,101688,2026-03-22,Phone,Delivery,0,1
-1098,101658,2026-03-22,Email,Delivery,0,4
-1099,100662,2026-03-23,Phone,Product quality,1,
-1100,100847,2026-03-23,In-store,Billing,0,
-1101,101905,2026-03-23,Chat,Delivery,1,
-1102,100726,2026-03-23,Chat,Delivery,1,1
-1103,101801,2026-03-24,Phone,Loyalty points,1,5
-1104,101432,2026-03-25,Phone,Delivery,0,
-1105,100067,2026-03-26,Chat,Loyalty points,1,5
-1106,101095,2026-03-26,Phone,Return/Refund,1,2
-1107,101153,2026-03-26,Phone,General inquiry,0,
-1108,101577,2026-03-26,Email,Billing,1,
-1109,101776,2026-03-26,Chat,General inquiry,1,3
-1110,100128,2026-03-27,Chat,Return/Refund,1,2
-1111,101688,2026-03-29,Phone,Delivery,1,5
-1112,101060,2026-03-30,Phone,Delivery,1,4
-1113,101533,2026-03-30,Phone,General inquiry,0,
-1114,101757,2026-03-31,Chat,Product quality,1,5
-1115,100683,2026-04-01,Phone,Return/Refund,1,3
-1116,101478,2026-04-01,Chat,Product quality,0,4
-1117,100757,2026-04-02,Phone,Delivery,1,
-1118,101432,2026-04-02,Chat,Product quality,1,
-1119,100667,2026-04-04,Phone,General inquiry,1,4
-1120,100987,2026-04-05,Phone,Billing,0,4
-1121,100088,2026-04-07,In-store,Loyalty points,1,4
-1122,100010,2026-04-07,Chat,Return/Refund,1,2
-1123,101027,2026-04-08,In-store,Product quality,0,1
-1124,101802,2026-04-09,Phone,General inquiry,1,3
-1125,101893,2026-04-09,Phone,Loyalty points,1,
-1126,100564,2026-04-10,Chat,General inquiry,1,
-1127,100738,2026-04-11,Phone,Delivery,1,4
-1128,101375,2026-04-11,Phone,Delivery,1,1
-1129,100248,2026-04-13,Phone,Delivery,1,2
-1130,100490,2026-04-14,Phone,Return/Refund,1,5
-1131,101273,2026-04-14,Phone,General inquiry,1,2
-1132,101436,2026-04-14,Phone,Return/Refund,1,
-1133,101747,2026-04-14,Chat,Delivery,1,
-1134,100012,2026-04-15,Chat,Loyalty points,1,
-1135,100223,2026-04-15,Email,General inquiry,1,3
-1136,100905,2026-04-16,Email,General inquiry,1,4
-1137,100345,2026-04-16,Email,Delivery,1,1
-1138,100880,2026-04-17,Phone,General inquiry,1,
-1139,101180,2026-04-18,Email,Delivery,1,3
-1140,101677,2026-04-19,Email,Return/Refund,1,5
-1141,101375,2026-04-19,Phone,Billing,1,
-1142,100273,2026-04-21,Phone,Return/Refund,1,4
-1143,101381,2026-04-21,Email,Loyalty points,1,
-1144,101724,2026-04-21,In-store,Delivery,0,1
-1145,100409,2026-04-22,Chat,Delivery,1,2
-1146,100145,2026-04-23,Email,Delivery,1,
-1147,100584,2026-04-23,Email,Product quality,1,
-1148,100593,2026-04-23,In-store,General inquiry,1,2
-1149,101839,2026-04-23,Chat,Billing,1,
-1150,100575,2026-04-24,Email,Loyalty points,1,
-1151,100880,2026-04-24,In-store,Billing,1,5
-1152,101045,2026-04-24,Phone,Billing,1,5
-1153,100544,2026-04-25,In-store,Loyalty points,1,4
-1154,101128,2026-04-25,Phone,General inquiry,0,
-1155,101537,2026-04-25,Email,Return/Refund,0,
-1156,100409,2026-04-26,Phone,Delivery,1,2
-1157,100408,2026-04-27,In-store,General inquiry,0,3
-1158,101201,2026-04-27,Email,Delivery,0,3
-1159,100551,2026-05-01,Phone,Product quality,1,5
-1160,101249,2026-05-05,Chat,Delivery,1,
-1161,100992,2026-05-06,Phone,Delivery,1,4
-1162,101330,2026-05-06,Email,Return/Refund,1,3
-1163,101451,2026-05-07,In-store,Loyalty points,1,1
-1164,100409,2026-05-07,Chat,Delivery,1,4
-1165,100477,2026-05-08,Chat,General inquiry,0,3
-1166,100711,2026-05-08,Phone,Loyalty points,1,4
-1167,100631,2026-05-09,Chat,Return/Refund,1,5
-1168,100414,2026-05-10,Chat,General inquiry,1,4
-1169,100584,2026-05-10,Chat,Product quality,1,4
-1170,100731,2026-05-10,In-store,Product quality,0,
-1171,101774,2026-05-10,Phone,General inquiry,1,5
-1172,100820,2026-05-12,In-store,General inquiry,1,
-1173,101000,2026-05-12,Chat,Product quality,1,4
-1174,100713,2026-05-13,Phone,Return/Refund,1,3
-1175,101081,2026-05-13,Phone,Loyalty points,1,
-1176,101653,2026-05-15,Phone,Loyalty points,1,
-1177,100470,2026-05-16,Email,General inquiry,1,
-1178,100345,2026-05-17,In-store,Delivery,1,4
-1179,101884,2026-05-18,Email,Billing,1,
-1180,101432,2026-05-19,Phone,General inquiry,1,
-1181,100439,2026-05-19,Chat,Return/Refund,1,2
-1182,101128,2026-05-22,Chat,General inquiry,1,4
-1183,100650,2026-05-23,Email,Delivery,1,5
-1184,100439,2026-05-24,In-store,Delivery,1,
-1185,100344,2026-05-25,Chat,Delivery,1,
-1186,100890,2026-05-26,Phone,Loyalty points,1,4
-1187,101191,2026-05-26,Phone,General inquiry,1,
-1188,101872,2026-05-26,Phone,Billing,1,4
-1189,100677,2026-05-27,In-store,Billing,1,
-1190,101023,2026-05-28,In-store,General inquiry,1,4
-1191,101386,2026-05-28,Email,Product quality,0,2
-1192,101670,2026-05-29,Phone,Delivery,0,5
-1193,100148,2026-05-30,Phone,Product quality,1,
-1194,100460,2026-05-30,Chat,Loyalty points,1,4
-1195,101384,2026-06-02,Chat,General inquiry,1,
-1196,101489,2026-06-02,In-store,Loyalty points,1,5
-1197,101237,2026-06-03,Phone,General inquiry,1,5
-1198,100697,2026-06-04,Phone,Return/Refund,1,
-1199,100355,2026-06-05,Chat,Product quality,0,4
-1200,101651,2026-06-06,Phone,Return/Refund,1,
-1201,101027,2026-06-07,Chat,Loyalty points,1,3
-1202,101968,2026-06-09,Phone,Return/Refund,0,3
-1203,101488,2026-06-10,Chat,General inquiry,1,
-1204,101940,2026-06-10,Email,Loyalty points,0,
-1205,100633,2026-06-11,Chat,Return/Refund,1,
-1206,101852,2026-06-11,In-store,Return/Refund,0,
-1207,101694,2026-06-11,Chat,Return/Refund,1,
-1208,100080,2026-06-12,Phone,Return/Refund,1,4
-1209,100246,2026-06-12,Phone,Return/Refund,0,4
-1210,101224,2026-06-12,Chat,Delivery,1,
-1211,100099,2026-06-12,Phone,Loyalty points,1,5
-1212,100109,2026-06-13,Chat,Delivery,1,
-1213,101128,2026-06-15,Phone,Product quality,1,
-1214,101369,2026-06-15,Chat,Product quality,1,
-1215,100828,2026-06-15,In-store,Return/Refund,1,4
-1216,100570,2026-06-16,Phone,Delivery,1,4
-1217,101440,2026-06-17,In-store,Loyalty points,1,5
-1218,100674,2026-06-19,Chat,Delivery,1,3
-1219,101904,2026-06-19,In-store,Loyalty points,1,
-1220,100223,2026-06-20,Chat,General inquiry,1,3
-1221,100250,2026-06-20,Phone,General inquiry,1,
-1222,100975,2026-06-20,Chat,General inquiry,1,4
-1223,101839,2026-06-20,Phone,Delivery,1,4
-1224,100927,2026-06-20,In-store,Product quality,1,2
-1225,100545,2026-06-23,Chat,Loyalty points,1,3
-1226,101330,2026-06-23,Chat,General inquiry,1,3
-1227,101819,2026-06-23,Phone,Delivery,1,2
-1228,100427,2026-06-24,Phone,Billing,1,
-1229,100431,2026-06-24,Phone,Delivery,1,
-1230,100975,2026-06-24,Chat,General inquiry,1,4
-1231,101526,2026-06-25,Email,Loyalty points,1,4
-1232,100528,2026-06-25,Email,Loyalty points,0,4
-1233,100833,2026-06-28,In-store,General inquiry,1,4
-1234,101637,2026-06-28,Chat,General inquiry,1,4
-1235,100539,2026-06-29,In-store,Billing,1,
-1236,100458,2026-06-30,Phone,General inquiry,1,3
-1237,101562,2026-06-30,Phone,Delivery,1,4
-1238,101707,2026-06-30,Chat,Product quality,0,
-1239,101302,2026-07-02,Phone,Loyalty points,0,
-1240,101881,2026-07-03,Chat,Billing,1,5
-1241,100366,2026-07-06,Chat,Billing,1,
-1242,100812,2026-07-06,Email,Loyalty points,1,
-1243,101662,2026-07-07,Phone,Billing,1,4
-1244,100180,2026-07-08,In-store,Product quality,1,
-1245,100292,2026-07-10,Phone,Loyalty points,0,5
-1246,101045,2026-07-10,Chat,Return/Refund,1,3
-1247,101467,2026-07-11,Phone,Return/Refund,1,
-1248,101965,2026-07-11,Email,General inquiry,1,5
-1249,101414,2026-07-11,Chat,Loyalty points,1,2
-1250,101333,2026-07-15,Email,Return/Refund,1,
-1251,101922,2026-07-16,Email,Return/Refund,1,4
-1252,100397,2026-07-17,Chat,General inquiry,1,
-1253,101211,2026-07-17,Email,Product quality,0,
-1254,100025,2026-07-19,Phone,General inquiry,1,5
-1255,100136,2026-07-20,Chat,Return/Refund,1,
-1256,101707,2026-07-20,Phone,Return/Refund,1,
-1257,101801,2026-07-20,Phone,Product quality,1,
-1258,101998,2026-07-20,Chat,Loyalty points,1,
-1259,100528,2026-07-20,Chat,Product quality,1,2
-1260,100802,2026-07-21,Email,Billing,1,4
-1261,100851,2026-07-22,Chat,Billing,1,
-1262,101837,2026-07-22,Phone,General inquiry,1,3
-1263,100184,2026-07-22,In-store,Delivery,1,
-1264,100783,2026-07-22,Chat,Product quality,1,1
-1265,101533,2026-07-23,Email,Billing,1,5
-1266,101141,2026-07-24,Phone,Product quality,0,1
-1267,100271,2026-07-25,Email,General inquiry,1,
-1268,100605,2026-07-25,Phone,Delivery,1,5
-1269,100808,2026-07-25,Email,Return/Refund,0,
-1270,100870,2026-07-25,Email,Return/Refund,1,3
-1271,100950,2026-07-26,Chat,General inquiry,1,4
-1272,101874,2026-07-26,Chat,General inquiry,1,4
-1273,100461,2026-07-27,Phone,Billing,1,
-1274,100651,2026-07-28,Phone,Billing,0,
-1275,101527,2026-07-28,Email,Delivery,1,4
-1276,101885,2026-07-28,Chat,Return/Refund,1,2
-1277,100353,2026-07-29,Chat,Loyalty points,1,
-1278,101067,2026-07-29,Email,Product quality,0,2
-1279,101146,2026-07-31,Phone,Product quality,1,
-1280,100085,2026-08-02,In-store,General inquiry,1,5
-1281,100059,2026-08-04,Chat,Product quality,1,4
-1282,100549,2026-08-04,In-store,Delivery,0,
-1283,100156,2026-08-05,Phone,Product quality,1,
-1284,101270,2026-08-05,Chat,Delivery,1,5
-1285,101796,2026-08-07,Phone,Delivery,1,5
-1286,100148,2026-08-07,Phone,Product quality,0,
-1287,101897,2026-08-08,In-store,Product quality,1,1
-1288,101117,2026-08-09,Chat,Return/Refund,0,
-1289,101891,2026-08-09,Email,Product quality,1,1
-1290,101819,2026-08-10,Phone,General inquiry,1,
-1291,101989,2026-08-10,Phone,Product quality,1,5
-1292,100593,2026-08-11,Chat,Return/Refund,1,4
-1293,100916,2026-08-13,Chat,Billing,1,
-1294,100077,2026-08-14,Email,Delivery,0,5
-1295,101881,2026-08-17,Email,Delivery,1,
-1296,100944,2026-08-18,Chat,Return/Refund,0,3
-1297,101467,2026-08-19,Email,Billing,1,
-1298,101410,2026-08-20,Phone,Delivery,1,4
-1299,100297,2026-08-22,In-store,General inquiry,1,4
-1300,101413,2026-08-25,Email,Loyalty points,0,3
-1301,100699,2026-08-26,Email,Return/Refund,0,2
-1302,101706,2026-08-28,Chat,Return/Refund,0,
-1303,100012,2026-08-29,In-store,Loyalty points,1,
-1304,100493,2026-08-29,In-store,General inquiry,0,
-1305,100631,2026-08-30,Email,General inquiry,1,
-1306,100292,2026-08-31,Chat,Return/Refund,1,4
-1307,101820,2026-08-31,Chat,Delivery,1,4
-1308,100946,2026-09-02,Phone,Product quality,1,
-1309,101662,2026-09-02,Email,Product quality,0,1
-1310,101505,2026-09-03,Phone,Loyalty points,1,
-1311,100024,2026-09-04,Chat,Delivery,1,
-1312,100667,2026-09-04,Phone,Product quality,1,
-1313,101144,2026-09-05,Chat,Loyalty points,0,3
-1314,101141,2026-09-08,In-store,Product quality,1,5
-1315,100397,2026-09-09,Email,General inquiry,1,
-1316,100328,2026-09-10,In-store,General inquiry,1,5
-1317,100357,2026-09-10,Chat,Billing,1,1
-1318,100744,2026-09-10,Email,Product quality,1,
-1319,101059,2026-09-10,Chat,Billing,1,
-1320,101406,2026-09-10,Phone,General inquiry,0,
-1321,101328,2026-09-10,Chat,Return/Refund,0,3
-1322,100212,2026-09-11,Phone,General inquiry,1,3
-1323,101908,2026-09-11,Email,Product quality,0,4
-1324,101223,2026-09-12,Phone,General inquiry,1,4
-1325,101240,2026-09-12,Phone,Billing,1,4
-1326,101687,2026-09-12,Chat,General inquiry,0,
-1327,101112,2026-09-13,Phone,General inquiry,1,4
-1328,100800,2026-09-15,Chat,General inquiry,1,
-1329,101240,2026-09-15,Phone,Loyalty points,1,5
-1330,101669,2026-09-15,Chat,General inquiry,1,
-1331,100373,2026-09-16,Email,Return/Refund,1,5
-1332,101544,2026-09-16,Chat,Billing,0,2
-1333,100143,2026-09-16,Phone,Delivery,1,
-1334,101447,2026-09-17,Chat,Return/Refund,1,
-1335,100762,2026-09-17,Phone,Billing,1,2
-1336,100305,2026-09-18,Phone,Loyalty points,1,
-1337,101341,2026-09-18,Phone,Return/Refund,1,2
-1338,100987,2026-09-19,Email,Return/Refund,1,5
-1339,100282,2026-09-21,Phone,General inquiry,0,
-1340,101105,2026-09-21,Phone,Billing,1,4
-1341,101664,2026-09-21,In-store,Product quality,0,
-1342,100140,2026-09-29,In-store,Loyalty points,0,
-1343,101637,2026-09-30,In-store,Delivery,1,3
-1344,100675,2026-10-01,Phone,Billing,1,
-1345,100173,2026-10-03,Phone,Product quality,1,
-1346,100226,2026-10-03,Chat,Delivery,1,
-1347,100342,2026-10-03,In-store,Return/Refund,1,
-1348,101188,2026-10-04,Email,Product quality,1,5
-1349,101458,2026-10-04,Phone,Loyalty points,0,5
-1350,100373,2026-10-05,In-store,Return/Refund,1,4
-1351,100397,2026-10-05,Chat,Return/Refund,1,
-1352,101328,2026-10-05,Email,Return/Refund,0,1
-1353,100296,2026-10-06,Phone,Delivery,1,
-1354,101641,2026-10-06,Chat,Loyalty points,1,
-1355,100880,2026-10-08,Chat,Return/Refund,0,5
-1356,100104,2026-10-09,Email,General inquiry,0,4
-1357,101562,2026-10-09,Phone,General inquiry,1,5
-1358,101633,2026-10-09,Chat,General inquiry,1,
-1359,101883,2026-10-09,Phone,General inquiry,1,5
-1360,100987,2026-10-10,In-store,Billing,0,
-1361,101423,2026-10-10,Chat,Return/Refund,1,4
-1362,101335,2026-10-11,In-store,Loyalty points,0,
-1363,101273,2026-10-12,Email,Billing,1,5
-1364,101978,2026-10-12,Email,Delivery,1,4
-1365,101887,2026-10-14,Phone,Delivery,1,3
-1366,100080,2026-10-15,Chat,Product quality,1,4
-1367,100056,2026-10-17,Phone,General inquiry,1,5
-1368,100870,2026-10-17,In-store,Delivery,1,4
-1369,101663,2026-10-17,Chat,Return/Refund,1,5
-1370,100247,2026-10-18,Phone,Product quality,1,3
-1371,100832,2026-10-19,In-store,Loyalty points,1,
-1372,100992,2026-10-19,Phone,General inquiry,1,4
-1373,101802,2026-10-20,In-store,General inquiry,1,
-1374,101592,2026-10-24,Email,Product quality,1,2
-1375,100022,2026-10-26,Chat,General inquiry,1,2
-1376,101314,2026-10-27,Chat,General inquiry,1,5
-1377,100201,2026-10-28,Chat,Return/Refund,1,4
-1378,100371,2026-10-28,Phone,Return/Refund,1,5
-1379,100829,2026-10-28,Phone,Return/Refund,1,4
-1380,100458,2026-10-29,Chat,Loyalty points,1,4
-1381,100186,2026-10-31,In-store,General inquiry,1,
-1382,101759,2026-11-01,Chat,Return/Refund,1,3
+1,100082,2023-11-06,Chat,Product quality,0,
+2,100143,2023-11-06,Chat,Return/Refund,1,
+3,100260,2023-11-06,Phone,Delivery,1,
+4,100260,2023-11-06,In-store,Return/Refund,0,1
+5,100704,2023-11-06,Phone,Billing,0,
+6,100749,2023-11-06,In-store,Return/Refund,1,1
+7,100786,2023-11-06,Phone,Loyalty points,1,1
+8,100837,2023-11-06,Chat,Loyalty points,1,1
+9,100837,2023-11-06,Chat,Billing,0,
+10,101152,2023-11-06,Email,Loyalty points,1,1
+11,101250,2023-11-06,Chat,Loyalty points,1,
+12,101264,2023-11-06,In-store,Delivery,0,1
+13,101287,2023-11-06,Chat,General inquiry,0,
+14,101671,2023-11-06,Chat,Delivery,1,2
+15,101678,2023-11-06,Phone,Product quality,0,
+16,101801,2023-11-06,Email,Product quality,0,4
+17,101851,2023-11-06,Chat,Delivery,0,
+18,101989,2023-11-06,Chat,Delivery,1,1
+19,101171,2023-11-07,Email,Loyalty points,0,5
+20,100057,2023-11-08,Chat,Return/Refund,1,1
+21,100130,2023-11-08,Chat,General inquiry,1,2
+22,101706,2023-11-08,Chat,General inquiry,1,
+23,100837,2023-11-09,Chat,Delivery,1,3
+24,100727,2023-11-10,Phone,Product quality,1,5
+25,101505,2023-11-10,Phone,Return/Refund,1,5
+26,101671,2023-11-10,Email,Product quality,1,1
+27,100503,2023-11-12,In-store,Return/Refund,1,
+28,100322,2023-11-13,Email,Return/Refund,1,4
+29,100237,2023-11-14,Phone,Loyalty points,0,
+30,100786,2023-11-14,Email,Delivery,1,1
+31,100857,2023-11-15,Chat,General inquiry,1,4
+32,100973,2023-11-15,Chat,Billing,0,
+33,101064,2023-11-15,Phone,Return/Refund,0,
+34,101163,2023-11-15,Email,Delivery,1,4
+35,101801,2023-11-16,Chat,Return/Refund,0,1
+36,101173,2023-11-17,In-store,Billing,1,
+37,101101,2023-11-18,Phone,Delivery,1,
+38,101454,2023-11-18,In-store,Loyalty points,1,4
+39,101407,2023-11-22,Phone,Return/Refund,1,5
+40,100078,2023-11-24,Chat,Loyalty points,1,
+41,101152,2023-11-24,Email,Product quality,1,2
+42,100088,2023-11-25,Phone,Product quality,0,
+43,101665,2023-11-26,Chat,Delivery,1,4
+44,101704,2023-11-28,Chat,Delivery,1,2
+45,100862,2023-11-29,Phone,General inquiry,1,5
+46,100970,2023-11-29,Chat,Delivery,1,
+47,100149,2023-11-29,Email,Delivery,1,
+48,100029,2023-12-02,Phone,General inquiry,1,4
+49,100010,2023-12-03,Phone,Product quality,1,4
+50,100374,2023-12-05,Chat,General inquiry,0,4
+51,100491,2023-12-05,Phone,Return/Refund,1,5
+52,101786,2023-12-05,Phone,Delivery,0,
+53,100110,2023-12-06,Chat,Return/Refund,1,4
+54,100788,2023-12-07,Chat,Product quality,1,5
+55,100038,2023-12-08,Chat,Product quality,1,1
+56,101171,2023-12-08,Chat,Delivery,1,
+57,100104,2023-12-10,Phone,Billing,1,
+58,100787,2023-12-11,Chat,General inquiry,1,5
+59,100033,2023-12-12,Phone,Delivery,1,2
+60,100143,2023-12-12,Phone,Billing,1,
+61,100740,2023-12-13,Chat,Product quality,1,
+62,101306,2023-12-13,Email,Return/Refund,1,
+63,100536,2023-12-14,Phone,Product quality,0,2
+64,100052,2023-12-15,Phone,Return/Refund,0,2
+65,101314,2023-12-16,Chat,Delivery,0,1
+66,101358,2023-12-17,Chat,Loyalty points,1,
+67,100674,2023-12-19,Chat,General inquiry,1,
+68,100527,2023-12-21,Chat,Return/Refund,0,3
+69,100560,2023-12-21,In-store,Product quality,0,
+70,100632,2023-12-21,Phone,Product quality,0,
+71,100769,2023-12-22,Email,Delivery,1,
+72,101714,2023-12-22,Email,Delivery,1,5
+73,100320,2023-12-23,In-store,Product quality,1,4
+74,101520,2023-12-24,Email,Delivery,1,5
+75,100017,2023-12-25,Email,Billing,1,5
+76,100522,2023-12-25,In-store,Product quality,0,5
+77,100710,2023-12-26,Email,Product quality,0,
+78,101481,2023-12-27,Phone,Loyalty points,0,
+79,101457,2023-12-28,Email,Return/Refund,1,3
+80,101712,2023-12-30,Email,Return/Refund,1,
+81,100109,2023-12-31,In-store,General inquiry,1,
+82,101906,2024-01-02,Chat,General inquiry,1,5
+83,101677,2024-01-02,Chat,Delivery,0,2
+84,101290,2024-01-03,Phone,Product quality,1,5
+85,101619,2024-01-05,Chat,Product quality,1,4
+86,101792,2024-01-05,Chat,Return/Refund,1,
+87,101511,2024-01-07,Chat,Product quality,0,1
+88,100641,2024-01-09,Email,Product quality,1,4
+89,101387,2024-01-09,Phone,Billing,1,
+90,100506,2024-01-11,Chat,Billing,1,1
+91,100076,2024-01-12,In-store,Billing,1,2
+92,101758,2024-01-12,Chat,General inquiry,1,3
+93,101222,2024-01-13,Chat,Loyalty points,1,5
+94,101784,2024-01-13,Chat,Delivery,1,3
+95,100334,2024-01-14,Chat,Delivery,0,
+96,101686,2024-01-14,Phone,Product quality,1,5
+97,100523,2024-01-14,Phone,Product quality,0,2
+98,100552,2024-01-15,Phone,General inquiry,1,4
+99,101355,2024-01-15,Email,Return/Refund,1,3
+100,100471,2024-01-16,In-store,Return/Refund,1,3
+101,100590,2024-01-17,Phone,General inquiry,1,
+102,100933,2024-01-18,Chat,Billing,1,
+103,100488,2024-01-20,Chat,Return/Refund,1,4
+104,101084,2024-01-20,Phone,Billing,1,2
+105,101852,2024-01-21,Phone,Product quality,1,
+106,100267,2024-01-21,Chat,Delivery,1,2
+107,100038,2024-01-22,Phone,Return/Refund,1,3
+108,101865,2024-01-22,Email,Product quality,1,
+109,101706,2024-01-24,Phone,Loyalty points,1,
+110,100857,2024-01-25,In-store,Delivery,1,5
+111,101692,2024-01-25,Email,General inquiry,0,
+112,100631,2024-01-26,Chat,General inquiry,1,
+113,101520,2024-01-26,In-store,Billing,0,3
+114,100244,2024-01-27,Email,Product quality,1,4
+115,100871,2024-01-27,In-store,General inquiry,1,2
+116,101209,2024-01-29,Chat,General inquiry,1,4
+117,101337,2024-01-30,Chat,General inquiry,1,2
+118,100104,2024-01-31,Phone,General inquiry,0,4
+119,100123,2024-01-31,Phone,Loyalty points,1,4
+120,100219,2024-01-31,Chat,Return/Refund,1,1
+121,101683,2024-02-01,Email,Loyalty points,1,3
+122,101154,2024-02-02,Chat,Loyalty points,1,
+123,101050,2024-02-04,Phone,Delivery,0,4
+124,100584,2024-02-05,Phone,Delivery,0,
+125,100252,2024-02-07,Phone,Loyalty points,1,
+126,101904,2024-02-07,Chat,Delivery,0,5
+127,101113,2024-02-09,Phone,Billing,1,5
+128,100480,2024-02-11,Email,Return/Refund,1,
+129,100542,2024-02-11,Email,Loyalty points,1,2
+130,101485,2024-02-13,Email,Return/Refund,1,
+131,100881,2024-02-14,Phone,Delivery,1,5
+132,101190,2024-02-14,In-store,Product quality,1,
+133,101747,2024-02-14,Chat,Return/Refund,1,
+134,100782,2024-02-14,Chat,Loyalty points,0,4
+135,100491,2024-02-15,Chat,Delivery,1,
+136,101709,2024-02-17,Email,Product quality,1,4
+137,101764,2024-02-17,Phone,Loyalty points,1,
+138,100632,2024-02-18,Email,General inquiry,0,4
+139,100367,2024-02-19,Chat,Loyalty points,0,1
+140,101224,2024-02-20,Phone,General inquiry,1,5
+141,100673,2024-02-22,Phone,Delivery,1,5
+142,101387,2024-02-22,Chat,General inquiry,0,3
+143,100542,2024-02-23,In-store,Delivery,0,5
+144,100684,2024-02-23,Chat,General inquiry,1,5
+145,101336,2024-02-23,Email,Return/Refund,1,4
+146,101763,2024-02-26,In-store,General inquiry,1,
+147,101918,2024-02-26,In-store,Return/Refund,1,4
+148,101667,2024-02-27,Phone,Billing,1,4
+149,100406,2024-02-28,Chat,Return/Refund,1,
+150,101721,2024-02-28,In-store,Return/Refund,0,5
+151,100657,2024-02-29,Chat,General inquiry,1,
+152,101060,2024-03-02,Chat,Delivery,0,3
+153,101631,2024-03-03,Phone,Delivery,1,5
+154,100290,2024-03-04,Phone,Delivery,0,4
+155,100558,2024-03-04,Phone,Product quality,1,5
+156,100348,2024-03-05,Phone,Delivery,1,
+157,100643,2024-03-05,In-store,Delivery,1,
+158,100908,2024-03-05,Phone,Loyalty points,0,
+159,100344,2024-03-06,Chat,General inquiry,1,
+160,101638,2024-03-06,Email,Return/Refund,1,5
+161,100320,2024-03-07,Email,Loyalty points,1,
+162,101292,2024-03-07,Email,Loyalty points,1,2
+163,101522,2024-03-07,Chat,General inquiry,1,4
+164,100585,2024-03-07,Email,Return/Refund,1,2
+165,100309,2024-03-08,Email,Delivery,1,
+166,100561,2024-03-08,In-store,Return/Refund,1,4
+167,100487,2024-03-09,Phone,Loyalty points,1,
+168,100391,2024-03-11,Chat,Delivery,1,4
+169,100554,2024-03-11,Chat,Delivery,1,4
+170,101732,2024-03-11,Chat,General inquiry,1,4
+171,101832,2024-03-12,Phone,Delivery,1,5
+172,101218,2024-03-13,Chat,General inquiry,1,
+173,101312,2024-03-13,In-store,Loyalty points,1,2
+174,101864,2024-03-14,Email,General inquiry,1,
+175,101907,2024-03-14,Email,Return/Refund,1,
+176,101040,2024-03-15,Email,Product quality,1,
+177,101119,2024-03-15,Chat,Return/Refund,1,4
+178,101297,2024-03-16,Chat,Loyalty points,1,4
+179,101331,2024-03-16,Email,Delivery,1,5
+180,100027,2024-03-16,In-store,Loyalty points,1,3
+181,100800,2024-03-17,Phone,General inquiry,0,
+182,100458,2024-03-18,Email,Delivery,1,2
+183,100513,2024-03-19,In-store,Delivery,0,2
+184,100519,2024-03-19,In-store,Loyalty points,0,2
+185,100617,2024-03-19,In-store,Product quality,0,
+186,100536,2024-03-20,Chat,Loyalty points,1,
+187,100594,2024-03-21,Chat,Billing,1,
+188,101449,2024-03-23,Phone,Return/Refund,1,4
+189,101778,2024-03-24,Chat,Loyalty points,1,
+190,100369,2024-03-25,Email,Billing,1,2
+191,100991,2024-03-25,In-store,Delivery,0,
+192,101737,2024-03-25,In-store,Loyalty points,0,2
+193,100771,2024-03-26,Phone,General inquiry,0,1
+194,101443,2024-03-26,Phone,Delivery,1,
+195,100191,2024-03-27,Phone,Delivery,0,
+196,101907,2024-03-27,Chat,Delivery,1,
+197,101019,2024-03-31,Phone,Billing,0,
+198,101257,2024-04-01,Chat,Delivery,1,1
+199,100740,2024-04-01,Phone,Billing,1,3
+200,100633,2024-04-02,In-store,General inquiry,1,
+201,101503,2024-04-02,Email,Return/Refund,1,3
+202,101928,2024-04-02,Email,Return/Refund,1,
+203,100302,2024-04-04,Chat,General inquiry,1,4
+204,100590,2024-04-04,In-store,Loyalty points,0,5
+205,101008,2024-04-04,In-store,Billing,1,3
+206,101117,2024-04-05,In-store,Return/Refund,1,5
+207,101170,2024-04-05,Email,Billing,1,5
+208,101298,2024-04-07,Phone,General inquiry,1,4
+209,100097,2024-04-07,Email,Product quality,0,
+210,101898,2024-04-08,Chat,Delivery,0,3
+211,100693,2024-04-10,Phone,Loyalty points,1,4
+212,101449,2024-04-10,Phone,Return/Refund,0,1
+213,101489,2024-04-11,Phone,Loyalty points,0,2
+214,100456,2024-04-12,In-store,Delivery,1,3
+215,101870,2024-04-12,Email,Billing,1,1
+216,100975,2024-04-13,Email,Product quality,1,2
+217,100038,2024-04-14,Chat,Delivery,1,
+218,101099,2024-04-14,Email,Return/Refund,1,3
+219,101918,2024-04-14,In-store,Return/Refund,1,
+220,101375,2024-04-15,Chat,Delivery,1,5
+221,101272,2024-04-17,In-store,Product quality,1,3
+222,101709,2024-04-17,Email,Billing,1,5
+223,101966,2024-04-17,Chat,Loyalty points,1,5
+224,101425,2024-04-17,Phone,Return/Refund,1,2
+225,101554,2024-04-19,Phone,Delivery,1,
+226,101449,2024-04-19,Phone,Product quality,1,
+227,100158,2024-04-20,Email,Billing,1,3
+228,101515,2024-04-20,In-store,Product quality,1,5
+229,100377,2024-04-21,In-store,Loyalty points,1,3
+230,100755,2024-04-21,Chat,Billing,1,5
+231,100906,2024-04-21,Email,Delivery,1,4
+232,100941,2024-04-22,Email,Return/Refund,1,
+233,101348,2024-04-22,Phone,Product quality,1,
+234,101449,2024-04-25,Chat,Return/Refund,0,
+235,101642,2024-04-25,Phone,Product quality,1,4
+236,101506,2024-04-26,Email,Return/Refund,1,
+237,100072,2024-04-27,Email,General inquiry,1,4
+238,101244,2024-04-30,Chat,Delivery,1,
+239,101608,2024-04-30,Phone,General inquiry,1,
+240,100703,2024-04-30,Phone,Delivery,1,1
+241,100801,2024-04-30,Chat,Product quality,0,4
+242,100993,2024-05-02,Phone,Product quality,0,
+243,100904,2024-05-05,Chat,Billing,0,
+244,101923,2024-05-05,Phone,General inquiry,1,
+245,101957,2024-05-05,In-store,Product quality,1,2
+246,101348,2024-05-06,Phone,Return/Refund,1,5
+247,100752,2024-05-10,Phone,Delivery,1,5
+248,101275,2024-05-11,Email,General inquiry,1,3
+249,101452,2024-05-11,In-store,General inquiry,0,1
+250,100790,2024-05-12,Phone,Delivery,1,
+251,101375,2024-05-12,Phone,Product quality,1,
+252,100351,2024-05-14,Phone,Delivery,1,
+253,100203,2024-05-15,Email,General inquiry,1,3
+254,101706,2024-05-15,Chat,Product quality,1,4
+255,100371,2024-05-16,Chat,Return/Refund,1,
+256,100589,2024-05-16,Email,Return/Refund,0,4
+257,101425,2024-05-16,Phone,Delivery,1,1
+258,101621,2024-05-16,In-store,Return/Refund,0,2
+259,100997,2024-05-17,In-store,Product quality,1,5
+260,101163,2024-05-18,In-store,Loyalty points,1,5
+261,101632,2024-05-19,Email,Loyalty points,1,
+262,101375,2024-05-20,Email,Return/Refund,1,3
+263,101260,2024-05-21,In-store,Product quality,1,
+264,101520,2024-05-21,Phone,General inquiry,1,4
+265,100204,2024-05-22,Chat,Billing,1,
+266,100246,2024-05-23,Email,Return/Refund,1,
+267,100516,2024-05-23,Chat,General inquiry,1,
+268,101649,2024-05-24,Email,General inquiry,1,4
+269,101788,2024-05-24,Phone,Return/Refund,0,1
+270,101008,2024-05-26,Email,Product quality,1,2
+271,100705,2024-05-27,Chat,Delivery,1,
+272,101490,2024-05-27,Chat,Loyalty points,1,4
+273,100790,2024-05-27,Phone,Return/Refund,1,1
+274,101348,2024-05-27,Email,Return/Refund,1,3
+275,101022,2024-05-28,In-store,General inquiry,0,5
+276,101942,2024-05-28,Phone,Loyalty points,1,4
+277,101211,2024-05-28,Email,Return/Refund,0,1
+278,101334,2024-05-28,Phone,Delivery,1,3
+279,100697,2024-05-29,Phone,Product quality,1,1
+280,101045,2024-05-30,Email,Billing,1,
+281,100262,2024-05-31,Email,General inquiry,1,
+282,100620,2024-05-31,In-store,Loyalty points,1,2
+283,100283,2024-06-02,Email,Loyalty points,1,4
+284,100468,2024-06-02,Chat,General inquiry,1,
+285,100976,2024-06-02,Phone,Product quality,1,
+286,101905,2024-06-02,Phone,Product quality,1,3
+287,100277,2024-06-04,Phone,Product quality,1,5
+288,101643,2024-06-04,In-store,Delivery,1,
+289,101620,2024-06-06,Phone,Product quality,1,
+290,101058,2024-06-09,Chat,Loyalty points,1,5
+291,101375,2024-06-09,Chat,Billing,1,
+292,100406,2024-06-10,In-store,Return/Refund,1,
+293,100764,2024-06-10,Chat,Return/Refund,1,4
+294,101299,2024-06-10,Email,General inquiry,1,4
+295,101981,2024-06-11,Chat,Product quality,0,5
+296,100528,2024-06-12,Phone,Return/Refund,0,2
+297,100743,2024-06-13,Email,Return/Refund,0,4
+298,101828,2024-06-13,Phone,Delivery,1,4
+299,101453,2024-06-14,Phone,Return/Refund,0,
+300,100975,2024-06-15,Phone,Return/Refund,1,3
+301,100976,2024-06-15,Phone,Return/Refund,1,
+302,100158,2024-06-16,Chat,General inquiry,1,5
+303,100826,2024-06-17,Chat,Return/Refund,1,
+304,100334,2024-06-18,Email,Return/Refund,1,2
+305,100586,2024-06-20,Phone,General inquiry,1,5
+306,101054,2024-06-20,Chat,Product quality,1,5
+307,101743,2024-06-20,Chat,Delivery,1,
+308,100413,2024-06-21,Email,Product quality,1,4
+309,100401,2024-06-21,Phone,Billing,1,1
+310,101642,2024-06-23,In-store,Return/Refund,1,3
+311,101211,2024-06-23,Chat,Product quality,0,3
+312,100819,2024-06-24,Phone,Return/Refund,1,2
+313,100844,2024-06-24,Phone,Product quality,1,
+314,100753,2024-06-24,Phone,Billing,0,1
+315,100854,2024-06-26,In-store,Product quality,1,
+316,100542,2024-06-27,Email,Delivery,0,
+317,101458,2024-06-29,Phone,Return/Refund,1,5
+318,101907,2024-06-29,In-store,Loyalty points,1,4
+319,100205,2024-07-01,In-store,Delivery,1,4
+320,100488,2024-07-02,Chat,Return/Refund,1,
+321,101918,2024-07-02,Phone,Billing,1,3
+322,100797,2024-07-03,Phone,General inquiry,1,
+323,100945,2024-07-03,Email,General inquiry,1,4
+324,100990,2024-07-04,Chat,Product quality,1,
+325,101520,2024-07-05,Email,Billing,0,4
+326,101735,2024-07-05,Chat,Loyalty points,1,
+327,100586,2024-07-06,Chat,Delivery,1,
+328,101540,2024-07-07,Email,Billing,1,2
+329,100806,2024-07-08,Email,Delivery,1,
+330,100712,2024-07-09,Phone,General inquiry,1,5
+331,100771,2024-07-09,Chat,General inquiry,1,
+332,100705,2024-07-10,In-store,Return/Refund,1,2
+333,100239,2024-07-11,Phone,Return/Refund,1,3
+334,100924,2024-07-12,Phone,Return/Refund,1,4
+335,100291,2024-07-14,Phone,Delivery,1,
+336,100545,2024-07-14,Phone,Billing,1,1
+337,100934,2024-07-15,Phone,Product quality,1,
+338,100997,2024-07-16,Chat,General inquiry,1,3
+339,100845,2024-07-16,In-store,Product quality,1,4
+340,100975,2024-07-16,Email,Billing,1,
+341,101948,2024-07-17,In-store,Loyalty points,1,4
+342,101965,2024-07-18,Chat,Delivery,1,5
+343,101403,2024-07-19,Chat,Loyalty points,0,5
+344,101905,2024-07-20,Chat,Product quality,1,
+345,101209,2024-07-21,In-store,General inquiry,1,3
+346,101329,2024-07-22,Chat,Delivery,0,
+347,100776,2024-07-23,Chat,General inquiry,1,
+348,101605,2024-07-23,Phone,Delivery,1,4
+349,100134,2024-07-24,Email,Return/Refund,1,
+350,101473,2024-07-25,Phone,Billing,1,
+351,101130,2024-07-27,Chat,Return/Refund,1,5
+352,101182,2024-07-27,Phone,General inquiry,1,3
+353,100445,2024-07-28,Phone,Product quality,1,
+354,100508,2024-07-29,Chat,General inquiry,1,5
+355,101110,2024-07-29,Chat,Billing,0,1
+356,100676,2024-07-30,Chat,Product quality,1,
+357,101015,2024-07-30,Chat,Loyalty points,1,
+358,100657,2024-07-31,In-store,Product quality,1,1
+359,100705,2024-07-31,Phone,General inquiry,1,5
+360,101000,2024-07-31,In-store,Return/Refund,1,4
+361,101936,2024-07-31,Chat,Loyalty points,1,
+362,100914,2024-08-01,Chat,Billing,1,
+363,100521,2024-08-02,Chat,General inquiry,1,3
+364,101458,2024-08-02,Phone,Return/Refund,1,
+365,100402,2024-08-03,Chat,Delivery,0,4
+366,101402,2024-08-04,Phone,Delivery,1,3
+367,100753,2024-08-05,Phone,Loyalty points,1,2
+368,101307,2024-08-05,Phone,Product quality,1,3
+369,100886,2024-08-09,Phone,Delivery,1,4
+370,101066,2024-08-09,Phone,Return/Refund,1,
+371,101832,2024-08-11,Phone,General inquiry,1,
+372,100402,2024-08-12,Phone,General inquiry,1,4
+373,100032,2024-08-13,Phone,General inquiry,1,4
+374,100491,2024-08-15,Phone,Delivery,1,
+375,101918,2024-08-17,Email,Product quality,1,5
+376,100035,2024-08-18,Chat,Delivery,1,4
+377,101163,2024-08-19,Phone,Loyalty points,1,2
+378,100508,2024-08-20,In-store,Return/Refund,1,
+379,100755,2024-08-20,Phone,Delivery,1,4
+380,101027,2024-08-20,Phone,Return/Refund,1,
+381,101271,2024-08-21,In-store,Delivery,1,
+382,101922,2024-08-23,Phone,Return/Refund,1,
+383,100371,2024-08-25,Chat,General inquiry,1,2
+384,101922,2024-08-26,Chat,Billing,1,
+385,101066,2024-08-27,Chat,Loyalty points,1,
+386,101669,2024-08-27,Chat,General inquiry,0,3
+387,100694,2024-08-28,Chat,General inquiry,1,
+388,101356,2024-08-28,In-store,Loyalty points,1,
+389,100994,2024-08-29,Email,Return/Refund,1,4
+390,101924,2024-08-29,Phone,Return/Refund,1,4
+391,100949,2024-08-30,Phone,General inquiry,1,
+392,100983,2024-08-30,Chat,Return/Refund,1,3
+393,100783,2024-08-31,Email,Return/Refund,1,5
+394,101301,2024-08-31,Phone,Billing,1,5
+395,100897,2024-09-01,Phone,Product quality,1,
+396,100860,2024-09-02,Chat,General inquiry,1,2
+397,101431,2024-09-02,Phone,General inquiry,0,4
+398,100884,2024-09-05,Chat,General inquiry,0,
+399,101804,2024-09-05,Chat,Billing,1,4
+400,100187,2024-09-06,Chat,Loyalty points,1,
+401,101763,2024-09-06,In-store,General inquiry,1,4
+402,101782,2024-09-06,Chat,Loyalty points,1,
+403,100661,2024-09-07,Email,Loyalty points,1,4
+404,100917,2024-09-08,Email,Delivery,1,3
+405,100344,2024-09-12,Chat,Loyalty points,1,
+406,101834,2024-09-12,Chat,Loyalty points,1,2
+407,101846,2024-09-12,Email,General inquiry,1,4
+408,101080,2024-09-12,In-store,Billing,0,4
+409,101510,2024-09-14,Email,Loyalty points,1,
+410,101873,2024-09-14,In-store,Billing,1,
+411,101556,2024-09-15,Phone,Delivery,1,
+412,101852,2024-09-16,Chat,Loyalty points,1,
+413,100724,2024-09-18,In-store,Delivery,0,4
+414,100237,2024-09-19,Email,General inquiry,0,5
+415,101551,2024-09-19,Phone,Delivery,1,2
+416,101715,2024-09-19,Email,General inquiry,1,4
+417,100803,2024-09-21,Email,Billing,1,
+418,100436,2024-09-21,Email,Loyalty points,1,3
+419,100320,2024-09-22,Chat,General inquiry,1,
+420,100855,2024-09-23,In-store,Delivery,1,
+421,100388,2024-09-24,In-store,Delivery,1,5
+422,100075,2024-09-24,Phone,Product quality,0,4
+423,101159,2024-09-26,Phone,Delivery,1,
+424,101179,2024-09-27,Chat,Delivery,1,5
+425,101361,2024-09-27,Chat,General inquiry,0,
+426,100433,2024-09-28,Email,Loyalty points,1,3
+427,101080,2024-09-28,Email,Return/Refund,0,
+428,100386,2024-09-29,Phone,Return/Refund,1,
+429,101121,2024-09-29,Phone,General inquiry,1,
+430,101055,2024-09-30,Chat,General inquiry,1,
+431,101484,2024-09-30,Chat,Delivery,1,
+432,100682,2024-09-30,Chat,Billing,1,4
+433,100731,2024-10-01,Phone,Delivery,1,5
+434,100917,2024-10-01,Chat,General inquiry,1,1
+435,101317,2024-10-02,Phone,Loyalty points,1,4
+436,100175,2024-10-02,In-store,Product quality,0,1
+437,100594,2024-10-02,In-store,Product quality,0,4
+438,101296,2024-10-02,In-store,Return/Refund,1,
+439,100041,2024-10-03,Phone,Return/Refund,1,
+440,100874,2024-10-03,Email,General inquiry,1,
+441,100326,2024-10-03,Chat,Delivery,1,
+442,101616,2024-10-04,Chat,Delivery,1,4
+443,101022,2024-10-04,Phone,Delivery,0,
+444,100320,2024-10-05,Phone,General inquiry,1,
+445,101904,2024-10-05,Phone,Loyalty points,1,
+446,101619,2024-10-06,Email,Loyalty points,1,5
+447,100168,2024-10-07,Phone,Billing,1,1
+448,101604,2024-10-08,Phone,Loyalty points,1,
+449,101914,2024-10-10,Phone,General inquiry,1,4
+450,101346,2024-10-13,Chat,Product quality,0,4
+451,101660,2024-10-14,Email,Delivery,1,4
+452,100764,2024-10-16,Chat,Delivery,1,
+453,100169,2024-10-17,In-store,Delivery,1,4
+454,100270,2024-10-17,Email,Delivery,1,3
+455,101895,2024-10-18,In-store,Return/Refund,1,5
+456,100910,2024-10-20,Chat,Return/Refund,1,
+457,101384,2024-10-20,Phone,Delivery,1,
+458,100906,2024-10-21,Chat,Product quality,0,3
+459,100479,2024-10-22,Chat,Loyalty points,1,5
+460,100817,2024-10-22,In-store,Return/Refund,1,5
+461,101312,2024-10-22,In-store,Product quality,0,5
+462,100698,2024-10-23,Phone,Loyalty points,1,2
+463,100763,2024-10-23,Chat,Return/Refund,0,4
+464,100870,2024-10-23,Phone,Product quality,1,4
+465,100520,2024-10-25,In-store,General inquiry,1,
+466,101895,2024-10-25,Chat,Return/Refund,1,3
+467,100818,2024-10-26,Phone,Return/Refund,1,
+468,100909,2024-10-26,In-store,General inquiry,1,4
+469,100825,2024-10-27,Phone,Loyalty points,1,5
+470,100921,2024-10-27,In-store,Delivery,1,5
+471,101981,2024-10-28,Phone,Delivery,1,3
+472,100099,2024-11-01,Chat,Loyalty points,1,3
+473,101445,2024-11-01,Chat,Product quality,1,
+474,101607,2024-11-01,Chat,Billing,1,5
+475,101508,2024-11-02,Phone,General inquiry,1,
+476,100174,2024-11-05,Chat,Return/Refund,0,4
+477,101281,2024-11-05,In-store,Loyalty points,1,4
+478,101350,2024-11-06,Chat,Loyalty points,1,
+479,100175,2024-11-06,Chat,Return/Refund,1,
+480,101247,2024-11-07,Phone,Return/Refund,1,
+481,101445,2024-11-08,Phone,Product quality,1,
+482,101045,2024-11-09,Chat,Billing,1,
+483,101448,2024-11-09,In-store,Billing,1,1
+484,101040,2024-11-10,Email,General inquiry,1,4
+485,100075,2024-11-10,Chat,General inquiry,0,
+486,100190,2024-11-13,Email,Return/Refund,1,5
+487,101752,2024-11-15,In-store,General inquiry,0,4
+488,101991,2024-11-15,Phone,General inquiry,1,
+489,100092,2024-11-17,In-store,Billing,1,4
+490,101028,2024-11-17,Email,Delivery,0,3
+491,100620,2024-11-19,Email,General inquiry,1,3
+492,100869,2024-11-20,Email,Return/Refund,0,1
+493,100961,2024-11-22,Email,Return/Refund,1,4
+494,100026,2024-11-23,Phone,Delivery,1,4
+495,101049,2024-11-23,Chat,Product quality,1,4
+496,100862,2024-11-25,Chat,Loyalty points,1,3
+497,101934,2024-11-25,Phone,Delivery,1,1
+498,101705,2024-11-26,Chat,General inquiry,1,4
+499,101112,2024-11-27,Email,Delivery,0,5
+500,100113,2024-11-28,In-store,Billing,1,4
+501,100853,2024-11-28,Chat,Return/Refund,1,1
+502,101099,2024-11-29,Phone,General inquiry,1,
+503,101108,2024-11-29,Chat,Delivery,1,
+504,100730,2024-12-01,Chat,Billing,1,
+505,101308,2024-12-02,Phone,Return/Refund,1,
+506,101483,2024-12-02,Phone,Delivery,1,
+507,101259,2024-12-05,Email,Product quality,1,
+508,100811,2024-12-06,Phone,Delivery,1,1
+509,101356,2024-12-08,Chat,General inquiry,1,3
+510,101119,2024-12-09,Chat,General inquiry,1,4
+511,101575,2024-12-09,In-store,Loyalty points,1,
+512,100804,2024-12-11,Chat,Loyalty points,1,3
+513,101237,2024-12-11,Phone,Product quality,1,2
+514,100602,2024-12-13,Chat,Delivery,1,3
+515,100010,2024-12-14,Phone,Delivery,1,4
+516,100464,2024-12-15,Chat,Loyalty points,1,
+517,100921,2024-12-15,In-store,Return/Refund,0,3
+518,100050,2024-12-16,Chat,Loyalty points,1,
+519,101351,2024-12-16,In-store,Product quality,1,
+520,101351,2024-12-16,Phone,Product quality,1,3
+521,100476,2024-12-19,Email,Billing,1,4
+522,101200,2024-12-19,Chat,Delivery,0,4
+523,101882,2024-12-19,Phone,Return/Refund,1,
+524,100192,2024-12-20,Phone,Billing,0,
+525,100270,2024-12-20,Phone,Loyalty points,1,4
+526,100004,2024-12-20,Chat,Delivery,1,4
+527,100155,2024-12-22,Phone,Return/Refund,1,3
+528,100693,2024-12-22,Phone,Product quality,1,
+529,100192,2024-12-25,Phone,Loyalty points,1,3
+530,100109,2024-12-26,Email,Return/Refund,1,3
+531,100298,2024-12-27,In-store,Loyalty points,1,4
+532,101889,2024-12-27,Email,General inquiry,1,3
+533,100800,2024-12-28,Email,Return/Refund,1,5
+534,100620,2024-12-28,Chat,Product quality,0,
+535,101603,2024-12-29,In-store,General inquiry,1,
+536,100543,2024-12-30,In-store,Product quality,1,
+537,101747,2024-12-31,Phone,Billing,0,
+538,100228,2025-01-02,Chat,Return/Refund,1,
+539,101063,2025-01-02,Phone,General inquiry,1,3
+540,100947,2025-01-02,In-store,Return/Refund,0,
+541,100006,2025-01-03,Chat,General inquiry,1,5
+542,101026,2025-01-04,Email,Return/Refund,1,4
+543,101031,2025-01-04,Phone,General inquiry,0,5
+544,100811,2025-01-04,Phone,Return/Refund,0,
+545,100013,2025-01-08,Chat,Loyalty points,1,
+546,100294,2025-01-08,Chat,Billing,1,1
+547,101164,2025-01-09,Phone,Return/Refund,1,
+548,100004,2025-01-09,Phone,Product quality,1,
+549,100426,2025-01-11,Email,Return/Refund,1,
+550,101944,2025-01-13,Chat,General inquiry,0,
+551,100915,2025-01-14,Phone,Product quality,1,3
+552,100421,2025-01-15,Chat,Return/Refund,1,
+553,101954,2025-01-15,Email,Loyalty points,1,
+554,100994,2025-01-17,In-store,Delivery,1,5
+555,101350,2025-01-19,Phone,Delivery,0,
+556,100295,2025-01-20,Email,Loyalty points,1,4
+557,100533,2025-01-21,Phone,Delivery,1,2
+558,100645,2025-01-21,Phone,Delivery,1,4
+559,101871,2025-01-22,Phone,Return/Refund,1,3
+560,101505,2025-01-23,In-store,General inquiry,1,4
+561,101027,2025-01-25,Email,Return/Refund,1,
+562,100398,2025-01-26,Phone,Loyalty points,1,5
+563,101017,2025-01-26,Email,Loyalty points,1,3
+564,101432,2025-01-26,Chat,Delivery,1,1
+565,101054,2025-01-30,Chat,Loyalty points,1,5
+566,100915,2025-02-01,Phone,Loyalty points,1,4
+567,100491,2025-02-03,Phone,Delivery,1,3
+568,101143,2025-02-04,In-store,Product quality,1,3
+569,100099,2025-02-07,Phone,General inquiry,1,4
+570,100183,2025-02-07,Chat,General inquiry,1,3
+571,101077,2025-02-07,Chat,Loyalty points,1,3
+572,101924,2025-02-08,Phone,Return/Refund,0,5
+573,100364,2025-02-09,In-store,Loyalty points,1,
+574,100932,2025-02-09,Chat,Product quality,0,
+575,100325,2025-02-10,Chat,Billing,1,4
+576,101713,2025-02-10,Chat,Delivery,1,3
+577,100491,2025-02-14,Phone,Return/Refund,1,2
+578,101452,2025-02-14,Chat,Product quality,0,1
+579,101827,2025-02-15,Chat,Product quality,0,1
+580,100194,2025-02-17,Chat,General inquiry,1,
+581,101121,2025-02-17,Chat,Product quality,1,4
+582,100723,2025-02-18,Phone,Return/Refund,1,
+583,100426,2025-02-22,Phone,General inquiry,1,3
+584,101452,2025-02-22,In-store,Delivery,1,4
+585,100583,2025-02-23,Chat,Delivery,1,4
+586,100238,2025-02-25,Phone,General inquiry,1,4
+587,100447,2025-02-26,Chat,Return/Refund,1,4
+588,100848,2025-02-26,In-store,Billing,1,
+589,101127,2025-02-26,Chat,General inquiry,1,5
+590,101423,2025-02-26,Phone,Product quality,1,5
+591,101712,2025-02-26,Chat,General inquiry,1,
+592,100541,2025-02-26,Chat,Product quality,1,2
+593,100021,2025-02-27,Chat,Delivery,1,
+594,101300,2025-02-27,Chat,Delivery,1,4
+595,101659,2025-03-04,Phone,Delivery,1,5
+596,100235,2025-03-04,Email,General inquiry,1,
+597,100963,2025-03-05,In-store,Return/Refund,1,2
+598,101208,2025-03-05,Chat,Product quality,0,4
+599,101852,2025-03-06,Phone,Delivery,1,5
+600,101346,2025-03-08,Phone,Delivery,1,4
+601,101660,2025-03-08,Chat,Return/Refund,0,
+602,101832,2025-03-09,Email,Return/Refund,1,
+603,100897,2025-03-10,Email,Return/Refund,1,5
+604,100788,2025-03-13,Email,Return/Refund,1,
+605,101236,2025-03-13,Phone,Loyalty points,1,4
+606,100397,2025-03-13,In-store,Product quality,0,
+607,100631,2025-03-14,Phone,Delivery,1,5
+608,100993,2025-03-15,Phone,Product quality,1,
+609,101208,2025-03-15,Chat,General inquiry,1,
+610,101934,2025-03-16,Email,General inquiry,1,
+611,100017,2025-03-17,In-store,Loyalty points,1,3
+612,101226,2025-03-19,Chat,Product quality,1,
+613,100025,2025-03-20,In-store,General inquiry,1,
+614,100406,2025-03-20,Chat,General inquiry,1,
+615,101473,2025-03-20,In-store,Product quality,1,4
+616,100294,2025-03-21,In-store,General inquiry,1,4
+617,100309,2025-03-23,Phone,Product quality,1,
+618,101906,2025-03-23,Phone,General inquiry,1,4
+619,101984,2025-03-25,Chat,Delivery,1,4
+620,100203,2025-03-26,Phone,Delivery,1,3
+621,100216,2025-03-26,Chat,Delivery,1,3
+622,100340,2025-03-28,In-store,Product quality,1,
+623,100732,2025-03-28,In-store,Billing,1,5
+624,100826,2025-03-28,Phone,Delivery,1,5
+625,100766,2025-03-28,Chat,Delivery,1,
+626,101127,2025-03-29,Email,Product quality,1,3
+627,100657,2025-03-30,Chat,Return/Refund,1,5
+628,100351,2025-04-01,Chat,Loyalty points,1,
+629,100688,2025-04-01,In-store,Delivery,1,
+630,101283,2025-04-02,Phone,Product quality,0,1
+631,100981,2025-04-03,Chat,Return/Refund,1,5
+632,101272,2025-04-04,Chat,Loyalty points,1,
+633,100572,2025-04-05,Chat,Product quality,1,4
+634,101933,2025-04-06,Phone,Product quality,1,4
+635,100154,2025-04-07,Chat,Return/Refund,1,
+636,100599,2025-04-07,Phone,Delivery,1,4
+637,101507,2025-04-07,Email,Loyalty points,0,4
+638,101487,2025-04-08,Phone,Product quality,0,2
+639,100963,2025-04-09,Email,Delivery,1,3
+640,100351,2025-04-10,Phone,Loyalty points,1,4
+641,101835,2025-04-10,In-store,Return/Refund,1,
+642,100907,2025-04-12,Phone,Delivery,1,
+643,101794,2025-04-12,Phone,Delivery,1,1
+644,100832,2025-04-14,Chat,Delivery,1,
+645,101188,2025-04-15,Chat,Loyalty points,1,
+646,100576,2025-04-16,Chat,Return/Refund,1,
+647,100685,2025-04-16,In-store,General inquiry,1,5
+648,101432,2025-04-17,Phone,General inquiry,1,
+649,100718,2025-04-18,Chat,Product quality,0,5
+650,101751,2025-04-18,Email,General inquiry,1,
+651,101462,2025-04-19,Chat,Return/Refund,1,5
+652,101633,2025-04-20,Chat,Delivery,1,5
+653,101826,2025-04-20,Phone,Billing,1,
+654,100507,2025-04-21,Phone,Return/Refund,1,5
+655,100414,2025-04-22,Chat,Delivery,0,3
+656,100343,2025-04-23,In-store,Billing,1,
+657,100993,2025-04-23,Phone,Return/Refund,1,2
+658,101208,2025-04-25,Phone,Delivery,1,5
+659,101575,2025-04-27,Phone,Billing,0,4
+660,101842,2025-04-28,Chat,Product quality,1,4
+661,100188,2025-04-29,Chat,Product quality,1,4
+662,101925,2025-04-29,Phone,Return/Refund,1,
+663,100488,2025-04-29,Chat,Return/Refund,1,2
+664,100670,2025-04-30,Phone,General inquiry,1,
+665,101084,2025-05-01,Phone,Delivery,1,
+666,100030,2025-05-02,Chat,Product quality,1,
+667,101450,2025-05-02,Chat,Billing,0,
+668,100412,2025-05-03,Email,Delivery,1,4
+669,100178,2025-05-04,Chat,General inquiry,0,
+670,101328,2025-05-04,Chat,Delivery,1,5
+671,101830,2025-05-04,Phone,Delivery,1,
+672,101950,2025-05-04,Email,Loyalty points,1,
+673,100580,2025-05-04,Email,Delivery,0,
+674,100752,2025-05-06,Chat,Loyalty points,1,1
+675,101291,2025-05-06,Phone,Return/Refund,0,1
+676,100378,2025-05-07,Email,General inquiry,1,4
+677,100098,2025-05-07,In-store,Product quality,0,4
+678,100800,2025-05-08,Phone,Billing,1,
+679,101165,2025-05-08,Email,Loyalty points,1,
+680,101935,2025-05-09,Phone,Billing,1,5
+681,100808,2025-05-10,Phone,Delivery,1,
+682,100629,2025-05-10,Email,Return/Refund,1,1
+683,100096,2025-05-12,Email,Product quality,0,4
+684,100638,2025-05-12,Chat,Return/Refund,1,
+685,100660,2025-05-14,Phone,General inquiry,1,5
+686,101040,2025-05-14,Chat,General inquiry,1,3
+687,101854,2025-05-16,Chat,General inquiry,1,4
+688,101873,2025-05-16,Email,General inquiry,1,4
+689,101284,2025-05-18,Phone,General inquiry,1,4
+690,100287,2025-05-19,Email,Loyalty points,1,4
+691,101730,2025-05-19,Phone,Delivery,1,4
+692,101487,2025-05-20,Phone,General inquiry,0,4
+693,101341,2025-05-21,In-store,General inquiry,1,5
+694,101841,2025-05-21,Chat,Delivery,1,4
+695,100541,2025-05-21,Phone,Product quality,0,3
+696,100671,2025-05-22,Phone,Delivery,1,1
+697,100503,2025-05-23,Chat,Return/Refund,1,
+698,101273,2025-05-23,Email,Return/Refund,1,5
+699,100977,2025-05-24,Phone,Loyalty points,1,4
+700,101042,2025-05-24,Phone,General inquiry,1,
+701,101445,2025-05-25,Phone,Loyalty points,1,3
+702,100411,2025-05-26,Phone,Return/Refund,1,
+703,101139,2025-05-26,Chat,Delivery,1,
+704,101597,2025-05-26,Chat,Loyalty points,0,2
+705,100190,2025-05-27,Email,General inquiry,0,
+706,100796,2025-05-27,Chat,General inquiry,1,
+707,100489,2025-05-27,Chat,Return/Refund,1,5
+708,101730,2025-05-28,Chat,Product quality,1,2
+709,100433,2025-05-29,Chat,Delivery,1,5
+710,100443,2025-05-29,In-store,Return/Refund,1,5
+711,100452,2025-05-29,Chat,Loyalty points,1,4
+712,101767,2025-05-29,Email,Billing,1,
+713,100743,2025-05-30,In-store,General inquiry,1,
+714,101637,2025-05-30,Chat,Return/Refund,0,
+715,101081,2025-05-30,Phone,Loyalty points,1,1
+716,100986,2025-05-31,Chat,Loyalty points,1,
+717,100642,2025-06-01,In-store,Loyalty points,1,5
+718,101624,2025-06-01,In-store,Product quality,0,4
+719,101873,2025-06-01,Phone,Return/Refund,1,4
+720,101706,2025-06-04,Chat,General inquiry,1,5
+721,101084,2025-06-04,In-store,Product quality,1,
+722,100302,2025-06-05,Chat,Loyalty points,1,
+723,101496,2025-06-05,Chat,General inquiry,1,4
+724,101912,2025-06-05,Chat,Return/Refund,0,
+725,101684,2025-06-06,Chat,Loyalty points,0,3
+726,101747,2025-06-06,Chat,Delivery,1,
+727,100651,2025-06-07,Phone,Loyalty points,1,4
+728,101637,2025-06-07,In-store,Return/Refund,1,4
+729,100050,2025-06-08,Phone,General inquiry,0,
+730,100168,2025-06-09,Chat,General inquiry,1,5
+731,100188,2025-06-09,Chat,General inquiry,1,
+732,101373,2025-06-09,In-store,Return/Refund,1,4
+733,101980,2025-06-09,Phone,Loyalty points,1,5
+734,100409,2025-06-12,Chat,General inquiry,1,5
+735,101650,2025-06-12,Email,Loyalty points,1,3
+736,100309,2025-06-12,Phone,Delivery,0,3
+737,101076,2025-06-15,Phone,Loyalty points,1,
+738,100629,2025-06-16,In-store,Billing,0,
+739,101776,2025-06-17,Chat,Return/Refund,0,
+740,101889,2025-06-17,Chat,Delivery,1,
+741,101495,2025-06-17,Email,Return/Refund,0,4
+742,100983,2025-06-19,In-store,General inquiry,1,5
+743,101581,2025-06-19,Phone,Loyalty points,1,4
+744,101659,2025-06-20,In-store,General inquiry,1,3
+745,101344,2025-06-23,Phone,Product quality,1,
+746,101770,2025-06-23,Chat,Loyalty points,1,5
+747,101778,2025-06-24,In-store,General inquiry,1,5
+748,101950,2025-06-26,Chat,Product quality,0,4
+749,101596,2025-06-27,Phone,Loyalty points,1,4
+750,101950,2025-06-27,Phone,Loyalty points,1,4
+751,100344,2025-06-28,In-store,General inquiry,1,2
+752,101129,2025-06-29,Email,General inquiry,1,5
+753,101934,2025-06-30,Chat,Delivery,1,5
+754,101849,2025-06-30,Phone,Product quality,1,1
+755,100768,2025-07-01,Phone,Return/Refund,1,3
+756,101841,2025-07-01,Phone,Delivery,1,
+757,101821,2025-07-04,Phone,Return/Refund,1,4
+758,101770,2025-07-05,Chat,General inquiry,1,3
+759,100924,2025-07-06,Phone,Product quality,0,4
+760,100886,2025-07-07,Email,Delivery,1,5
+761,100593,2025-07-07,Chat,Return/Refund,1,
+762,100227,2025-07-09,In-store,Product quality,1,1
+763,101197,2025-07-12,Email,Billing,1,5
+764,100743,2025-07-12,Phone,Product quality,0,
+765,100463,2025-07-14,Email,Return/Refund,1,5
+766,100733,2025-07-14,Email,Billing,1,3
+767,101019,2025-07-14,Email,Loyalty points,0,3
+768,101761,2025-07-14,Phone,General inquiry,0,
+769,100933,2025-07-16,Phone,Product quality,1,
+770,101532,2025-07-16,Phone,Return/Refund,0,2
+771,100346,2025-07-17,In-store,Return/Refund,1,
+772,101689,2025-07-18,Phone,Product quality,1,2
+773,100769,2025-07-19,Phone,Billing,1,5
+774,100154,2025-07-20,Chat,Return/Refund,1,
+775,101253,2025-07-20,Email,Delivery,1,1
+776,100492,2025-07-20,In-store,Loyalty points,1,
+777,101392,2025-07-21,Chat,Delivery,1,4
+778,100671,2025-07-23,Email,Product quality,1,
+779,101088,2025-07-25,Phone,Loyalty points,1,
+780,101944,2025-07-25,In-store,Delivery,1,2
+781,101174,2025-07-26,Chat,Billing,0,4
+782,100050,2025-07-27,Email,General inquiry,1,4
+783,100205,2025-07-27,Phone,Loyalty points,0,2
+784,101735,2025-07-27,Chat,General inquiry,0,
+785,101015,2025-07-28,Chat,Return/Refund,1,5
+786,101994,2025-07-28,Email,Loyalty points,0,4
+787,101130,2025-07-29,Email,Delivery,0,
+788,101333,2025-07-30,Phone,Billing,1,
+789,100985,2025-07-30,Chat,Loyalty points,0,
+790,100988,2025-07-30,Phone,Product quality,1,4
+791,101821,2025-07-30,Chat,Loyalty points,0,
+792,100364,2025-08-01,Email,Loyalty points,1,2
+793,100489,2025-08-01,Email,Billing,1,
+794,101137,2025-08-01,Email,Delivery,1,2
+795,101224,2025-08-02,In-store,Return/Refund,1,
+796,101616,2025-08-02,Phone,General inquiry,1,
+797,100128,2025-08-03,Chat,Product quality,1,5
+798,101896,2025-08-04,Chat,General inquiry,1,5
+799,101344,2025-08-05,Phone,General inquiry,1,5
+800,101027,2025-08-06,Phone,Return/Refund,0,
+801,101424,2025-08-09,Email,General inquiry,1,4
+802,101336,2025-08-10,Chat,Billing,1,
+803,101832,2025-08-10,In-store,General inquiry,1,5
+804,100330,2025-08-10,Phone,Product quality,1,1
+805,100092,2025-08-11,Chat,General inquiry,1,3
+806,100839,2025-08-12,Phone,Product quality,1,4
+807,101871,2025-08-12,Email,Loyalty points,1,4
+808,100273,2025-08-13,Chat,Delivery,1,
+809,100447,2025-08-13,Chat,Return/Refund,1,
+810,101059,2025-08-19,Email,General inquiry,0,1
+811,101392,2025-08-19,Phone,General inquiry,1,
+812,101044,2025-08-21,In-store,Delivery,1,
+813,100231,2025-08-21,Email,Delivery,1,
+814,100630,2025-08-22,Chat,Return/Refund,1,
+815,101770,2025-08-22,Phone,Delivery,1,5
+816,100135,2025-08-23,Email,Loyalty points,1,
+817,101178,2025-08-26,Chat,Delivery,1,4
+818,101191,2025-08-29,In-store,General inquiry,1,
+819,101218,2025-09-01,Chat,Loyalty points,0,1
+820,101165,2025-09-02,Chat,Return/Refund,1,3
+821,101716,2025-09-02,Email,Product quality,0,2
+822,100552,2025-09-05,Phone,General inquiry,1,4
+823,101254,2025-09-05,Chat,Loyalty points,1,5
+824,100164,2025-09-06,Phone,General inquiry,1,3
+825,100690,2025-09-06,Chat,Delivery,0,4
+826,100914,2025-09-06,Chat,Loyalty points,1,3
+827,101522,2025-09-06,Chat,Delivery,1,
+828,101873,2025-09-06,Phone,Product quality,1,4
+829,100716,2025-09-08,Phone,General inquiry,1,4
+830,100646,2025-09-10,Email,Delivery,0,2
+831,100723,2025-09-10,In-store,General inquiry,1,2
+832,101106,2025-09-10,In-store,Return/Refund,1,3
+833,101019,2025-09-11,Phone,Return/Refund,1,3
+834,100062,2025-09-12,Email,Return/Refund,1,
+835,101867,2025-09-12,Email,Product quality,1,5
+836,101543,2025-09-13,Email,Loyalty points,1,3
+837,100656,2025-09-16,Phone,Product quality,1,2
+838,101559,2025-09-16,Chat,Return/Refund,1,
+839,101631,2025-09-20,In-store,Loyalty points,1,
+840,100369,2025-09-21,Chat,Return/Refund,0,
+841,101364,2025-09-21,Phone,Delivery,1,1
+842,100126,2025-09-22,Phone,Delivery,1,4
+843,100155,2025-09-22,Chat,Loyalty points,1,3
+844,100916,2025-09-23,Phone,General inquiry,1,
+845,101966,2025-09-23,Email,Delivery,1,3
+846,100910,2025-09-24,In-store,Delivery,1,5
+847,100648,2025-09-24,Email,Billing,1,3
+848,101337,2025-09-25,Chat,Billing,1,2
+849,100876,2025-09-26,In-store,Loyalty points,0,
+850,101473,2025-09-26,In-store,Return/Refund,1,1
+851,100652,2025-09-28,Phone,Loyalty points,1,
+852,101200,2025-09-28,Phone,Loyalty points,1,
+853,101659,2025-09-28,In-store,Loyalty points,1,
+854,101712,2025-09-29,Phone,Loyalty points,1,4
+855,100225,2025-09-30,Chat,Delivery,1,
+856,100494,2025-10-01,In-store,Delivery,1,
+857,100699,2025-10-01,Phone,Product quality,1,
+858,101027,2025-10-01,In-store,Loyalty points,1,
+859,100468,2025-10-02,Phone,Loyalty points,1,
+860,100497,2025-10-02,Chat,Billing,1,4
+861,100689,2025-10-02,Phone,Billing,1,4
+862,101140,2025-10-03,Phone,General inquiry,1,1
+863,101993,2025-10-03,Phone,Delivery,1,3
+864,100077,2025-10-04,Email,Delivery,1,
+865,100225,2025-10-05,Phone,Loyalty points,1,5
+866,101715,2025-10-05,In-store,Billing,1,5
+867,101719,2025-10-05,Email,Billing,1,4
+868,101846,2025-10-06,In-store,Loyalty points,1,4
+869,100270,2025-10-07,Email,General inquiry,1,4
+870,101719,2025-10-07,Chat,Delivery,1,4
+871,101224,2025-10-09,Email,General inquiry,1,3
+872,101154,2025-10-10,Email,Return/Refund,1,2
+873,100113,2025-10-11,Email,General inquiry,0,4
+874,100378,2025-10-11,Email,General inquiry,1,3
+875,101956,2025-10-13,Phone,Product quality,1,3
+876,101706,2025-10-14,Phone,Product quality,1,5
+877,101964,2025-10-14,Chat,Delivery,0,1
+878,101198,2025-10-14,In-store,General inquiry,1,4
+879,100191,2025-10-16,In-store,Product quality,1,
+880,100586,2025-10-16,Email,General inquiry,1,4
+881,101956,2025-10-16,In-store,General inquiry,1,2
+882,101045,2025-10-16,In-store,Return/Refund,0,
+883,101045,2025-10-16,Email,Return/Refund,1,
+884,100662,2025-10-19,Phone,Return/Refund,1,3
+885,101197,2025-10-19,Email,Billing,1,
+886,100725,2025-10-20,Email,Product quality,1,4
+887,100916,2025-10-20,Phone,Billing,1,1
+888,101345,2025-10-20,Phone,Return/Refund,1,
+889,101510,2025-10-20,Email,General inquiry,1,
+890,100868,2025-10-21,Phone,Loyalty points,1,4
+891,101238,2025-10-21,Phone,Delivery,1,
+892,101753,2025-10-21,Chat,General inquiry,1,3
+893,101844,2025-10-21,Email,Billing,1,
+894,101473,2025-10-22,Email,Return/Refund,1,
+895,101755,2025-10-23,Chat,Billing,1,5
+896,100623,2025-10-23,Phone,Product quality,1,2
+897,101535,2025-10-23,Chat,Delivery,0,
+898,100302,2025-10-24,Email,General inquiry,1,
+899,100662,2025-10-24,Phone,Delivery,1,
+900,100407,2025-10-26,Chat,Delivery,1,5
+901,101612,2025-10-26,Chat,Return/Refund,0,
+902,101942,2025-10-27,Phone,Delivery,0,3
+903,100663,2025-10-29,Phone,Loyalty points,1,1
+904,100834,2025-10-29,Phone,Delivery,1,4
+905,100375,2025-10-29,Email,Product quality,0,1
+906,101518,2025-10-31,Phone,Delivery,1,
+907,100987,2025-11-03,Chat,Product quality,1,
+908,100952,2025-11-04,Phone,Delivery,0,4
+909,100509,2025-11-05,Phone,Return/Refund,1,
+910,100776,2025-11-05,Chat,Delivery,1,
+911,101303,2025-11-05,Phone,General inquiry,1,
+912,101580,2025-11-05,Chat,General inquiry,1,4
+913,101719,2025-11-05,In-store,Loyalty points,1,3
+914,100525,2025-11-07,Phone,Loyalty points,1,
+915,101117,2025-11-08,Phone,Return/Refund,1,
+916,100184,2025-11-09,Chat,General inquiry,1,
+917,100731,2025-11-09,Email,Delivery,1,5
+918,101397,2025-11-09,Chat,Billing,1,
+919,101179,2025-11-10,Email,General inquiry,0,
+920,100221,2025-11-11,Phone,General inquiry,1,
+921,100172,2025-11-11,In-store,Product quality,1,3
+922,101936,2025-11-13,Email,Delivery,1,5
+923,101045,2025-11-13,Chat,Product quality,0,1
+924,101357,2025-11-13,Chat,Return/Refund,0,
+925,100823,2025-11-14,In-store,Product quality,1,
+926,101543,2025-11-14,Chat,Return/Refund,0,1
+927,100578,2025-11-15,Phone,Loyalty points,0,
+928,100219,2025-11-15,Email,Loyalty points,1,4
+929,101216,2025-11-15,Chat,Product quality,0,
+930,101455,2025-11-15,Phone,Product quality,0,1
+931,100161,2025-11-16,Chat,General inquiry,1,
+932,101860,2025-11-16,Email,Loyalty points,1,5
+933,100010,2025-11-17,Email,Delivery,1,
+934,101818,2025-11-17,In-store,Loyalty points,1,
+935,101998,2025-11-18,Chat,Delivery,1,
+936,100341,2025-11-19,In-store,General inquiry,1,
+937,101707,2025-11-19,Email,General inquiry,1,5
+938,100636,2025-11-20,Chat,Return/Refund,1,
+939,100698,2025-11-20,Email,Loyalty points,1,
+940,100344,2025-11-21,Chat,Delivery,0,4
+941,100607,2025-11-21,Phone,Return/Refund,1,
+942,101350,2025-11-22,Chat,Delivery,0,4
+943,100074,2025-11-23,Phone,Loyalty points,1,
+944,100604,2025-11-23,Chat,Delivery,1,5
+945,100219,2025-11-23,Email,Product quality,1,
+946,100818,2025-11-23,In-store,Return/Refund,1,1
+947,100767,2025-11-24,Email,General inquiry,1,3
+948,100639,2025-11-24,Chat,Product quality,0,2
+949,101157,2025-11-25,In-store,Return/Refund,1,
+950,101620,2025-11-25,Chat,General inquiry,1,
+951,100380,2025-11-26,Phone,Return/Refund,1,
+952,101567,2025-11-26,Email,General inquiry,1,5
+953,101749,2025-11-26,Phone,General inquiry,1,
+954,100337,2025-11-27,Chat,Delivery,1,3
+955,101010,2025-11-27,In-store,Return/Refund,1,
+956,101611,2025-11-27,Email,Product quality,0,2
+957,101720,2025-11-28,Email,Return/Refund,1,1
+958,100089,2025-11-29,In-store,Return/Refund,1,2
+959,100983,2025-12-01,In-store,Return/Refund,1,2
+960,101144,2025-12-01,Phone,Delivery,0,
+961,101260,2025-12-01,Email,General inquiry,0,2
+962,101868,2025-12-02,Phone,General inquiry,0,
+963,101254,2025-12-03,Chat,Delivery,1,4
+964,101890,2025-12-03,Phone,Return/Refund,1,4
+965,100989,2025-12-04,Chat,General inquiry,1,4
+966,101063,2025-12-05,Phone,Return/Refund,1,
+967,100044,2025-12-06,In-store,General inquiry,1,
+968,100886,2025-12-06,Chat,General inquiry,1,
+969,100608,2025-12-07,In-store,Billing,1,
+970,100375,2025-12-07,Chat,Return/Refund,1,1
+971,101571,2025-12-07,Chat,Return/Refund,0,4
+972,100646,2025-12-08,In-store,Return/Refund,1,4
+973,100089,2025-12-08,Phone,Loyalty points,0,
+974,100427,2025-12-10,Phone,Delivery,1,4
+975,101733,2025-12-15,Phone,General inquiry,0,5
+976,100096,2025-12-16,Email,General inquiry,1,3
+977,100805,2025-12-16,In-store,Return/Refund,1,
+978,101111,2025-12-16,In-store,Return/Refund,1,
+979,100104,2025-12-17,Phone,Delivery,1,4
+980,100861,2025-12-18,Phone,Return/Refund,1,
+981,100221,2025-12-19,Phone,Product quality,1,3
+982,100251,2025-12-20,Phone,Return/Refund,1,
+983,100418,2025-12-21,Chat,Loyalty points,1,
+984,101112,2025-12-21,Chat,Loyalty points,0,1
+985,101758,2025-12-23,Phone,General inquiry,1,5
+986,101820,2025-12-24,Email,Product quality,1,4
+987,101341,2025-12-24,Chat,Billing,1,2
+988,101923,2025-12-28,Email,Billing,1,3
+989,100355,2025-12-29,Phone,Billing,1,4
+990,100572,2025-12-30,In-store,Loyalty points,1,4
+991,100547,2025-12-30,Phone,Delivery,1,
+992,100386,2025-12-31,In-store,General inquiry,0,3
+993,101092,2025-12-31,Chat,Product quality,1,
+994,100694,2026-01-02,Email,Delivery,1,
+995,101599,2026-01-03,Phone,General inquiry,1,
+996,101852,2026-01-04,In-store,Return/Refund,1,
+997,100219,2026-01-06,Chat,Loyalty points,1,2
+998,100500,2026-01-07,Email,General inquiry,1,
+999,100030,2026-01-10,Email,Return/Refund,0,4
+1000,101230,2026-01-10,Phone,Return/Refund,1,2
+1001,100154,2026-01-13,Chat,General inquiry,1,5
+1002,100660,2026-01-13,Phone,General inquiry,1,
+1003,101897,2026-01-13,Chat,Loyalty points,1,5
+1004,101446,2026-01-16,In-store,Loyalty points,1,5
+1005,101991,2026-01-17,Phone,Delivery,1,5
+1006,101518,2026-01-17,Phone,Return/Refund,1,2
+1007,100512,2026-01-19,In-store,Return/Refund,1,
+1008,101299,2026-01-20,Email,Loyalty points,1,1
+1009,101680,2026-01-20,Chat,General inquiry,1,1
+1010,100587,2026-01-21,Phone,Product quality,1,5
+1011,101533,2026-01-22,Chat,Billing,1,3
+1012,100607,2026-01-23,In-store,Return/Refund,1,3
+1013,100454,2026-01-24,Chat,Billing,0,1
+1014,100910,2026-01-26,Phone,General inquiry,1,4
+1015,100442,2026-01-26,Email,Product quality,1,3
+1016,101530,2026-01-26,Phone,Return/Refund,1,3
+1017,100165,2026-01-27,Chat,Billing,1,3
+1018,101183,2026-01-27,Phone,General inquiry,1,3
+1019,101381,2026-01-27,Phone,General inquiry,1,4
+1020,100763,2026-01-28,Phone,Return/Refund,1,
+1021,101317,2026-01-29,Chat,Return/Refund,1,3
+1022,100017,2026-02-01,Chat,Loyalty points,1,3
+1023,100530,2026-02-01,Phone,Loyalty points,1,
+1024,100765,2026-02-01,Phone,Loyalty points,1,3
+1025,100280,2026-02-03,Phone,Loyalty points,0,3
+1026,101980,2026-02-05,In-store,Return/Refund,1,4
+1027,101253,2026-02-06,Email,General inquiry,1,
+1028,101516,2026-02-06,Chat,Return/Refund,1,5
+1029,101358,2026-02-07,Email,General inquiry,1,
+1030,101746,2026-02-07,Chat,General inquiry,1,5
+1031,101942,2026-02-07,In-store,Delivery,1,
+1032,100298,2026-02-08,In-store,General inquiry,1,4
+1033,101174,2026-02-08,Chat,Product quality,1,
+1034,101183,2026-02-08,Chat,Billing,1,4
+1035,100454,2026-02-08,Email,Product quality,1,3
+1036,101005,2026-02-09,Email,Delivery,1,4
+1037,101481,2026-02-09,In-store,Delivery,1,4
+1038,100184,2026-02-11,Email,Delivery,1,4
+1039,100948,2026-02-11,Phone,Delivery,1,3
+1040,101093,2026-02-11,Chat,General inquiry,0,
+1041,101722,2026-02-12,In-store,Billing,0,
+1042,100184,2026-02-13,Phone,Loyalty points,1,
+1043,101088,2026-02-13,In-store,Product quality,0,4
+1044,100948,2026-02-14,Phone,Delivery,1,
+1045,100955,2026-02-14,Chat,Loyalty points,1,
+1046,101530,2026-02-15,Phone,Product quality,1,
+1047,100647,2026-02-16,In-store,General inquiry,1,
+1048,101875,2026-02-16,Phone,Delivery,1,
+1049,100707,2026-02-17,Email,General inquiry,0,
+1050,100222,2026-02-18,Chat,Delivery,1,
+1051,100714,2026-02-21,Phone,General inquiry,1,4
+1052,101580,2026-02-21,Phone,Billing,1,3
+1053,100728,2026-02-21,Email,Product quality,1,4
+1054,100271,2026-02-23,Email,Loyalty points,1,3
+1055,101675,2026-02-23,Chat,General inquiry,1,
+1056,100611,2026-02-24,Email,Return/Refund,1,5
+1057,100155,2026-02-25,Phone,Return/Refund,1,
+1058,101868,2026-02-26,Chat,Return/Refund,1,2
+1059,101649,2026-02-27,Phone,General inquiry,1,
+1060,100162,2026-02-28,Phone,Delivery,1,4
+1061,101565,2026-02-28,In-store,Delivery,1,5
+1062,101098,2026-03-01,In-store,Delivery,0,
+1063,101722,2026-03-01,Email,Product quality,1,
+1064,100924,2026-03-02,In-store,Delivery,1,5
+1065,101192,2026-03-02,Phone,General inquiry,1,4
+1066,101316,2026-03-02,Chat,Loyalty points,1,2
+1067,101632,2026-03-05,In-store,Delivery,1,4
+1068,100017,2026-03-05,In-store,Return/Refund,1,2
+1069,101908,2026-03-05,Phone,Delivery,0,2
+1070,101632,2026-03-07,Chat,Delivery,1,3
+1071,100381,2026-03-07,Phone,Delivery,0,
+1072,100406,2026-03-09,Chat,Return/Refund,0,
+1073,101665,2026-03-09,Chat,Loyalty points,1,
+1074,100100,2026-03-10,Chat,Return/Refund,1,
+1075,100912,2026-03-10,Phone,General inquiry,1,3
+1076,101381,2026-03-10,Chat,Loyalty points,1,
+1077,100103,2026-03-11,Phone,Loyalty points,1,3
+1078,101521,2026-03-11,Phone,Return/Refund,1,
+1079,101631,2026-03-11,Phone,General inquiry,1,
+1080,101015,2026-03-12,Phone,General inquiry,1,2
+1081,101398,2026-03-12,Email,Delivery,1,1
+1082,101784,2026-03-13,Phone,Delivery,1,5
+1083,100343,2026-03-19,Chat,Billing,0,2
+1084,101670,2026-03-19,Email,General inquiry,1,2
+1085,100741,2026-03-20,Chat,Delivery,1,2
+1086,101908,2026-03-20,In-store,Delivery,1,1
+1087,100080,2026-03-21,Email,General inquiry,0,
+1088,100101,2026-03-21,Email,Loyalty points,1,3
+1089,100657,2026-03-21,Phone,Product quality,1,2
+1090,101977,2026-03-21,In-store,Return/Refund,1,4
+1091,100270,2026-03-22,Email,Loyalty points,0,5
+1092,100964,2026-03-22,Chat,Billing,1,1
+1093,101165,2026-03-23,Chat,General inquiry,0,3
+1094,100705,2026-03-24,Chat,Return/Refund,1,3
+1095,100752,2026-03-24,Phone,General inquiry,0,4
+1096,101994,2026-03-24,Phone,Loyalty points,1,
+1097,101109,2026-03-25,Phone,Loyalty points,0,4
+1098,101962,2026-03-26,Phone,General inquiry,1,
+1099,100737,2026-03-27,Email,General inquiry,1,
+1100,100739,2026-03-27,Chat,General inquiry,1,3
+1101,100929,2026-03-27,Email,Billing,1,3
+1102,101245,2026-03-27,Chat,General inquiry,1,3
+1103,100018,2026-03-27,Email,Return/Refund,1,2
+1104,101070,2026-03-28,Phone,Product quality,0,
+1105,101432,2026-03-29,Phone,Billing,1,2
+1106,101507,2026-03-30,Email,Return/Refund,1,1
+1107,100252,2026-04-01,Chat,Delivery,0,4
+1108,101259,2026-04-01,Phone,Loyalty points,1,4
+1109,101638,2026-04-01,Phone,Loyalty points,1,5
+1110,100296,2026-04-02,Phone,Delivery,1,
+1111,101975,2026-04-02,In-store,Billing,0,5
+1112,100031,2026-04-05,Email,Delivery,1,2
+1113,101303,2026-04-06,Email,General inquiry,1,4
+1114,100752,2026-04-07,Chat,Delivery,1,
+1115,100886,2026-04-07,In-store,Return/Refund,1,2
+1116,101434,2026-04-08,Chat,Delivery,1,4
+1117,101481,2026-04-08,Phone,General inquiry,1,4
+1118,100870,2026-04-08,In-store,Delivery,1,1
+1119,100177,2026-04-09,Chat,Delivery,1,
+1120,100250,2026-04-09,Email,General inquiry,1,3
+1121,100511,2026-04-09,Phone,Product quality,1,
+1122,101308,2026-04-09,Chat,Product quality,1,5
+1123,101418,2026-04-10,Chat,Return/Refund,1,1
+1124,101986,2026-04-11,Phone,Return/Refund,1,3
+1125,101259,2026-04-11,Chat,Delivery,0,
+1126,101533,2026-04-12,Email,Loyalty points,1,
+1127,100870,2026-04-12,Phone,Return/Refund,1,4
+1128,100415,2026-04-13,In-store,Loyalty points,0,5
+1129,100886,2026-04-13,Email,Billing,1,4
+1130,101819,2026-04-15,Phone,Loyalty points,1,4
+1131,100846,2026-04-16,Chat,General inquiry,0,4
+1132,101456,2026-04-16,Phone,Return/Refund,1,
+1133,100886,2026-04-16,Phone,Delivery,0,
+1134,101325,2026-04-16,In-store,Delivery,1,2
+1135,100128,2026-04-17,Email,Return/Refund,0,
+1136,100991,2026-04-17,Chat,Billing,1,5
+1137,101988,2026-04-17,Phone,Delivery,1,
+1138,101770,2026-04-18,Email,Loyalty points,0,
+1139,100886,2026-04-18,Phone,Delivery,1,
+1140,100728,2026-04-20,Chat,Product quality,1,1
+1141,100902,2026-04-20,Email,Billing,0,2
+1142,100056,2026-04-21,In-store,Delivery,1,
+1143,101885,2026-04-21,In-store,Loyalty points,1,
+1144,100803,2026-04-23,Chat,Delivery,1,4
+1145,101370,2026-04-23,Chat,Delivery,0,3
+1146,101934,2026-04-23,Phone,Delivery,1,
+1147,100223,2026-04-23,Phone,Product quality,0,5
+1148,101015,2026-04-25,In-store,Billing,1,
+1149,101944,2026-04-25,Phone,General inquiry,1,
+1150,100960,2026-04-26,Email,Loyalty points,1,4
+1151,100823,2026-04-27,In-store,Loyalty points,1,3
+1152,100922,2026-04-28,Phone,General inquiry,1,
+1153,100568,2026-04-29,Email,Delivery,1,3
+1154,101107,2026-04-30,Phone,Billing,1,
+1155,100944,2026-05-01,Chat,General inquiry,0,5
+1156,101893,2026-05-01,Phone,Delivery,1,
+1157,101290,2026-05-01,Email,Loyalty points,1,
+1158,100440,2026-05-02,Chat,Billing,1,4
+1159,101173,2026-05-04,Phone,Loyalty points,1,2
+1160,101613,2026-05-05,Email,General inquiry,1,2
+1161,101994,2026-05-05,In-store,Return/Refund,1,4
+1162,100426,2026-05-05,Phone,Product quality,0,3
+1163,101347,2026-05-06,In-store,Return/Refund,0,5
+1164,101290,2026-05-06,Email,Return/Refund,1,2
+1165,100425,2026-05-08,In-store,Product quality,1,3
+1166,100533,2026-05-09,Email,Loyalty points,1,
+1167,100354,2026-05-09,Phone,Return/Refund,1,2
+1168,101325,2026-05-09,Phone,Delivery,1,
+1169,100509,2026-05-10,In-store,General inquiry,0,2
+1170,101320,2026-05-10,Phone,General inquiry,1,4
+1171,100949,2026-05-10,Chat,Delivery,1,1
+1172,101950,2026-05-11,Phone,General inquiry,1,4
+1173,101158,2026-05-12,Email,Delivery,1,4
+1174,101986,2026-05-12,Chat,Loyalty points,1,5
+1175,101407,2026-05-13,Chat,Delivery,1,
+1176,100870,2026-05-15,Email,Product quality,0,
+1177,101070,2026-05-15,Chat,Return/Refund,0,
+1178,101325,2026-05-15,Chat,Product quality,1,1
+1179,101874,2026-05-16,Email,General inquiry,1,
+1180,100391,2026-05-17,Chat,General inquiry,1,
+1181,101620,2026-05-17,Phone,Return/Refund,1,5
+1182,101641,2026-05-17,Chat,General inquiry,1,4
+1183,100512,2026-05-17,Email,Product quality,1,5
+1184,100148,2026-05-18,Email,Product quality,1,
+1185,101094,2026-05-18,In-store,Delivery,1,
+1186,101580,2026-05-19,Phone,Return/Refund,1,
+1187,100273,2026-05-22,Phone,Product quality,1,4
+1188,100847,2026-05-22,Phone,Return/Refund,1,3
+1189,101108,2026-05-22,Email,Return/Refund,1,
+1190,100582,2026-05-22,Chat,Delivery,1,
+1191,101027,2026-05-23,Chat,General inquiry,1,
+1192,100490,2026-05-24,Phone,General inquiry,1,
+1193,101480,2026-05-25,Phone,General inquiry,1,2
+1194,101584,2026-05-25,Chat,General inquiry,1,
+1195,101437,2026-05-25,Chat,Product quality,0,
+1196,101488,2026-05-27,In-store,Billing,1,
+1197,101117,2026-05-27,Phone,Delivery,1,
+1198,100353,2026-05-28,In-store,General inquiry,1,3
+1199,101129,2026-05-28,Email,Billing,1,5
+1200,101048,2026-05-29,Chat,Return/Refund,1,
+1201,101753,2026-05-29,Email,General inquiry,1,
+1202,101906,2026-05-29,Email,Return/Refund,1,
+1203,101373,2026-05-30,Phone,Loyalty points,1,
+1204,100233,2026-05-31,Phone,Product quality,1,
+1205,100850,2026-05-31,Email,General inquiry,1,4
+1206,101668,2026-06-01,Chat,Billing,1,2
+1207,100706,2026-06-02,Email,Return/Refund,1,4
+1208,101298,2026-06-03,Chat,Return/Refund,1,5
+1209,101573,2026-06-03,Phone,Delivery,1,
+1210,100549,2026-06-04,Chat,Return/Refund,1,
+1211,101831,2026-06-04,Chat,General inquiry,1,1
+1212,101625,2026-06-05,Phone,General inquiry,1,
+1213,101569,2026-06-06,Chat,Loyalty points,1,
+1214,101175,2026-06-08,Phone,Return/Refund,1,
+1215,101173,2026-06-08,Email,Return/Refund,0,
+1216,101783,2026-06-10,Email,Return/Refund,1,
+1217,100079,2026-06-12,Chat,Delivery,1,2
+1218,100055,2026-06-13,Chat,Product quality,1,4
+1219,101245,2026-06-13,Chat,Loyalty points,0,1
+1220,100462,2026-06-14,Chat,Loyalty points,1,4
+1221,101485,2026-06-14,Phone,Product quality,1,
+1222,100373,2026-06-15,Phone,Return/Refund,1,
+1223,101155,2026-06-15,Email,Loyalty points,1,
+1224,101732,2026-06-15,Chat,Product quality,1,3
+1225,100067,2026-06-16,Email,General inquiry,1,4
+1226,100491,2026-06-16,In-store,Return/Refund,1,
+1227,101508,2026-06-17,In-store,Return/Refund,1,3
+1228,101668,2026-06-17,Phone,Delivery,0,3
+1229,100880,2026-06-18,Chat,General inquiry,1,
+1230,100983,2026-06-19,Chat,Delivery,1,
+1231,100252,2026-06-21,Phone,Return/Refund,1,4
+1232,100266,2026-06-21,Chat,Delivery,1,5
+1233,100890,2026-06-23,Phone,Loyalty points,1,3
+1234,101864,2026-06-24,Phone,General inquiry,1,3
+1235,101637,2026-06-24,Phone,Delivery,1,1
+1236,100025,2026-06-25,Chat,Return/Refund,1,3
+1237,101337,2026-06-25,Phone,Return/Refund,0,3
+1238,101893,2026-06-25,Chat,Billing,1,
+1239,100960,2026-06-26,Phone,General inquiry,1,4
+1240,101349,2026-06-27,Phone,General inquiry,1,5
+1241,101117,2026-06-27,Phone,Return/Refund,1,2
+1242,100013,2026-06-28,Phone,Delivery,1,2
+1243,100929,2026-06-28,Phone,Return/Refund,1,4
+1244,100447,2026-06-29,Chat,Product quality,1,1
+1245,101431,2026-06-29,Email,Delivery,1,
+1246,101667,2026-06-29,In-store,Delivery,1,4
+1247,101930,2026-06-30,Email,Return/Refund,1,
+1248,100684,2026-07-01,Phone,Delivery,0,4
+1249,100344,2026-07-02,Phone,Delivery,1,
+1250,101206,2026-07-02,Chat,Loyalty points,1,4
+1251,101910,2026-07-04,Phone,Delivery,1,4
+1252,100897,2026-07-05,Phone,Return/Refund,1,4
+1253,100206,2026-07-06,Email,Product quality,1,4
+1254,101153,2026-07-07,Phone,General inquiry,1,
+1255,100289,2026-07-08,Phone,Product quality,1,
+1256,101707,2026-07-09,Chat,Product quality,1,
+1257,100130,2026-07-10,Phone,General inquiry,1,
+1258,100177,2026-07-10,Phone,Return/Refund,0,
+1259,100521,2026-07-10,Phone,Product quality,1,2
+1260,100360,2026-07-11,Chat,General inquiry,1,
+1261,100007,2026-07-13,In-store,Delivery,1,4
+1262,101491,2026-07-13,Phone,Return/Refund,1,
+1263,101515,2026-07-16,In-store,Return/Refund,1,5
+1264,101220,2026-07-16,Email,Delivery,1,5
+1265,101282,2026-07-17,In-store,Loyalty points,1,4
+1266,101072,2026-07-18,Phone,Product quality,0,
+1267,100509,2026-07-19,Chat,Product quality,1,1
+1268,100166,2026-07-20,Chat,Delivery,1,4
+1269,100368,2026-07-20,Email,Return/Refund,1,2
+1270,100944,2026-07-20,In-store,Return/Refund,0,
+1271,100072,2026-07-24,In-store,Delivery,0,4
+1272,100892,2026-07-24,In-store,Billing,1,
+1273,100890,2026-07-26,Phone,Delivery,1,
+1274,101656,2026-07-26,Email,Return/Refund,1,5
+1275,100641,2026-07-27,Chat,Return/Refund,0,
+1276,101782,2026-07-27,Phone,Return/Refund,1,5
+1277,100364,2026-07-27,Chat,Product quality,0,2
+1278,100863,2026-07-27,Email,Return/Refund,1,1
+1279,100270,2026-07-28,Chat,General inquiry,1,4
+1280,100344,2026-07-28,Phone,Loyalty points,1,
+1281,101764,2026-07-31,Chat,General inquiry,1,
+1282,101632,2026-08-03,Chat,Return/Refund,1,1
+1283,101959,2026-08-04,Phone,Delivery,1,5
+1284,101842,2026-08-05,Chat,Delivery,1,
+1285,101770,2026-08-06,Phone,Loyalty points,1,4
+1286,101867,2026-08-06,In-store,Loyalty points,1,4
+1287,101300,2026-08-06,Chat,General inquiry,1,1
+1288,100863,2026-08-10,Chat,Product quality,0,4
+1289,101270,2026-08-10,Email,Return/Refund,1,
+1290,100465,2026-08-11,Phone,Loyalty points,1,4
+1291,100186,2026-08-13,Chat,Return/Refund,1,4
+1292,100437,2026-08-13,Phone,Product quality,1,3
+1293,100977,2026-08-13,In-store,Billing,1,5
+1294,101294,2026-08-14,Chat,Product quality,1,
+1295,100983,2026-08-15,Email,Delivery,1,
+1296,100310,2026-08-17,Email,Loyalty points,1,
+1297,101966,2026-08-18,Email,General inquiry,1,
+1298,101182,2026-08-20,Email,Product quality,1,5
+1299,100031,2026-08-21,Phone,General inquiry,1,
+1300,100983,2026-08-23,Phone,Return/Refund,1,
+1301,100481,2026-08-24,In-store,Product quality,1,4
+1302,101311,2026-08-25,Email,General inquiry,1,
+1303,100167,2026-08-26,Chat,Delivery,1,5
+1304,100852,2026-08-27,Chat,Loyalty points,1,
+1305,101675,2026-08-27,Phone,Product quality,1,4
+1306,101140,2026-08-27,Chat,Return/Refund,1,
+1307,101936,2026-08-28,In-store,Delivery,0,4
+1308,100259,2026-08-28,Phone,Product quality,1,4
+1309,101777,2026-08-29,Chat,Return/Refund,1,3
+1310,100425,2026-08-31,Email,Loyalty points,1,5
+1311,100820,2026-08-31,Email,Loyalty points,1,3
+1312,100553,2026-09-01,Phone,Product quality,1,3
+1313,101654,2026-09-01,Email,Product quality,1,5
+1314,101248,2026-09-02,Email,Return/Refund,1,4
+1315,101395,2026-09-02,Phone,General inquiry,1,5
+1316,100005,2026-09-03,Email,Delivery,1,
+1317,100419,2026-09-03,Chat,Product quality,0,
+1318,101006,2026-09-04,Phone,Delivery,1,5
+1319,101270,2026-09-04,Email,Delivery,0,5
+1320,101651,2026-09-05,Phone,Loyalty points,1,4
+1321,100660,2026-09-05,Email,Return/Refund,1,1
+1322,101356,2026-09-07,Phone,General inquiry,1,2
+1323,100881,2026-09-11,Chat,Delivery,1,5
+1324,101468,2026-09-11,Chat,Loyalty points,1,5
+1325,100731,2026-09-12,Chat,Delivery,1,
+1326,100388,2026-09-14,Email,Billing,1,5
+1327,100462,2026-09-14,Phone,Return/Refund,0,4
+1328,101129,2026-09-14,Phone,Delivery,1,
+1329,101226,2026-09-14,In-store,General inquiry,1,5
+1330,101574,2026-09-14,Phone,Product quality,1,5
+1331,101625,2026-09-14,In-store,Delivery,1,
+1332,101322,2026-09-15,Chat,Return/Refund,1,4
+1333,100258,2026-09-17,Phone,Delivery,1,
+1334,100344,2026-09-17,Phone,General inquiry,1,4
+1335,101863,2026-09-17,Phone,Loyalty points,1,
+1336,100471,2026-09-18,Email,General inquiry,1,
+1337,101316,2026-09-19,Phone,Loyalty points,1,3
+1338,101725,2026-09-19,Email,Delivery,0,4
+1339,101322,2026-09-19,Phone,Return/Refund,0,4
+1340,100257,2026-09-22,Chat,Product quality,1,
+1341,101424,2026-09-22,Chat,General inquiry,0,4
+1342,101874,2026-09-23,In-store,General inquiry,1,
+1343,100292,2026-09-25,Phone,Delivery,1,
+1344,101581,2026-09-25,Chat,Delivery,1,
+1345,100247,2026-09-26,Chat,Delivery,1,
+1346,100262,2026-09-26,Chat,Loyalty points,1,
+1347,100984,2026-09-26,In-store,Billing,1,3
+1348,101762,2026-09-27,Chat,Delivery,1,
+1349,101898,2026-09-28,Chat,Return/Refund,0,
+1350,101624,2026-09-29,Phone,Loyalty points,1,5
+1351,100619,2026-09-30,Chat,Billing,1,
+1352,101749,2026-09-30,Email,Billing,1,5
+1353,100154,2026-10-01,Phone,Return/Refund,1,
+1354,100342,2026-10-02,Email,Loyalty points,0,
+1355,101488,2026-10-02,Chat,General inquiry,1,4
+1356,101723,2026-10-02,Chat,Return/Refund,1,4
+1357,101932,2026-10-03,Email,Billing,1,
+1358,100099,2026-10-04,Phone,Return/Refund,0,
+1359,101603,2026-10-06,Phone,Loyalty points,1,3
+1360,101868,2026-10-07,In-store,Delivery,1,4
+1361,101025,2026-10-08,Chat,General inquiry,0,
+1362,101631,2026-10-08,Chat,Delivery,1,1
+1363,100834,2026-10-09,Chat,Return/Refund,1,4
+1364,101150,2026-10-11,In-store,Delivery,1,
+1365,100738,2026-10-12,Chat,General inquiry,1,5
+1366,101272,2026-10-12,Email,Return/Refund,0,1
+1367,101342,2026-10-14,Chat,Return/Refund,1,3
+1368,101361,2026-10-14,Chat,Product quality,0,5
+1369,101464,2026-10-15,Chat,Loyalty points,1,3
+1370,101431,2026-10-16,Chat,Loyalty points,1,
+1371,100833,2026-10-17,Chat,Return/Refund,1,
+1372,100506,2026-10-21,Phone,Delivery,1,
+1373,100691,2026-10-21,Email,Product quality,1,2
+1374,101857,2026-10-21,Chat,General inquiry,1,5
+1375,100877,2026-10-22,Chat,General inquiry,0,5
+1376,101995,2026-10-22,In-store,General inquiry,1,5
+1377,101776,2026-10-23,Chat,General inquiry,1,
+1378,100919,2026-10-24,Phone,Product quality,1,
+1379,101313,2026-10-25,Phone,Delivery,0,
+1380,100960,2026-10-27,Chat,Product quality,1,
+1381,101390,2026-10-27,Email,Loyalty points,1,
+1382,100493,2026-10-29,Chat,Delivery,1,
+1383,101142,2026-10-29,Chat,Loyalty points,1,
+1384,101840,2026-10-30,Phone,General inquiry,1,3
+1385,100465,2026-10-31,In-store,Loyalty points,1,
+1386,101991,2026-10-31,In-store,Return/Refund,1,
+1387,100113,2026-11-01,Email,Return/Refund,1,4
+1388,100933,2026-11-01,Chat,Delivery,1,
+1389,101354,2026-11-01,Email,Return/Refund,1,
+1390,101790,2026-11-01,Phone,Return/Refund,1,

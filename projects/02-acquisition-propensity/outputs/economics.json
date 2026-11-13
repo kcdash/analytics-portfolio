@@ -9,46 +9,46 @@
       "Purchased list": 2.0
     }
   },
-  "prospects_per_year": 52077.15714285715,
-  "converters_per_year": 5302.928571428572,
+  "prospects_per_year": 51939.5,
+  "converters_per_year": 5413.471428571429,
   "test_days": 350,
   "value": {
-    "first_year_margin_mean": 411.997490611588,
-    "first_year_margin_median": 254.715,
-    "standard_error": 5.521636492454612,
-    "customers_measured": 7456,
-    "never_ordered": 0.09696888412017167,
-    "active_in_second_half": 0.7325643776824035,
+    "first_year_margin_mean": 428.2658010752688,
+    "first_year_margin_median": 260.105,
+    "standard_error": 5.889844312990781,
+    "customers_measured": 7440,
+    "never_ordered": 0.09408602150537634,
+    "active_in_second_half": 0.7334677419354839,
     "by_source": [
       {
         "lead_source": "Event",
-        "size": 619,
-        "mean": 391.51,
-        "sem": 19.88
+        "size": 612,
+        "mean": 410.81,
+        "sem": 20.25
       },
       {
         "lead_source": "Partner list",
-        "size": 1320,
-        "mean": 399.05,
-        "sem": 12.56
+        "size": 1317,
+        "mean": 457.89,
+        "sem": 14.88
       },
       {
         "lead_source": "Purchased list",
         "size": 1013,
-        "mean": 410.14,
-        "sem": 14.26
+        "mean": 419.28,
+        "sem": 16.37
       },
       {
         "lead_source": "Referral",
-        "size": 1275,
-        "mean": 433.05,
-        "sem": 13.71
+        "size": 1207,
+        "mean": 422.13,
+        "sem": 13.8
       },
       {
         "lead_source": "Web lead",
-        "size": 3229,
-        "mean": 413.49,
-        "sem": 8.5
+        "size": 3291,
+        "mean": 424.67,
+        "sem": 8.75
       }
     ]
   },
@@ -56,796 +56,796 @@
     "Random list": [
       {
         "share": 5,
-        "contacts": 2496,
-        "converters": 254
+        "contacts": 2490,
+        "converters": 260
       },
       {
         "share": 10,
-        "contacts": 4993,
-        "converters": 508
+        "contacts": 4980,
+        "converters": 519
       },
       {
         "share": 15,
-        "contacts": 7490,
-        "converters": 763
+        "contacts": 7470,
+        "converters": 779
       },
       {
         "share": 20,
-        "contacts": 9987,
-        "converters": 1017
+        "contacts": 9961,
+        "converters": 1038
       },
       {
         "share": 25,
-        "contacts": 12484,
-        "converters": 1271
+        "contacts": 12451,
+        "converters": 1298
       },
       {
         "share": 30,
-        "contacts": 14981,
-        "converters": 1526
+        "contacts": 14941,
+        "converters": 1557
       },
       {
         "share": 35,
-        "contacts": 17477,
-        "converters": 1780
+        "contacts": 17431,
+        "converters": 1817
       },
       {
         "share": 40,
-        "contacts": 19974,
-        "converters": 2034
+        "contacts": 19922,
+        "converters": 2076
       },
       {
         "share": 45,
-        "contacts": 22471,
-        "converters": 2288
+        "contacts": 22412,
+        "converters": 2336
       },
       {
         "share": 50,
-        "contacts": 24968,
-        "converters": 2542
+        "contacts": 24902,
+        "converters": 2596
       },
       {
         "share": 55,
-        "contacts": 27465,
-        "converters": 2797
+        "contacts": 27392,
+        "converters": 2855
       },
       {
         "share": 60,
-        "contacts": 29962,
-        "converters": 3051
+        "contacts": 29883,
+        "converters": 3115
       },
       {
         "share": 65,
-        "contacts": 32459,
-        "converters": 3305
+        "contacts": 32373,
+        "converters": 3374
       },
       {
         "share": 70,
-        "contacts": 34955,
-        "converters": 3560
+        "contacts": 34863,
+        "converters": 3634
       },
       {
         "share": 75,
-        "contacts": 37452,
-        "converters": 3814
+        "contacts": 37353,
+        "converters": 3893
       },
       {
         "share": 80,
-        "contacts": 39949,
-        "converters": 4068
+        "contacts": 39844,
+        "converters": 4153
       },
       {
         "share": 85,
-        "contacts": 42446,
-        "converters": 4322
+        "contacts": 42334,
+        "converters": 4412
       },
       {
         "share": 90,
-        "contacts": 44943,
-        "converters": 4576
+        "contacts": 44824,
+        "converters": 4672
       },
       {
         "share": 95,
-        "contacts": 47440,
-        "converters": 4831
+        "contacts": 47314,
+        "converters": 4931
       },
       {
         "share": 100,
-        "contacts": 49937,
-        "converters": 5085
+        "contacts": 49805,
+        "converters": 5191
       }
     ],
     "Look-alike index": [
       {
         "share": 5,
-        "contacts": 2496,
-        "converters": 661
+        "contacts": 2490,
+        "converters": 674
       },
       {
         "share": 10,
-        "contacts": 4993,
-        "converters": 1131
+        "contacts": 4980,
+        "converters": 1171
       },
       {
         "share": 15,
-        "contacts": 7490,
-        "converters": 1598
+        "contacts": 7470,
+        "converters": 1587
       },
       {
         "share": 20,
-        "contacts": 9987,
-        "converters": 1990
+        "contacts": 9961,
+        "converters": 1982
       },
       {
         "share": 25,
-        "contacts": 12484,
-        "converters": 2346
+        "contacts": 12451,
+        "converters": 2341
       },
       {
         "share": 30,
-        "contacts": 14981,
-        "converters": 2680
+        "contacts": 14941,
+        "converters": 2693
       },
       {
         "share": 35,
-        "contacts": 17477,
-        "converters": 2965
+        "contacts": 17431,
+        "converters": 3005
       },
       {
         "share": 40,
-        "contacts": 19974,
-        "converters": 3226
+        "contacts": 19922,
+        "converters": 3304
       },
       {
         "share": 45,
-        "contacts": 22471,
-        "converters": 3484
+        "contacts": 22412,
+        "converters": 3582
       },
       {
         "share": 50,
-        "contacts": 24968,
-        "converters": 3738
+        "contacts": 24902,
+        "converters": 3802
       },
       {
         "share": 55,
-        "contacts": 27465,
-        "converters": 3947
+        "contacts": 27392,
+        "converters": 4007
       },
       {
         "share": 60,
-        "contacts": 29962,
-        "converters": 4130
+        "contacts": 29883,
+        "converters": 4211
       },
       {
         "share": 65,
-        "contacts": 32459,
-        "converters": 4297
+        "contacts": 32373,
+        "converters": 4392
       },
       {
         "share": 70,
-        "contacts": 34955,
-        "converters": 4447
+        "contacts": 34863,
+        "converters": 4549
       },
       {
         "share": 75,
-        "contacts": 37452,
-        "converters": 4588
+        "contacts": 37353,
+        "converters": 4712
       },
       {
         "share": 80,
-        "contacts": 39949,
-        "converters": 4713
+        "contacts": 39844,
+        "converters": 4838
       },
       {
         "share": 85,
-        "contacts": 42446,
-        "converters": 4826
+        "contacts": 42334,
+        "converters": 4944
       },
       {
         "share": 90,
-        "contacts": 44943,
-        "converters": 4935
+        "contacts": 44824,
+        "converters": 5047
       },
       {
         "share": 95,
-        "contacts": 47440,
-        "converters": 5016
+        "contacts": 47314,
+        "converters": 5130
       },
       {
         "share": 100,
-        "contacts": 49937,
-        "converters": 5085
+        "contacts": 49805,
+        "converters": 5191
       }
     ],
     "Propensity scorecard": [
       {
         "share": 5,
-        "contacts": 2496,
-        "converters": 669
+        "contacts": 2490,
+        "converters": 696
       },
       {
         "share": 10,
-        "contacts": 4993,
-        "converters": 1187
+        "contacts": 4980,
+        "converters": 1200
       },
       {
         "share": 15,
-        "contacts": 7490,
-        "converters": 1647
+        "contacts": 7470,
+        "converters": 1652
       },
       {
         "share": 20,
-        "contacts": 9987,
-        "converters": 2046
+        "contacts": 9961,
+        "converters": 2053
       },
       {
         "share": 25,
-        "contacts": 12484,
-        "converters": 2406
+        "contacts": 12451,
+        "converters": 2394
       },
       {
         "share": 30,
-        "contacts": 14981,
-        "converters": 2694
+        "contacts": 14941,
+        "converters": 2763
       },
       {
         "share": 35,
-        "contacts": 17477,
-        "converters": 2981
+        "contacts": 17431,
+        "converters": 3046
       },
       {
         "share": 40,
-        "contacts": 19974,
-        "converters": 3230
+        "contacts": 19922,
+        "converters": 3317
       },
       {
         "share": 45,
-        "contacts": 22471,
-        "converters": 3527
+        "contacts": 22412,
+        "converters": 3575
       },
       {
         "share": 50,
-        "contacts": 24968,
-        "converters": 3746
+        "contacts": 24902,
+        "converters": 3807
       },
       {
         "share": 55,
-        "contacts": 27465,
-        "converters": 3959
+        "contacts": 27392,
+        "converters": 4014
       },
       {
         "share": 60,
-        "contacts": 29962,
-        "converters": 4129
+        "contacts": 29883,
+        "converters": 4207
       },
       {
         "share": 65,
-        "contacts": 32459,
-        "converters": 4309
+        "contacts": 32373,
+        "converters": 4387
       },
       {
         "share": 70,
-        "contacts": 34955,
-        "converters": 4452
+        "contacts": 34863,
+        "converters": 4578
       },
       {
         "share": 75,
-        "contacts": 37452,
-        "converters": 4593
+        "contacts": 37353,
+        "converters": 4735
       },
       {
         "share": 80,
-        "contacts": 39949,
-        "converters": 4721
+        "contacts": 39844,
+        "converters": 4848
       },
       {
         "share": 85,
-        "contacts": 42446,
-        "converters": 4825
+        "contacts": 42334,
+        "converters": 4959
       },
       {
         "share": 90,
-        "contacts": 44943,
-        "converters": 4942
+        "contacts": 44824,
+        "converters": 5054
       },
       {
         "share": 95,
-        "contacts": 47440,
-        "converters": 5015
+        "contacts": 47314,
+        "converters": 5131
       },
       {
         "share": 100,
-        "contacts": 49937,
-        "converters": 5085
+        "contacts": 49805,
+        "converters": 5191
       }
     ],
     "Gradient boosting": [
       {
         "share": 5,
-        "contacts": 2496,
-        "converters": 673
+        "contacts": 2490,
+        "converters": 687
       },
       {
         "share": 10,
-        "contacts": 4993,
-        "converters": 1181
+        "contacts": 4980,
+        "converters": 1153
       },
       {
         "share": 15,
-        "contacts": 7490,
-        "converters": 1604
+        "contacts": 7470,
+        "converters": 1606
       },
       {
         "share": 20,
-        "contacts": 9987,
-        "converters": 2001
+        "contacts": 9961,
+        "converters": 2031
       },
       {
         "share": 25,
-        "contacts": 12484,
-        "converters": 2354
+        "contacts": 12451,
+        "converters": 2391
       },
       {
         "share": 30,
-        "contacts": 14981,
-        "converters": 2660
+        "contacts": 14941,
+        "converters": 2733
       },
       {
         "share": 35,
-        "contacts": 17477,
-        "converters": 2951
+        "contacts": 17431,
+        "converters": 3031
       },
       {
         "share": 40,
-        "contacts": 19974,
-        "converters": 3233
+        "contacts": 19922,
+        "converters": 3294
       },
       {
         "share": 45,
-        "contacts": 22471,
-        "converters": 3465
+        "contacts": 22412,
+        "converters": 3552
       },
       {
         "share": 50,
-        "contacts": 24968,
-        "converters": 3699
+        "contacts": 24902,
+        "converters": 3781
       },
       {
         "share": 55,
-        "contacts": 27465,
-        "converters": 3909
+        "contacts": 27392,
+        "converters": 3982
       },
       {
         "share": 60,
-        "contacts": 29962,
-        "converters": 4087
+        "contacts": 29883,
+        "converters": 4180
       },
       {
         "share": 65,
-        "contacts": 32459,
-        "converters": 4279
+        "contacts": 32373,
+        "converters": 4364
       },
       {
         "share": 70,
-        "contacts": 34955,
-        "converters": 4436
+        "contacts": 34863,
+        "converters": 4537
       },
       {
         "share": 75,
-        "contacts": 37452,
-        "converters": 4590
+        "contacts": 37353,
+        "converters": 4696
       },
       {
         "share": 80,
-        "contacts": 39949,
-        "converters": 4713
+        "contacts": 39844,
+        "converters": 4842
       },
       {
         "share": 85,
-        "contacts": 42446,
-        "converters": 4833
+        "contacts": 42334,
+        "converters": 4944
       },
       {
         "share": 90,
-        "contacts": 44943,
-        "converters": 4938
+        "contacts": 44824,
+        "converters": 5044
       },
       {
         "share": 95,
-        "contacts": 47440,
-        "converters": 5010
+        "contacts": 47314,
+        "converters": 5124
       },
       {
         "share": 100,
-        "contacts": 49937,
-        "converters": 5085
+        "contacts": 49805,
+        "converters": 5191
       }
     ]
   },
   "budget_scenarios": [
     {
       "share": 20,
-      "contacts_per_year": 10415.431428571428,
-      "customers_random": 1060.5857142857144,
-      "customers_scorecard": 2133.6857142857143,
-      "customers_lookalike": 2075.285714285714,
-      "extra_customers": 1073.1000000000001,
-      "extra_first_year_margin": 442114.5071752951,
-      "cost_per_customer_random": 58.92271386430678,
-      "cost_per_customer_scorecard": 29.28856304985337
+      "contacts_per_year": 10387.900000000001,
+      "customers_random": 1082.4857142857143,
+      "customers_scorecard": 2140.9857142857145,
+      "customers_lookalike": 2066.942857142857,
+      "extra_customers": 1058.5,
+      "extra_first_year_margin": 453319.35043817206,
+      "cost_per_customer_random": 57.578034682080926,
+      "cost_per_customer_scorecard": 29.111544081831465
     },
     {
       "share": 40,
-      "contacts_per_year": 20830.862857142856,
-      "customers_random": 2121.171428571429,
-      "customers_scorecard": 3368.4285714285716,
-      "customers_lookalike": 3364.257142857143,
-      "extra_customers": 1247.257142857143,
-      "extra_first_year_margin": 513866.8130045218,
-      "cost_per_customer_random": 58.92271386430678,
-      "cost_per_customer_scorecard": 37.10489164086687
+      "contacts_per_year": 20775.800000000003,
+      "customers_random": 2164.9714285714285,
+      "customers_scorecard": 3459.1571428571433,
+      "customers_lookalike": 3445.6000000000004,
+      "extra_customers": 1294.1857142857143,
+      "extra_first_year_margin": 554255.4816687404,
+      "cost_per_customer_random": 57.578034682080926,
+      "cost_per_customer_scorecard": 36.03617726861622
     },
     {
       "share": 60,
-      "contacts_per_year": 31246.294285714288,
-      "customers_random": 3181.757142857143,
-      "customers_scorecard": 4305.9571428571435,
-      "customers_lookalike": 4307.0,
-      "extra_customers": 1124.2,
-      "extra_first_year_margin": 463167.5789455472,
-      "cost_per_customer_random": 58.922713864306786,
-      "cost_per_customer_scorecard": 43.53916202470332
+      "contacts_per_year": 31163.7,
+      "customers_random": 3248.5,
+      "customers_scorecard": 4387.3,
+      "customers_lookalike": 4391.471428571429,
+      "extra_customers": 1138.8000000000002,
+      "extra_first_year_margin": 487709.0942645162,
+      "cost_per_customer_random": 57.55955056179775,
+      "cost_per_customer_scorecard": 42.6189683860233
     },
     {
       "share": 80,
-      "contacts_per_year": 41661.72571428571,
-      "customers_random": 4242.342857142858,
-      "customers_scorecard": 4923.328571428572,
-      "customers_lookalike": 4914.9857142857145,
-      "extra_customers": 680.9857142857144,
-      "extra_first_year_margin": 280564.40542805416,
-      "cost_per_customer_random": 58.92271386430678,
-      "cost_per_customer_scorecard": 50.77263291675492
+      "contacts_per_year": 41551.600000000006,
+      "customers_random": 4330.9857142857145,
+      "customers_scorecard": 5055.771428571429,
+      "customers_lookalike": 5045.342857142858,
+      "extra_customers": 724.7857142857143,
+      "extra_first_year_margin": 310400.9345364824,
+      "cost_per_customer_random": 57.564170479171686,
+      "cost_per_customer_scorecard": 49.31188118811881
     }
   ],
   "deciles": [
     {
       "decile": 1,
-      "prospects": 4994,
-      "conversion_rate": 0.2377,
-      "predicted": 0.2243,
-      "breakeven_incrementality": 0.0613
+      "prospects": 4981,
+      "conversion_rate": 0.2411,
+      "predicted": 0.2209,
+      "breakeven_incrementality": 0.0581
     },
     {
       "decile": 2,
-      "prospects": 4994,
-      "conversion_rate": 0.172,
-      "predicted": 0.1515,
-      "breakeven_incrementality": 0.0847
+      "prospects": 4980,
+      "conversion_rate": 0.1711,
+      "predicted": 0.1513,
+      "breakeven_incrementality": 0.0819
     },
     {
       "decile": 3,
-      "prospects": 4993,
-      "conversion_rate": 0.1298,
-      "predicted": 0.1217,
-      "breakeven_incrementality": 0.1122
+      "prospects": 4981,
+      "conversion_rate": 0.1425,
+      "predicted": 0.1224,
+      "breakeven_incrementality": 0.0983
     },
     {
       "decile": 4,
-      "prospects": 4994,
-      "conversion_rate": 0.1075,
-      "predicted": 0.1018,
-      "breakeven_incrementality": 0.1354
+      "prospects": 4980,
+      "conversion_rate": 0.1112,
+      "predicted": 0.1029,
+      "breakeven_incrementality": 0.1259
     },
     {
       "decile": 5,
-      "prospects": 4993,
-      "conversion_rate": 0.1031,
-      "predicted": 0.0859,
-      "breakeven_incrementality": 0.1412
+      "prospects": 4980,
+      "conversion_rate": 0.0984,
+      "predicted": 0.0873,
+      "breakeven_incrementality": 0.1424
     },
     {
       "decile": 6,
-      "prospects": 4994,
-      "conversion_rate": 0.0767,
-      "predicted": 0.0723,
-      "breakeven_incrementality": 0.1899
+      "prospects": 4981,
+      "conversion_rate": 0.0803,
+      "predicted": 0.0741,
+      "breakeven_incrementality": 0.1745
     },
     {
       "decile": 7,
-      "prospects": 4994,
-      "conversion_rate": 0.0647,
-      "predicted": 0.0601,
-      "breakeven_incrementality": 0.2252
+      "prospects": 4980,
+      "conversion_rate": 0.0745,
+      "predicted": 0.062,
+      "breakeven_incrementality": 0.1881
     },
     {
       "decile": 8,
-      "prospects": 4993,
-      "conversion_rate": 0.0539,
-      "predicted": 0.0487,
-      "breakeven_incrementality": 0.2703
+      "prospects": 4981,
+      "conversion_rate": 0.0542,
+      "predicted": 0.0508,
+      "breakeven_incrementality": 0.2585
     },
     {
       "decile": 9,
-      "prospects": 4994,
-      "conversion_rate": 0.0443,
-      "predicted": 0.0375,
-      "breakeven_incrementality": 0.3291
+      "prospects": 4980,
+      "conversion_rate": 0.0414,
+      "predicted": 0.0398,
+      "breakeven_incrementality": 0.3387
     },
     {
       "decile": 10,
-      "prospects": 4994,
-      "conversion_rate": 0.0286,
-      "predicted": 0.0248,
-      "breakeven_incrementality": 0.5086
+      "prospects": 4981,
+      "conversion_rate": 0.0275,
+      "predicted": 0.027,
+      "breakeven_incrementality": 0.5094
     }
   ],
   "incrementality_scenarios": [
     {
       "incrementality": 1.0,
-      "net_contact_all": 1872330.3214639218,
-      "net_with_cutoff": 1872970.6383665695,
-      "share_contacted": 0.9965756853635581,
-      "gain_from_cutoff": 640.316902647876,
+      "net_contact_all": 2006767.677955223,
+      "net_with_cutoff": 2007118.077955223,
+      "share_contacted": 0.9988756148981026,
+      "gain_from_cutoff": 350.40000000000003,
       "deciles_losing_money": 0
     },
     {
       "incrementality": 0.75,
-      "net_contact_all": 1326132.0053836557,
-      "net_with_cutoff": 1327008.028936058,
-      "share_contacted": 0.98482087430162,
-      "gain_from_cutoff": 876.0235524025546,
+      "net_contact_all": 1427166.5084664172,
+      "net_with_cutoff": 1427290.4039570855,
+      "share_contacted": 0.9931532978616605,
+      "gain_from_cutoff": 123.89549066816524,
       "deciles_losing_money": 0
     },
     {
       "incrementality": 0.5,
-      "net_contact_all": 779933.6893033894,
-      "net_with_cutoff": 782419.9928871092,
-      "share_contacted": 0.9226024791236959,
-      "gain_from_cutoff": 2486.3035837197976,
+      "net_contact_all": 847565.3389776114,
+      "net_with_cutoff": 849826.003151421,
+      "share_contacted": 0.9483184419235017,
+      "gain_from_cutoff": 2260.6641738095623,
       "deciles_losing_money": 1
     },
     {
       "incrementality": 0.25,
-      "net_contact_all": 233735.37322312332,
-      "net_with_cutoff": 260638.43194816256,
-      "share_contacted": 0.6653583515229189,
-      "gain_from_cutoff": 26903.058725039245,
+      "net_contact_all": 267964.1694888057,
+      "net_with_cutoff": 293287.6584013441,
+      "share_contacted": 0.701977713081016,
+      "gain_from_cutoff": 25323.488912538392,
       "deciles_losing_money": 3
     }
   ],
   "sources": [
     {
       "lead_source": "Event",
-      "prospects": 4993,
-      "conversion_rate": 0.0865,
-      "prospects_per_year": 5206.9857,
+      "prospects": 5053,
+      "conversion_rate": 0.0859,
+      "prospects_per_year": 5269.5571,
       "cost_per_lead": 15.0,
-      "cost_per_customer": 242.7153,
-      "first_year_return_per_dollar": 1.6975
+      "cost_per_customer": 244.5,
+      "first_year_return_per_dollar": 1.7516
     },
     {
       "lead_source": "Partner list",
-      "prospects": 9979,
-      "conversion_rate": 0.0882,
-      "prospects_per_year": 10406.6714,
+      "prospects": 9951,
+      "conversion_rate": 0.0875,
+      "prospects_per_year": 10377.4714,
       "cost_per_lead": 5.0,
-      "cost_per_customer": 124.7375,
-      "first_year_return_per_dollar": 3.3029
+      "cost_per_customer": 125.6728,
+      "first_year_return_per_dollar": 3.4078
     },
     {
       "lead_source": "Purchased list",
-      "prospects": 14092,
-      "conversion_rate": 0.0494,
-      "prospects_per_year": 14695.9429,
+      "prospects": 13738,
+      "conversion_rate": 0.0507,
+      "prospects_per_year": 14326.7714,
       "cost_per_lead": 2.0,
-      "cost_per_customer": 161.977,
-      "first_year_return_per_dollar": 2.5436
+      "cost_per_customer": 157.6815,
+      "first_year_return_per_dollar": 2.716
     },
     {
       "lead_source": "Referral",
-      "prospects": 5855,
-      "conversion_rate": 0.1491,
-      "prospects_per_year": 6105.9286,
+      "prospects": 6027,
+      "conversion_rate": 0.1415,
+      "prospects_per_year": 6285.3,
       "cost_per_lead": 20.0,
-      "cost_per_customer": 174.3757,
-      "first_year_return_per_dollar": 2.3627
+      "cost_per_customer": 183.7069,
+      "first_year_return_per_dollar": 2.3312
     },
     {
       "lead_source": "Web lead",
-      "prospects": 15018,
-      "conversion_rate": 0.1468,
-      "prospects_per_year": 15661.6286,
+      "prospects": 15036,
+      "conversion_rate": 0.1554,
+      "prospects_per_year": 15680.4,
       "cost_per_lead": 8.0,
-      "cost_per_customer": 95.3956,
-      "first_year_return_per_dollar": 4.3188
+      "cost_per_customer": 90.113,
+      "first_year_return_per_dollar": 4.7525
     }
   ],
   "source_by_score": [
     {
       "lead_source": "Event",
       "band": "Bottom third",
-      "size": 1591,
-      "mean": 0.0522
+      "size": 1928,
+      "mean": 0.0503
     },
     {
       "lead_source": "Event",
       "band": "Middle third",
-      "size": 2340,
-      "mean": 0.0821
+      "size": 2300,
+      "mean": 0.0843
     },
     {
       "lead_source": "Event",
       "band": "Top third",
-      "size": 1062,
-      "mean": 0.1478
+      "size": 825,
+      "mean": 0.1733
     },
     {
       "lead_source": "Partner list",
       "band": "Bottom third",
-      "size": 3059,
-      "mean": 0.0441
+      "size": 2900,
+      "mean": 0.0503
     },
     {
       "lead_source": "Partner list",
       "band": "Middle third",
-      "size": 4655,
-      "mean": 0.0879
+      "size": 4861,
+      "mean": 0.0839
     },
     {
       "lead_source": "Partner list",
       "band": "Top third",
-      "size": 2265,
-      "mean": 0.1483
+      "size": 2190,
+      "mean": 0.1447
     },
     {
       "lead_source": "Purchased list",
       "band": "Bottom third",
-      "size": 11011,
-      "mean": 0.041
+      "size": 10928,
+      "mean": 0.0404
     },
     {
       "lead_source": "Purchased list",
       "band": "Middle third",
-      "size": 2799,
-      "mean": 0.0729
+      "size": 2592,
+      "mean": 0.091
     },
     {
       "lead_source": "Purchased list",
       "band": "Top third",
-      "size": 282,
-      "mean": 0.1418
+      "size": 218,
+      "mean": 0.0872
     },
     {
       "lead_source": "Referral",
       "band": "Bottom third",
-      "size": 212,
-      "mean": 0.0613
+      "size": 230,
+      "mean": 0.0696
     },
     {
       "lead_source": "Referral",
       "band": "Middle third",
-      "size": 1953,
-      "mean": 0.1029
+      "size": 2201,
+      "mean": 0.0863
     },
     {
       "lead_source": "Referral",
       "band": "Top third",
-      "size": 3690,
-      "mean": 0.1786
+      "size": 3596,
+      "mean": 0.1799
     },
     {
       "lead_source": "Web lead",
       "band": "Bottom third",
-      "size": 773,
-      "mean": 0.0505
+      "size": 616,
+      "mean": 0.0617
     },
     {
       "lead_source": "Web lead",
       "band": "Middle third",
-      "size": 4898,
-      "mean": 0.0947
+      "size": 4647,
+      "mean": 0.1018
     },
     {
       "lead_source": "Web lead",
       "band": "Top third",
-      "size": 9347,
-      "mean": 0.182
+      "size": 9773,
+      "mean": 0.1867
     }
   ],
   "value_by_score": [
     {
       "third": "Bottom third",
-      "size": 2486,
-      "mean": 392.91,
-      "sem": 8.89
+      "size": 2480,
+      "mean": 431.34,
+      "sem": 10.29
     },
     {
       "third": "Middle third",
-      "size": 2485,
-      "mean": 414.55,
-      "sem": 9.7
+      "size": 2480,
+      "mean": 437.08,
+      "sem": 10.55
     },
     {
       "third": "Top third",
-      "size": 2485,
-      "mean": 428.53,
-      "sem": 10.05
+      "size": 2480,
+      "mean": 416.38,
+      "sem": 9.75
     }
   ],
-  "corr_score_value": 0.016972989982659666,
+  "corr_score_value": -0.004809539449029358,
   "test_design": [
     {
       "holdout_share": 0.05,
       "weeks": 13,
-      "holdout_n": 650.9644642857143,
-      "treated_n": 12368.32482142857,
-      "mde_points": 0.034070587506691945,
-      "smallest_incrementality_detectable": 0.33458857980760587
+      "holdout_n": 649.2437500000001,
+      "treated_n": 12335.631249999999,
+      "mde_points": 0.03446899244204812,
+      "smallest_incrementality_detectable": 0.33071241929805556
     },
     {
       "holdout_share": 0.05,
       "weeks": 26,
-      "holdout_n": 1301.9289285714285,
-      "treated_n": 24736.64964285714,
-      "mde_points": 0.024091543464991542,
-      "smallest_incrementality_detectable": 0.23658985368953445
+      "holdout_n": 1298.4875000000002,
+      "treated_n": 24671.262499999997,
+      "mde_points": 0.024373258296440083,
+      "smallest_incrementality_detectable": 0.23384899430826397
     },
     {
       "holdout_share": 0.05,
       "weeks": 52,
-      "holdout_n": 2603.857857142857,
-      "treated_n": 49473.29928571428,
-      "mde_points": 0.017035293753345972,
-      "smallest_incrementality_detectable": 0.16729428990380293
+      "holdout_n": 2596.9750000000004,
+      "treated_n": 49342.524999999994,
+      "mde_points": 0.01723449622102406,
+      "smallest_incrementality_detectable": 0.16535620964902778
     },
     {
       "holdout_share": 0.1,
       "weeks": 13,
-      "holdout_n": 1301.9289285714285,
-      "treated_n": 11717.360357142858,
-      "mde_points": 0.024751707981454932,
-      "smallest_incrementality_detectable": 0.24307296784069127
+      "holdout_n": 1298.4875000000002,
+      "treated_n": 11686.3875,
+      "mde_points": 0.025041142456759168,
+      "smallest_incrementality_detectable": 0.2402570025156791
     },
     {
       "holdout_share": 0.1,
       "weeks": 26,
-      "holdout_n": 2603.857857142857,
-      "treated_n": 23434.720714285715,
-      "mde_points": 0.017502100559635973,
-      "smallest_incrementality_detectable": 0.17187854388329235
+      "holdout_n": 2596.9750000000004,
+      "treated_n": 23372.775,
+      "mde_points": 0.01770676163983277,
+      "smallest_incrementality_detectable": 0.16988735570639013
     },
     {
       "holdout_share": 0.1,
       "weeks": 52,
-      "holdout_n": 5207.715714285714,
-      "treated_n": 46869.44142857143,
-      "mde_points": 0.012375853990727466,
-      "smallest_incrementality_detectable": 0.12153648392034563
+      "holdout_n": 5193.950000000001,
+      "treated_n": 46745.55,
+      "mde_points": 0.012520571228379584,
+      "smallest_incrementality_detectable": 0.12012850125783955
     },
     {
       "holdout_share": 0.2,
       "weeks": 13,
-      "holdout_n": 2603.857857142857,
-      "treated_n": 10415.431428571428,
-      "mde_points": 0.0185637809860912,
-      "smallest_incrementality_detectable": 0.18230472588051846
+      "holdout_n": 2596.9750000000004,
+      "treated_n": 10387.900000000001,
+      "mde_points": 0.018780856842569377,
+      "smallest_incrementality_detectable": 0.18019275188675934
     },
     {
       "holdout_share": 0.2,
       "weeks": 26,
-      "holdout_n": 5207.715714285714,
-      "treated_n": 20830.862857142856,
-      "mde_points": 0.013126575419726982,
-      "smallest_incrementality_detectable": 0.12890890791246928
+      "holdout_n": 5193.950000000001,
+      "treated_n": 20775.800000000003,
+      "mde_points": 0.013280071229874579,
+      "smallest_incrementality_detectable": 0.1274155167797926
     },
     {
       "holdout_share": 0.2,
       "weeks": 52,
-      "holdout_n": 10415.431428571428,
-      "treated_n": 41661.72571428571,
-      "mde_points": 0.0092818904930456,
-      "smallest_incrementality_detectable": 0.09115236294025923
+      "holdout_n": 10387.900000000001,
+      "treated_n": 41551.600000000006,
+      "mde_points": 0.009390428421284689,
+      "smallest_incrementality_detectable": 0.09009637594337967
     }
   ]
 }

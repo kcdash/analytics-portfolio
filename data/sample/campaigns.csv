@@ -1,39 +1,39 @@
 campaign_id,campaign_name,channel,offer,start_date,end_date,cost_per_contact_cad,audience_size,treated_size
-C001,10% off - Email - 2023-11,Email,10% off,2023-11-20,2023-12-03,0.02,250,217
-C002,5x bonus points - SMS - 2023-12,SMS,5x bonus points,2023-12-18,2023-12-31,0.06,250,229
-C003,$15 off $75 - Email - 2024-01,Email,$15 off $75,2024-01-15,2024-01-28,0.02,250,229
-C004,Free shipping - Direct Mail - 2024-02,Direct Mail,Free shipping,2024-02-12,2024-02-25,0.95,250,214
-C005,Win-back 20% off - Email - 2024-03,Email,Win-back 20% off,2024-03-11,2024-03-24,0.02,250,226
-C006,10% off - SMS - 2024-04,SMS,10% off,2024-04-08,2024-04-21,0.06,250,233
-C007,5x bonus points - Email - 2024-05,Email,5x bonus points,2024-05-06,2024-05-19,0.02,250,219
+C001,10% off - Email - 2023-11,Email,10% off,2023-11-20,2023-12-03,0.02,250,225
+C002,5x bonus points - SMS - 2023-12,SMS,5x bonus points,2023-12-18,2023-12-31,0.06,250,219
+C003,$15 off $75 - Email - 2024-01,Email,$15 off $75,2024-01-15,2024-01-28,0.02,250,221
+C004,Free shipping - Direct Mail - 2024-02,Direct Mail,Free shipping,2024-02-12,2024-02-25,0.95,250,225
+C005,Win-back 20% off - Email - 2024-03,Email,Win-back 20% off,2024-03-11,2024-03-24,0.02,250,223
+C006,10% off - SMS - 2024-04,SMS,10% off,2024-04-08,2024-04-21,0.06,250,228
+C007,5x bonus points - Email - 2024-05,Email,5x bonus points,2024-05-06,2024-05-19,0.02,250,218
 C008,$15 off $75 - Direct Mail - 2024-06,Direct Mail,$15 off $75,2024-06-03,2024-06-16,0.95,250,229
-C009,Free shipping - Email - 2024-07,Email,Free shipping,2024-07-01,2024-07-14,0.02,250,227
-C010,Win-back 20% off - SMS - 2024-07,SMS,Win-back 20% off,2024-07-29,2024-08-11,0.06,250,235
-C011,10% off - Email - 2024-08,Email,10% off,2024-08-26,2024-09-08,0.02,250,229
-C012,5x bonus points - Direct Mail - 2024-09,Direct Mail,5x bonus points,2024-09-23,2024-10-06,0.95,250,230
-C013,$15 off $75 - Email - 2024-10,Email,$15 off $75,2024-10-21,2024-11-03,0.02,250,224
-C014,Free shipping - SMS - 2024-11,SMS,Free shipping,2024-11-18,2024-12-01,0.06,250,229
-C015,Win-back 20% off - Email - 2024-12,Email,Win-back 20% off,2024-12-16,2024-12-29,0.02,250,229
-C016,10% off - Direct Mail - 2025-01,Direct Mail,10% off,2025-01-13,2025-01-26,0.95,250,226
-C017,5x bonus points - Email - 2025-02,Email,5x bonus points,2025-02-10,2025-02-23,0.02,250,228
-C018,$15 off $75 - SMS - 2025-03,SMS,$15 off $75,2025-03-10,2025-03-23,0.06,250,227
-C019,Free shipping - Email - 2025-04,Email,Free shipping,2025-04-07,2025-04-20,0.02,250,234
-C020,Win-back 20% off - Direct Mail - 2025-05,Direct Mail,Win-back 20% off,2025-05-05,2025-05-18,0.95,250,220
-C021,10% off - Email - 2025-06,Email,10% off,2025-06-02,2025-06-15,0.02,250,229
-C022,5x bonus points - SMS - 2025-06,SMS,5x bonus points,2025-06-30,2025-07-13,0.06,250,225
-C023,$15 off $75 - Email - 2025-07,Email,$15 off $75,2025-07-28,2025-08-10,0.02,250,229
-C024,Free shipping - Direct Mail - 2025-08,Direct Mail,Free shipping,2025-08-25,2025-09-07,0.95,250,231
-C025,Win-back 20% off - Email - 2025-09,Email,Win-back 20% off,2025-09-22,2025-10-05,0.02,250,222
-C026,10% off - SMS - 2025-10,SMS,10% off,2025-10-20,2025-11-02,0.06,250,225
-C027,5x bonus points - Email - 2025-11,Email,5x bonus points,2025-11-17,2025-11-30,0.02,250,232
-C028,$15 off $75 - Direct Mail - 2025-12,Direct Mail,$15 off $75,2025-12-15,2025-12-28,0.95,250,227
-C029,Free shipping - Email - 2026-01,Email,Free shipping,2026-01-12,2026-01-25,0.02,250,236
-C030,Win-back 20% off - SMS - 2026-02,SMS,Win-back 20% off,2026-02-09,2026-02-22,0.06,250,221
-C031,10% off - Email - 2026-03,Email,10% off,2026-03-09,2026-03-22,0.02,250,220
-C032,5x bonus points - Direct Mail - 2026-04,Direct Mail,5x bonus points,2026-04-06,2026-04-19,0.95,250,228
-C033,$15 off $75 - Email - 2026-05,Email,$15 off $75,2026-05-04,2026-05-17,0.02,250,218
-C034,Free shipping - SMS - 2026-06,SMS,Free shipping,2026-06-01,2026-06-14,0.06,250,226
-C035,Win-back 20% off - Email - 2026-06,Email,Win-back 20% off,2026-06-29,2026-07-12,0.02,250,226
-C036,10% off - Direct Mail - 2026-07,Direct Mail,10% off,2026-07-27,2026-08-09,0.95,250,223
-C037,5x bonus points - Email - 2026-08,Email,5x bonus points,2026-08-24,2026-09-06,0.02,250,229
-C038,$15 off $75 - SMS - 2026-09,SMS,$15 off $75,2026-09-21,2026-10-04,0.06,250,220
+C009,Free shipping - Email - 2024-07,Email,Free shipping,2024-07-01,2024-07-14,0.02,250,229
+C010,Win-back 20% off - SMS - 2024-07,SMS,Win-back 20% off,2024-07-29,2024-08-11,0.06,250,223
+C011,10% off - Email - 2024-08,Email,10% off,2024-08-26,2024-09-08,0.02,250,226
+C012,5x bonus points - Direct Mail - 2024-09,Direct Mail,5x bonus points,2024-09-23,2024-10-06,0.95,250,221
+C013,$15 off $75 - Email - 2024-10,Email,$15 off $75,2024-10-21,2024-11-03,0.02,250,223
+C014,Free shipping - SMS - 2024-11,SMS,Free shipping,2024-11-18,2024-12-01,0.06,250,226
+C015,Win-back 20% off - Email - 2024-12,Email,Win-back 20% off,2024-12-16,2024-12-29,0.02,250,217
+C016,10% off - Direct Mail - 2025-01,Direct Mail,10% off,2025-01-13,2025-01-26,0.95,250,222
+C017,5x bonus points - Email - 2025-02,Email,5x bonus points,2025-02-10,2025-02-23,0.02,250,213
+C018,$15 off $75 - SMS - 2025-03,SMS,$15 off $75,2025-03-10,2025-03-23,0.06,250,218
+C019,Free shipping - Email - 2025-04,Email,Free shipping,2025-04-07,2025-04-20,0.02,250,239
+C020,Win-back 20% off - Direct Mail - 2025-05,Direct Mail,Win-back 20% off,2025-05-05,2025-05-18,0.95,250,230
+C021,10% off - Email - 2025-06,Email,10% off,2025-06-02,2025-06-15,0.02,250,225
+C022,5x bonus points - SMS - 2025-06,SMS,5x bonus points,2025-06-30,2025-07-13,0.06,250,224
+C023,$15 off $75 - Email - 2025-07,Email,$15 off $75,2025-07-28,2025-08-10,0.02,250,228
+C024,Free shipping - Direct Mail - 2025-08,Direct Mail,Free shipping,2025-08-25,2025-09-07,0.95,250,227
+C025,Win-back 20% off - Email - 2025-09,Email,Win-back 20% off,2025-09-22,2025-10-05,0.02,250,227
+C026,10% off - SMS - 2025-10,SMS,10% off,2025-10-20,2025-11-02,0.06,250,230
+C027,5x bonus points - Email - 2025-11,Email,5x bonus points,2025-11-17,2025-11-30,0.02,250,226
+C028,$15 off $75 - Direct Mail - 2025-12,Direct Mail,$15 off $75,2025-12-15,2025-12-28,0.95,250,234
+C029,Free shipping - Email - 2026-01,Email,Free shipping,2026-01-12,2026-01-25,0.02,250,224
+C030,Win-back 20% off - SMS - 2026-02,SMS,Win-back 20% off,2026-02-09,2026-02-22,0.06,250,220
+C031,10% off - Email - 2026-03,Email,10% off,2026-03-09,2026-03-22,0.02,250,221
+C032,5x bonus points - Direct Mail - 2026-04,Direct Mail,5x bonus points,2026-04-06,2026-04-19,0.95,250,223
+C033,$15 off $75 - Email - 2026-05,Email,$15 off $75,2026-05-04,2026-05-17,0.02,250,228
+C034,Free shipping - SMS - 2026-06,SMS,Free shipping,2026-06-01,2026-06-14,0.06,250,225
+C035,Win-back 20% off - Email - 2026-06,Email,Win-back 20% off,2026-06-29,2026-07-12,0.02,250,214
+C036,10% off - Direct Mail - 2026-07,Direct Mail,10% off,2026-07-27,2026-08-09,0.95,250,226
+C037,5x bonus points - Email - 2026-08,Email,5x bonus points,2026-08-24,2026-09-06,0.02,250,226
+C038,$15 off $75 - SMS - 2026-09,SMS,$15 off $75,2026-09-21,2026-10-04,0.06,250,225

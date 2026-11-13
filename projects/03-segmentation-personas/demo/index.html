@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Persona explorer · Maple & Main · Krish Dash</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/css/site.css">
+<style>
+  .demo-head { background: linear-gradient(160deg, var(--navy), var(--navy-2)); color: #fff; padding: 44px 0 36px; }
+  .demo-head h1 { font-size: clamp(1.8rem, 4vw, 2.5rem); }
+  .demo-head p { color: #cbd5e1; max-width: 70ch; margin: 12px 0 0; }
+  .panel { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; }
+  .sim { display: grid; grid-template-columns: 340px 1fr; gap: 20px; align-items: start; }
+  .basket label { display: grid; grid-template-columns: 1fr 44px; align-items: center; gap: 10px; font-size: .9rem; margin-bottom: 10px; }
+  .basket input[type=range] { grid-column: 1 / -1; margin: 2px 0 0; }
+  .basket b { text-align: right; font-variant-numeric: tabular-nums; }
+  .basket .sw { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 7px; }
+  .verdict { border-radius: 10px; padding: 20px 22px; margin-bottom: 16px; }
+  .verdict.yes { background: var(--navy); color: #fff; }
+  .verdict.no { background: var(--bg-alt); border: 1px solid var(--line); }
+  .verdict h2 { margin: 0; font-size: 1.6rem; }
+  .verdict.yes h2 { color: var(--accent); }
+  .verdict p { margin: 8px 0 0; font-size: .95rem; }
+  .verdict.yes p { color: #cbd5e1; }
+  .scores { margin-top: 4px; }
+  .scores div { display: grid; grid-template-columns: 150px 1fr 70px; align-items: center; gap: 10px; font-size: .88rem; padding: 5px 0; }
+  .scores i { height: 10px; border-radius: 3px; background: var(--navy); display: block; }
+  .scores i.alt { background: #cbd5e1; }
+  .scores span.n { text-align: right; font-variant-numeric: tabular-nums; color: var(--slate); }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 16px; }
+  .card2 { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 20px; }
+  .card2 h3 { margin: 0 0 2px; font-size: 1.1rem; }
+  .card2 .sub2 { color: var(--slate); font-size: .82rem; margin-bottom: 12px; }
+  .card2 dl { display: grid; grid-template-columns: auto auto; gap: 3px 10px; margin: 0; font-size: .86rem; }
+  .card2 dt { color: var(--slate); } .card2 dd { margin: 0; text-align: right; font-weight: 600; font-variant-numeric: tabular-nums; }
+  .mixbar { display: flex; height: 20px; border-radius: 4px; overflow: hidden; margin: 12px 0 6px; }
+  .legend { display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: .78rem; color: var(--slate); }
+  .legend span { display: flex; align-items: center; gap: 6px; }
+  .legend b { width: 10px; height: 10px; border-radius: 2px; }
+  .ct { font-weight: 600; font-size: .95rem; } .cn { color: var(--slate); font-size: .8rem; margin-top: 6px; }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+  .chips button { font: inherit; font-size: .85rem; padding: 6px 12px; border-radius: 999px; border: 1px solid #cbd5e1; background: #fff; cursor: pointer; }
+  h2.sec { margin-top: 0; }
+  @media (max-width: 900px) { .sim, .two { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="nav"><div class="wrap nav-in"><a class="brand" href="../../../">Krish Dash</a>
+  <nav><a href="../deck/">Deck</a><a href="https://github.com/kcdash/analytics-portfolio/tree/main/projects/03-segmentation-personas">Code</a><a class="btn btn-sm" href="../../../#work">All projects</a></nav></div></header>
+
+<section class="demo-head"><div class="wrap">
+  <p class="eyebrow">Project 3 · Segmentation &amp; personas</p>
+  <h1>Persona explorer</h1>
+  <p>Build a customer's year of shopping and watch the label appear, or refuse to. The same multinomial rule used in the project runs here in your browser.</p>
+</div></section>
+
+<main>
+<section class="section" style="padding-top:36px"><div class="wrap">
+  <h2 class="sec">Label a customer</h2>
+  <div class="sim">
+    <div class="panel basket">
+      <div class="chips" id="presets"></div>
+      <div id="sliders"></div>
+      <p class="cn" id="totalNote"></p>
+    </div>
+    <div>
+      <div class="verdict" id="verdict"></div>
+      <div class="panel">
+        <div class="ct">How well each persona explains this basket</div>
+        <div class="scores" id="scores"></div>
+        <div class="cn">Bars show how much better each persona explains the basket than the average shopper, on a log scale. A persona is given only when the leader beats the runner-up by <span id="oddsNote"></span> times.</div>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<section class="section alt"><div class="wrap">
+  <h2 class="sec">The five personas</h2>
+  <p class="section-lead">Built from category mix alone, on <span id="rowsNote"></span> active customers. Share of labelled customers, their value, and where their items come from.</p>
+  <div class="cards" id="cards"></div>
+  <div class="legend" style="margin-top:16px" id="legend"></div>
+</div></section>
+
+<section class="section"><div class="wrap">
+  <h2 class="sec">How much history a label needs</h2>
+  <div class="two">
+    <div class="panel"><div class="ct">Share of customers given a persona, by items bought in the year</div><div id="evidence"></div>
+      <div class="cn">Two years of history instead of one lifts the labelled share from <b id="a12"></b> to <b id="a24"></b>.</div></div>
+    <div class="panel"><div class="ct">Share of next year's items bought in the persona's own aisle</div><div id="forward"></div>
+      <div class="cn">Dark bars: customers with that persona. Light bars: the average customer. Personas fixed a year before the purchases were measured.</div></div>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <p>Personal demonstration portfolio. All projects use synthetic data created to illustrate methods and contain no client, employer or proprietary information. Not affiliated with or endorsed by any current or former employer or client.</p>
+  <p>© 2026 Krish Dash</p>
+</div></footer>
+
+<script src="../outputs/report_data.js"></script>
+<script src="../../../assets/js/charts.js"></script>
+<script>
+const P = window.P3, $ = id => document.getElementById(id), C = P.classifier, n0 = v => Math.round(v).toLocaleString("en-CA");
+const CATCOL = {"Apparel": "#2a78d6", "Home": "#eb6834", "Outdoor & Garden": "#1baf7a", "Electronics": "#eda100",
+                "Beauty & Wellness": "#e87ba4", "Grocery & Pantry": "#008300", "Toys & Seasonal": "#6250d6", "Sports & Fitness": "#7a8699"};
+const cats = P.categories, basket = cats.map((c, i) => Math.round(P.base_mix[c] * 18));
+
+$("oddsNote").textContent = Math.round(Math.exp(C.min_log_odds));
+$("rowsNote").textContent = n0(P.rows.current);
+$("a12").textContent = MM.pct(P.assignment.share_with_persona, 0);
+$("a24").textContent = MM.pct(P.assignment.share_with_persona_24m, 0);
+
+const presets = {
+  "Average customer": cats.map(c => Math.round(P.base_mix[c] * 18)),
+  "Keen gardener": [2, 5, 9, 1, 1, 1, 0, 1],
+  "Light shopper": [1, 1, 0, 1, 0, 1, 0, 0],
+  "Gadget buyer": [2, 2, 1, 12, 0, 1, 1, 1],
+};
+$("presets").innerHTML = Object.keys(presets).map(k => `<button>${k}</button>`).join("");
+[...$("presets").children].forEach(b => b.onclick = () => { presets[b.textContent].forEach((v, i) => basket[i] = v); render(); });
+
+$("sliders").innerHTML = cats.map((c, i) =>
+  `<label><span><i class="sw" style="background:${CATCOL[c]}"></i>${c}</span><b id="u${i}"></b>
+   <input type="range" min="0" max="25" value="${basket[i]}" data-i="${i}"></label>`).join("");
+$("sliders").addEventListener("input", e => { basket[+e.target.dataset.i] = +e.target.value; render(); });
+
+function classify(units) {
+  const rows = C.centres.concat([C.base]);
+  const ll = rows.map(r => units.reduce((a, u, i) => a + u * Math.log(r[i]), 0));
+  const idx = ll.map((v, i) => i).sort((a, b) => ll[b] - ll[a]);
+  const margin = ll[idx[0]] - ll[idx[1]];
+  const confident = idx[0] < C.centres.length && margin >= C.min_log_odds;
+  return { ll, idx, margin, confident, best: idx[0] };
+}
+function render() {
+  cats.forEach((c, i) => { $("u" + i).textContent = basket[i]; $("sliders").querySelector(`[data-i="${i}"]`).value = basket[i]; });
+  const total = basket.reduce((a, b) => a + b, 0);
+  $("totalNote").textContent = `${total} items a year. The median active customer buys ${n0(P.assignment.median_units_12m)}.`;
+  const r = classify(basket), v = $("verdict");
+  if (total === 0) {
+    v.className = "verdict no"; v.innerHTML = "<h2>No purchases</h2><p>Add some items to the basket.</p>";
+  } else if (r.confident) {
+    v.className = "verdict yes";
+    v.innerHTML = `<h2>${C.names[r.best]}</h2><p>This basket is about ${Math.round(Math.exp(Math.min(r.margin, 12)))} times more likely under this persona than under the runner-up, which clears the bar for a label.</p>`;
+  } else {
+    const lead = r.idx[0] < C.centres.length ? C.names[r.idx[0]] : "the average shopper";
+    v.className = "verdict no";
+    v.innerHTML = `<h2>No clear persona</h2><p>${lead} fits best, but not well enough to act on${total < 15 ? ": there are too few items to tell a taste from a coincidence" : ": this basket looks much like the average customer's"}. This customer stays on general content.</p>`;
+  }
+  const rel = r.ll.map(v2 => v2 - r.ll[C.centres.length]);
+  const span = Math.max(1e-6, Math.max(...rel.map(Math.abs)));
+  $("scores").innerHTML = C.names.map((n, i) =>
+    `<div><span>${n}</span><i class="${i === r.best && r.confident ? "" : "alt"}" style="width:${Math.max(2, Math.abs(rel[i]) / span * 100)}%"></i><span class="n">${rel[i] >= 0 ? "+" : ""}${rel[i].toFixed(1)}</span></div>`).join("");
+}
+render();
+
+$("cards").innerHTML = P.profiles.map(p => `<div class="card2"><h3>${p.persona}</h3>
+  <div class="sub2">${MM.pct(p.share_of_assigned, 0)} of labelled customers · leans ${p.leading_category}</div>
+  <dl><dt>Spend a year</dt><dd>${MM.cad(p.spend_365d)}</dd><dt>Orders a year</dt><dd>${p.orders_365d.toFixed(1)}</dd>
+  <dt>Items a year</dt><dd>${p.units_total.toFixed(0)}</dd><dt>Average basket</dt><dd>${MM.cad(p.avg_basket)}</dd>
+  <dt>Gold tier</dt><dd>${MM.pct(p.gold_share, 0)}</dd><dt>Typical age</dt><dd>${p.top_age_band}</dd></dl>
+  <div class="mixbar">${cats.map(c => `<i style="width:${(p.mix[c] * 100).toFixed(2)}%;background:${CATCOL[c]}"></i>`).join("")}</div>
+  </div>`).join("") + `<div class="card2" style="background:var(--bg-alt)"><h3>No clear persona</h3>
+  <div class="sub2">${MM.pct(P.no_persona_profile.share_of_all, 0)} of all active customers</div>
+  <dl><dt>Spend a year</dt><dd>${MM.cad(P.no_persona_profile.spend_365d)}</dd><dt>Orders a year</dt><dd>${P.no_persona_profile.orders_365d.toFixed(1)}</dd>
+  <dt>Items a year</dt><dd>${P.no_persona_profile.units_total.toFixed(0)}</dd><dt>Categories</dt><dd>${P.no_persona_profile.distinct_categories.toFixed(1)}</dd></dl>
+  <div class="mixbar">${cats.map(c => `<i style="width:${(P.no_persona_profile.mix[c] * 100).toFixed(2)}%;background:${CATCOL[c]}"></i>`).join("")}</div></div>`;
+$("legend").innerHTML = cats.map(c => `<span><b style="background:${CATCOL[c]}"></b>${c}</span>`).join("");
+
+MM.bars("#evidence", { width: 520, height: 300, fmt: v => MM.pct(v, 0), xTitle: "Items bought in the last twelve months",
+  data: P.assignment.share_with_persona_by_units.map(d => ({ label: d.units_band, value: d.assigned,
+    color: d.assigned >= 0.3 ? MM.C.focus : MM.C.context, tip: `<b>${d.units_band} items</b><br>${n0(d.customers)} customers<br>${MM.pct(d.assigned, 0)} labelled` })) });
+MM.bars("#forward", { width: 520, height: 300, fmt: v => MM.pct(v, 0), maxBar: 40,
+  data: P.next_year.by_persona.flatMap(d => [
+    { label: d.persona.split(" & ")[0], value: d.share_in_leading_category, color: MM.C.focus,
+      tip: `<b>${d.persona}</b><br>${MM.pct(d.share_in_leading_category)} of next year's items in ${P.leading_category[d.persona]}<br>Average customer ${MM.pct(d.base_share)} · ${d.lift.toFixed(2)}x` },
+    { label: "", value: d.base_share, color: MM.C.context, tip: `Average customer: ${MM.pct(d.base_share)}` }]) });
+</script>
+</body>
+</html>

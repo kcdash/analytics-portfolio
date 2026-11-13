@@ -1,11 +1,11 @@
 {
   "rows": {
-    "train": 89433,
-    "test": 49937
+    "train": 89552,
+    "test": 49805
   },
   "conversion_rate": {
-    "train": 0.08213970234700838,
-    "test": 0.10182830366261489
+    "train": 0.08158388422369127,
+    "test": 0.10422648328481077
   },
   "period": {
     "train": [
@@ -18,219 +18,219 @@
     ]
   },
   "scorecard": {
-    "auc": 0.6846650594578687,
-    "top_decile_lift": 2.3341763902326846,
-    "top_decile_rate": 0.23768522226672006,
-    "bottom_decile_rate": 0.028634361233480177,
-    "capture_top_30pct": 0.5297935103244837,
-    "brier": 0.08757838957767815,
-    "mean_predicted_before_refresh": 0.08259931516943246,
-    "mean_predicted_after_refresh": 0.09286443399482704,
-    "actual_rate": 0.10182830366261489,
-    "intercept": -3.049968734404035,
-    "intercept_shift": 0.13373825479050372,
+    "auc": 0.6846495477200061,
+    "top_decile_lift": 2.3133874819478724,
+    "top_decile_rate": 0.2411162417185304,
+    "bottom_decile_rate": 0.027504517165227865,
+    "capture_top_30pct": 0.5322673858601426,
+    "brier": 0.08941799408212886,
+    "mean_predicted_before_refresh": 0.0823185464149789,
+    "mean_predicted_after_refresh": 0.09383970278447372,
+    "actual_rate": 0.10422648328481077,
+    "intercept": -3.066527306640803,
+    "intercept_shift": 0.14916714662405828,
     "lift_table": [
       {
         "decile": 1,
-        "prospects": 4994,
-        "converters": 1187,
-        "conversion_rate": 0.2377,
-        "lift": 2.3342,
-        "cum_capture": 0.2334
+        "prospects": 4981,
+        "converters": 1201,
+        "conversion_rate": 0.2411,
+        "lift": 2.3134,
+        "cum_capture": 0.2314
       },
       {
         "decile": 2,
-        "prospects": 4994,
-        "converters": 859,
-        "conversion_rate": 0.172,
-        "lift": 1.6892,
-        "cum_capture": 0.4024
+        "prospects": 4980,
+        "converters": 852,
+        "conversion_rate": 0.1711,
+        "lift": 1.6415,
+        "cum_capture": 0.3955
       },
       {
         "decile": 3,
-        "prospects": 4993,
-        "converters": 648,
-        "conversion_rate": 0.1298,
-        "lift": 1.2745,
-        "cum_capture": 0.5298
+        "prospects": 4981,
+        "converters": 710,
+        "conversion_rate": 0.1425,
+        "lift": 1.3676,
+        "cum_capture": 0.5323
       },
       {
         "decile": 4,
-        "prospects": 4994,
-        "converters": 537,
-        "conversion_rate": 0.1075,
-        "lift": 1.056,
-        "cum_capture": 0.6354
+        "prospects": 4980,
+        "converters": 554,
+        "conversion_rate": 0.1112,
+        "lift": 1.0673,
+        "cum_capture": 0.639
       },
       {
         "decile": 5,
-        "prospects": 4993,
-        "converters": 515,
-        "conversion_rate": 0.1031,
-        "lift": 1.0129,
-        "cum_capture": 0.7367
+        "prospects": 4980,
+        "converters": 490,
+        "conversion_rate": 0.0984,
+        "lift": 0.944,
+        "cum_capture": 0.7334
       },
       {
         "decile": 6,
-        "prospects": 4994,
-        "converters": 383,
-        "conversion_rate": 0.0767,
-        "lift": 0.7532,
-        "cum_capture": 0.812
+        "prospects": 4981,
+        "converters": 400,
+        "conversion_rate": 0.0803,
+        "lift": 0.7705,
+        "cum_capture": 0.8104
       },
       {
         "decile": 7,
-        "prospects": 4994,
-        "converters": 323,
-        "conversion_rate": 0.0647,
-        "lift": 0.6352,
-        "cum_capture": 0.8755
+        "prospects": 4980,
+        "converters": 371,
+        "conversion_rate": 0.0745,
+        "lift": 0.7148,
+        "cum_capture": 0.8819
       },
       {
         "decile": 8,
-        "prospects": 4993,
-        "converters": 269,
-        "conversion_rate": 0.0539,
-        "lift": 0.5291,
-        "cum_capture": 0.9284
+        "prospects": 4981,
+        "converters": 270,
+        "conversion_rate": 0.0542,
+        "lift": 0.5201,
+        "cum_capture": 0.9339
       },
       {
         "decile": 9,
-        "prospects": 4994,
-        "converters": 221,
-        "conversion_rate": 0.0443,
-        "lift": 0.4346,
-        "cum_capture": 0.9719
+        "prospects": 4980,
+        "converters": 206,
+        "conversion_rate": 0.0414,
+        "lift": 0.3969,
+        "cum_capture": 0.9736
       },
       {
         "decile": 10,
-        "prospects": 4994,
-        "converters": 143,
-        "conversion_rate": 0.0286,
-        "lift": 0.2812,
+        "prospects": 4981,
+        "converters": 137,
+        "conversion_rate": 0.0275,
+        "lift": 0.2639,
         "cum_capture": 1.0
       }
     ],
     "calibration": [
       {
-        "predicted": 0.0248,
-        "actual": 0.0286
+        "predicted": 0.027,
+        "actual": 0.0275
       },
       {
-        "predicted": 0.0375,
-        "actual": 0.0443
+        "predicted": 0.0398,
+        "actual": 0.0414
       },
       {
-        "predicted": 0.0487,
-        "actual": 0.0539
+        "predicted": 0.0508,
+        "actual": 0.0542
       },
       {
-        "predicted": 0.0601,
-        "actual": 0.0647
+        "predicted": 0.062,
+        "actual": 0.0745
       },
       {
-        "predicted": 0.0723,
-        "actual": 0.0767
+        "predicted": 0.0741,
+        "actual": 0.0803
       },
       {
-        "predicted": 0.0859,
-        "actual": 0.1031
+        "predicted": 0.0873,
+        "actual": 0.0984
       },
       {
-        "predicted": 0.1018,
-        "actual": 0.1075
+        "predicted": 0.1029,
+        "actual": 0.1112
       },
       {
-        "predicted": 0.1217,
-        "actual": 0.1298
+        "predicted": 0.1224,
+        "actual": 0.1425
       },
       {
-        "predicted": 0.1515,
-        "actual": 0.172
+        "predicted": 0.1513,
+        "actual": 0.1711
       },
       {
-        "predicted": 0.2243,
-        "actual": 0.2377
+        "predicted": 0.2209,
+        "actual": 0.2411
       }
     ]
   },
   "boosting": {
-    "auc": 0.6794078126588037,
-    "top_decile_lift": 2.322377689018366,
-    "top_decile_rate": 0.23648378053664398,
-    "bottom_decile_rate": 0.02943532238686424,
-    "capture_top_30pct": 0.5231071779744346
+    "auc": 0.6796491110455223,
+    "top_decile_lift": 2.2209290313787653,
+    "top_decile_rate": 0.23147962256574986,
+    "bottom_decile_rate": 0.029512146155390485,
+    "capture_top_30pct": 0.5264881525717588
   },
   "lookalike": {
-    "auc": 0.6801029230101562,
-    "top_decile_lift": 2.224055178899045,
-    "top_decile_rate": 0.22647176611934322,
-    "bottom_decile_rate": 0.030036043251902282,
-    "capture_top_30pct": 0.5268436578171092,
+    "auc": 0.679975038696838,
+    "top_decile_lift": 2.2556009503421803,
+    "top_decile_rate": 0.23509335474804255,
+    "bottom_decile_rate": 0.0289098574583417,
+    "capture_top_30pct": 0.51897514929686,
     "index": {
       "lead_source": {
-        "Event": 0.856,
-        "Partner list": 0.879,
-        "Purchased list": 0.478,
-        "Referral": 1.433,
-        "Web lead": 1.451
+        "Event": 0.807,
+        "Partner list": 0.885,
+        "Purchased list": 0.488,
+        "Referral": 1.363,
+        "Web lead": 1.477
       },
       "age_band": {
-        "35-44": 1.136,
-        "25-34": 1.14,
-        "45-54": 0.882,
-        "55-64": 0.842,
-        "65+": 0.919,
-        "18-24": 0.939
+        "35-44": 1.163,
+        "25-34": 1.088,
+        "45-54": 0.862,
+        "55-64": 0.921,
+        "65+": 0.942,
+        "18-24": 0.876
       },
       "income": {
-        "100-150k": 1.08,
-        "150k+": 1.24,
-        "50-75k": 0.888,
-        "75-100k": 1.028,
-        "<50k": 0.811
+        "100-150k": 1.125,
+        "150k+": 1.188,
+        "50-75k": 0.926,
+        "75-100k": 0.99,
+        "<50k": 0.804
       },
       "children": {
-        "0": 0.906,
-        "1": 1.181
+        "0": 0.926,
+        "1": 1.144
       },
       "email": {
-        "0": 0.81,
-        "1": 1.451
+        "0": 0.824,
+        "1": 1.414
       },
       "visits": {
-        "0": 0.707,
-        "1": 0.823,
-        "2": 1.045,
-        "3": 1.214,
-        "4": 1.777
+        "0": 0.653,
+        "1": 0.824,
+        "2": 1.053,
+        "3": 1.335,
+        "4": 1.725
       },
       "distance": {
-        "0": 1.209,
-        "1": 1.114,
-        "2": 0.955,
-        "3": 0.857,
-        "4": 0.736,
-        "5": 0.546
+        "0": 1.215,
+        "1": 1.071,
+        "2": 0.975,
+        "3": 0.874,
+        "4": 0.757,
+        "5": 0.631
       }
     }
   },
   "web_visits_rule": {
-    "auc": 0.5842371822073006,
-    "top_decile_lift": 1.714744576480961,
-    "top_decile_rate": 0.17460953143772526,
-    "bottom_decile_rate": 0.07208650380456548,
-    "capture_top_30pct": 0.4055063913470993
+    "auc": 0.5971340612772829,
+    "top_decile_lift": 1.8125708746985412,
+    "top_decile_rate": 0.18891788797430234,
+    "bottom_decile_rate": 0.07528608713109818,
+    "capture_top_30pct": 0.4261221344634945
   },
   "ground_truth": {
-    "auc_ceiling": 0.684749142399594,
+    "auc_ceiling": 0.6850251102293259,
     "share_of_signal_captured": {
-      "scorecard": 0.9995448804761249,
-      "boosting": 0.9710887440590251,
-      "lookalike": 0.9748511991498805,
-      "web_visits_rule": 0.45595438827588153
+      "scorecard": 0.9979702078877061,
+      "boosting": 0.9709444886851281,
+      "lookalike": 0.9727060206788759,
+      "web_visits_rule": 0.5249777241418306
     },
-    "corr_scorecard_vs_true_logit": 0.9972441148044936,
+    "corr_scorecard_vs_true_logit": 0.9962479046247209,
     "effects_within_95pct_interval": 17,
     "effects_total": 17
   },
@@ -238,120 +238,120 @@
     {
       "term": "lead_source=Event",
       "label": "Event (vs partner list)",
-      "estimate": -0.033636368775327906,
-      "se": 0.05125250483377555,
+      "estimate": -0.09463609068624729,
+      "se": 0.05151870920777838,
       "true": 0.0
     },
     {
       "term": "lead_source=Purchased list",
       "label": "Purchased list (vs partner list)",
-      "estimate": -0.6545177880305042,
-      "se": 0.04360495906712149,
+      "estimate": -0.6375722505059324,
+      "se": 0.04357396135056805,
       "true": -0.6
     },
     {
       "term": "lead_source=Referral",
       "label": "Referral (vs partner list)",
-      "estimate": 0.5467940770461918,
-      "se": 0.042010601520865554,
+      "estimate": 0.4829388144726986,
+      "se": 0.042628333074355484,
       "true": 0.55
     },
     {
       "term": "lead_source=Web lead",
       "label": "Web lead (vs partner list)",
-      "estimate": 0.308745081059526,
-      "se": 0.03768280653491778,
+      "estimate": 0.3117626212926063,
+      "se": 0.03762157218509799,
       "true": 0.35
     },
     {
       "term": "age_band=18-24",
       "label": "18-24 (vs age 45-54)",
-      "estimate": 0.05353398566656042,
-      "se": 0.05029544778808646,
+      "estimate": -0.006840823299987494,
+      "se": 0.05150022416540232,
       "true": 0.0
     },
     {
       "term": "age_band=25-34",
       "label": "25-34 (vs age 45-54)",
-      "estimate": 0.27655445026655534,
-      "se": 0.03886138084177882,
+      "estimate": 0.24751455528630392,
+      "se": 0.039659259858022114,
       "true": 0.3
     },
     {
       "term": "age_band=35-44",
       "label": "35-44 (vs age 45-54)",
-      "estimate": 0.2738698233013205,
-      "se": 0.03861487455712647,
+      "estimate": 0.32298972329830744,
+      "se": 0.03887406909580534,
       "true": 0.3
     },
     {
       "term": "age_band=55-64",
       "label": "55-64 (vs age 45-54)",
-      "estimate": -0.0744895628774065,
-      "se": 0.045575144506266076,
+      "estimate": 0.044437901820149596,
+      "se": 0.04496017364020759,
       "true": 0.0
     },
     {
       "term": "age_band=65+",
       "label": "65+ (vs age 45-54)",
-      "estimate": 0.02305234204502525,
-      "se": 0.04866134746608339,
+      "estimate": 0.06855212435732398,
+      "se": 0.04916875177882087,
       "true": 0.0
     },
     {
       "term": "household_income_band=50-75k",
       "label": "50-75k income (vs under 50k)",
-      "estimate": 0.11782570745665621,
-      "se": 0.0434988079348521,
+      "estimate": 0.1711679520933333,
+      "se": 0.04341127594559251,
       "true": 0.12
     },
     {
       "term": "household_income_band=75-100k",
       "label": "75-100k income (vs under 50k)",
-      "estimate": 0.2808346999476904,
-      "se": 0.04185511513332318,
+      "estimate": 0.24407628469665066,
+      "se": 0.04237190445263219,
       "true": 0.24
     },
     {
       "term": "household_income_band=100-150k",
       "label": "100-150k income (vs under 50k)",
-      "estimate": 0.3393016427628864,
-      "se": 0.04350615355487025,
+      "estimate": 0.38854605588779906,
+      "se": 0.04342126918868075,
       "true": 0.36
     },
     {
       "term": "household_income_band=150k+",
       "label": "150k+ income (vs under 50k)",
-      "estimate": 0.5023370709187117,
-      "se": 0.045687637278493724,
+      "estimate": 0.44823868116350535,
+      "se": 0.04621940033849172,
       "true": 0.48
     },
     {
       "term": "web_visits_capped",
       "label": "Each web visit (up to 8)",
-      "estimate": 0.16218432302801855,
-      "se": 0.00872576387830658,
+      "estimate": 0.16816537611166735,
+      "se": 0.008737575578852942,
       "true": 0.16
     },
     {
       "term": "distance_to_store_km",
       "label": "Each 10 km from a store",
-      "estimate": -0.26959570216471157,
-      "se": 0.016700279638373734,
+      "estimate": -0.2324150154606893,
+      "se": 0.01626291033099454,
       "true": -0.25
     },
     {
       "term": "has_children",
       "label": "Children at home",
-      "estimate": 0.29660963193522516,
-      "se": 0.025385496340059304,
+      "estimate": 0.2396603423951711,
+      "se": 0.02560243930956576,
       "true": 0.25
     },
     {
       "term": "email_engaged_flag",
       "label": "Opened a marketing email",
-      "estimate": 0.6610065756590868,
-      "se": 0.02524910567784246,
+      "estimate": 0.6090389640690658,
+      "se": 0.025320402322492296,
       "true": 0.65
     }
   ]

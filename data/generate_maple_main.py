@@ -41,6 +41,18 @@ PROV = {  # share of customers, cities, postal-code first letters
     "PE": (0.004, ["Charlottetown"], "C"),
 }
 PROV_NAMES = {"ON": "Ontario", "QC": "Quebec", "BC": "British Columbia", "AB": "Alberta"}
+# Latent shopper types. Each multiplies a customer's chance of buying in a category, so category
+# mix carries a persistent customer-level signal the way it does in real retail. Types are fuzzy:
+# every customer gets a strength, and the weakest are effectively generalists.
+ARCHETYPES = {
+    "Home & Garden": {"Home": 2.6, "Outdoor & Garden": 2.8, "Electronics": 0.6, "Toys & Seasonal": 0.8},
+    "Tech & Gadgets": {"Electronics": 3.2, "Sports & Fitness": 1.3, "Beauty & Wellness": 0.5, "Apparel": 0.6},
+    "Family Everyday": {"Grocery & Pantry": 2.9, "Toys & Seasonal": 2.5, "Home": 1.3, "Electronics": 0.5},
+    "Fashion & Beauty": {"Apparel": 2.7, "Beauty & Wellness": 2.9, "Outdoor & Garden": 0.4, "Electronics": 0.5},
+    "Active Outdoors": {"Sports & Fitness": 3.1, "Outdoor & Garden": 1.8, "Apparel": 1.2, "Home": 0.6},
+}
+ARCHETYPE_SHARES = [0.22, 0.18, 0.22, 0.20, 0.18]
+
 CATS = {  # category: (subcategories, price low, price high, base share, seasonal peak months, amplitude)
     "Apparel": (["Outerwear", "Tops", "Bottoms", "Footwear", "Accessories"], 15, 220, 0.20, [9, 11, 12], 0.35),
     "Home": (["Bedding", "Kitchen", "Decor", "Storage", "Small Appliances"], 10, 300, 0.17, [3, 11], 0.15),
@@ -187,6 +199,20 @@ def main():
     pref /= pref.sum(1, keepdims=True)
     pref_ch = (rng.random(N)[:, None] > pref.cumsum(1)).sum(1).clip(0, 2)
 
+    # latent shopper type and category affinity
+    arch = rng.choice(len(ARCHETYPES), N, p=ARCHETYPE_SHARES)
+    strength = rng.beta(2.0, 2.2, N)                       # 0 = generalist, 1 = strong specialist
+    mult = np.ones((len(ARCHETYPES), len(cat_names)))
+    for ai, tilts in enumerate(ARCHETYPES.values()):
+        for c, v in tilts.items():
+            mult[ai, list(cat_names).index(c)] = v
+    aff = mult[arch] ** strength[:, None]                  # per-customer category multipliers
+    aff *= rng.lognormal(0, 0.25, aff.shape)               # personal taste on top of the type
+    aff /= aff.mean(0, keepdims=True)                      # keep the overall category mix unchanged
+    truth["archetypes"] = {"types": list(ARCHETYPES), "shares": ARCHETYPE_SHARES,
+                           "strength_distribution": "Beta(2.0, 2.2)",
+                           "note": "category choice is month seasonality times the customer's affinity"}
+
     # churn: monthly hazard, exponential time to churn from first active week
     hz = 0.016 * np.exp(-0.55 * eng + 0.45 * (acq_i == 3) + 0.20 * (acq_i == 2) - 0.15 * (tier_i == 1)
                         - 0.35 * (tier_i == 2) - 0.20 * email_opt + 0.45 * complaint_prone + 0.25 * (~pre))
@@ -269,10 +295,14 @@ def main():
     oi = np.repeat(np.arange(M), k_items)                     # order index per line
     L = len(oi)
     month = (odate.astype("datetime64[M]").astype(int) % 12)[oi]
-    cat = np.zeros(L, dtype=int)
-    for m in range(12):
-        mk = month == m
-        cat[mk] = rng.choice(len(cat_names), mk.sum(), p=cat_month_p[m])
+    # category = month seasonality x the customer's affinity, drawn per line (Gumbel-max, in chunks)
+    log_season = np.log(cat_month_p)
+    log_aff = np.log(aff)
+    cat = np.empty(L, dtype=int)
+    for lo_i in range(0, L, 500_000):
+        sl = slice(lo_i, min(lo_i + 500_000, L))
+        logits = log_season[month[sl]] + log_aff[oc[oi[sl]]]
+        cat[sl] = np.argmax(logits + rng.gumbel(size=logits.shape), axis=1)
     sku_i = cat_start[cat] + (rng.random(L) ** 1.8 * cat_count[cat]).astype(int)   # long-tail popularity
     qty = rng.choice([1, 2, 3], L, p=[0.78, 0.17, 0.05])
     promo = rng.random(L) < 0.14 + 0.16 * flyer_on[(oday // 7).clip(0, NW - 1)][oi]
@@ -395,7 +425,9 @@ def main():
                                      "-0.025 km +0.12 income band +0.30 age 25-44 +0.25 children +0.65 email engaged"}
 
     # --------------------------------------------------------------- truth file
-    cust_truth = pd.DataFrame({"customer_id": cid, "engagement": np.round(eng, 4), "complaint_prone": complaint_prone.astype(int),
+    cust_truth = pd.DataFrame({"customer_id": cid, "shopper_type": np.array(list(ARCHETYPES))[arch],
+                               "type_strength": np.round(strength, 4),
+                               "engagement": np.round(eng, 4), "complaint_prone": complaint_prone.astype(int),
                                "churned_in_window": churned.astype(int),
                                "churn_date": np.where(churned, (W0 + end * 7 * DAY).astype("datetime64[D]").astype(str), ""),
                                "annual_order_rate": np.round(lam, 3)})

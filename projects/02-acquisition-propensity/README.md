@@ -2,8 +2,8 @@
 
 **Question:** which prospects should Maple & Main prioritise, which leads should it buy, and should the outreach budget grow?
 
-**Answer:** a 17-term scorecard finds 59% more new customers than a random list at the same budget (about 1,250 more
-a year at 40% reach, worth roughly $514,000 in first-year margin). Whether to extend outreach to low-scoring
+**Answer:** a 17-term scorecard finds 60% more new customers than a random list at the same budget (about 1,290 more
+a year at 40% reach, worth roughly $554,000 in first-year margin). Whether to extend outreach to low-scoring
 prospects depends on a number nobody has measured: how many conversions outreach actually causes.
 
 - [Client deck](deck/) ([PDF](deck/deck.pdf))
@@ -25,11 +25,11 @@ prospects depends on a number nobody has measured: how many conversions outreach
 
 | | |
 |---|---|
-| Prospects scored in the test year | 49,937 |
-| Conversion, top decile against bottom decile | 23.8% against 2.9% |
+| Prospects scored in the test year | 49,805 |
+| Conversion, top decile against bottom decile | 24.1% against 2.8% |
 | Scorecard AUC, later period | 0.68 (ceiling 0.68) |
-| First-year margin per new customer | $412 |
-| Extra customers at 40% reach | 1,247 a year |
+| First-year margin per new customer | $428 |
+| Extra customers at 40% reach | 1,294 a year |
 | Break-even incrementality, bottom decile | 51% |
 
 ## Run it

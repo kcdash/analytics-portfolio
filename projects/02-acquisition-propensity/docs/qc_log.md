@@ -8,9 +8,9 @@ Produced by `sql/01_prospect_base.sql`. Counts come from `outputs/qc_log.json`.
 |---|---|---|
 | Prospects in raw file | 150,000 | |
 | Duplicate `prospect_id` | 0 | |
-| First contact before 1 January 2024 | 8,138 | Dropped. The customer file starts in November 2023, so the earliest prospects are over-represented by converters |
-| First contact after 15 September 2026 | 2,492 | Dropped. Their 45-day conversion window was still open when the data ends |
-| Kept for modelling | 139,370 | |
+| First contact before 1 January 2024 | 8,050 | Dropped. The customer file starts in November 2023, so the earliest prospects are over-represented by converters |
+| First contact after 15 September 2026 | 2,593 | Dropped. Their 45-day conversion window was still open when the data ends |
+| Kept for modelling | 139,357 | |
 | Missing value in any model input | 0 | |
 | Distance below 0 or above 150 km | 0 | |
 | Converted flag without a customer id | 0 | |

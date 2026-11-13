@@ -7,12 +7,12 @@ Produced by `sql/01_clean.sql`. Counts come from `outputs/qc_log.json`.
 | Check | Rows | Fix | Matches planted count |
 |---|---|---|---|
 | Duplicate customer rows | 800 | Kept one row per `customer_id` | Yes (800) |
-| Province spelled out instead of coded | 2,125 | Recoded to two-letter codes | Yes (2,125) |
-| Missing postal FSA | 5,937 | Left missing; not used as a model input | 5,984 planted rows; 47 were resolved by de-duplication |
-| Duplicate order rows | 2,327 | Kept one row per `order_id` | Yes (2,327) |
-| Order dates in DD/MM/YYYY | 46,318 | Parsed with a second date format | Yes (46,318) |
-| Negative net amounts | 1,384 | Replaced with the total of the order lines | Yes (1,384) |
-| Amounts 100x too large | 690 | Replaced with the total of the order lines | Yes (690) |
+| Province spelled out instead of coded | 2,061 | Recoded to two-letter codes | Yes (2,061) |
+| Missing postal FSA | 6,059 | Left missing; not used as a model input | 6,096 planted rows; 37 were resolved by de-duplication |
+| Duplicate order rows | 2,329 | Kept one row per `order_id` | Yes (2,329) |
+| Order dates in DD/MM/YYYY | 46,521 | Parsed with a second date format | Yes (46,521) |
+| Negative net amounts | 1,423 | Replaced with the total of the order lines | Yes (1,423) |
+| Amounts 100x too large | 751 | Replaced with the total of the order lines | Yes (751) |
 
 Dates that could not be parsed: 0. Orders without order lines: 0.
 
@@ -24,8 +24,8 @@ left for the QC agent and marketing mix projects.
 | Table | Rows |
 |---|---|
 | customers | 200,000 |
-| orders | 2,327,481 |
-| churn analytical base table | 628,171 |
+| orders | 2,328,684 |
+| churn analytical base table | 629,233 |
 | uplift analytical base table | 625,000 |
 
 ## Modelling checks

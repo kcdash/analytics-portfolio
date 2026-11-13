@@ -1,0 +1,497 @@
+{
+  "personas": [
+    "Sports",
+    "Electronics",
+    "Grocery & Toys",
+    "Home & Outdoor",
+    "Beauty & Apparel"
+  ],
+  "leading_category": {
+    "Sports": "Sports & Fitness",
+    "Electronics": "Electronics",
+    "Grocery & Toys": "Grocery & Pantry",
+    "Home & Outdoor": "Home",
+    "Beauty & Apparel": "Beauty & Wellness"
+  },
+  "next_year": {
+    "customers_tested": 69790,
+    "by_persona": [
+      {
+        "persona": "Sports",
+        "customers": 1836,
+        "share_in_leading_category": 0.11870253059600014,
+        "base_share": 0.07169356459601454,
+        "lift": 1.6556929658174484,
+        "top_category_is_leading": 0.09259259259259259,
+        "base_top_rate": 0.025290156182834218
+      },
+      {
+        "persona": "Electronics",
+        "customers": 3481,
+        "share_in_leading_category": 0.21512036809504037,
+        "base_share": 0.10604723390924434,
+        "lift": 2.028533514406809,
+        "top_category_is_leading": 0.3711577133007756,
+        "base_top_rate": 0.09018484023499068
+      },
+      {
+        "persona": "Grocery & Toys",
+        "customers": 2432,
+        "share_in_leading_category": 0.2470002467086819,
+        "base_share": 0.16209890308548613,
+        "lift": 1.5237626042319443,
+        "top_category_is_leading": 0.46175986842105265,
+        "base_top_rate": 0.16536753116492334
+      },
+      {
+        "persona": "Home & Outdoor",
+        "customers": 2740,
+        "share_in_leading_category": 0.23198990965622435,
+        "base_share": 0.15644534122923145,
+        "lift": 1.482881547212718,
+        "top_category_is_leading": 0.4416058394160584,
+        "base_top_rate": 0.19256340449921192
+      },
+      {
+        "persona": "Beauty & Apparel",
+        "customers": 3622,
+        "share_in_leading_category": 0.1732826619118136,
+        "base_share": 0.113620311950855,
+        "lift": 1.525102852971965,
+        "top_category_is_leading": 0.13583655438983988,
+        "base_top_rate": 0.07433729760710704
+      }
+    ],
+    "weighted_lift": 1.657854586862046,
+    "hit_rate": 0.3005905136240638,
+    "hit_rate_base": 0.10954864593781344,
+    "unassigned_lift": 0.9982580393327363,
+    "note": "personas fixed at May 2025, purchases measured over the following twelve months"
+  },
+  "offer_response": {
+    "campaigns": 13,
+    "contacts": 207905,
+    "by_persona": [
+      {
+        "persona": "Sports",
+        "contacts": 5522,
+        "holdout_n": 562,
+        "treated_response": 0.07338709677419354,
+        "holdout_response": 0.04804270462633452,
+        "uplift": 0.025344392147859024,
+        "uplift_se": 0.00975132110651884
+      },
+      {
+        "persona": "Electronics",
+        "contacts": 10586,
+        "holdout_n": 1090,
+        "treated_response": 0.07771693344566133,
+        "holdout_response": 0.043119266055045874,
+        "uplift": 0.034597667390615455,
+        "uplift_se": 0.0067380511377447124
+      },
+      {
+        "persona": "Grocery & Toys",
+        "contacts": 7368,
+        "holdout_n": 712,
+        "treated_response": 0.07647235576923077,
+        "holdout_response": 0.06179775280898876,
+        "uplift": 0.014674602960242006,
+        "uplift_se": 0.009593826807002676
+      },
+      {
+        "persona": "Home & Outdoor",
+        "contacts": 8179,
+        "holdout_n": 844,
+        "treated_response": 0.0747102931152011,
+        "holdout_response": 0.05568720379146919,
+        "uplift": 0.019023089323731902,
+        "uplift_se": 0.008469376971172237
+      },
+      {
+        "persona": "Beauty & Apparel",
+        "contacts": 11019,
+        "holdout_n": 1112,
+        "treated_response": 0.08165943272433633,
+        "holdout_response": 0.06924460431654676,
+        "uplift": 0.012414828407789569,
+        "uplift_se": 0.008094934025558534
+      }
+    ],
+    "with_persona": {
+      "contacts": 42674,
+      "holdout_n": 4320,
+      "treated_response": 0.07738436668926318,
+      "holdout_response": 0.056018518518518516,
+      "uplift": 0.021365848170744668,
+      "uplift_se": 0.0037553089072107
+    },
+    "without_persona": {
+      "contacts": 165231,
+      "holdout_n": 16584,
+      "treated_response": 0.06636528150584943,
+      "holdout_response": 0.03636034732272069,
+      "uplift": 0.03000493418312874,
+      "uplift_se": 0.0015904742749352587
+    },
+    "spread_between_personas": 0.022182838982825887,
+    "spread_se": 0.019345147913521515,
+    "difference_is_meaningful": false,
+    "note": "personas fixed at May 2025, campaigns over the following twelve months, each with a 10% random holdout"
+  },
+  "relevance": {
+    "by_persona": [
+      {
+        "persona": "Sports",
+        "customers": 2478,
+        "share_of_units_in_leading_category": 0.2261346797651062,
+        "base": 0.07177314426372466,
+        "relevance_lift": 3.1506865427853135
+      },
+      {
+        "persona": "Electronics",
+        "customers": 4511,
+        "share_of_units_in_leading_category": 0.3075736247794791,
+        "base": 0.10600509674964953,
+        "relevance_lift": 2.9014984581908414
+      },
+      {
+        "persona": "Grocery & Toys",
+        "customers": 3207,
+        "share_of_units_in_leading_category": 0.3214976594456504,
+        "base": 0.16200116040516901,
+        "relevance_lift": 1.9845392381238294
+      },
+      {
+        "persona": "Home & Outdoor",
+        "customers": 3633,
+        "share_of_units_in_leading_category": 0.2964872895344998,
+        "base": 0.1561709061409406,
+        "relevance_lift": 1.8984796647521978
+      },
+      {
+        "persona": "Beauty & Apparel",
+        "customers": 4743,
+        "share_of_units_in_leading_category": 0.20957886131142042,
+        "base": 0.11365673547452407,
+        "relevance_lift": 1.8439634082081928
+      }
+    ],
+    "weighted_lift": 2.310121322515626
+  },
+  "with_project_1": {
+    "customers_matched": 87586,
+    "share_with_persona_overall": 0.20587765167949215,
+    "share_with_persona_in_priority_group": 0.16844268534023443,
+    "churn_prob_by_persona": {
+      "Beauty & Apparel": 0.0725,
+      "Electronics": 0.0913,
+      "Grocery & Toys": 0.0694,
+      "Home & Outdoor": 0.0699,
+      "Sports": 0.0886
+    },
+    "churn_prob_no_persona": 0.1593538840258256,
+    "churn_prob_with_persona": 0.07809717206191344,
+    "churn_prob_overall": 0.14262494298349848,
+    "note": "value at risk is churn probability times twelve-month margin, from project 1"
+  },
+  "profiles": [
+    {
+      "persona": "Sports",
+      "customers": 2478,
+      "share_of_assigned": 0.13342666379496015,
+      "share_of_all": 0.025713129468408546,
+      "leading_category": "Sports & Fitness",
+      "spend_365d": 2356.813579499597,
+      "margin_365d": 978.5687772397093,
+      "orders_365d": 10.943906376109766,
+      "avg_basket": 222.32289471988398,
+      "units_total": 36.76553672316384,
+      "distinct_categories": 6.876513317191283,
+      "promo_line_share": 0.21626284939156848,
+      "private_label_share": 0.2711729270962567,
+      "q4_share": 0.17474570356342817,
+      "weekend_share": 0.3640224119458183,
+      "gold_share": 0.34342211460855526,
+      "email_opt_in": 0.7909604519774012,
+      "tenure_years": 4.319887701713477,
+      "top_age_band": "35-44",
+      "channel_mix": {
+        "Store-first": 0.5763,
+        "Web-first": 0.2797,
+        "App-first": 0.1392,
+        "No single channel": 0.0048
+      },
+      "mix": {
+        "Apparel": 0.17137368969869932,
+        "Home": 0.09901761703528895,
+        "Outdoor & Garden": 0.1226826189561495,
+        "Electronics": 0.08540694802700181,
+        "Beauty & Wellness": 0.0933977278963833,
+        "Grocery & Pantry": 0.12957576422808847,
+        "Toys & Seasonal": 0.07241095439328248,
+        "Sports & Fitness": 0.2261346797651062
+      },
+      "tilt": {
+        "Apparel": 0.8781814665175003,
+        "Home": 0.6340336973259787,
+        "Outdoor & Garden": 1.117099660883985,
+        "Electronics": 0.8056871852936088,
+        "Beauty & Wellness": 0.8217526880957989,
+        "Grocery & Pantry": 0.7998446671864338,
+        "Toys & Seasonal": 0.8476611812181144,
+        "Sports & Fitness": 3.1506865427853135
+      }
+    },
+    {
+      "persona": "Electronics",
+      "customers": 4511,
+      "share_of_assigned": 0.24289252638380357,
+      "share_of_all": 0.04680868726069046,
+      "leading_category": "Electronics",
+      "spend_365d": 2796.2438749722896,
+      "margin_365d": 1149.7642983817336,
+      "orders_365d": 10.764132121480825,
+      "avg_basket": 270.7135099785328,
+      "units_total": 36.06362225670583,
+      "distinct_categories": 6.714475726003103,
+      "promo_line_share": 0.2221190241654922,
+      "private_label_share": 0.2589340608222524,
+      "q4_share": 0.22235250862726613,
+      "weekend_share": 0.3560410088611428,
+      "gold_share": 0.33761915318111285,
+      "email_opt_in": 0.7867435158501441,
+      "tenure_years": 4.395404889803933,
+      "top_age_band": "35-44",
+      "channel_mix": {
+        "Store-first": 0.5801,
+        "Web-first": 0.2744,
+        "App-first": 0.1399,
+        "No single channel": 0.0055
+      },
+      "mix": {
+        "Apparel": 0.1311323248280398,
+        "Home": 0.12861823300529251,
+        "Outdoor & Garden": 0.09439216144280595,
+        "Electronics": 0.3075736247794791,
+        "Beauty & Wellness": 0.06977987865972474,
+        "Grocery & Pantry": 0.13295796118832331,
+        "Toys & Seasonal": 0.07491256000934332,
+        "Sports & Fitness": 0.060633256086991265
+      },
+      "tilt": {
+        "Apparel": 0.6719699945061708,
+        "Home": 0.8235735847573143,
+        "Outdoor & Garden": 0.8594978851531878,
+        "Electronics": 2.9014984581908414,
+        "Beauty & Wellness": 0.613952867539168,
+        "Grocery & Pantry": 0.8207222766540195,
+        "Toys & Seasonal": 0.8769456173813909,
+        "Sports & Fitness": 0.8447903001741045
+      }
+    },
+    {
+      "persona": "Grocery & Toys",
+      "customers": 3207,
+      "share_of_assigned": 0.17267930217531768,
+      "share_of_all": 0.03327764576480476,
+      "leading_category": "Grocery & Pantry",
+      "spend_365d": 1798.35904895541,
+      "margin_365d": 741.5026223885252,
+      "orders_365d": 12.488306828811973,
+      "avg_basket": 136.86514306500783,
+      "units_total": 42.23199251637044,
+      "distinct_categories": 6.882444652323043,
+      "promo_line_share": 0.22184579047880854,
+      "private_label_share": 0.25176086796240776,
+      "q4_share": 0.20331120007445236,
+      "weekend_share": 0.360662999416403,
+      "gold_share": 0.4140941690053009,
+      "email_opt_in": 0.7932647333956969,
+      "tenure_years": 4.30703455629551,
+      "top_age_band": "35-44",
+      "channel_mix": {
+        "Store-first": 0.5784,
+        "Web-first": 0.2728,
+        "App-first": 0.1434,
+        "No single channel": 0.0053
+      },
+      "mix": {
+        "Apparel": 0.137922887225151,
+        "Home": 0.12579925870139844,
+        "Outdoor & Garden": 0.07765915031232003,
+        "Electronics": 0.05667537914027083,
+        "Beauty & Wellness": 0.08183818426143327,
+        "Grocery & Pantry": 0.3214976594456504,
+        "Toys & Seasonal": 0.15415909862815458,
+        "Sports & Fitness": 0.044448382285621466
+      },
+      "tilt": {
+        "Apparel": 0.7067673198999239,
+        "Home": 0.8055230119998634,
+        "Outdoor & Garden": 0.7071336691095524,
+        "Electronics": 0.5346476808951943,
+        "Beauty & Wellness": 0.7200469371195087,
+        "Grocery & Pantry": 1.9845392381238294,
+        "Toys & Seasonal": 1.804625898575146,
+        "Sports & Fitness": 0.6192898853964018
+      }
+    },
+    {
+      "persona": "Home & Outdoor",
+      "customers": 3633,
+      "share_of_assigned": 0.19561705793667888,
+      "share_of_all": 0.03769806269520914,
+      "leading_category": "Home",
+      "spend_365d": 2461.8692540600055,
+      "margin_365d": 1017.0461712083678,
+      "orders_365d": 12.319295348197082,
+      "avg_basket": 201.8699825876748,
+      "units_total": 41.68731076245527,
+      "distinct_categories": 6.7913570052298375,
+      "promo_line_share": 0.2206312388302154,
+      "private_label_share": 0.24994437263973496,
+      "q4_share": 0.18294562356092384,
+      "weekend_share": 0.35860103206861527,
+      "gold_share": 0.42196531791907516,
+      "email_opt_in": 0.7954858243875584,
+      "tenure_years": 4.312212958519828,
+      "top_age_band": "35-44",
+      "channel_mix": {
+        "Store-first": 0.5695,
+        "Web-first": 0.2783,
+        "App-first": 0.1489,
+        "No single channel": 0.0033
+      },
+      "mix": {
+        "Apparel": 0.14013865962363817,
+        "Home": 0.2964872895344998,
+        "Outdoor & Garden": 0.20553978210630572,
+        "Electronics": 0.06089138329481677,
+        "Beauty & Wellness": 0.08423902277979531,
+        "Grocery & Pantry": 0.11449323208979861,
+        "Toys & Seasonal": 0.053245295477055136,
+        "Sports & Fitness": 0.04496533509409046
+      },
+      "tilt": {
+        "Apparel": 0.718121748095953,
+        "Home": 1.8984796647521978,
+        "Outdoor & Garden": 1.8715643898276357,
+        "Electronics": 0.5744193926696085,
+        "Beauty & Wellness": 0.7411705292087799,
+        "Grocery & Pantry": 0.7067432838348079,
+        "Toys & Seasonal": 0.6233030683900934,
+        "Sports & Fitness": 0.6264924792603337
+      }
+    },
+    {
+      "persona": "Beauty & Apparel",
+      "customers": 4743,
+      "share_of_assigned": 0.25538444970923974,
+      "share_of_all": 0.049216050471614904,
+      "leading_category": "Beauty & Wellness",
+      "spend_365d": 2027.497193759224,
+      "margin_365d": 839.4371431583386,
+      "orders_365d": 11.914189331646638,
+      "avg_basket": 169.09105324281686,
+      "units_total": 40.23107737718743,
+      "distinct_categories": 6.585916086864853,
+      "promo_line_share": 0.21947115393942465,
+      "private_label_share": 0.25281548942597765,
+      "q4_share": 0.19970764671832392,
+      "weekend_share": 0.3605789896159342,
+      "gold_share": 0.3788741302972802,
+      "email_opt_in": 0.80033733923677,
+      "tenure_years": 4.411860383463623,
+      "top_age_band": "25-34",
+      "channel_mix": {
+        "Store-first": 0.5663,
+        "Web-first": 0.2806,
+        "App-first": 0.1491,
+        "No single channel": 0.004
+      },
+      "mix": {
+        "Apparel": 0.3529630638940131,
+        "Home": 0.11153676840516519,
+        "Outdoor & Garden": 0.050755701827938954,
+        "Electronics": 0.058108334730840185,
+        "Beauty & Wellness": 0.20957886131142042,
+        "Grocery & Pantry": 0.10853387556599027,
+        "Toys & Seasonal": 0.06382064397115546,
+        "Sports & Fitness": 0.04470275029347644
+      },
+      "tilt": {
+        "Apparel": 1.8087118368164956,
+        "Home": 0.714196844734357,
+        "Outdoor & Garden": 0.4621614519020439,
+        "Electronics": 0.5481654798926666,
+        "Beauty & Wellness": 1.8439634082081928,
+        "Grocery & Pantry": 0.6699573959504012,
+        "Toys & Seasonal": 0.7471008068871556,
+        "Sports & Fitness": 0.6228339409127704
+      }
+    }
+  ],
+  "no_persona_profile": {
+    "customers": 77799,
+    "share_of_all": 0.8072864243392722,
+    "spend_365d": 1146.5473216879395,
+    "orders_365d": 6.50312986028098,
+    "units_total": 20.195015360094605,
+    "distinct_categories": 5.8125425776680935,
+    "mix": {
+      "Apparel": 0.19422118292819537,
+      "Home": 0.15685115125716673,
+      "Outdoor & Garden": 0.11139405989999694,
+      "Electronics": 0.10074645864944957,
+      "Beauty & Wellness": 0.11330348686823426,
+      "Grocery & Pantry": 0.16421262869537767,
+      "Toys & Seasonal": 0.0870679603246535,
+      "Sports & Fitness": 0.07220307137692597
+    }
+  },
+  "channel_by_persona": {
+    "App-first": {
+      "Beauty & Apparel": 0.1491,
+      "Electronics": 0.1399,
+      "Grocery & Toys": 0.1434,
+      "Home & Outdoor": 0.1489,
+      "No clear persona": 0.1387,
+      "Sports": 0.1392
+    },
+    "No single channel": {
+      "Beauty & Apparel": 0.004,
+      "Electronics": 0.0055,
+      "Grocery & Toys": 0.0053,
+      "Home & Outdoor": 0.0033,
+      "No clear persona": 0.0083,
+      "Sports": 0.0048
+    },
+    "Store-first": {
+      "Beauty & Apparel": 0.5663,
+      "Electronics": 0.5801,
+      "Grocery & Toys": 0.5784,
+      "Home & Outdoor": 0.5695,
+      "No clear persona": 0.5852,
+      "Sports": 0.5763
+    },
+    "Web-first": {
+      "Beauty & Apparel": 0.2806,
+      "Electronics": 0.2744,
+      "Grocery & Toys": 0.2728,
+      "Home & Outdoor": 0.2783,
+      "No clear persona": 0.2678,
+      "Sports": 0.2797
+    }
+  },
+  "base_mix": {
+    "Apparel": 0.19514610161188617,
+    "Home": 0.1561709061409406,
+    "Outdoor & Garden": 0.10982244758633988,
+    "Electronics": 0.10600509674964953,
+    "Beauty & Wellness": 0.11365673547452407,
+    "Grocery & Pantry": 0.16200116040516901,
+    "Toys & Seasonal": 0.0854244077677661,
+    "Sports & Fitness": 0.07177314426372466
+  }
+}

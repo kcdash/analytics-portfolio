@@ -9,20 +9,20 @@
 | Algorithm | Gradient boosting (scikit-learn `HistGradientBoostingClassifier`), isotonic calibration |
 | Benchmarks | Recency rule; logistic scorecard (also provided in SAS) |
 | Inputs | 33 point-in-time features: purchases, web activity, service contacts, CRM history, profile |
-| Training data | 409,773 customer-snapshots, four snapshots from Nov 2024 to Aug 2025 |
-| Calibration data | 105,452 customers, Nov 2025 snapshot |
-| Test data | 112,946 customers, May 2026 snapshot, used once |
+| Training data | 410,479 customer-snapshots, four snapshots from Nov 2024 to Aug 2025 |
+| Calibration data | 105,755 customers, Nov 2025 snapshot |
+| Test data | 112,999 customers, May 2026 snapshot, used once |
 
 ### Performance on the May 2026 test snapshot
 
 | Model | AUC | PR-AUC | Top-decile lift | Churners in top 20% |
 |---|---|---|---|---|
-| Recency rule | 0.69 | 0.32 | 2.4x | 41% |
+| Recency rule | 0.69 | 0.32 | 2.3x | 41% |
 | Logistic scorecard | 0.81 | 0.50 | 3.3x | 52% |
 | Gradient boosting, calibrated | 0.83 | 0.55 | 3.6x | 55% |
 
-- Churn rate in the test snapshot is 16.9%.
-- Brier score is 0.106. Predicted and actual churn rates differ by at most 2.6 points across 20 score bands.
+- Churn rate in the test snapshot is 17.0%.
+- Brier score is 0.106. Predicted and actual churn rates differ by at most 3.5 points across 20 score bands.
 - Population stability index between training and test scores is 0.004.
 
 ### Checked against ground truth
@@ -46,27 +46,27 @@ last 12 months.
 |---|---|
 | Purpose | Change in the chance of ordering within 14 days if the customer is sent an offer |
 | Design | Single gradient-boosting model with the treatment flag, channel and offer as inputs |
-| Selection | Chosen over a two-model design on the last training campaigns (Qini 0.0040 against 0.0038) |
+| Selection | Chosen over a two-model design on the last training campaigns (Qini 0.0046 against 0.0038) |
 | Training data | 400,000 contacts in 16 campaigns, Nov 2024 to Jan 2026, each with a 10% random holdout |
 | Test data | 225,000 contacts in 9 campaigns, Feb to Oct 2026 |
 
-- Measured uplift falls from 4.8 points in the top predicted decile to 0.5 points in the bottom decile.
-- Qini on the test campaigns is 0.0038, against 0.0008 when ranking by churn risk.
-- Correlation between predicted uplift and the true uplift built into the data is 0.54. Churn risk has a correlation
-  of -0.02 with true uplift.
+- Measured uplift falls from 4.4 points in the top predicted decile to 0.2 points in the bottom decile.
+- Qini on the test campaigns is 0.0039, against 0.0021 when ranking by churn risk.
+- Correlation between predicted uplift and the true uplift built into the data is 0.58. Churn risk has a correlation
+  of -0.03 with true uplift.
 
 ## Business results (nine test campaigns, scaled to a year)
 
 | Audience rule, 25,000 contacts per campaign | Net profit a year | 95% interval |
 |---|---|---|
-| Random draw (current practice) | $339,000 | ±$87,000 |
-| Highest churn risk | $374,000 | ±$103,000 |
-| Highest value at risk (risk x 12-month margin) | $555,000 | ±$111,000 |
-| Highest net uplift value | $544,000 | ±$123,000 |
+| Random draw (current practice) | $241,000 | ±$89,000 |
+| Highest churn risk | $410,000 | ±$95,000 |
+| Highest value at risk (risk x 12-month margin) | $455,000 | ±$119,000 |
+| Highest net uplift value | $492,000 | ±$117,000 |
 
-- The lowest-risk decile loses $3.46 per contact, about $112,000 a year at current volumes.
-- Offers show no effect on activity in the following six months: 87.3% treated against 87.3% holdout
-  (difference 0.04 points, ±0.32).
+- The three lowest-risk deciles all lose money; the last loses $3.05 per contact, about $99,000 a year at current volumes.
+- Offers show no effect on activity in the following six months: 87.4% treated against 87.3% holdout
+  (difference 0.05 points, ±0.32).
 
 ## Assumptions
 
