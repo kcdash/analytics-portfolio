@@ -1,0 +1,113 @@
+{
+  "seed": 42,
+  "scale": 0.01,
+  "window": [
+    "2023-11-06",
+    "2026-11-01"
+  ],
+  "mmm": {
+    "TV": {
+      "adstock_decay": 0.6,
+      "hill_shape": 1.6,
+      "hill_half_saturation": 101613.50001882564,
+      "max_sales_lift": 0.07,
+      "avg_sales_lift": 0.033672670776585124
+    },
+    "Paid Search": {
+      "adstock_decay": 0.15,
+      "hill_shape": 1.2,
+      "hill_half_saturation": 43228.838914241525,
+      "max_sales_lift": 0.06,
+      "avg_sales_lift": 0.030816958096646776
+    },
+    "Paid Social": {
+      "adstock_decay": 0.3,
+      "hill_shape": 1.4,
+      "hill_half_saturation": 43190.807507075835,
+      "max_sales_lift": 0.04,
+      "avg_sales_lift": 0.020178163977232107
+    },
+    "Display": {
+      "adstock_decay": 0.35,
+      "hill_shape": 1.3,
+      "hill_half_saturation": 25859.78144710711,
+      "max_sales_lift": 0.015,
+      "avg_sales_lift": 0.007664176779113853
+    },
+    "Flyer": {
+      "adstock_decay": 0.2,
+      "hill_shape": 1.5,
+      "hill_half_saturation": 25254.848571785304,
+      "max_sales_lift": 0.05,
+      "avg_sales_lift": 0.025111472261386412
+    },
+    "Email": {
+      "adstock_decay": 0.1,
+      "hill_shape": 1.1,
+      "hill_half_saturation": 4953.548284105718,
+      "max_sales_lift": 0.03,
+      "avg_sales_lift": 0.015299914844717072
+    }
+  },
+  "demand_index_note": "weekly orders are proportional to trend x seasonality x (1 + sum of media lifts)",
+  "churn": {
+    "definition": "latent churn date; customer places no orders afterwards",
+    "share_churned_in_window": 0.38,
+    "hazard_log_coefficients": {
+      "engagement": -0.55,
+      "acq_paid_social": 0.45,
+      "acq_paid_search": 0.2,
+      "tier_silver": -0.15,
+      "tier_gold": -0.35,
+      "email_opt_in": -0.2,
+      "complaint_prone": 0.45,
+      "joined_in_window": 0.25
+    }
+  },
+  "uplift": {
+    "response_window_days": 14,
+    "baseline": "sigmoid(-3.6 + 0.6*engagement)",
+    "uplift": "0.045*exp(-(engagement-0.2)^2/0.8) x channel x offer; SMS is -0.010 when engagement < -1.2",
+    "channel_factor": {
+      "Email": 1.0,
+      "SMS": 1.2,
+      "Direct Mail": 1.6
+    },
+    "offer_factor": {
+      "10% off": 1.0,
+      "5x bonus points": 0.8,
+      "$15 off $75": 1.2,
+      "Free shipping": 0.7,
+      "Win-back 20% off": 1.3
+    }
+  },
+  "acquisition": {
+    "conversion_rate": 0.08133333333333333,
+    "logit": "-3.1 +0.55 referral +0.35 web lead -0.60 purchased list +0.16 web visits (cap 8) -0.025 km +0.12 income band +0.30 age 25-44 +0.25 children +0.65 email engaged"
+  },
+  "planted_issues": {
+    "customers_duplicate_rows": 8,
+    "customers_missing_postal_fsa": 69,
+    "customers_province_full_name_instead_of_code": 14,
+    "transactions_order_date_in_dd_mm_yyyy": 515,
+    "transactions_outlier_baskets_x100": 5,
+    "transactions_negative_net_amount": 25,
+    "transactions_duplicate_rows": 24,
+    "loyalty_events_tier_codes_B_S_G_before_2025_03_01": 2299,
+    "media_spend_weekly_missing_display_weeks": 2
+  },
+  "row_counts": {
+    "customers": 2008,
+    "transactions": 23650,
+    "order_items": 59070,
+    "products": 1200,
+    "stores": 60,
+    "campaigns": 38,
+    "campaign_contacts": 9500,
+    "media_spend_weekly": 934,
+    "web_activity_monthly": 21978,
+    "service_contacts": 1382,
+    "loyalty_events": 4420,
+    "prospects": 1500
+  }
+}

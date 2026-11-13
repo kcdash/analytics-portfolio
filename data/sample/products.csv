@@ -1,0 +1,1201 @@
+sku,category,subcategory,brand,list_price,unit_cost
+SKU00001,Apparel,Bottoms,Brand J,15.99,9.49
+SKU00002,Apparel,Outerwear,Main Street (private label),15.99,7.44
+SKU00003,Apparel,Accessories,Main Street (private label),15.99,10.18
+SKU00004,Apparel,Footwear,Brand T,15.99,10.55
+SKU00005,Apparel,Accessories,Brand Y,15.99,7.85
+SKU00006,Apparel,Outerwear,Brand K,15.99,10.83
+SKU00007,Apparel,Outerwear,Brand T,16.99,9.3
+SKU00008,Apparel,Accessories,Brand Y,16.99,10.01
+SKU00009,Apparel,Tops,Main Street (private label),16.99,11.82
+SKU00010,Apparel,Footwear,Brand H,16.99,8.86
+SKU00011,Apparel,Accessories,Brand F,16.99,11.0
+SKU00012,Apparel,Outerwear,Main Street (private label),17.99,9.16
+SKU00013,Apparel,Outerwear,Brand R,18.99,12.23
+SKU00014,Apparel,Outerwear,Brand G,18.99,11.17
+SKU00015,Apparel,Outerwear,Brand H,18.99,9.13
+SKU00016,Apparel,Outerwear,Main Street (private label),18.99,10.18
+SKU00017,Apparel,Accessories,Main Street (private label),18.99,9.66
+SKU00018,Apparel,Footwear,Brand W,18.99,8.39
+SKU00019,Apparel,Accessories,Main Street (private label),19.99,8.56
+SKU00020,Apparel,Accessories,Brand A,19.99,10.34
+SKU00021,Apparel,Accessories,Brand C,19.99,8.5
+SKU00022,Apparel,Tops,Brand I,19.99,9.32
+SKU00023,Apparel,Tops,Brand L,19.99,12.45
+SKU00024,Apparel,Accessories,Brand I,19.99,12.36
+SKU00025,Apparel,Tops,Main Street (private label),19.99,12.53
+SKU00026,Apparel,Outerwear,Brand A,19.99,10.17
+SKU00027,Apparel,Footwear,Brand T,20.99,14.05
+SKU00028,Apparel,Accessories,Brand N,20.99,12.31
+SKU00029,Apparel,Accessories,Brand N,20.99,9.56
+SKU00030,Apparel,Accessories,Brand O,20.99,9.66
+SKU00031,Apparel,Outerwear,Brand R,20.99,12.89
+SKU00032,Apparel,Footwear,Main Street (private label),20.99,9.83
+SKU00033,Apparel,Accessories,Brand E,20.99,11.8
+SKU00034,Apparel,Footwear,Brand K,20.99,14.64
+SKU00035,Apparel,Accessories,Brand D,20.99,8.84
+SKU00036,Apparel,Accessories,Brand U,20.99,8.91
+SKU00037,Apparel,Bottoms,Brand I,21.99,15.35
+SKU00038,Apparel,Outerwear,Brand R,21.99,12.84
+SKU00039,Apparel,Bottoms,Brand U,21.99,10.02
+SKU00040,Apparel,Tops,Brand J,21.99,14.76
+SKU00041,Apparel,Outerwear,Brand W,21.99,14.66
+SKU00042,Apparel,Outerwear,Brand L,21.99,12.54
+SKU00043,Apparel,Footwear,Brand U,21.99,13.06
+SKU00044,Apparel,Bottoms,Brand D,21.99,10.92
+SKU00045,Apparel,Bottoms,Brand I,22.99,9.98
+SKU00046,Apparel,Footwear,Brand J,22.99,13.48
+SKU00047,Apparel,Bottoms,Main Street (private label),22.99,11.55
+SKU00048,Apparel,Footwear,Brand F,22.99,13.93
+SKU00049,Apparel,Outerwear,Brand W,23.99,15.69
+SKU00050,Apparel,Accessories,Brand N,23.99,10.2
+SKU00051,Apparel,Bottoms,Main Street (private label),23.99,14.08
+SKU00052,Apparel,Outerwear,Brand D,23.99,11.63
+SKU00053,Apparel,Accessories,Main Street (private label),24.99,16.61
+SKU00054,Apparel,Footwear,Main Street (private label),25.99,12.76
+SKU00055,Apparel,Outerwear,Brand W,25.99,15.36
+SKU00056,Apparel,Outerwear,Brand H,27.99,16.09
+SKU00057,Apparel,Outerwear,Brand C,27.99,14.86
+SKU00058,Apparel,Tops,Brand M,27.99,17.07
+SKU00059,Apparel,Outerwear,Main Street (private label),27.99,17.44
+SKU00060,Apparel,Footwear,Brand B,27.99,16.2
+SKU00061,Apparel,Bottoms,Brand P,28.99,18.33
+SKU00062,Apparel,Accessories,Brand N,28.99,20.16
+SKU00063,Apparel,Footwear,Brand Y,28.99,15.58
+SKU00064,Apparel,Footwear,Brand M,28.99,16.35
+SKU00065,Apparel,Bottoms,Brand I,29.99,12.7
+SKU00066,Apparel,Outerwear,Brand R,29.99,19.28
+SKU00067,Apparel,Outerwear,Brand V,30.99,17.53
+SKU00068,Apparel,Footwear,Brand Q,30.99,16.56
+SKU00069,Apparel,Outerwear,Brand X,31.99,14.28
+SKU00070,Apparel,Outerwear,Brand S,31.99,21.4
+SKU00071,Apparel,Tops,Brand U,31.99,16.97
+SKU00072,Apparel,Accessories,Main Street (private label),32.99,20.16
+SKU00073,Apparel,Bottoms,Brand Q,32.99,15.24
+SKU00074,Apparel,Footwear,Brand H,32.99,22.74
+SKU00075,Apparel,Bottoms,Brand K,33.99,15.97
+SKU00076,Apparel,Outerwear,Brand N,33.99,16.17
+SKU00077,Apparel,Tops,Brand Y,34.99,23.11
+SKU00078,Apparel,Outerwear,Brand Y,34.99,23.64
+SKU00079,Apparel,Footwear,Brand C,34.99,16.77
+SKU00080,Apparel,Outerwear,Brand Q,34.99,19.3
+SKU00081,Apparel,Tops,Brand Q,34.99,21.88
+SKU00082,Apparel,Accessories,Brand E,35.99,23.97
+SKU00083,Apparel,Bottoms,Main Street (private label),35.99,18.94
+SKU00084,Apparel,Bottoms,Main Street (private label),36.99,20.89
+SKU00085,Apparel,Bottoms,Brand R,39.99,25.1
+SKU00086,Apparel,Footwear,Brand I,39.99,24.98
+SKU00087,Apparel,Tops,Brand Y,39.99,25.56
+SKU00088,Apparel,Footwear,Brand H,40.99,23.76
+SKU00089,Apparel,Accessories,Brand Y,40.99,18.42
+SKU00090,Apparel,Bottoms,Brand G,40.99,27.59
+SKU00091,Apparel,Bottoms,Brand S,40.99,27.15
+SKU00092,Apparel,Outerwear,Main Street (private label),41.99,27.02
+SKU00093,Apparel,Tops,Brand K,41.99,18.81
+SKU00094,Apparel,Accessories,Brand S,41.99,20.04
+SKU00095,Apparel,Bottoms,Brand W,42.99,27.01
+SKU00096,Apparel,Tops,Brand T,43.99,18.76
+SKU00097,Apparel,Bottoms,Main Street (private label),44.99,31.23
+SKU00098,Apparel,Bottoms,Brand E,45.99,24.17
+SKU00099,Apparel,Bottoms,Main Street (private label),45.99,28.58
+SKU00100,Apparel,Footwear,Main Street (private label),45.99,30.75
+SKU00101,Apparel,Tops,Brand O,45.99,24.4
+SKU00102,Apparel,Footwear,Brand P,46.99,23.93
+SKU00103,Apparel,Bottoms,Brand R,47.99,28.34
+SKU00104,Apparel,Accessories,Brand U,48.99,28.55
+SKU00105,Apparel,Outerwear,Brand Q,48.99,26.19
+SKU00106,Apparel,Outerwear,Brand S,50.99,30.01
+SKU00107,Apparel,Bottoms,Main Street (private label),50.99,34.77
+SKU00108,Apparel,Bottoms,Brand A,50.99,28.09
+SKU00109,Apparel,Footwear,Brand M,51.99,24.7
+SKU00110,Apparel,Bottoms,Brand U,51.99,27.33
+SKU00111,Apparel,Accessories,Main Street (private label),52.99,28.1
+SKU00112,Apparel,Bottoms,Brand J,53.99,24.66
+SKU00113,Apparel,Outerwear,Brand O,53.99,25.14
+SKU00114,Apparel,Outerwear,Main Street (private label),54.99,33.64
+SKU00115,Apparel,Accessories,Brand F,55.99,28.84
+SKU00116,Apparel,Outerwear,Brand V,55.99,38.49
+SKU00117,Apparel,Accessories,Brand O,57.99,28.31
+SKU00118,Apparel,Tops,Brand A,57.99,25.96
+SKU00119,Apparel,Outerwear,Brand U,57.99,36.59
+SKU00120,Apparel,Tops,Brand E,59.99,39.99
+SKU00121,Apparel,Footwear,Brand U,59.99,29.87
+SKU00122,Apparel,Bottoms,Brand C,60.99,29.07
+SKU00123,Apparel,Footwear,Brand L,60.99,28.79
+SKU00124,Apparel,Footwear,Brand F,61.99,35.1
+SKU00125,Apparel,Bottoms,Brand B,62.99,34.72
+SKU00126,Apparel,Footwear,Brand V,62.99,31.03
+SKU00127,Apparel,Accessories,Main Street (private label),62.99,27.25
+SKU00128,Apparel,Bottoms,Main Street (private label),65.99,36.61
+SKU00129,Apparel,Outerwear,Brand D,66.99,46.13
+SKU00130,Apparel,Bottoms,Brand P,67.99,40.98
+SKU00131,Apparel,Accessories,Brand S,69.99,39.11
+SKU00132,Apparel,Tops,Brand Y,69.99,31.57
+SKU00133,Apparel,Accessories,Brand C,70.99,34.83
+SKU00134,Apparel,Bottoms,Brand G,72.99,36.68
+SKU00135,Apparel,Footwear,Main Street (private label),72.99,46.29
+SKU00136,Apparel,Tops,Brand L,72.99,48.57
+SKU00137,Apparel,Accessories,Brand Y,73.99,49.76
+SKU00138,Apparel,Outerwear,Brand P,73.99,51.47
+SKU00139,Apparel,Tops,Brand M,73.99,51.43
+SKU00140,Apparel,Bottoms,Brand F,74.99,51.51
+SKU00141,Apparel,Bottoms,Brand W,74.99,33.0
+SKU00142,Apparel,Bottoms,Brand I,75.99,34.85
+SKU00143,Apparel,Outerwear,Main Street (private label),75.99,38.39
+SKU00144,Apparel,Tops,Brand E,77.99,44.83
+SKU00145,Apparel,Outerwear,Main Street (private label),77.99,34.87
+SKU00146,Apparel,Bottoms,Main Street (private label),81.99,53.85
+SKU00147,Apparel,Tops,Main Street (private label),81.99,48.59
+SKU00148,Apparel,Bottoms,Brand H,82.99,47.46
+SKU00149,Apparel,Bottoms,Brand N,83.99,39.16
+SKU00150,Apparel,Footwear,Brand D,83.99,41.23
+SKU00151,Apparel,Bottoms,Brand G,85.99,39.98
+SKU00152,Apparel,Footwear,Brand X,85.99,56.63
+SKU00153,Apparel,Bottoms,Brand R,86.99,50.77
+SKU00154,Apparel,Footwear,Brand K,87.99,55.07
+SKU00155,Apparel,Footwear,Brand C,88.99,44.75
+SKU00156,Apparel,Tops,Brand V,88.99,46.63
+SKU00157,Apparel,Tops,Brand A,89.99,48.0
+SKU00158,Apparel,Footwear,Brand D,90.99,57.58
+SKU00159,Apparel,Tops,Brand W,92.99,59.17
+SKU00160,Apparel,Bottoms,Brand J,92.99,44.44
+SKU00161,Apparel,Outerwear,Brand Q,94.99,64.94
+SKU00162,Apparel,Bottoms,Brand L,94.99,43.1
+SKU00163,Apparel,Bottoms,Brand N,96.99,65.07
+SKU00164,Apparel,Footwear,Brand C,96.99,43.46
+SKU00165,Apparel,Bottoms,Brand A,101.99,50.39
+SKU00166,Apparel,Tops,Brand D,102.99,67.67
+SKU00167,Apparel,Accessories,Main Street (private label),104.99,49.37
+SKU00168,Apparel,Bottoms,Brand U,105.99,56.79
+SKU00169,Apparel,Accessories,Brand C,107.99,58.96
+SKU00170,Apparel,Footwear,Brand K,108.99,53.26
+SKU00171,Apparel,Bottoms,Brand S,110.99,68.69
+SKU00172,Apparel,Accessories,Brand S,110.99,73.07
+SKU00173,Apparel,Outerwear,Brand G,111.99,74.46
+SKU00174,Apparel,Accessories,Brand I,115.99,59.74
+SKU00175,Apparel,Accessories,Brand Y,116.99,66.52
+SKU00176,Apparel,Bottoms,Brand O,118.99,58.25
+SKU00177,Apparel,Footwear,Brand T,119.99,58.62
+SKU00178,Apparel,Bottoms,Brand V,120.99,56.28
+SKU00179,Apparel,Tops,Brand S,121.99,83.34
+SKU00180,Apparel,Footwear,Main Street (private label),121.99,81.57
+SKU00181,Apparel,Tops,Brand K,121.99,77.79
+SKU00182,Apparel,Tops,Main Street (private label),121.99,68.92
+SKU00183,Apparel,Bottoms,Brand N,122.99,68.55
+SKU00184,Apparel,Accessories,Brand X,122.99,69.9
+SKU00185,Apparel,Tops,Brand J,126.99,72.41
+SKU00186,Apparel,Bottoms,Brand G,126.99,68.79
+SKU00187,Apparel,Outerwear,Main Street (private label),127.99,58.48
+SKU00188,Apparel,Outerwear,Brand X,128.99,58.71
+SKU00189,Apparel,Outerwear,Main Street (private label),128.99,88.57
+SKU00190,Apparel,Outerwear,Main Street (private label),129.99,72.14
+SKU00191,Apparel,Accessories,Brand A,129.99,89.29
+SKU00192,Apparel,Accessories,Main Street (private label),129.99,60.55
+SKU00193,Apparel,Accessories,Brand H,133.99,77.08
+SKU00194,Apparel,Outerwear,Brand J,136.99,65.5
+SKU00195,Apparel,Outerwear,Brand C,137.99,67.74
+SKU00196,Apparel,Tops,Main Street (private label),138.99,59.55
+SKU00197,Apparel,Bottoms,Main Street (private label),139.99,63.46
+SKU00198,Apparel,Tops,Brand F,140.99,95.41
+SKU00199,Apparel,Bottoms,Main Street (private label),141.99,72.42
+SKU00200,Apparel,Outerwear,Brand P,144.99,85.58
+SKU00201,Apparel,Footwear,Main Street (private label),145.99,80.32
+SKU00202,Apparel,Tops,Brand C,146.99,78.22
+SKU00203,Apparel,Outerwear,Brand F,147.99,84.2
+SKU00204,Apparel,Footwear,Brand G,149.99,70.86
+SKU00205,Apparel,Accessories,Main Street (private label),150.99,105.21
+SKU00206,Apparel,Outerwear,Main Street (private label),153.99,99.96
+SKU00207,Apparel,Bottoms,Brand U,153.99,96.65
+SKU00208,Apparel,Accessories,Main Street (private label),156.99,86.54
+SKU00209,Apparel,Footwear,Brand J,156.99,72.66
+SKU00210,Apparel,Accessories,Brand I,158.99,107.76
+SKU00211,Apparel,Bottoms,Brand D,163.99,84.55
+SKU00212,Apparel,Tops,Brand G,163.99,71.18
+SKU00213,Apparel,Footwear,Brand R,164.99,85.11
+SKU00214,Apparel,Outerwear,Brand T,166.99,107.28
+SKU00215,Apparel,Tops,Brand B,166.99,99.25
+SKU00216,Apparel,Footwear,Brand D,168.99,106.5
+SKU00217,Apparel,Footwear,Brand A,175.99,113.02
+SKU00218,Apparel,Outerwear,Brand I,176.99,84.84
+SKU00219,Apparel,Bottoms,Brand O,177.99,120.79
+SKU00220,Apparel,Tops,Brand A,179.99,97.67
+SKU00221,Apparel,Bottoms,Brand D,179.99,107.8
+SKU00222,Apparel,Accessories,Brand W,180.99,76.13
+SKU00223,Apparel,Outerwear,Main Street (private label),182.99,127.75
+SKU00224,Apparel,Accessories,Brand H,183.99,91.75
+SKU00225,Apparel,Bottoms,Brand P,184.99,80.91
+SKU00226,Apparel,Footwear,Main Street (private label),184.99,101.43
+SKU00227,Apparel,Bottoms,Main Street (private label),184.99,84.38
+SKU00228,Apparel,Tops,Main Street (private label),185.99,86.05
+SKU00229,Apparel,Footwear,Brand W,189.99,113.43
+SKU00230,Apparel,Footwear,Main Street (private label),191.99,101.76
+SKU00231,Apparel,Outerwear,Main Street (private label),192.99,130.87
+SKU00232,Apparel,Footwear,Main Street (private label),194.99,99.32
+SKU00233,Apparel,Footwear,Main Street (private label),196.99,122.79
+SKU00234,Apparel,Tops,Brand M,200.99,110.37
+SKU00235,Apparel,Accessories,Brand A,203.99,123.37
+SKU00236,Apparel,Footwear,Brand L,207.99,122.28
+SKU00237,Apparel,Tops,Brand L,211.99,117.1
+SKU00238,Apparel,Outerwear,Brand U,215.99,148.17
+SKU00239,Apparel,Footwear,Main Street (private label),217.99,112.47
+SKU00240,Apparel,Tops,Brand U,218.99,102.84
+SKU00241,Home,Kitchen,Main Street (private label),9.99,5.2
+SKU00242,Home,Bedding,Brand S,9.99,5.53
+SKU00243,Home,Bedding,Brand D,10.99,5.07
+SKU00244,Home,Kitchen,Brand V,10.99,5.46
+SKU00245,Home,Decor,Brand E,10.99,5.56
+SKU00246,Home,Small Appliances,Brand L,10.99,5.01
+SKU00247,Home,Storage,Brand B,10.99,6.31
+SKU00248,Home,Storage,Main Street (private label),11.99,7.4
+SKU00249,Home,Storage,Brand R,11.99,5.27
+SKU00250,Home,Bedding,Brand I,11.99,6.65
+SKU00251,Home,Small Appliances,Brand K,12.99,8.3
+SKU00252,Home,Small Appliances,Brand X,12.99,8.18
+SKU00253,Home,Bedding,Brand X,12.99,8.42
+SKU00254,Home,Decor,Brand U,12.99,7.09
+SKU00255,Home,Small Appliances,Main Street (private label),13.99,9.09
+SKU00256,Home,Decor,Brand L,13.99,6.82
+SKU00257,Home,Small Appliances,Brand V,13.99,7.29
+SKU00258,Home,Small Appliances,Brand E,13.99,6.57
+SKU00259,Home,Decor,Main Street (private label),14.99,8.26
+SKU00260,Home,Bedding,Brand S,14.99,7.94
+SKU00261,Home,Kitchen,Brand I,14.99,7.31
+SKU00262,Home,Kitchen,Brand L,14.99,9.45
+SKU00263,Home,Decor,Brand Y,15.99,8.12
+SKU00264,Home,Decor,Brand M,15.99,7.94
+SKU00265,Home,Decor,Brand G,15.99,7.3
+SKU00266,Home,Bedding,Brand E,15.99,8.68
+SKU00267,Home,Kitchen,Brand G,15.99,8.07
+SKU00268,Home,Storage,Main Street (private label),15.99,8.37
+SKU00269,Home,Bedding,Brand S,15.99,7.77
+SKU00270,Home,Kitchen,Brand T,16.99,10.77
+SKU00271,Home,Small Appliances,Brand C,16.99,11.56
+SKU00272,Home,Bedding,Brand C,17.99,10.06
+SKU00273,Home,Decor,Brand U,17.99,10.79
+SKU00274,Home,Kitchen,Main Street (private label),17.99,11.92
+SKU00275,Home,Bedding,Brand J,17.99,12.59
+SKU00276,Home,Decor,Brand H,17.99,10.65
+SKU00277,Home,Decor,Brand P,18.99,12.71
+SKU00278,Home,Bedding,Main Street (private label),18.99,12.81
+SKU00279,Home,Bedding,Brand O,19.99,12.83
+SKU00280,Home,Bedding,Brand F,19.99,10.98
+SKU00281,Home,Storage,Brand M,19.99,8.85
+SKU00282,Home,Small Appliances,Main Street (private label),20.99,8.91
+SKU00283,Home,Bedding,Brand H,20.99,11.62
+SKU00284,Home,Kitchen,Brand J,20.99,11.72
+SKU00285,Home,Kitchen,Main Street (private label),22.99,12.28
+SKU00286,Home,Kitchen,Main Street (private label),22.99,13.31
+SKU00287,Home,Kitchen,Main Street (private label),22.99,13.21
+SKU00288,Home,Bedding,Brand D,23.99,15.7
+SKU00289,Home,Decor,Main Street (private label),23.99,10.81
+SKU00290,Home,Kitchen,Brand X,23.99,11.59
+SKU00291,Home,Kitchen,Brand F,23.99,15.4
+SKU00292,Home,Kitchen,Brand S,24.99,16.43
+SKU00293,Home,Small Appliances,Brand Y,24.99,17.46
+SKU00294,Home,Storage,Main Street (private label),24.99,16.6
+SKU00295,Home,Decor,Brand N,25.99,17.39
+SKU00296,Home,Kitchen,Brand U,26.99,13.71
+SKU00297,Home,Small Appliances,Brand N,26.99,14.37
+SKU00298,Home,Small Appliances,Brand G,27.99,13.86
+SKU00299,Home,Bedding,Brand G,28.99,17.1
+SKU00300,Home,Small Appliances,Main Street (private label),29.99,20.48
+SKU00301,Home,Storage,Brand K,29.99,15.49
+SKU00302,Home,Bedding,Brand Y,29.99,17.27
+SKU00303,Home,Storage,Brand X,29.99,15.08
+SKU00304,Home,Bedding,Main Street (private label),29.99,14.02
+SKU00305,Home,Bedding,Brand P,30.99,14.71
+SKU00306,Home,Bedding,Brand C,30.99,13.52
+SKU00307,Home,Decor,Brand V,31.99,21.94
+SKU00308,Home,Storage,Main Street (private label),32.99,17.58
+SKU00309,Home,Decor,Brand W,34.99,22.87
+SKU00310,Home,Bedding,Brand T,34.99,21.37
+SKU00311,Home,Bedding,Main Street (private label),36.99,17.52
+SKU00312,Home,Small Appliances,Main Street (private label),37.99,17.82
+SKU00313,Home,Small Appliances,Brand T,37.99,24.59
+SKU00314,Home,Storage,Main Street (private label),37.99,18.77
+SKU00315,Home,Bedding,Brand K,38.99,26.35
+SKU00316,Home,Small Appliances,Brand W,38.99,17.9
+SKU00317,Home,Storage,Brand L,38.99,23.77
+SKU00318,Home,Decor,Brand F,38.99,25.27
+SKU00319,Home,Bedding,Brand H,39.99,19.43
+SKU00320,Home,Small Appliances,Main Street (private label),39.99,19.89
+SKU00321,Home,Decor,Brand X,40.99,28.29
+SKU00322,Home,Bedding,Brand C,41.99,20.75
+SKU00323,Home,Kitchen,Main Street (private label),41.99,22.69
+SKU00324,Home,Decor,Brand C,41.99,22.72
+SKU00325,Home,Bedding,Brand X,41.99,20.61
+SKU00326,Home,Kitchen,Main Street (private label),41.99,26.76
+SKU00327,Home,Decor,Brand U,43.99,27.98
+SKU00328,Home,Small Appliances,Brand P,44.99,23.66
+SKU00329,Home,Bedding,Brand T,44.99,29.42
+SKU00330,Home,Decor,Brand Y,45.99,22.06
+SKU00331,Home,Small Appliances,Brand T,45.99,19.37
+SKU00332,Home,Small Appliances,Brand X,46.99,27.25
+SKU00333,Home,Small Appliances,Main Street (private label),47.99,33.51
+SKU00334,Home,Bedding,Brand S,48.99,21.11
+SKU00335,Home,Small Appliances,Brand K,50.99,24.39
+SKU00336,Home,Small Appliances,Brand K,51.99,29.39
+SKU00337,Home,Kitchen,Brand V,52.99,34.27
+SKU00338,Home,Decor,Brand Y,52.99,23.58
+SKU00339,Home,Decor,Brand P,54.99,29.18
+SKU00340,Home,Decor,Brand I,55.99,35.23
+SKU00341,Home,Kitchen,Brand H,55.99,29.34
+SKU00342,Home,Small Appliances,Brand F,57.99,27.42
+SKU00343,Home,Small Appliances,Brand E,58.99,28.0
+SKU00344,Home,Kitchen,Brand F,60.99,32.62
+SKU00345,Home,Small Appliances,Main Street (private label),60.99,33.8
+SKU00346,Home,Kitchen,Main Street (private label),62.99,41.66
+SKU00347,Home,Storage,Brand R,62.99,37.78
+SKU00348,Home,Decor,Brand H,63.99,39.25
+SKU00349,Home,Decor,Brand W,64.99,45.18
+SKU00350,Home,Bedding,Brand M,64.99,34.79
+SKU00351,Home,Storage,Main Street (private label),66.99,35.7
+SKU00352,Home,Kitchen,Main Street (private label),67.99,46.13
+SKU00353,Home,Kitchen,Main Street (private label),67.99,33.24
+SKU00354,Home,Bedding,Brand Y,68.99,43.07
+SKU00355,Home,Small Appliances,Main Street (private label),72.99,46.08
+SKU00356,Home,Bedding,Brand J,76.99,34.44
+SKU00357,Home,Storage,Brand W,79.99,44.08
+SKU00358,Home,Small Appliances,Brand Y,79.99,38.09
+SKU00359,Home,Bedding,Brand A,81.99,38.69
+SKU00360,Home,Decor,Main Street (private label),83.99,46.18
+SKU00361,Home,Decor,Main Street (private label),85.99,43.08
+SKU00362,Home,Kitchen,Main Street (private label),89.99,57.85
+SKU00363,Home,Storage,Main Street (private label),89.99,60.66
+SKU00364,Home,Decor,Brand L,91.99,59.31
+SKU00365,Home,Decor,Brand W,91.99,45.49
+SKU00366,Home,Decor,Brand K,91.99,45.7
+SKU00367,Home,Small Appliances,Brand N,92.99,45.69
+SKU00368,Home,Storage,Main Street (private label),92.99,42.57
+SKU00369,Home,Kitchen,Brand S,93.99,64.31
+SKU00370,Home,Small Appliances,Brand M,94.99,50.59
+SKU00371,Home,Small Appliances,Brand U,94.99,45.87
+SKU00372,Home,Small Appliances,Brand X,96.99,63.73
+SKU00373,Home,Storage,Brand E,96.99,51.58
+SKU00374,Home,Kitchen,Main Street (private label),97.99,42.12
+SKU00375,Home,Storage,Brand A,98.99,46.06
+SKU00376,Home,Kitchen,Brand G,99.99,59.89
+SKU00377,Home,Kitchen,Brand X,99.99,63.91
+SKU00378,Home,Decor,Brand F,102.99,49.34
+SKU00379,Home,Small Appliances,Brand R,102.99,69.71
+SKU00380,Home,Decor,Brand K,108.99,71.75
+SKU00381,Home,Kitchen,Main Street (private label),111.99,73.64
+SKU00382,Home,Decor,Brand D,115.99,56.11
+SKU00383,Home,Kitchen,Brand N,118.99,51.66
+SKU00384,Home,Storage,Brand O,121.99,80.86
+SKU00385,Home,Kitchen,Brand G,122.99,62.19
+SKU00386,Home,Decor,Brand A,122.99,72.97
+SKU00387,Home,Kitchen,Brand Q,125.99,79.73
+SKU00388,Home,Kitchen,Main Street (private label),127.99,58.35
+SKU00389,Home,Small Appliances,Brand W,127.99,81.74
+SKU00390,Home,Kitchen,Main Street (private label),127.99,87.39
+SKU00391,Home,Bedding,Main Street (private label),128.99,80.48
+SKU00392,Home,Kitchen,Brand I,128.99,70.11
+SKU00393,Home,Decor,Brand J,131.99,87.84
+SKU00394,Home,Bedding,Brand J,133.99,76.06
+SKU00395,Home,Kitchen,Brand G,134.99,84.85
+SKU00396,Home,Bedding,Brand Y,138.99,90.31
+SKU00397,Home,Decor,Brand I,138.99,87.54
+SKU00398,Home,Storage,Brand I,140.99,70.58
+SKU00399,Home,Small Appliances,Brand G,145.99,66.13
+SKU00400,Home,Kitchen,Main Street (private label),146.99,71.55
+SKU00401,Home,Small Appliances,Brand L,150.99,84.68
+SKU00402,Home,Kitchen,Brand A,152.99,85.9
+SKU00403,Home,Storage,Brand N,159.99,93.3
+SKU00404,Home,Decor,Main Street (private label),161.99,85.96
+SKU00405,Home,Storage,Brand Y,162.99,104.37
+SKU00406,Home,Storage,Brand H,163.99,110.81
+SKU00407,Home,Decor,Brand V,163.99,80.2
+SKU00408,Home,Kitchen,Brand I,163.99,102.69
+SKU00409,Home,Decor,Main Street (private label),165.99,101.23
+SKU00410,Home,Small Appliances,Brand T,166.99,94.59
+SKU00411,Home,Small Appliances,Brand N,168.99,79.9
+SKU00412,Home,Small Appliances,Brand S,169.99,109.25
+SKU00413,Home,Bedding,Brand G,173.99,119.87
+SKU00414,Home,Decor,Brand N,175.99,109.49
+SKU00415,Home,Bedding,Brand U,177.99,120.5
+SKU00416,Home,Storage,Brand N,182.99,127.28
+SKU00417,Home,Small Appliances,Brand E,186.99,96.97
+SKU00418,Home,Bedding,Brand O,186.99,111.95
+SKU00419,Home,Storage,Brand O,186.99,103.35
+SKU00420,Home,Small Appliances,Brand X,194.99,135.76
+SKU00421,Home,Small Appliances,Brand E,195.99,87.46
+SKU00422,Home,Kitchen,Brand G,195.99,104.95
+SKU00423,Home,Bedding,Brand S,198.99,132.36
+SKU00424,Home,Small Appliances,Brand J,202.99,101.4
+SKU00425,Home,Small Appliances,Brand Q,207.99,133.23
+SKU00426,Home,Decor,Brand H,208.99,110.18
+SKU00427,Home,Small Appliances,Main Street (private label),218.99,152.07
+SKU00428,Home,Bedding,Brand Q,220.99,147.49
+SKU00429,Home,Storage,Main Street (private label),222.99,112.47
+SKU00430,Home,Bedding,Main Street (private label),231.99,147.47
+SKU00431,Home,Small Appliances,Brand N,238.99,122.92
+SKU00432,Home,Storage,Brand Q,240.99,142.13
+SKU00433,Home,Small Appliances,Brand V,250.99,151.69
+SKU00434,Home,Decor,Brand B,255.99,166.98
+SKU00435,Home,Bedding,Main Street (private label),275.99,117.81
+SKU00436,Home,Bedding,Brand X,276.99,133.41
+SKU00437,Home,Kitchen,Main Street (private label),276.99,171.55
+SKU00438,Home,Storage,Main Street (private label),278.99,161.2
+SKU00439,Home,Bedding,Brand C,280.99,157.01
+SKU00440,Home,Small Appliances,Brand J,289.99,126.28
+SKU00441,Home,Kitchen,Brand V,291.99,151.11
+SKU00442,Home,Decor,Brand R,291.99,193.36
+SKU00443,Home,Kitchen,Brand P,298.99,128.16
+SKU00444,Home,Decor,Main Street (private label),298.99,158.76
+SKU00445,Outdoor & Garden,Garden Tools,Brand K,11.99,7.87
+SKU00446,Outdoor & Garden,Camping,Main Street (private label),12.99,7.08
+SKU00447,Outdoor & Garden,BBQ,Brand D,13.99,9.61
+SKU00448,Outdoor & Garden,BBQ,Main Street (private label),15.99,9.63
+SKU00449,Outdoor & Garden,BBQ,Brand N,15.99,7.23
+SKU00450,Outdoor & Garden,Patio,Brand B,15.99,10.68
+SKU00451,Outdoor & Garden,Patio,Main Street (private label),15.99,8.91
+SKU00452,Outdoor & Garden,BBQ,Main Street (private label),15.99,7.35
+SKU00453,Outdoor & Garden,Camping,Brand L,15.99,7.4
+SKU00454,Outdoor & Garden,Patio,Main Street (private label),16.99,10.41
+SKU00455,Outdoor & Garden,Patio,Brand U,16.99,7.36
+SKU00456,Outdoor & Garden,Camping,Main Street (private label),18.99,9.5
+SKU00457,Outdoor & Garden,Camping,Brand M,18.99,8.72
+SKU00458,Outdoor & Garden,Patio,Brand H,19.99,10.86
+SKU00459,Outdoor & Garden,Garden Tools,Brand H,19.99,10.72
+SKU00460,Outdoor & Garden,BBQ,Main Street (private label),20.99,11.88
+SKU00461,Outdoor & Garden,Patio,Brand S,21.99,10.96
+SKU00462,Outdoor & Garden,Garden Tools,Brand V,21.99,9.43
+SKU00463,Outdoor & Garden,Garden Tools,Main Street (private label),22.99,13.61
+SKU00464,Outdoor & Garden,BBQ,Main Street (private label),24.99,13.11
+SKU00465,Outdoor & Garden,Garden Tools,Brand V,25.99,15.66
+SKU00466,Outdoor & Garden,Garden Tools,Brand K,25.99,11.71
+SKU00467,Outdoor & Garden,Garden Tools,Main Street (private label),25.99,11.02
+SKU00468,Outdoor & Garden,Camping,Main Street (private label),25.99,12.72
+SKU00469,Outdoor & Garden,Patio,Brand O,26.99,14.79
+SKU00470,Outdoor & Garden,Patio,Brand Q,27.99,14.84
+SKU00471,Outdoor & Garden,Patio,Brand M,27.99,18.11
+SKU00472,Outdoor & Garden,Camping,Brand X,28.99,15.24
+SKU00473,Outdoor & Garden,Camping,Brand I,28.99,16.48
+SKU00474,Outdoor & Garden,BBQ,Brand C,30.99,18.17
+SKU00475,Outdoor & Garden,Patio,Brand I,30.99,13.21
+SKU00476,Outdoor & Garden,Camping,Brand E,33.99,19.18
+SKU00477,Outdoor & Garden,Garden Tools,Brand A,34.99,18.07
+SKU00478,Outdoor & Garden,Camping,Main Street (private label),36.99,19.9
+SKU00479,Outdoor & Garden,Garden Tools,Brand E,39.99,17.92
+SKU00480,Outdoor & Garden,Camping,Brand P,39.99,25.56
+SKU00481,Outdoor & Garden,Camping,Main Street (private label),41.99,28.72
+SKU00482,Outdoor & Garden,Patio,Brand H,42.99,18.32
+SKU00483,Outdoor & Garden,BBQ,Brand N,52.99,31.18
+SKU00484,Outdoor & Garden,Garden Tools,Brand M,56.99,36.12
+SKU00485,Outdoor & Garden,Garden Tools,Brand R,58.99,29.48
+SKU00486,Outdoor & Garden,Garden Tools,Brand S,60.99,39.07
+SKU00487,Outdoor & Garden,BBQ,Brand P,60.99,36.41
+SKU00488,Outdoor & Garden,Garden Tools,Main Street (private label),60.99,41.48
+SKU00489,Outdoor & Garden,BBQ,Brand I,60.99,42.37
+SKU00490,Outdoor & Garden,BBQ,Brand M,64.99,28.07
+SKU00491,Outdoor & Garden,Camping,Brand A,65.99,35.94
+SKU00492,Outdoor & Garden,Camping,Main Street (private label),66.99,38.4
+SKU00493,Outdoor & Garden,Patio,Brand A,66.99,30.89
+SKU00494,Outdoor & Garden,Camping,Brand H,68.99,35.47
+SKU00495,Outdoor & Garden,Patio,Brand G,70.99,49.45
+SKU00496,Outdoor & Garden,BBQ,Main Street (private label),71.99,30.56
+SKU00497,Outdoor & Garden,Garden Tools,Brand T,72.99,39.9
+SKU00498,Outdoor & Garden,BBQ,Brand W,77.99,51.16
+SKU00499,Outdoor & Garden,BBQ,Main Street (private label),79.99,40.85
+SKU00500,Outdoor & Garden,Camping,Brand W,81.99,45.45
+SKU00501,Outdoor & Garden,Garden Tools,Main Street (private label),81.99,56.89
+SKU00502,Outdoor & Garden,Camping,Brand W,81.99,45.34
+SKU00503,Outdoor & Garden,Garden Tools,Brand X,86.99,39.72
+SKU00504,Outdoor & Garden,Patio,Main Street (private label),88.99,38.66
+SKU00505,Outdoor & Garden,Garden Tools,Brand R,93.99,64.36
+SKU00506,Outdoor & Garden,BBQ,Brand Y,97.99,48.45
+SKU00507,Outdoor & Garden,BBQ,Brand V,97.99,54.99
+SKU00508,Outdoor & Garden,Camping,Brand Y,105.99,47.21
+SKU00509,Outdoor & Garden,Patio,Brand K,109.99,59.24
+SKU00510,Outdoor & Garden,Garden Tools,Main Street (private label),112.99,76.88
+SKU00511,Outdoor & Garden,Camping,Brand U,113.99,63.91
+SKU00512,Outdoor & Garden,Garden Tools,Brand M,114.99,79.56
+SKU00513,Outdoor & Garden,Patio,Brand M,117.99,58.11
+SKU00514,Outdoor & Garden,Camping,Brand G,119.99,67.35
+SKU00515,Outdoor & Garden,Garden Tools,Brand L,120.99,79.93
+SKU00516,Outdoor & Garden,Camping,Main Street (private label),121.99,66.55
+SKU00517,Outdoor & Garden,Camping,Brand Q,137.99,68.75
+SKU00518,Outdoor & Garden,Camping,Main Street (private label),141.99,93.65
+SKU00519,Outdoor & Garden,BBQ,Brand Q,143.99,76.2
+SKU00520,Outdoor & Garden,Camping,Brand U,145.99,83.01
+SKU00521,Outdoor & Garden,Camping,Brand I,147.99,102.62
+SKU00522,Outdoor & Garden,Garden Tools,Brand J,156.99,74.13
+SKU00523,Outdoor & Garden,Patio,Brand C,158.99,80.19
+SKU00524,Outdoor & Garden,Garden Tools,Brand Y,173.99,74.59
+SKU00525,Outdoor & Garden,BBQ,Brand Q,176.99,93.75
+SKU00526,Outdoor & Garden,BBQ,Brand E,177.99,84.73
+SKU00527,Outdoor & Garden,Patio,Main Street (private label),178.99,109.26
+SKU00528,Outdoor & Garden,BBQ,Main Street (private label),181.99,85.68
+SKU00529,Outdoor & Garden,Patio,Brand H,188.99,115.09
+SKU00530,Outdoor & Garden,BBQ,Brand X,191.99,94.8
+SKU00531,Outdoor & Garden,BBQ,Brand Q,198.99,103.37
+SKU00532,Outdoor & Garden,BBQ,Main Street (private label),201.99,104.57
+SKU00533,Outdoor & Garden,Garden Tools,Brand U,214.99,133.44
+SKU00534,Outdoor & Garden,Garden Tools,Brand F,226.99,124.99
+SKU00535,Outdoor & Garden,BBQ,Brand U,240.99,125.6
+SKU00536,Outdoor & Garden,BBQ,Brand A,242.99,160.07
+SKU00537,Outdoor & Garden,Camping,Brand M,253.99,147.35
+SKU00538,Outdoor & Garden,Garden Tools,Brand W,266.99,128.12
+SKU00539,Outdoor & Garden,Garden Tools,Brand B,276.99,186.14
+SKU00540,Outdoor & Garden,Garden Tools,Brand P,293.99,151.68
+SKU00541,Outdoor & Garden,BBQ,Brand Y,296.99,127.98
+SKU00542,Outdoor & Garden,Patio,Main Street (private label),299.99,167.54
+SKU00543,Outdoor & Garden,Garden Tools,Main Street (private label),315.99,143.68
+SKU00544,Outdoor & Garden,Patio,Brand O,324.99,158.2
+SKU00545,Outdoor & Garden,BBQ,Brand D,338.99,213.29
+SKU00546,Outdoor & Garden,Camping,Main Street (private label),338.99,154.79
+SKU00547,Outdoor & Garden,Camping,Brand I,346.99,224.14
+SKU00548,Outdoor & Garden,Garden Tools,Brand R,368.99,251.77
+SKU00549,Outdoor & Garden,Patio,Brand C,386.99,228.26
+SKU00550,Outdoor & Garden,Patio,Brand D,391.99,242.6
+SKU00551,Outdoor & Garden,Patio,Brand U,406.99,252.25
+SKU00552,Outdoor & Garden,Camping,Brand J,433.99,302.92
+SKU00553,Electronics,Phone Accessories,Main Street (private label),20.99,10.75
+SKU00554,Electronics,Audio,Brand C,21.99,14.97
+SKU00555,Electronics,Audio,Brand Y,22.99,14.05
+SKU00556,Electronics,Phone Accessories,Brand P,22.99,15.93
+SKU00557,Electronics,Audio,Brand M,22.99,12.34
+SKU00558,Electronics,Smart Home,Brand C,23.99,13.69
+SKU00559,Electronics,Phone Accessories,Brand C,24.99,13.9
+SKU00560,Electronics,Phone Accessories,Main Street (private label),25.99,11.7
+SKU00561,Electronics,Smart Home,Brand Q,25.99,12.64
+SKU00562,Electronics,Audio,Main Street (private label),27.99,15.89
+SKU00563,Electronics,Computing,Main Street (private label),27.99,12.28
+SKU00564,Electronics,Computing,Brand Q,28.99,19.74
+SKU00565,Electronics,Computing,Brand X,28.99,13.18
+SKU00566,Electronics,Phone Accessories,Brand R,28.99,13.78
+SKU00567,Electronics,Smart Home,Brand I,29.99,19.02
+SKU00568,Electronics,Computing,Brand I,29.99,13.41
+SKU00569,Electronics,Smart Home,Brand G,30.99,20.83
+SKU00570,Electronics,Audio,Brand D,30.99,19.31
+SKU00571,Electronics,Computing,Brand J,30.99,13.61
+SKU00572,Electronics,Smart Home,Brand G,33.99,20.86
+SKU00573,Electronics,Computing,Brand M,35.99,21.48
+SKU00574,Electronics,Smart Home,Brand V,35.99,22.75
+SKU00575,Electronics,Computing,Brand Y,36.99,24.11
+SKU00576,Electronics,Phone Accessories,Main Street (private label),37.99,23.6
+SKU00577,Electronics,Smart Home,Brand F,38.99,22.78
+SKU00578,Electronics,Smart Home,Main Street (private label),40.99,20.92
+SKU00579,Electronics,Computing,Brand E,40.99,25.22
+SKU00580,Electronics,Audio,Brand C,41.99,28.89
+SKU00581,Electronics,Smart Home,Main Street (private label),42.99,25.13
+SKU00582,Electronics,Smart Home,Brand R,49.99,30.29
+SKU00583,Electronics,Phone Accessories,Brand I,51.99,28.2
+SKU00584,Electronics,Smart Home,Brand W,52.99,33.47
+SKU00585,Electronics,Phone Accessories,Main Street (private label),52.99,37.06
+SKU00586,Electronics,Smart Home,Main Street (private label),53.99,25.1
+SKU00587,Electronics,Audio,Brand F,54.99,26.21
+SKU00588,Electronics,Audio,Main Street (private label),54.99,31.4
+SKU00589,Electronics,Phone Accessories,Brand B,54.99,30.51
+SKU00590,Electronics,Smart Home,Brand Y,55.99,32.48
+SKU00591,Electronics,Smart Home,Main Street (private label),56.99,24.72
+SKU00592,Electronics,Phone Accessories,Main Street (private label),56.99,30.39
+SKU00593,Electronics,Smart Home,Brand L,57.99,33.82
+SKU00594,Electronics,Smart Home,Brand I,64.99,37.94
+SKU00595,Electronics,Audio,Brand L,65.99,39.86
+SKU00596,Electronics,Smart Home,Brand F,65.99,41.02
+SKU00597,Electronics,Phone Accessories,Brand T,67.99,40.77
+SKU00598,Electronics,Phone Accessories,Main Street (private label),69.99,44.88
+SKU00599,Electronics,Computing,Brand G,69.99,41.64
+SKU00600,Electronics,Computing,Brand P,72.99,41.64
+SKU00601,Electronics,Audio,Brand U,72.99,43.04
+SKU00602,Electronics,Smart Home,Brand E,75.99,34.07
+SKU00603,Electronics,Smart Home,Brand L,76.99,38.22
+SKU00604,Electronics,Phone Accessories,Main Street (private label),84.99,48.25
+SKU00605,Electronics,Smart Home,Main Street (private label),86.99,57.8
+SKU00606,Electronics,Computing,Main Street (private label),88.99,54.3
+SKU00607,Electronics,Smart Home,Brand Q,95.99,42.75
+SKU00608,Electronics,Phone Accessories,Brand C,96.99,56.82
+SKU00609,Electronics,Audio,Brand Q,97.99,47.24
+SKU00610,Electronics,Computing,Main Street (private label),97.99,61.3
+SKU00611,Electronics,Computing,Brand U,100.99,65.81
+SKU00612,Electronics,Computing,Brand T,100.99,59.2
+SKU00613,Electronics,Smart Home,Main Street (private label),103.99,60.89
+SKU00614,Electronics,Audio,Main Street (private label),107.99,55.59
+SKU00615,Electronics,Phone Accessories,Main Street (private label),109.99,59.94
+SKU00616,Electronics,Smart Home,Brand U,111.99,74.13
+SKU00617,Electronics,Computing,Brand A,112.99,70.34
+SKU00618,Electronics,Phone Accessories,Brand K,124.99,70.69
+SKU00619,Electronics,Phone Accessories,Brand G,134.99,70.61
+SKU00620,Electronics,Computing,Brand S,135.99,59.03
+SKU00621,Electronics,Computing,Brand I,135.99,62.56
+SKU00622,Electronics,Smart Home,Brand I,140.99,66.84
+SKU00623,Electronics,Audio,Brand Y,143.99,75.53
+SKU00624,Electronics,Audio,Main Street (private label),147.99,101.28
+SKU00625,Electronics,Smart Home,Brand T,150.99,84.77
+SKU00626,Electronics,Phone Accessories,Main Street (private label),151.99,73.83
+SKU00627,Electronics,Audio,Brand I,170.99,76.88
+SKU00628,Electronics,Audio,Brand V,171.99,88.53
+SKU00629,Electronics,Phone Accessories,Brand O,184.99,119.95
+SKU00630,Electronics,Computing,Brand O,186.99,98.61
+SKU00631,Electronics,Audio,Brand B,194.99,124.07
+SKU00632,Electronics,Phone Accessories,Brand G,197.99,127.66
+SKU00633,Electronics,Audio,Brand E,205.99,92.91
+SKU00634,Electronics,Phone Accessories,Brand J,242.99,143.47
+SKU00635,Electronics,Computing,Brand H,248.99,171.44
+SKU00636,Electronics,Computing,Brand D,292.99,156.05
+SKU00637,Electronics,Phone Accessories,Brand C,307.99,133.75
+SKU00638,Electronics,Phone Accessories,Brand A,310.99,211.01
+SKU00639,Electronics,Computing,Brand E,355.99,237.6
+SKU00640,Electronics,Phone Accessories,Main Street (private label),367.99,208.36
+SKU00641,Electronics,Smart Home,Brand U,370.99,213.18
+SKU00642,Electronics,Computing,Brand M,374.99,179.73
+SKU00643,Electronics,Phone Accessories,Main Street (private label),374.99,243.54
+SKU00644,Electronics,Computing,Brand P,380.99,213.21
+SKU00645,Electronics,Phone Accessories,Brand U,396.99,170.5
+SKU00646,Electronics,Computing,Brand A,418.99,256.11
+SKU00647,Electronics,Audio,Main Street (private label),430.99,295.72
+SKU00648,Electronics,Audio,Main Street (private label),446.99,291.51
+SKU00649,Electronics,Audio,Main Street (private label),450.99,224.42
+SKU00650,Electronics,Phone Accessories,Brand R,459.99,200.06
+SKU00651,Electronics,Phone Accessories,Brand Y,485.99,332.08
+SKU00652,Electronics,Audio,Main Street (private label),496.99,339.13
+SKU00653,Electronics,Audio,Brand Q,521.99,297.05
+SKU00654,Electronics,Computing,Main Street (private label),553.99,332.31
+SKU00655,Electronics,Computing,Brand L,568.99,312.68
+SKU00656,Electronics,Phone Accessories,Brand R,600.99,323.05
+SKU00657,Electronics,Smart Home,Brand E,602.99,273.42
+SKU00658,Electronics,Smart Home,Main Street (private label),604.99,270.49
+SKU00659,Electronics,Audio,Brand M,610.99,296.43
+SKU00660,Electronics,Audio,Brand Y,669.99,438.35
+SKU00661,Electronics,Computing,Brand B,682.99,314.74
+SKU00662,Electronics,Smart Home,Main Street (private label),685.99,331.66
+SKU00663,Electronics,Phone Accessories,Main Street (private label),686.99,394.07
+SKU00664,Electronics,Phone Accessories,Brand K,687.99,330.4
+SKU00665,Electronics,Smart Home,Brand M,688.99,320.86
+SKU00666,Electronics,Audio,Brand S,707.99,409.03
+SKU00667,Electronics,Phone Accessories,Brand R,736.99,385.49
+SKU00668,Electronics,Audio,Brand V,795.99,473.87
+SKU00669,Electronics,Smart Home,Brand S,801.99,541.68
+SKU00670,Electronics,Computing,Brand A,868.99,401.72
+SKU00671,Electronics,Phone Accessories,Brand K,880.99,595.34
+SKU00672,Electronics,Computing,Brand C,898.99,604.75
+SKU00673,Beauty & Wellness,Haircare,Brand E,5.99,2.7
+SKU00674,Beauty & Wellness,Haircare,Brand S,5.99,2.73
+SKU00675,Beauty & Wellness,Haircare,Main Street (private label),5.99,2.76
+SKU00676,Beauty & Wellness,Haircare,Main Street (private label),5.99,4.16
+SKU00677,Beauty & Wellness,Haircare,Brand I,5.99,3.55
+SKU00678,Beauty & Wellness,Vitamins,Main Street (private label),5.99,3.54
+SKU00679,Beauty & Wellness,Skincare,Brand A,6.99,4.87
+SKU00680,Beauty & Wellness,Vitamins,Brand Q,6.99,3.11
+SKU00681,Beauty & Wellness,Skincare,Brand T,6.99,4.84
+SKU00682,Beauty & Wellness,Haircare,Main Street (private label),6.99,3.34
+SKU00683,Beauty & Wellness,Fragrance,Brand V,7.99,4.75
+SKU00684,Beauty & Wellness,Fragrance,Brand S,7.99,4.3
+SKU00685,Beauty & Wellness,Vitamins,Brand U,7.99,4.21
+SKU00686,Beauty & Wellness,Vitamins,Brand P,7.99,5.44
+SKU00687,Beauty & Wellness,Skincare,Brand O,7.99,3.69
+SKU00688,Beauty & Wellness,Haircare,Brand J,8.99,6.29
+SKU00689,Beauty & Wellness,Vitamins,Brand N,8.99,4.73
+SKU00690,Beauty & Wellness,Fragrance,Brand W,8.99,5.41
+SKU00691,Beauty & Wellness,Vitamins,Main Street (private label),9.99,6.9
+SKU00692,Beauty & Wellness,Fragrance,Brand D,9.99,4.36
+SKU00693,Beauty & Wellness,Haircare,Main Street (private label),10.99,7.46
+SKU00694,Beauty & Wellness,Skincare,Brand X,10.99,6.36
+SKU00695,Beauty & Wellness,Skincare,Brand H,10.99,6.78
+SKU00696,Beauty & Wellness,Vitamins,Brand O,10.99,5.07
+SKU00697,Beauty & Wellness,Vitamins,Brand T,11.99,6.83
+SKU00698,Beauty & Wellness,Haircare,Brand Y,11.99,7.3
+SKU00699,Beauty & Wellness,Fragrance,Main Street (private label),11.99,6.57
+SKU00700,Beauty & Wellness,Vitamins,Brand S,11.99,5.56
+SKU00701,Beauty & Wellness,Haircare,Brand V,12.99,6.34
+SKU00702,Beauty & Wellness,Skincare,Main Street (private label),12.99,8.56
+SKU00703,Beauty & Wellness,Vitamins,Brand R,12.99,5.58
+SKU00704,Beauty & Wellness,Vitamins,Brand E,13.99,8.65
+SKU00705,Beauty & Wellness,Skincare,Brand N,13.99,9.79
+SKU00706,Beauty & Wellness,Haircare,Brand J,13.99,5.91
+SKU00707,Beauty & Wellness,Haircare,Brand B,13.99,6.51
+SKU00708,Beauty & Wellness,Vitamins,Main Street (private label),13.99,8.52
+SKU00709,Beauty & Wellness,Skincare,Main Street (private label),14.99,6.55
+SKU00710,Beauty & Wellness,Fragrance,Main Street (private label),15.99,9.36
+SKU00711,Beauty & Wellness,Haircare,Brand N,15.99,9.78
+SKU00712,Beauty & Wellness,Haircare,Brand E,16.99,9.93
+SKU00713,Beauty & Wellness,Skincare,Main Street (private label),16.99,8.87
+SKU00714,Beauty & Wellness,Fragrance,Brand P,16.99,10.45
+SKU00715,Beauty & Wellness,Skincare,Brand O,17.99,10.55
+SKU00716,Beauty & Wellness,Fragrance,Brand K,18.99,9.08
+SKU00717,Beauty & Wellness,Haircare,Brand W,19.99,11.55
+SKU00718,Beauty & Wellness,Fragrance,Brand F,19.99,13.33
+SKU00719,Beauty & Wellness,Skincare,Brand T,19.99,12.13
+SKU00720,Beauty & Wellness,Skincare,Main Street (private label),19.99,11.04
+SKU00721,Beauty & Wellness,Fragrance,Brand Q,19.99,10.2
+SKU00722,Beauty & Wellness,Fragrance,Brand Y,19.99,8.88
+SKU00723,Beauty & Wellness,Vitamins,Brand U,20.99,10.25
+SKU00724,Beauty & Wellness,Skincare,Brand L,20.99,8.88
+SKU00725,Beauty & Wellness,Fragrance,Brand N,20.99,14.61
+SKU00726,Beauty & Wellness,Haircare,Brand E,21.99,10.61
+SKU00727,Beauty & Wellness,Fragrance,Brand O,21.99,14.25
+SKU00728,Beauty & Wellness,Fragrance,Brand R,22.99,10.74
+SKU00729,Beauty & Wellness,Fragrance,Brand Y,22.99,11.48
+SKU00730,Beauty & Wellness,Vitamins,Brand I,22.99,12.35
+SKU00731,Beauty & Wellness,Vitamins,Main Street (private label),22.99,11.74
+SKU00732,Beauty & Wellness,Vitamins,Brand M,23.99,15.44
+SKU00733,Beauty & Wellness,Skincare,Main Street (private label),23.99,16.51
+SKU00734,Beauty & Wellness,Haircare,Brand A,23.99,15.96
+SKU00735,Beauty & Wellness,Vitamins,Brand D,23.99,11.11
+SKU00736,Beauty & Wellness,Fragrance,Brand Q,25.99,16.57
+SKU00737,Beauty & Wellness,Vitamins,Main Street (private label),25.99,11.99
+SKU00738,Beauty & Wellness,Vitamins,Main Street (private label),25.99,17.56
+SKU00739,Beauty & Wellness,Skincare,Main Street (private label),26.99,15.25
+SKU00740,Beauty & Wellness,Haircare,Brand U,26.99,13.88
+SKU00741,Beauty & Wellness,Vitamins,Brand P,26.99,12.52
+SKU00742,Beauty & Wellness,Fragrance,Main Street (private label),27.99,11.85
+SKU00743,Beauty & Wellness,Haircare,Main Street (private label),27.99,13.7
+SKU00744,Beauty & Wellness,Skincare,Brand K,28.99,19.6
+SKU00745,Beauty & Wellness,Haircare,Brand C,28.99,18.65
+SKU00746,Beauty & Wellness,Skincare,Brand M,30.99,21.43
+SKU00747,Beauty & Wellness,Vitamins,Brand G,30.99,13.89
+SKU00748,Beauty & Wellness,Vitamins,Brand W,31.99,18.74
+SKU00749,Beauty & Wellness,Fragrance,Brand C,31.99,15.74
+SKU00750,Beauty & Wellness,Fragrance,Brand O,32.99,18.87
+SKU00751,Beauty & Wellness,Skincare,Main Street (private label),32.99,16.82
+SKU00752,Beauty & Wellness,Skincare,Brand X,33.99,16.97
+SKU00753,Beauty & Wellness,Haircare,Brand Y,33.99,19.74
+SKU00754,Beauty & Wellness,Skincare,Brand Q,34.99,16.49
+SKU00755,Beauty & Wellness,Fragrance,Brand H,36.99,20.39
+SKU00756,Beauty & Wellness,Skincare,Main Street (private label),37.99,22.88
+SKU00757,Beauty & Wellness,Skincare,Brand S,37.99,17.32
+SKU00758,Beauty & Wellness,Fragrance,Brand Q,37.99,25.85
+SKU00759,Beauty & Wellness,Fragrance,Brand A,37.99,21.34
+SKU00760,Beauty & Wellness,Skincare,Brand H,37.99,24.67
+SKU00761,Beauty & Wellness,Haircare,Brand H,39.99,24.12
+SKU00762,Beauty & Wellness,Vitamins,Brand T,39.99,24.75
+SKU00763,Beauty & Wellness,Vitamins,Brand O,40.99,25.43
+SKU00764,Beauty & Wellness,Fragrance,Brand N,40.99,27.26
+SKU00765,Beauty & Wellness,Haircare,Brand N,41.99,24.85
+SKU00766,Beauty & Wellness,Skincare,Brand B,42.99,21.4
+SKU00767,Beauty & Wellness,Haircare,Brand E,43.99,19.7
+SKU00768,Beauty & Wellness,Vitamins,Main Street (private label),43.99,25.94
+SKU00769,Beauty & Wellness,Vitamins,Brand S,43.99,19.29
+SKU00770,Beauty & Wellness,Vitamins,Brand G,45.99,22.42
+SKU00771,Beauty & Wellness,Fragrance,Brand G,46.99,20.53
+SKU00772,Beauty & Wellness,Fragrance,Brand A,47.99,27.53
+SKU00773,Beauty & Wellness,Haircare,Main Street (private label),47.99,22.31
+SKU00774,Beauty & Wellness,Haircare,Brand L,50.99,30.13
+SKU00775,Beauty & Wellness,Vitamins,Brand A,52.99,33.99
+SKU00776,Beauty & Wellness,Haircare,Main Street (private label),55.99,36.4
+SKU00777,Beauty & Wellness,Haircare,Brand R,55.99,28.37
+SKU00778,Beauty & Wellness,Skincare,Brand F,56.99,32.7
+SKU00779,Beauty & Wellness,Haircare,Brand F,56.99,32.92
+SKU00780,Beauty & Wellness,Vitamins,Brand G,57.99,32.03
+SKU00781,Beauty & Wellness,Fragrance,Brand T,59.99,36.2
+SKU00782,Beauty & Wellness,Fragrance,Brand D,60.99,29.2
+SKU00783,Beauty & Wellness,Haircare,Brand R,61.99,43.03
+SKU00784,Beauty & Wellness,Skincare,Brand X,65.99,29.53
+SKU00785,Beauty & Wellness,Skincare,Brand O,66.99,43.69
+SKU00786,Beauty & Wellness,Haircare,Brand G,68.99,40.45
+SKU00787,Beauty & Wellness,Vitamins,Brand Q,69.99,34.19
+SKU00788,Beauty & Wellness,Fragrance,Brand H,70.99,44.64
+SKU00789,Beauty & Wellness,Fragrance,Brand G,70.99,31.5
+SKU00790,Beauty & Wellness,Skincare,Brand J,70.99,45.21
+SKU00791,Beauty & Wellness,Vitamins,Brand D,71.99,42.13
+SKU00792,Beauty & Wellness,Haircare,Main Street (private label),72.99,32.92
+SKU00793,Beauty & Wellness,Skincare,Brand G,73.99,32.72
+SKU00794,Beauty & Wellness,Vitamins,Main Street (private label),75.99,47.89
+SKU00795,Beauty & Wellness,Skincare,Brand G,78.99,39.65
+SKU00796,Beauty & Wellness,Haircare,Brand K,78.99,52.84
+SKU00797,Beauty & Wellness,Vitamins,Brand W,79.99,50.66
+SKU00798,Beauty & Wellness,Haircare,Main Street (private label),82.99,51.08
+SKU00799,Beauty & Wellness,Vitamins,Brand M,83.99,41.83
+SKU00800,Beauty & Wellness,Haircare,Brand H,84.99,52.57
+SKU00801,Beauty & Wellness,Fragrance,Main Street (private label),85.99,58.94
+SKU00802,Beauty & Wellness,Skincare,Brand A,86.99,38.77
+SKU00803,Beauty & Wellness,Skincare,Main Street (private label),87.99,44.99
+SKU00804,Beauty & Wellness,Vitamins,Main Street (private label),89.99,43.71
+SKU00805,Beauty & Wellness,Haircare,Brand B,92.99,49.29
+SKU00806,Beauty & Wellness,Vitamins,Brand F,95.99,60.27
+SKU00807,Beauty & Wellness,Skincare,Brand J,95.99,53.06
+SKU00808,Beauty & Wellness,Vitamins,Main Street (private label),97.99,56.82
+SKU00809,Beauty & Wellness,Fragrance,Main Street (private label),100.99,51.3
+SKU00810,Beauty & Wellness,Skincare,Main Street (private label),102.99,47.33
+SKU00811,Beauty & Wellness,Haircare,Brand K,103.99,51.45
+SKU00812,Beauty & Wellness,Fragrance,Brand D,105.99,70.03
+SKU00813,Beauty & Wellness,Vitamins,Brand K,105.99,62.39
+SKU00814,Beauty & Wellness,Skincare,Brand A,109.99,57.84
+SKU00815,Beauty & Wellness,Skincare,Main Street (private label),117.99,75.65
+SKU00816,Beauty & Wellness,Fragrance,Brand X,117.99,51.69
+SKU00817,Grocery & Pantry,Pantry Staples,Brand K,2.99,1.51
+SKU00818,Grocery & Pantry,Coffee & Tea,Brand I,2.99,1.63
+SKU00819,Grocery & Pantry,Beverages,Brand O,2.99,1.53
+SKU00820,Grocery & Pantry,Beverages,Brand O,2.99,1.58
+SKU00821,Grocery & Pantry,Snacks,Brand D,2.99,1.94
+SKU00822,Grocery & Pantry,Coffee & Tea,Brand E,2.99,1.47
+SKU00823,Grocery & Pantry,Pantry Staples,Brand L,2.99,1.88
+SKU00824,Grocery & Pantry,Pantry Staples,Brand M,2.99,1.32
+SKU00825,Grocery & Pantry,Beverages,Brand D,2.99,1.9
+SKU00826,Grocery & Pantry,Beverages,Brand D,2.99,1.92
+SKU00827,Grocery & Pantry,Coffee & Tea,Brand P,2.99,1.59
+SKU00828,Grocery & Pantry,Beverages,Brand N,2.99,1.86
+SKU00829,Grocery & Pantry,Pantry Staples,Main Street (private label),2.99,2.02
+SKU00830,Grocery & Pantry,Snacks,Brand H,3.99,2.57
+SKU00831,Grocery & Pantry,Beverages,Brand V,3.99,2.11
+SKU00832,Grocery & Pantry,Coffee & Tea,Main Street (private label),3.99,2.22
+SKU00833,Grocery & Pantry,Snacks,Brand U,3.99,2.55
+SKU00834,Grocery & Pantry,Snacks,Main Street (private label),3.99,2.0
+SKU00835,Grocery & Pantry,Coffee & Tea,Brand J,3.99,2.57
+SKU00836,Grocery & Pantry,Beverages,Brand G,3.99,2.04
+SKU00837,Grocery & Pantry,Beverages,Main Street (private label),3.99,2.58
+SKU00838,Grocery & Pantry,Pantry Staples,Brand W,3.99,1.77
+SKU00839,Grocery & Pantry,Snacks,Brand H,3.99,1.73
+SKU00840,Grocery & Pantry,Snacks,Brand X,3.99,2.79
+SKU00841,Grocery & Pantry,Snacks,Brand C,3.99,2.65
+SKU00842,Grocery & Pantry,Snacks,Brand U,3.99,2.66
+SKU00843,Grocery & Pantry,Snacks,Brand W,3.99,2.74
+SKU00844,Grocery & Pantry,Pantry Staples,Brand K,3.99,2.17
+SKU00845,Grocery & Pantry,Beverages,Main Street (private label),3.99,2.0
+SKU00846,Grocery & Pantry,Snacks,Brand O,3.99,1.82
+SKU00847,Grocery & Pantry,Snacks,Brand K,3.99,2.24
+SKU00848,Grocery & Pantry,Beverages,Brand X,3.99,1.92
+SKU00849,Grocery & Pantry,Coffee & Tea,Brand H,3.99,2.72
+SKU00850,Grocery & Pantry,Beverages,Brand B,3.99,1.68
+SKU00851,Grocery & Pantry,Snacks,Main Street (private label),3.99,1.84
+SKU00852,Grocery & Pantry,Snacks,Brand P,3.99,1.95
+SKU00853,Grocery & Pantry,Beverages,Brand Y,3.99,1.9
+SKU00854,Grocery & Pantry,Snacks,Main Street (private label),3.99,1.93
+SKU00855,Grocery & Pantry,Coffee & Tea,Brand Q,4.99,3.01
+SKU00856,Grocery & Pantry,Coffee & Tea,Brand W,4.99,2.55
+SKU00857,Grocery & Pantry,Beverages,Main Street (private label),4.99,2.96
+SKU00858,Grocery & Pantry,Coffee & Tea,Main Street (private label),4.99,3.34
+SKU00859,Grocery & Pantry,Beverages,Brand P,4.99,2.94
+SKU00860,Grocery & Pantry,Snacks,Brand N,4.99,3.07
+SKU00861,Grocery & Pantry,Coffee & Tea,Main Street (private label),4.99,2.61
+SKU00862,Grocery & Pantry,Coffee & Tea,Brand T,4.99,2.32
+SKU00863,Grocery & Pantry,Beverages,Brand J,4.99,2.54
+SKU00864,Grocery & Pantry,Pantry Staples,Brand W,4.99,3.44
+SKU00865,Grocery & Pantry,Snacks,Brand V,4.99,2.96
+SKU00866,Grocery & Pantry,Pantry Staples,Brand S,4.99,2.48
+SKU00867,Grocery & Pantry,Pantry Staples,Brand J,4.99,2.73
+SKU00868,Grocery & Pantry,Pantry Staples,Brand B,4.99,3.26
+SKU00869,Grocery & Pantry,Pantry Staples,Brand J,4.99,3.03
+SKU00870,Grocery & Pantry,Pantry Staples,Main Street (private label),4.99,2.88
+SKU00871,Grocery & Pantry,Pantry Staples,Brand O,4.99,3.33
+SKU00872,Grocery & Pantry,Coffee & Tea,Main Street (private label),4.99,3.04
+SKU00873,Grocery & Pantry,Snacks,Brand J,4.99,2.99
+SKU00874,Grocery & Pantry,Beverages,Main Street (private label),4.99,2.36
+SKU00875,Grocery & Pantry,Beverages,Brand C,4.99,2.24
+SKU00876,Grocery & Pantry,Pantry Staples,Brand A,5.99,4.13
+SKU00877,Grocery & Pantry,Snacks,Brand M,5.99,3.52
+SKU00878,Grocery & Pantry,Beverages,Brand S,5.99,3.21
+SKU00879,Grocery & Pantry,Coffee & Tea,Main Street (private label),5.99,3.5
+SKU00880,Grocery & Pantry,Snacks,Brand U,5.99,2.62
+SKU00881,Grocery & Pantry,Pantry Staples,Brand U,5.99,3.89
+SKU00882,Grocery & Pantry,Pantry Staples,Brand D,5.99,2.88
+SKU00883,Grocery & Pantry,Beverages,Brand O,5.99,3.87
+SKU00884,Grocery & Pantry,Snacks,Brand F,5.99,3.41
+SKU00885,Grocery & Pantry,Snacks,Main Street (private label),5.99,2.98
+SKU00886,Grocery & Pantry,Beverages,Brand J,5.99,2.57
+SKU00887,Grocery & Pantry,Snacks,Main Street (private label),5.99,3.88
+SKU00888,Grocery & Pantry,Snacks,Brand V,5.99,2.81
+SKU00889,Grocery & Pantry,Snacks,Brand W,5.99,2.6
+SKU00890,Grocery & Pantry,Snacks,Brand T,6.99,4.42
+SKU00891,Grocery & Pantry,Coffee & Tea,Brand K,6.99,3.62
+SKU00892,Grocery & Pantry,Pantry Staples,Brand K,6.99,3.7
+SKU00893,Grocery & Pantry,Snacks,Brand Y,6.99,3.42
+SKU00894,Grocery & Pantry,Pantry Staples,Brand A,6.99,4.62
+SKU00895,Grocery & Pantry,Snacks,Main Street (private label),6.99,3.52
+SKU00896,Grocery & Pantry,Beverages,Brand K,6.99,3.35
+SKU00897,Grocery & Pantry,Snacks,Brand D,6.99,3.54
+SKU00898,Grocery & Pantry,Snacks,Brand D,6.99,3.33
+SKU00899,Grocery & Pantry,Snacks,Main Street (private label),6.99,3.56
+SKU00900,Grocery & Pantry,Beverages,Brand M,6.99,3.1
+SKU00901,Grocery & Pantry,Beverages,Brand B,6.99,3.25
+SKU00902,Grocery & Pantry,Beverages,Main Street (private label),6.99,3.75
+SKU00903,Grocery & Pantry,Pantry Staples,Main Street (private label),6.99,4.66
+SKU00904,Grocery & Pantry,Pantry Staples,Brand E,7.99,3.48
+SKU00905,Grocery & Pantry,Pantry Staples,Brand V,7.99,3.83
+SKU00906,Grocery & Pantry,Pantry Staples,Brand D,7.99,5.39
+SKU00907,Grocery & Pantry,Pantry Staples,Brand O,7.99,5.35
+SKU00908,Grocery & Pantry,Beverages,Brand R,7.99,4.88
+SKU00909,Grocery & Pantry,Snacks,Brand D,7.99,3.89
+SKU00910,Grocery & Pantry,Beverages,Brand T,7.99,4.3
+SKU00911,Grocery & Pantry,Snacks,Brand P,7.99,3.83
+SKU00912,Grocery & Pantry,Coffee & Tea,Brand K,7.99,3.64
+SKU00913,Grocery & Pantry,Beverages,Main Street (private label),8.99,4.73
+SKU00914,Grocery & Pantry,Coffee & Tea,Main Street (private label),8.99,5.23
+SKU00915,Grocery & Pantry,Coffee & Tea,Brand Y,8.99,4.68
+SKU00916,Grocery & Pantry,Beverages,Brand S,8.99,5.31
+SKU00917,Grocery & Pantry,Coffee & Tea,Brand W,8.99,4.52
+SKU00918,Grocery & Pantry,Beverages,Brand V,9.99,5.16
+SKU00919,Grocery & Pantry,Snacks,Main Street (private label),9.99,6.41
+SKU00920,Grocery & Pantry,Snacks,Brand S,9.99,6.65
+SKU00921,Grocery & Pantry,Snacks,Brand H,9.99,5.1
+SKU00922,Grocery & Pantry,Coffee & Tea,Brand S,9.99,5.79
+SKU00923,Grocery & Pantry,Beverages,Main Street (private label),9.99,4.97
+SKU00924,Grocery & Pantry,Beverages,Brand C,9.99,4.34
+SKU00925,Grocery & Pantry,Beverages,Brand R,9.99,6.26
+SKU00926,Grocery & Pantry,Beverages,Brand S,9.99,4.67
+SKU00927,Grocery & Pantry,Coffee & Tea,Brand M,10.99,5.93
+SKU00928,Grocery & Pantry,Coffee & Tea,Brand C,10.99,6.11
+SKU00929,Grocery & Pantry,Snacks,Brand C,10.99,5.18
+SKU00930,Grocery & Pantry,Pantry Staples,Brand X,10.99,4.91
+SKU00931,Grocery & Pantry,Beverages,Brand H,11.99,6.2
+SKU00932,Grocery & Pantry,Snacks,Brand H,11.99,8.23
+SKU00933,Grocery & Pantry,Coffee & Tea,Brand K,12.99,7.69
+SKU00934,Grocery & Pantry,Snacks,Brand G,12.99,6.84
+SKU00935,Grocery & Pantry,Snacks,Brand K,12.99,5.6
+SKU00936,Grocery & Pantry,Snacks,Brand G,12.99,7.64
+SKU00937,Grocery & Pantry,Beverages,Brand T,13.99,6.24
+SKU00938,Grocery & Pantry,Pantry Staples,Brand W,13.99,8.0
+SKU00939,Grocery & Pantry,Beverages,Brand W,13.99,8.82
+SKU00940,Grocery & Pantry,Snacks,Brand L,13.99,7.54
+SKU00941,Grocery & Pantry,Snacks,Brand H,13.99,7.05
+SKU00942,Grocery & Pantry,Coffee & Tea,Brand P,14.99,6.49
+SKU00943,Grocery & Pantry,Coffee & Tea,Brand T,14.99,6.4
+SKU00944,Grocery & Pantry,Coffee & Tea,Brand K,14.99,8.1
+SKU00945,Grocery & Pantry,Pantry Staples,Brand P,14.99,10.0
+SKU00946,Grocery & Pantry,Pantry Staples,Brand Q,14.99,7.32
+SKU00947,Grocery & Pantry,Coffee & Tea,Brand O,14.99,8.71
+SKU00948,Grocery & Pantry,Pantry Staples,Brand Q,15.99,9.78
+SKU00949,Grocery & Pantry,Beverages,Main Street (private label),15.99,6.99
+SKU00950,Grocery & Pantry,Beverages,Brand I,15.99,7.4
+SKU00951,Grocery & Pantry,Beverages,Brand L,15.99,8.2
+SKU00952,Grocery & Pantry,Snacks,Main Street (private label),15.99,9.72
+SKU00953,Grocery & Pantry,Snacks,Brand U,15.99,8.68
+SKU00954,Grocery & Pantry,Pantry Staples,Brand M,15.99,10.0
+SKU00955,Grocery & Pantry,Coffee & Tea,Main Street (private label),15.99,10.6
+SKU00956,Grocery & Pantry,Snacks,Brand T,15.99,10.11
+SKU00957,Grocery & Pantry,Snacks,Brand P,15.99,11.16
+SKU00958,Grocery & Pantry,Snacks,Brand R,16.99,10.72
+SKU00959,Grocery & Pantry,Coffee & Tea,Brand F,16.99,11.19
+SKU00960,Grocery & Pantry,Beverages,Brand U,16.99,11.1
+SKU00961,Grocery & Pantry,Beverages,Brand G,16.99,10.61
+SKU00962,Grocery & Pantry,Snacks,Brand L,16.99,10.95
+SKU00963,Grocery & Pantry,Coffee & Tea,Main Street (private label),16.99,11.58
+SKU00964,Grocery & Pantry,Beverages,Brand N,17.99,9.95
+SKU00965,Grocery & Pantry,Coffee & Tea,Brand P,17.99,10.77
+SKU00966,Grocery & Pantry,Pantry Staples,Brand L,17.99,10.15
+SKU00967,Grocery & Pantry,Snacks,Brand I,17.99,11.84
+SKU00968,Grocery & Pantry,Coffee & Tea,Brand S,17.99,9.73
+SKU00969,Grocery & Pantry,Pantry Staples,Brand O,18.99,12.33
+SKU00970,Grocery & Pantry,Pantry Staples,Brand B,18.99,12.23
+SKU00971,Grocery & Pantry,Snacks,Brand X,18.99,13.09
+SKU00972,Grocery & Pantry,Coffee & Tea,Brand P,18.99,9.3
+SKU00973,Grocery & Pantry,Coffee & Tea,Brand Y,18.99,11.75
+SKU00974,Grocery & Pantry,Beverages,Brand Y,18.99,12.0
+SKU00975,Grocery & Pantry,Snacks,Brand W,19.99,13.64
+SKU00976,Grocery & Pantry,Coffee & Tea,Brand R,19.99,13.47
+SKU00977,Grocery & Pantry,Coffee & Tea,Brand M,19.99,11.61
+SKU00978,Grocery & Pantry,Pantry Staples,Main Street (private label),19.99,11.64
+SKU00979,Grocery & Pantry,Pantry Staples,Brand K,20.99,9.8
+SKU00980,Grocery & Pantry,Snacks,Brand R,20.99,14.55
+SKU00981,Grocery & Pantry,Snacks,Brand J,20.99,10.31
+SKU00982,Grocery & Pantry,Coffee & Tea,Brand U,21.99,13.7
+SKU00983,Grocery & Pantry,Beverages,Main Street (private label),21.99,14.14
+SKU00984,Grocery & Pantry,Beverages,Brand F,21.99,11.95
+SKU00985,Grocery & Pantry,Pantry Staples,Brand J,21.99,10.54
+SKU00986,Grocery & Pantry,Snacks,Brand G,21.99,10.4
+SKU00987,Grocery & Pantry,Snacks,Main Street (private label),21.99,14.51
+SKU00988,Grocery & Pantry,Snacks,Main Street (private label),22.99,12.94
+SKU00989,Grocery & Pantry,Beverages,Brand T,22.99,10.24
+SKU00990,Grocery & Pantry,Beverages,Brand I,22.99,14.27
+SKU00991,Grocery & Pantry,Snacks,Main Street (private label),23.99,11.76
+SKU00992,Grocery & Pantry,Beverages,Main Street (private label),23.99,15.96
+SKU00993,Grocery & Pantry,Beverages,Brand I,24.99,12.66
+SKU00994,Grocery & Pantry,Pantry Staples,Main Street (private label),24.99,11.9
+SKU00995,Grocery & Pantry,Pantry Staples,Brand P,25.99,11.53
+SKU00996,Grocery & Pantry,Coffee & Tea,Brand S,26.99,15.2
+SKU00997,Grocery & Pantry,Coffee & Tea,Brand A,26.99,14.74
+SKU00998,Grocery & Pantry,Beverages,Brand L,27.99,17.64
+SKU00999,Grocery & Pantry,Coffee & Tea,Main Street (private label),27.99,15.4
+SKU01000,Grocery & Pantry,Pantry Staples,Brand C,27.99,14.45
+SKU01001,Grocery & Pantry,Snacks,Brand V,27.99,13.81
+SKU01002,Grocery & Pantry,Beverages,Brand K,28.99,14.43
+SKU01003,Grocery & Pantry,Pantry Staples,Brand V,29.99,20.39
+SKU01004,Grocery & Pantry,Coffee & Tea,Brand A,29.99,13.98
+SKU01005,Grocery & Pantry,Beverages,Brand D,30.99,21.59
+SKU01006,Grocery & Pantry,Snacks,Brand I,30.99,15.85
+SKU01007,Grocery & Pantry,Snacks,Brand I,30.99,13.78
+SKU01008,Grocery & Pantry,Snacks,Brand Y,31.99,15.66
+SKU01009,Grocery & Pantry,Pantry Staples,Main Street (private label),31.99,13.96
+SKU01010,Grocery & Pantry,Pantry Staples,Brand U,31.99,20.51
+SKU01011,Grocery & Pantry,Beverages,Brand U,31.99,18.03
+SKU01012,Grocery & Pantry,Pantry Staples,Brand K,31.99,16.45
+SKU01013,Grocery & Pantry,Coffee & Tea,Brand D,31.99,19.37
+SKU01014,Grocery & Pantry,Coffee & Tea,Brand J,32.99,19.68
+SKU01015,Grocery & Pantry,Snacks,Brand C,32.99,22.54
+SKU01016,Grocery & Pantry,Pantry Staples,Brand S,32.99,22.74
+SKU01017,Grocery & Pantry,Coffee & Tea,Brand I,33.99,20.75
+SKU01018,Grocery & Pantry,Coffee & Tea,Brand W,33.99,22.06
+SKU01019,Grocery & Pantry,Beverages,Brand M,33.99,21.82
+SKU01020,Grocery & Pantry,Beverages,Brand J,34.99,19.51
+SKU01021,Grocery & Pantry,Coffee & Tea,Brand P,34.99,21.6
+SKU01022,Grocery & Pantry,Snacks,Brand J,35.99,15.9
+SKU01023,Grocery & Pantry,Pantry Staples,Brand V,35.99,22.75
+SKU01024,Grocery & Pantry,Snacks,Main Street (private label),35.99,24.81
+SKU01025,Grocery & Pantry,Coffee & Tea,Brand Y,35.99,15.97
+SKU01026,Grocery & Pantry,Snacks,Brand S,35.99,23.54
+SKU01027,Grocery & Pantry,Snacks,Brand U,37.99,25.88
+SKU01028,Grocery & Pantry,Beverages,Brand I,37.99,18.36
+SKU01029,Grocery & Pantry,Snacks,Brand T,37.99,21.54
+SKU01030,Grocery & Pantry,Beverages,Brand C,38.99,26.51
+SKU01031,Grocery & Pantry,Beverages,Brand R,38.99,26.86
+SKU01032,Grocery & Pantry,Beverages,Main Street (private label),39.99,18.23
+SKU01033,Toys & Seasonal,Toys,Brand F,7.99,4.12
+SKU01034,Toys & Seasonal,Toys,Brand C,7.99,3.76
+SKU01035,Toys & Seasonal,Party,Brand J,8.99,5.58
+SKU01036,Toys & Seasonal,Toys,Brand K,8.99,4.67
+SKU01037,Toys & Seasonal,Holiday Decor,Brand O,8.99,5.92
+SKU01038,Toys & Seasonal,Party,Brand G,8.99,4.38
+SKU01039,Toys & Seasonal,Holiday Decor,Main Street (private label),9.99,5.7
+SKU01040,Toys & Seasonal,Games,Brand U,9.99,4.71
+SKU01041,Toys & Seasonal,Toys,Brand E,11.99,6.7
+SKU01042,Toys & Seasonal,Toys,Brand W,12.99,6.01
+SKU01043,Toys & Seasonal,Toys,Main Street (private label),12.99,6.04
+SKU01044,Toys & Seasonal,Party,Brand K,12.99,7.68
+SKU01045,Toys & Seasonal,Toys,Brand K,14.99,7.4
+SKU01046,Toys & Seasonal,Toys,Brand T,14.99,7.02
+SKU01047,Toys & Seasonal,Party,Main Street (private label),14.99,10.2
+SKU01048,Toys & Seasonal,Games,Brand W,14.99,6.48
+SKU01049,Toys & Seasonal,Games,Brand J,15.99,9.25
+SKU01050,Toys & Seasonal,Holiday Decor,Brand L,16.99,9.74
+SKU01051,Toys & Seasonal,Holiday Decor,Brand J,17.99,8.82
+SKU01052,Toys & Seasonal,Party,Main Street (private label),17.99,9.84
+SKU01053,Toys & Seasonal,Games,Brand I,17.99,8.0
+SKU01054,Toys & Seasonal,Holiday Decor,Brand B,17.99,11.19
+SKU01055,Toys & Seasonal,Party,Brand D,17.99,8.67
+SKU01056,Toys & Seasonal,Games,Brand N,17.99,8.53
+SKU01057,Toys & Seasonal,Games,Brand I,18.99,9.65
+SKU01058,Toys & Seasonal,Party,Main Street (private label),19.99,13.45
+SKU01059,Toys & Seasonal,Toys,Main Street (private label),20.99,13.5
+SKU01060,Toys & Seasonal,Toys,Main Street (private label),20.99,14.38
+SKU01061,Toys & Seasonal,Holiday Decor,Main Street (private label),20.99,12.65
+SKU01062,Toys & Seasonal,Party,Brand M,21.99,13.32
+SKU01063,Toys & Seasonal,Toys,Main Street (private label),21.99,12.19
+SKU01064,Toys & Seasonal,Party,Brand V,22.99,15.48
+SKU01065,Toys & Seasonal,Party,Main Street (private label),23.99,13.51
+SKU01066,Toys & Seasonal,Party,Main Street (private label),24.99,12.98
+SKU01067,Toys & Seasonal,Games,Brand V,24.99,14.98
+SKU01068,Toys & Seasonal,Games,Brand C,26.99,15.46
+SKU01069,Toys & Seasonal,Holiday Decor,Brand G,26.99,12.27
+SKU01070,Toys & Seasonal,Toys,Brand X,27.99,14.83
+SKU01071,Toys & Seasonal,Party,Brand X,27.99,14.21
+SKU01072,Toys & Seasonal,Holiday Decor,Brand P,27.99,18.39
+SKU01073,Toys & Seasonal,Games,Main Street (private label),28.99,15.25
+SKU01074,Toys & Seasonal,Holiday Decor,Brand L,28.99,18.84
+SKU01075,Toys & Seasonal,Holiday Decor,Brand Y,30.99,16.85
+SKU01076,Toys & Seasonal,Holiday Decor,Brand X,31.99,20.19
+SKU01077,Toys & Seasonal,Party,Main Street (private label),31.99,14.65
+SKU01078,Toys & Seasonal,Party,Brand F,31.99,21.72
+SKU01079,Toys & Seasonal,Party,Brand D,34.99,19.4
+SKU01080,Toys & Seasonal,Holiday Decor,Main Street (private label),38.99,19.21
+SKU01081,Toys & Seasonal,Holiday Decor,Brand P,39.99,19.5
+SKU01082,Toys & Seasonal,Games,Brand B,41.99,20.75
+SKU01083,Toys & Seasonal,Toys,Brand E,41.99,21.95
+SKU01084,Toys & Seasonal,Games,Main Street (private label),41.99,26.07
+SKU01085,Toys & Seasonal,Party,Brand I,41.99,28.8
+SKU01086,Toys & Seasonal,Toys,Main Street (private label),46.99,28.54
+SKU01087,Toys & Seasonal,Holiday Decor,Brand G,47.99,27.51
+SKU01088,Toys & Seasonal,Toys,Main Street (private label),48.99,26.73
+SKU01089,Toys & Seasonal,Games,Brand X,48.99,31.94
+SKU01090,Toys & Seasonal,Toys,Main Street (private label),49.99,32.89
+SKU01091,Toys & Seasonal,Holiday Decor,Brand J,49.99,25.1
+SKU01092,Toys & Seasonal,Party,Main Street (private label),50.99,35.03
+SKU01093,Toys & Seasonal,Party,Main Street (private label),52.99,28.12
+SKU01094,Toys & Seasonal,Holiday Decor,Main Street (private label),53.99,34.77
+SKU01095,Toys & Seasonal,Toys,Main Street (private label),53.99,37.29
+SKU01096,Toys & Seasonal,Holiday Decor,Main Street (private label),53.99,33.31
+SKU01097,Toys & Seasonal,Toys,Brand I,55.99,26.05
+SKU01098,Toys & Seasonal,Games,Brand N,57.99,33.87
+SKU01099,Toys & Seasonal,Holiday Decor,Main Street (private label),58.99,26.74
+SKU01100,Toys & Seasonal,Holiday Decor,Brand H,59.99,38.45
+SKU01101,Toys & Seasonal,Toys,Brand L,59.99,29.92
+SKU01102,Toys & Seasonal,Party,Brand A,61.99,38.1
+SKU01103,Toys & Seasonal,Games,Brand E,62.99,42.51
+SKU01104,Toys & Seasonal,Party,Main Street (private label),62.99,29.65
+SKU01105,Toys & Seasonal,Holiday Decor,Brand A,66.99,35.5
+SKU01106,Toys & Seasonal,Holiday Decor,Brand H,67.99,40.88
+SKU01107,Toys & Seasonal,Holiday Decor,Brand Y,75.99,40.84
+SKU01108,Toys & Seasonal,Party,Brand Y,77.99,36.57
+SKU01109,Toys & Seasonal,Toys,Brand Y,81.99,35.1
+SKU01110,Toys & Seasonal,Holiday Decor,Brand G,82.99,44.3
+SKU01111,Toys & Seasonal,Toys,Main Street (private label),84.99,51.15
+SKU01112,Toys & Seasonal,Games,Brand D,93.99,54.58
+SKU01113,Toys & Seasonal,Party,Brand A,123.99,57.5
+SKU01114,Toys & Seasonal,Party,Main Street (private label),123.99,67.72
+SKU01115,Toys & Seasonal,Games,Main Street (private label),128.99,67.52
+SKU01116,Toys & Seasonal,Games,Brand H,132.99,66.07
+SKU01117,Sports & Fitness,Cycling,Brand H,11.99,5.29
+SKU01118,Sports & Fitness,Fitness Gear,Main Street (private label),12.99,7.6
+SKU01119,Sports & Fitness,Winter Sports,Brand P,13.99,9.05
+SKU01120,Sports & Fitness,Team Sports,Brand E,13.99,7.45
+SKU01121,Sports & Fitness,Team Sports,Brand H,15.99,8.71
+SKU01122,Sports & Fitness,Cycling,Main Street (private label),15.99,9.35
+SKU01123,Sports & Fitness,Cycling,Brand L,16.99,9.67
+SKU01124,Sports & Fitness,Team Sports,Main Street (private label),17.99,11.02
+SKU01125,Sports & Fitness,Winter Sports,Brand O,21.99,12.14
+SKU01126,Sports & Fitness,Winter Sports,Main Street (private label),23.99,14.87
+SKU01127,Sports & Fitness,Fitness Gear,Brand Y,24.99,17.47
+SKU01128,Sports & Fitness,Cycling,Brand O,26.99,13.98
+SKU01129,Sports & Fitness,Team Sports,Main Street (private label),27.99,11.85
+SKU01130,Sports & Fitness,Winter Sports,Main Street (private label),31.99,14.56
+SKU01131,Sports & Fitness,Team Sports,Brand D,31.99,18.39
+SKU01132,Sports & Fitness,Team Sports,Main Street (private label),32.99,17.04
+SKU01133,Sports & Fitness,Cycling,Main Street (private label),33.99,23.22
+SKU01134,Sports & Fitness,Winter Sports,Brand U,35.99,21.44
+SKU01135,Sports & Fitness,Fitness Gear,Brand M,37.99,21.49
+SKU01136,Sports & Fitness,Cycling,Main Street (private label),39.99,25.73
+SKU01137,Sports & Fitness,Team Sports,Brand K,39.99,19.69
+SKU01138,Sports & Fitness,Cycling,Brand B,41.99,27.27
+SKU01139,Sports & Fitness,Cycling,Brand Y,41.99,17.67
+SKU01140,Sports & Fitness,Winter Sports,Main Street (private label),41.99,24.92
+SKU01141,Sports & Fitness,Winter Sports,Brand Q,53.99,36.81
+SKU01142,Sports & Fitness,Cycling,Brand R,53.99,34.59
+SKU01143,Sports & Fitness,Cycling,Main Street (private label),54.99,36.24
+SKU01144,Sports & Fitness,Winter Sports,Main Street (private label),56.99,30.27
+SKU01145,Sports & Fitness,Fitness Gear,Brand F,60.99,39.69
+SKU01146,Sports & Fitness,Cycling,Brand U,63.99,36.75
+SKU01147,Sports & Fitness,Winter Sports,Brand K,65.99,39.14
+SKU01148,Sports & Fitness,Fitness Gear,Brand N,66.99,29.24
+SKU01149,Sports & Fitness,Winter Sports,Brand S,69.99,33.35
+SKU01150,Sports & Fitness,Cycling,Brand T,76.99,44.21
+SKU01151,Sports & Fitness,Team Sports,Brand I,76.99,33.6
+SKU01152,Sports & Fitness,Team Sports,Brand J,77.99,48.95
+SKU01153,Sports & Fitness,Team Sports,Brand P,79.99,52.41
+SKU01154,Sports & Fitness,Winter Sports,Brand B,84.99,57.6
+SKU01155,Sports & Fitness,Winter Sports,Brand U,85.99,38.57
+SKU01156,Sports & Fitness,Winter Sports,Main Street (private label),87.99,60.11
+SKU01157,Sports & Fitness,Cycling,Main Street (private label),87.99,38.62
+SKU01158,Sports & Fitness,Fitness Gear,Brand S,90.99,50.29
+SKU01159,Sports & Fitness,Winter Sports,Brand D,90.99,59.62
+SKU01160,Sports & Fitness,Fitness Gear,Main Street (private label),92.99,40.89
+SKU01161,Sports & Fitness,Fitness Gear,Main Street (private label),94.99,40.38
+SKU01162,Sports & Fitness,Fitness Gear,Brand J,97.99,41.84
+SKU01163,Sports & Fitness,Winter Sports,Brand U,98.99,55.75
+SKU01164,Sports & Fitness,Team Sports,Main Street (private label),98.99,64.07
+SKU01165,Sports & Fitness,Fitness Gear,Main Street (private label),106.99,48.75
+SKU01166,Sports & Fitness,Fitness Gear,Brand H,115.99,52.76
+SKU01167,Sports & Fitness,Team Sports,Brand X,119.99,69.5
+SKU01168,Sports & Fitness,Cycling,Brand B,120.99,58.75
+SKU01169,Sports & Fitness,Winter Sports,Brand X,133.99,83.67
+SKU01170,Sports & Fitness,Cycling,Brand V,136.99,93.96
+SKU01171,Sports & Fitness,Cycling,Brand C,138.99,88.19
+SKU01172,Sports & Fitness,Winter Sports,Brand T,145.99,97.17
+SKU01173,Sports & Fitness,Winter Sports,Brand O,157.99,89.34
+SKU01174,Sports & Fitness,Team Sports,Brand J,175.99,114.93
+SKU01175,Sports & Fitness,Winter Sports,Brand G,178.99,84.34
+SKU01176,Sports & Fitness,Cycling,Brand T,191.99,84.31
+SKU01177,Sports & Fitness,Winter Sports,Brand S,193.99,117.11
+SKU01178,Sports & Fitness,Fitness Gear,Brand R,206.99,89.95
+SKU01179,Sports & Fitness,Fitness Gear,Brand Y,207.99,139.33
+SKU01180,Sports & Fitness,Winter Sports,Brand I,209.99,128.86
+SKU01181,Sports & Fitness,Cycling,Brand S,238.99,164.09
+SKU01182,Sports & Fitness,Fitness Gear,Brand U,241.99,122.9
+SKU01183,Sports & Fitness,Winter Sports,Main Street (private label),244.99,136.24
+SKU01184,Sports & Fitness,Fitness Gear,Main Street (private label),269.99,169.47
+SKU01185,Sports & Fitness,Cycling,Brand F,271.99,132.73
+SKU01186,Sports & Fitness,Fitness Gear,Brand U,272.99,156.07
+SKU01187,Sports & Fitness,Fitness Gear,Brand C,305.99,185.02
+SKU01188,Sports & Fitness,Winter Sports,Brand P,315.99,219.32
+SKU01189,Sports & Fitness,Winter Sports,Main Street (private label),341.99,214.95
+SKU01190,Sports & Fitness,Fitness Gear,Brand E,346.99,157.21
+SKU01191,Sports & Fitness,Fitness Gear,Brand M,353.99,195.79
+SKU01192,Sports & Fitness,Cycling,Main Street (private label),385.99,225.75
+SKU01193,Sports & Fitness,Fitness Gear,Brand V,413.99,190.87
+SKU01194,Sports & Fitness,Cycling,Main Street (private label),417.99,226.11
+SKU01195,Sports & Fitness,Winter Sports,Brand W,417.99,208.8
+SKU01196,Sports & Fitness,Winter Sports,Main Street (private label),419.99,190.37
+SKU01197,Sports & Fitness,Fitness Gear,Brand Y,430.99,242.81
+SKU01198,Sports & Fitness,Fitness Gear,Brand M,443.99,207.07
+SKU01199,Sports & Fitness,Cycling,Main Street (private label),494.99,289.74
+SKU01200,Sports & Fitness,Fitness Gear,Main Street (private label),591.99,276.76
