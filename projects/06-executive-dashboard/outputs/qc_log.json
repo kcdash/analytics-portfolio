@@ -1,0 +1,11 @@
+{
+  "weeks in the mart": 156,
+  "weeks with missing revenue": 0,
+  "weeks with no media figure": 0,
+  "weeks with no service contacts recorded": 0,
+  "slice revenue that does not reconcile to the company total (tolerance $1)": 0,
+  "customers counted as new more than once": 0,
+  "members who joined before the window (excluded from new customers)": 110301,
+  "new customers across the window": 89699,
+  "orders counted in more than one week": 0
+}

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Executive dashboard · Maple & Main · Krish Dash</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/css/site.css">
+<style>
+  body { background: #f5f7fa; }
+  .bar { background: var(--navy); color: #fff; position: sticky; top: 0; z-index: 20; }
+  .bar-in { display: flex; align-items: center; gap: 20px; height: 62px; }
+  .bar h1 { font-family: Fraunces, Georgia, serif; font-size: 1.15rem; margin: 0; font-weight: 600; }
+  .bar .asof { color: #cbd5e1; font-size: .85rem; }
+  .bar .spacer { margin-left: auto; }
+  .bar a { color: #cbd5e1; text-decoration: none; font-size: .88rem; }
+  .bar a:hover { color: #fff; }
+  .seg { display: flex; background: rgba(255,255,255,.12); border-radius: 8px; padding: 3px; }
+  .seg button { font: inherit; font-size: .82rem; font-weight: 600; color: #cbd5e1; background: none; border: 0; padding: 5px 11px; border-radius: 6px; cursor: pointer; }
+  .seg button.on { background: #fff; color: var(--navy); }
+  main { padding: 22px 0 60px; }
+  .card { background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 18px 20px; }
+  .card h2 { font-size: 1.02rem; margin: 0 0 4px; font-family: Inter, sans-serif; font-weight: 600; }
+  .card .sub { color: var(--slate); font-size: .82rem; margin-bottom: 12px; }
+  .row { display: grid; gap: 16px; margin-bottom: 16px; min-width: 0; align-items: start; }
+  .row > .card, .card { min-width: 0; }
+  .scroll-x { overflow-x: auto; }
+  .tiles { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-bottom: 16px; }
+  .tile { background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 13px 14px; cursor: pointer; transition: border-color .15s, box-shadow .15s; position: relative; }
+  .tile:hover { border-color: #94a3b8; }
+  .tile.sel { border-color: var(--navy); box-shadow: 0 0 0 2px rgba(15,30,51,.12); }
+  .tile .lab { font-size: .75rem; color: var(--slate); font-weight: 600; text-transform: uppercase; letter-spacing: .04em; }
+  .tile .val { font-size: 1.3rem; font-weight: 700; margin: 3px 0 2px; font-variant-numeric: tabular-nums; }
+  .tile .chg { font-size: .8rem; font-weight: 600; }
+  .up { color: #166534; } .down { color: #9a4a0c; } .flat { color: var(--slate); }
+  .badge { position: absolute; top: 11px; right: 12px; font-size: .62rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; padding: 2px 6px; border-radius: 4px; }
+  .badge.signal { background: #fdeee2; color: #9a4a0c; }
+  .badge.watch { background: #fdf6e7; color: #8a5a0b; }
+  .badge.normal { background: #eef2f7; color: #64748b; }
+  .spark { margin-top: 6px; }
+  .alerts { display: grid; gap: 10px; }
+  .scroll-y { max-height: 470px; overflow-y: auto; padding-right: 4px; }
+  .alert { display: grid; grid-template-columns: 7px 1fr; gap: 14px; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; background: #fff; }
+  .alert i { display: block; }
+  .alert.high i { background: #c2410c; } .alert.medium i { background: var(--accent); }
+  .alert.low i { background: #94a3b8; } .alert.info i { background: #1baf7a; }
+  .alert .body { padding: 12px 14px 12px 0; }
+  .alert b { display: block; font-size: .95rem; margin-bottom: 3px; }
+  .alert p { margin: 0; font-size: .86rem; color: var(--slate); line-height: 1.5; }
+  .alert .meta { font-size: .72rem; color: var(--slate); text-transform: uppercase; letter-spacing: .05em; font-weight: 600; margin-top: 7px; }
+  table.g { width: 100%; border-collapse: collapse; font-size: .86rem; }
+  table.g th { text-align: left; font-size: .7rem; text-transform: uppercase; letter-spacing: .05em; color: var(--slate); border-bottom: 2px solid var(--line); padding: 7px 8px; cursor: pointer; white-space: nowrap; }
+  table.g td { padding: 7px 8px; border-bottom: 1px solid var(--line); }
+  table.g .n { text-align: right; font-variant-numeric: tabular-nums; }
+  .pill { display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: .72rem; font-weight: 600; }
+  .pill.yes { background: #fdeee2; color: #9a4a0c; } .pill.no { background: #eef2f7; color: #64748b; }
+  .models { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
+  .model { background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 16px; display: flex; flex-direction: column; }
+  .model h3 { font-size: .9rem; margin: 0 0 2px; }
+  .model .src { font-size: .7rem; color: var(--slate); margin-bottom: 10px; }
+  .model .big { font-family: Fraunces, Georgia, serif; font-size: 1.6rem; color: var(--navy); line-height: 1.1; }
+  .model .biglab { font-size: .76rem; color: var(--slate); margin: 2px 0 10px; }
+  .model dl { display: grid; gap: 3px; margin: 0 0 10px; font-size: .76rem; }
+  .model dl div { display: flex; justify-content: space-between; gap: 8px; }
+  .model dt { color: var(--slate); } .model dd { margin: 0; font-weight: 600; text-align: right; }
+  .model .act { margin-top: auto; font-size: .78rem; border-top: 1px solid var(--line); padding-top: 9px; color: var(--navy); font-weight: 600; }
+  .decomp { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .decomp div { background: var(--bg-alt); border-radius: 8px; padding: 12px; }
+  .decomp .d-lab { font-size: .74rem; color: var(--slate); }
+  .decomp .d-val { font-size: 1.15rem; font-weight: 700; margin-top: 2px; font-variant-numeric: tabular-nums; }
+  .note { color: var(--slate); font-size: .78rem; margin-top: 8px; }
+  @media (max-width: 1100px) { .tiles, .models { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 700px) { .tiles, .models, .decomp { grid-template-columns: 1fr; } .bar-in { height: auto; padding: 10px 0; flex-wrap: wrap; gap: 10px; }
+    .seg { overflow-x: auto; } .seg button { white-space: nowrap; } }
+</style>
+</head>
+<body>
+
+<div class="bar"><div class="wrap bar-in">
+  <h1>Maple &amp; Main</h1>
+  <span class="asof">Week ending <b id="asof"></b></span>
+  <div class="seg" id="periods"></div>
+  <span class="spacer"></span>
+  <a href="../deck/">Design notes</a>
+  <a href="../../../">Portfolio</a>
+</div></div>
+
+<main><div class="wrap">
+
+  <div class="row" style="grid-template-columns:1.3fr 1fr">
+    <div class="card">
+      <h2>What needs attention</h2>
+      <div class="sub" id="alertSub"></div>
+      <div class="alerts scroll-y" id="alerts"></div>
+    </div>
+    <div class="card">
+      <h2 id="chartTitle"></h2>
+      <div class="sub" id="chartSub"></div>
+      <div id="mainChart"></div>
+      <p class="note">Shaded band: the range this metric normally sits in for the time of year, three standard deviations wide. Amber points are weeks the control rules flagged.</p>
+    </div>
+  </div>
+
+  <div class="tiles" id="tiles"></div>
+
+  <div class="row" style="grid-template-columns:1fr 1.3fr">
+    <div class="card">
+      <h2>Why revenue moved</h2>
+      <div class="sub" id="decompSub"></div>
+      <div class="decomp" id="decomp"></div>
+      <p class="note">Revenue is customers multiplied by how often they buy and how much they spend each time. The three parts add up to the total change.</p>
+    </div>
+    <div class="card">
+      <h2>Where it is happening</h2>
+      <div class="sub">Change against the previous quarter, and whether it is unusual for the time of year. The two columns often disagree, which is the point.</div>
+      <div class="seg" id="dims" style="background:#eef2f7;margin-bottom:10px"></div>
+      <div class="scroll-x" style="max-height:320px;overflow-y:auto"><table class="g" style="min-width:520px"><thead><tr>
+        <th data-k="slice">Slice</th><th data-k="share" class="n">Share</th><th data-k="change_13w_pct" class="n">Change on the quarter</th>
+        <th data-k="z" class="n">Against its own season</th><th>Verdict</th></tr></thead><tbody id="sliceBody"></tbody></table></div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-bottom:16px">
+    <h2>What the models say is coming</h2>
+    <div class="sub">Each panel is the output of a separate project in this portfolio, reported here so the page says what is about to happen as well as what has happened.</div>
+    <div class="models" id="models"></div>
+  </div>
+
+  <div class="card">
+    <h2>How much of a dashboard is noise</h2>
+    <div class="sub">Every metric, every week with at least a year of history behind it.</div>
+    <div class="decomp" id="noise"></div>
+    <p class="note" id="noiseNote"></p>
+  </div>
+
+</div></main>
+
+<footer><div class="wrap">
+  <p>Personal demonstration portfolio. All projects use synthetic data created to illustrate methods and contain no client, employer or proprietary information. Not affiliated with or endorsed by any current or former employer or client.</p>
+  <p>© 2026 Krish Dash</p>
+</div></footer>
+
+<script src="../outputs/report_data.js"></script>
+<script src="../../../assets/js/charts.js"></script>
+<script>
+const P = window.P6, $ = id => document.getElementById(id);
+let period = "13", selected = "revenue", dim = "Category", sortK = "share", sortDir = -1;
+$("asof").textContent = P.as_of_date;
+
+const fmt = (v, u) => u === "cad" ? MM.cad(v) : u === "pct" ? (v * 100).toFixed(1) + "%" : Math.round(v).toLocaleString("en-CA");
+const fmtShort = (v, u) => u === "cad" ? (Math.abs(v) >= 10000 ? MM.cadK(v) : MM.cad(v))
+  : u === "pct" ? (v * 100).toFixed(1) + "%" : Math.round(v).toLocaleString("en-CA");
+const pct = v => (v >= 0 ? "+" : "") + (v * 100).toFixed(1) + "%";
+
+$("periods").innerHTML = [["4", "4 weeks"], ["13", "13 weeks"], ["26", "26 weeks"], ["52", "52 weeks"]]
+  .map(([k, l]) => `<button data-p="${k}">${l}</button>`).join("");
+$("periods").addEventListener("click", e => { if (e.target.dataset.p) { period = e.target.dataset.p; render(); } });
+
+function sparkline(id, vals) {
+  const w = 150, h = 26, lo = Math.min(...vals), hi = Math.max(...vals), pad = (hi - lo) * 0.1 || 1;
+  const x = i => i / (vals.length - 1) * w, y = v => h - (v - lo + pad) / (hi - lo + 2 * pad) * h;
+  const d = vals.map((v, i) => (i ? "L" : "M") + x(i).toFixed(1) + "," + y(v).toFixed(1)).join("");
+  return `<svg class="spark" viewBox="0 0 ${w} ${h}" width="100%" height="26" preserveAspectRatio="none">
+    <path d="${d}" fill="none" stroke="#94a3b8" stroke-width="1.5"/>
+    <circle cx="${x(vals.length - 1).toFixed(1)}" cy="${y(vals[vals.length - 1]).toFixed(1)}" r="2.5" fill="#1f3a5f"/></svg>`;
+}
+
+function render() {
+  [...$("periods").children].forEach(b => b.className = b.dataset.p === period ? "on" : "");
+
+  /* tiles */
+  $("tiles").innerHTML = P.metric_order.map(k => {
+    const m = P.metrics[k], p = m.periods[period], lat = m.latest;
+    const good = (p.change > 0) === (m.good === "up");
+    const cls = m.good === "flat" || !p.is_real ? "flat" : good ? "up" : "down";
+    const badge = lat.flag ? "signal" : Math.abs(lat.z) >= 2 ? "watch" : "normal";
+    const badgeText = lat.flag ? "signal" : Math.abs(lat.z) >= 2 ? "watch" : "normal";
+    const vals = m.series.value.slice(-26);
+    return `<div class="tile ${k === selected ? "sel" : ""}" data-k="${k}">
+      <span class="badge ${badge}">${badgeText}</span>
+      <div class="lab">${m.label}</div>
+      <div class="val">${fmtShort(p.current, m.unit)}</div>
+      <div class="chg ${cls}">${pct(p.change_pct)}${p.is_real ? "" : " <span class='flat'>(within normal)</span>"}</div>
+      ${sparkline("sp" + k, vals)}</div>`;
+  }).join("");
+  [...$("tiles").children].forEach(t => t.onclick = () => { selected = t.dataset.k; render(); });
+
+  /* main chart */
+  const m = P.metrics[selected], s = m.series, n = s.value.length;
+  const from = Math.max(P.min_history_weeks, n - Math.max(+period, 26) * 2);
+  const idx = [...Array(n - from).keys()].map(i => i + from);
+  const band = { lo: idx.map(i => s.lower[i]), hi: idx.map(i => s.upper[i]) };
+  $("chartTitle").textContent = m.label;
+  $("chartSub").innerHTML = `${m.decision} &middot; owned by ${m.owner}`;
+  MM.lines("#mainChart", { width: 560, height: 300, rightPad: 110, zeroBase: false,
+    yFmt: v => fmtShort(v, m.unit), xFmt: i => (s.weeks[Math.round(i)] || "").slice(0, 7),
+    band, bandColor: "#eaf0f7",
+    series: [{ name: "Expected", color: "#94a3b8", points: idx.map(i => [i, s.expected[i]]) },
+             { name: "Actual", color: MM.C.focus, points: idx.map(i => [i, s.value[i]]), mark: idx.map(i => !!s.flag[i]) }] });
+
+  /* alerts */
+  const counts = P.alert_counts;
+  $("alertSub").textContent = `${P.alerts.length} items, ranked. ${counts.high + counts.medium} need a decision; the rest are context.`;
+  $("alerts").innerHTML = P.alerts.map(a => `<div class="alert ${a.severity}"><i></i><div class="body">
+    <b>${a.title}</b><p>${a.body}</p>
+    <div class="meta">${a.kind} &middot; ${a.metric} &middot; ${a.owner}</div></div></div>`).join("");
+
+  /* decomposition */
+  const dc = P.revenue_decomposition[period] || P.revenue_decomposition["13"];
+  const names = { active_customers: "Customers", orders_per_customer: "Visits each", avg_basket: "Basket size" };
+  $("decompSub").textContent = `Last ${period} weeks against the ${period} before, revenue ${pct(dc.total_change_pct)}.`;
+  $("decomp").innerHTML = `<div style="background:var(--navy);color:#fff"><div class="d-lab" style="color:#cbd5e1">Revenue</div>
+      <div class="d-val" style="color:var(--accent)">${pct(dc.total_change_pct)}</div></div>` +
+    Object.entries(dc.contributions).map(([k, v]) =>
+      `<div><div class="d-lab">${names[k]}</div><div class="d-val ${v >= 0 ? "up" : "down"}">${pct(v)}</div></div>`).join("");
+
+  /* slices */
+  const dims = [...new Set(P.slices.map(r => r.dimension))];
+  $("dims").innerHTML = dims.map(x => `<button data-d="${x}" class="${x === dim ? "on" : ""}">${x}</button>`).join("");
+  [...$("dims").children].forEach(b => b.onclick = () => { dim = b.dataset.d; render(); });
+  const rows = P.slices.filter(r => r.dimension === dim)
+    .sort((a, b) => ((a[sortK] > b[sortK]) ? 1 : -1) * sortDir);
+  $("sliceBody").innerHTML = rows.map(r => {
+    const unusual = r.flag || Math.abs(r.z) >= 2;
+    return `<tr><td>${r.slice}</td><td class="n">${(r.share * 100).toFixed(1)}%</td>
+      <td class="n ${r.change_13w_pct >= 0 ? "up" : "down"}">${pct(r.change_13w_pct)}</td>
+      <td class="n">${r.z >= 0 ? "+" : ""}${r.z.toFixed(1)} sd</td>
+      <td><span class="pill ${unusual ? "yes" : "no"}" title="${unusual ? "Outside the range this slice normally sits in for the time of year" : "Within the range this slice normally sits in for the time of year"}">${unusual ? "Unusual" : "Normal"}</span></td></tr>`;
+  }).join("");
+  document.querySelectorAll("table.g th[data-k]").forEach(th => th.onclick = () => {
+    sortDir = sortK === th.dataset.k ? -sortDir : -1; sortK = th.dataset.k; render(); });
+
+  /* models */
+  $("models").innerHTML = Object.values(P.models).map(mo => `<div class="model">
+    <h3>${mo.title}</h3><div class="src">${mo.source}</div>
+    <div class="big">${mo.headline}</div><div class="biglab">${mo.headline_label}</div>
+    <dl>${mo.detail.map(x => `<div><dt>${x.label}</dt><dd>${x.value}</dd></div>`).join("")}</dl>
+    <div class="act">${mo.action}</div></div>`).join("");
+
+  /* noise audit */
+  const na = P.noise_audit;
+  $("noise").innerHTML = [
+    ["Metric-weeks judged", na.metric_weeks.toLocaleString("en-CA")],
+    ["Moved more than 2% in a week", na.weeks_that_moved_more_than_2pct.toLocaleString("en-CA")],
+    ["Actually outside normal variation", na.weeks_with_a_signal.toLocaleString("en-CA")],
+    ["Share that were real signals", (na.share_of_weeks_with_a_signal * 100).toFixed(1) + "%"],
+  ].map(([l, v]) => `<div><div class="d-lab">${l}</div><div class="d-val">${v}</div></div>`).join("");
+  $("noiseNote").textContent = `A dashboard that highlights every move larger than two per cent would raise `
+    + `${Math.round(na.weeks_that_moved_more_than_2pct / na.weeks_with_a_signal)} times as many flags as the data supports. `
+    + `That is how an executive learns to ignore the page.`;
+}
+render();
+</script>
+</body>
+</html>

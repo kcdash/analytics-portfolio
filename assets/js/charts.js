@@ -95,10 +95,20 @@ const MM = (() => {
   function lines(target, o) {
     const w = o.width || 640, h = o.height || 320, m = { t: 34, r: o.rightPad || 150, b: 44, l: 58 };
     const s = svgIn(target, w, h), xf = o.xFmt || (v => v), yf = o.yFmt || (v => v);
-    const xs = o.series[0].points.map(p => p[0]), all = o.series.flatMap(q => q.points.map(p => p[1])).concat(0);
+    const xs = o.series[0].points.map(p => p[0]);
+    const all = o.series.flatMap(q => q.points.map(p => p[1]))
+      .concat(o.band ? o.band.lo.concat(o.band.hi) : [])
+      .concat(o.zeroBase === false ? [] : [0]);
     let lo = Math.min(...all), hi = Math.max(...all); const pad = (hi - lo) * 0.1; hi += pad; if (lo < 0) lo -= pad;
     const x = v => m.l + (v - xs[0]) / (xs[xs.length - 1] - xs[0]) * (w - m.l - m.r);
     const y = v => m.t + (hi - v) / (hi - lo) * (h - m.t - m.b);
+    // an expected range, drawn behind everything else
+    if (o.band) {
+      const pts = xs.map((v, i) => [x(v), y(o.band.hi[i])]).concat(xs.map((v, i) => [x(v), y(o.band.lo[i])]).reverse());
+      const usable = pts.every(p => isFinite(p[0]) && isFinite(p[1]));
+      if (usable) el("path", { d: pts.map((p, i) => (i ? "L" : "M") + p[0] + "," + p[1]).join("") + "Z",
+                               fill: o.bandColor || "#e8eef6", stroke: "none" }, s);
+    }
     ticks(lo, hi, 5).forEach(t => {
       el("line", { x1: m.l, x2: w - m.r, y1: y(t), y2: y(t), stroke: t === 0 ? BASE : GRID }, s);
       el("text", { x: m.l - 8, y: y(t) + 4, "text-anchor": "end", "font-size": 11, fill: MUTED }, s, yf(t));
@@ -111,6 +121,8 @@ const MM = (() => {
     o.series.forEach((q, i) => {
       const col = q.color || C.series[i];
       el("path", { d: q.points.map((p, k) => (k ? "L" : "M") + x(p[0]) + "," + y(p[1])).join(""), fill: "none", stroke: col, "stroke-width": 2, "stroke-linejoin": "round" }, s);
+      if (q.mark) q.points.forEach((p, k) => { if (q.mark[k]) el("circle", { cx: x(p[0]), cy: y(p[1]), r: 5,
+        fill: C.accent, stroke: "#fff", "stroke-width": 2 }, s); });
       const ly = ends.find(e => e.i === i).y, last = q.points[q.points.length - 1];
       el("circle", { cx: x(last[0]), cy: y(last[1]), r: 4, fill: col, stroke: "#fff", "stroke-width": 2 }, s);
       el("line", { x1: w - m.r + 8, x2: w - m.r + 20, y1: ly, y2: ly, stroke: col, "stroke-width": 3 }, s);

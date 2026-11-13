@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Executive KPI dashboard · Maple & Main · Krish Dash</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/css/deck.css">
+<style>
+  .principles { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px 36px; }
+  .principles div { border-left: 3px solid var(--accent); padding-left: 16px; }
+  .principles b { display: block; font-size: 17px; margin-bottom: 4px; }
+  .principles span { color: var(--slate); font-size: 15px; }
+  .alertdemo { border: 1px solid var(--line); border-radius: 8px; overflow: hidden; display: grid; grid-template-columns: 6px 1fr; }
+  .alertdemo i { background: var(--accent); } .alertdemo.good i { background: #1baf7a; }
+  .alertdemo .b { padding: 12px 16px; }
+  .alertdemo b { display: block; font-size: 16px; } .alertdemo p { margin: 4px 0 0; font-size: 14px; color: var(--slate); }
+  .alertdemo .m { font-size: 11px; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); font-weight: 600; margin-top: 8px; }
+</style>
+</head>
+<body>
+<div class="deck-bar"><span>Executive KPI dashboard · Maple &amp; Main</span><a href="deck.pdf">Download PDF</a><a href="../demo/">Open the dashboard</a><a href="../../../">Portfolio</a></div>
+
+<section class="slide title-slide">
+  <div class="kicker">Maple &amp; Main · Decision products</div>
+  <h1>A KPI page that tells you when to care</h1>
+  <p>Ten metrics, a seasonal baseline behind each one, and a ranked list of what actually needs a decision this week. Design notes for the dashboard.</p>
+  <div class="foot"><span>Krish Dash · Personal demonstration portfolio</span><span>Synthetic data. No client, employer or proprietary information.</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">Executive summary</div>
+  <h2>Most dashboards show every movement. This one shows the <span data-v="signalShare"></span> that are real.</h2>
+  <div class="body cols-3" style="margin-top:46px;flex:0 0 auto">
+    <div class="stat"><b data-v="noiseRatio"></b><span>more flags would be raised by the usual "highlight anything over two per cent" rule than the data supports. That is how a page teaches people to ignore it.</span></div>
+    <div class="stat"><b data-v="alertCount"></b><span>items on this week's list, ranked, each written as a sentence with an owner attached. <span data-v="decisionCount"></span> of them need a decision; the rest are context.</span></div>
+    <div class="stat"><b>5</b><span>models reporting on the same page, so it says what is about to happen as well as what has happened: churn, acquisition, personas, demand, media.</span></div>
+  </div>
+  <div class="callout" style="margin-top:50px;font-size:19px;padding:22px 26px"><b>The design rule:</b> a number earns a place on the page only if someone owns it, a decision depends on it, and the page can say whether this week's movement is larger than its own normal variation.</div>
+  <div class="foot"><span>Executive KPI dashboard</span><span>2</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">The problem</div>
+  <h2>Why executives stop looking at dashboards</h2>
+  <div class="body cols-2" style="margin-top:26px">
+    <div>
+      <ul style="font-size:16.5px">
+        <li><b>Everything moves every week.</b> Weekly retail numbers swing by a few per cent for no reason at all. A page that colours those swings red and green is reporting noise in two colours.</li>
+        <li><b>Seasonality is reported as news.</b> Garden furniture falls off a cliff every autumn. On a quarter-over-quarter view that looks like a crisis.</li>
+        <li><b>No one owns a number.</b> Forty tiles, no names, no decisions. The meeting becomes a tour of the page.</li>
+        <li><b>It only looks backwards.</b> The models that predict what happens next live somewhere else entirely.</li>
+      </ul>
+    </div>
+    <div>
+      <div class="chart-title">How often each metric moved more than 2% in a week</div>
+      <div id="moveChart"></div>
+      <p class="chart-note">Across <span data-v="metricWeeks"></span> metric-weeks with at least a year of history behind them.</p>
+    </div>
+  </div>
+  <div class="foot"><span>Executive KPI dashboard</span><span>3</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">Design</div>
+  <h2>Four rules, applied to every tile on the page</h2>
+  <div class="body" style="margin-top:30px">
+    <div class="principles">
+      <div><b>1. A metric needs an owner and a decision</b><span>Each of the ten metrics is on the page because a named person uses it to decide something. "Realised price" exists so merchandising can see whether the discount plan is holding, not because it is available.</span></div>
+      <div><b>2. Signal before size</b><span>Every number is compared with what it should have been for that week of the year, not with last week. The page says "within normal" or flags it, before it says how big the change was.</span></div>
+      <div><b>3. Sentences, not charts, at the top</b><span>The first thing on the page is a ranked list of what needs attention, written in plain English with the owner attached. Charts are for the person who wants to check.</span></div>
+      <div><b>4. The models report here too</b><span>Churn risk, acquisition value, persona coverage, forecast accuracy and media return appear on the same page, each with the action it implies.</span></div>
+    </div>
+    <table class="t" style="margin-top:26px">
+      <tr><th>Metric</th><th>Owner</th><th>The decision it supports</th></tr>
+      <tbody id="metricTable"></tbody>
+    </table>
+  </div>
+  <div class="foot"><span>Executive KPI dashboard</span><span>4</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">The method</div>
+  <h2>Every metric gets a baseline, and the baseline never sees the week it judges</h2>
+  <div class="body cols-2">
+    <div>
+      <div class="chart-title" id="exampleTitle"></div>
+      <div id="exampleChart"></div>
+      <p class="chart-note">Shaded band: three standard deviations around the expected level. Amber points: weeks the control rules flagged.</p>
+    </div>
+    <div>
+      <p style="font-size:16px">For each metric and each week, a model is fitted on <b>everything before that week only</b>: a trend, an annual shape, the holiday peak, back-to-school and flyer weeks. It produces an expected level and a measure of how much a normal week varies around it.</p>
+      <p style="font-size:16px">Three rules then decide whether to speak up, borrowed from a century of factory process control:</p>
+      <ul style="font-size:15.5px">
+        <li>a week beyond <b>three</b> standard deviations</li>
+        <li><b>two of three</b> weeks beyond two</li>
+        <li><b>eight</b> weeks in a row on the same side of the baseline</li>
+      </ul>
+      <div class="callout">The third rule is the one that earns its keep. A drift of half a standard deviation never trips an eyeball, and it is exactly how a problem arrives.</div>
+    </div>
+  </div>
+  <div class="foot"><span>Executive KPI dashboard</span><span>5</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">The audit</div>
+  <h2>Of <span data-v="movedCount"></span> movements a normal dashboard would highlight, <span data-v="signalCount"></span> are real</h2>
+  <div class="body cols-2">
+    <div>
+      <div class="chart-title">Metric-weeks, by how they would be treated</div>
+      <div id="noiseChart"></div>
+      <p class="chart-note">Ten metrics across <span data-v="judgedWeeks"></span> weeks each. A signal is a week that broke one of the three control rules.</p>
+    </div>
+    <div>
+      <table class="t">
+        <tr><th>Metric</th><th class="n">Weeks with a signal</th><th class="n">Share of weeks</th></tr>
+        <tbody id="signalTable"></tbody>
+      </table>
+      <div class="callout" style="margin-top:14px">Service contacts and realised price are genuinely drifting and deserve the attention. Revenue, margin and digital share mostly do what they always do. A page that shouted equally about all ten would bury the two that matter.</div>
+    </div>
+  </div>
+  <div class="foot"><span>Executive KPI dashboard</span><span>6</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">The example that makes the case</div>
+  <h2>Outdoor and garden is down <span data-v="ogDrop"></span> on the quarter, and nothing is wrong</h2>
+  <div class="body cols-2">
+    <div>
+      <div class="chart-title">Outdoor &amp; Garden weekly revenue</div>
+      <div id="ogChart"></div>
+      <p class="chart-note">It is October. The category does this every year.</p>
+    </div>
+    <div>
+      <p style="font-size:16px">A standard report compares the last quarter with the one before and shows a <b><span data-v="ogDrop"></span></b> fall. In most companies that produces a meeting.</p>
+      <p style="font-size:16px">Measured against its own seasonal pattern, the category is <b><span data-v="ogZ"></span> standard deviations</b> from where it should be, which is to say exactly where it should be.</p>
+      <div class="alertdemo good" style="margin-top:16px"><i></i><div class="b">
+        <b>Outdoor &amp; Garden is down <span data-v="ogDrop"></span> and that is normal</b>
+        <p>Against its own seasonal pattern it is <span data-v="ogZ"></span> standard deviations from where it should be. No action needed.</p>
+        <div class="m">Not a problem · Category · Commercial</div></div></div>
+      <p class="chart-note" style="margin-top:12px">The dashboard says so out loud, because the most valuable thing a page can do is take an item off the agenda.</p>
+    </div>
+  </div>
+  <div class="foot"><span>Executive KPI dashboard</span><span>7</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">The first follow-up question</div>
+  <h2>When revenue moves, the page already knows what moved it</h2>
+  <div class="body cols-2">
+    <div>
+      <div class="chart-title">Contribution to the change in revenue</div>
+      <div id="decompChart"></div>
+      <p class="chart-note">Revenue is customers multiplied by how often they buy and how much they spend each time. The three parts add to the total.</p>
+    </div>
+    <div>
+      <table class="t">
+        <tr><th>Period</th><th class="n">Revenue</th><th class="n">Customers</th><th class="n">Visits each</th><th class="n">Basket</th></tr>
+        <tbody id="decompTable"></tbody>
+      </table>
+      <div class="callout" style="margin-top:16px">Over the year the business grew <span data-v="rev52"></span>, almost entirely by having more customers. Over the last quarter revenue is flat because a <span data-v="cust13"></span> rise in customers was cancelled by a <span data-v="bask13"></span> fall in basket. Those are two completely different conversations, and the page separates them before anyone asks.</div>
+    </div>
+  </div>
+  <div class="foot"><span>Executive KPI dashboard</span><span>8</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">The alert engine</div>
+  <h2>Nine sentences, ranked, each with a name on it</h2>
+  <div class="body cols-2" style="grid-template-columns:1.1fr 1fr">
+    <div>
+      <div id="alertList" style="display:grid;gap:10px"></div>
+    </div>
+    <div>
+      <p style="font-size:16px">Items come from four places: a control rule firing, a quarter-on-quarter change larger than normal variation, a slice behaving unusually for the season, and the models.</p>
+      <p style="font-size:16px">Each is scored on how far it is from normal and how much money sits behind it, then sorted. Severity is a colour, not a word count.</p>
+      <ul style="font-size:15.5px">
+        <li><b>High</b>: beyond three standard deviations</li>
+        <li><b>Medium</b>: a pattern, or a real change in the wrong direction</li>
+        <li><b>Low</b>: a real change in the right direction</li>
+        <li><b>Green</b>: something that looks alarming and is not</li>
+      </ul>
+      <div class="callout">The list is capped by the data, not by a target length. A quiet week produces a short list, which is the correct output for a quiet week.</div>
+    </div>
+  </div>
+  <div class="foot"><span>Executive KPI dashboard</span><span>9</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">Forward-looking</div>
+  <h2>Five models, reporting on the page the executive already reads</h2>
+  <div class="body" style="margin-top:20px">
+    <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:14px" id="modelCards"></div>
+    <p class="chart-note" style="margin-top:16px">Each panel is the output of a separate project in this portfolio. Putting them on the KPI page is the difference between a reporting tool and a decision product: the page says what happened, what is about to happen, and what to do about it, in one place.</p>
+  </div>
+  <div class="foot"><span>Executive KPI dashboard</span><span>10</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">Honest limits</div>
+  <h2>What this page cannot do</h2>
+  <div class="body cols-2" style="margin-top:24px">
+    <div>
+      <ul style="font-size:16px">
+        <li><b>It cannot tell you why.</b> A control signal says a metric left its normal range. The cause is a separate question, and usually needs an experiment rather than another chart.</li>
+        <li><b>It cannot prove a campaign worked.</b> Sales rose and marketing spent money. Only a holdout settles which caused which, which is why projects 1 and 5 are built around them.</li>
+        <li><b>The baseline is only as good as the history.</b> A metric needs a year before it can be judged, and a genuine step change will be called a signal for several weeks before the baseline catches up. That is the correct behaviour, but it has to be explained once.</li>
+      </ul>
+    </div>
+    <div>
+      <ul style="font-size:16px">
+        <li><b>Three rules on ten metrics will produce false alarms.</b> Roughly one week in a hundred will trip a rule by chance. With ten metrics that is about one spurious flag a quarter, and the page is better for accepting it.</li>
+        <li><b>Nothing here replaces a human.</b> The alert list is an agenda, not a decision. Its purpose is to make sure the meeting starts on the two things that matter rather than the first chart on the page.</li>
+      </ul>
+      <div class="callout" style="margin-top:16px">Governance: every metric has one definition, written in SQL in one place. If the dashboard and the finance pack disagree, one of them is not using this mart.</div>
+    </div>
+  </div>
+  <div class="foot"><span>Executive KPI dashboard</span><span>11</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">Appendix</div>
+  <h2>Method, definitions and limits</h2>
+  <div class="body cols-even" style="font-size:14px;gap:44px">
+    <div>
+      <p><b>Data.</b> One weekly fact table built from every order line, plus the media plan, the trading calendar and service records. 156 weeks to <span data-v="asOf"></span>. Slices by category, channel and province reconcile to the company total to the dollar.</p>
+      <p><b>Baseline.</b> For each metric and week, a linear model on trend, three annual harmonics, holiday peak, back-to-school and flyer weeks, fitted only on earlier weeks. Metrics need <span data-v="minHistory"></span> weeks of history before they are judged.</p>
+      <p><b>Control rules.</b> Three standard deviations; two of three beyond two; eight consecutive weeks on one side.</p>
+      <p><b>Period comparison.</b> The average of the last N weeks against the N before, with a standard error from the week-to-week variation of both. "Real" means the difference exceeds two standard errors.</p>
+    </div>
+    <div>
+      <p><b>Decomposition.</b> Revenue is split into customers, orders per customer and average basket on a log scale, so the three parts add to the total change.</p>
+      <p><b>New customers</b> are counted in the week they joined the loyalty programme, not the week of their first order: the latter puts every pre-existing member into the first week of the extract and invents an acquisition spike.</p>
+      <p><b>Limits.</b> No competitor, weather or macroeconomic inputs exist in this dataset. The baseline treats a step change as a run of signals until it has a year of new history. False alarm rate is roughly one metric-week in a hundred.</p>
+      <p><b>Synthetic data.</b> Maple &amp; Main is fictional. Figures illustrate the method, not any real company.</p>
+      <p><b>Code.</b> SQL, Python and SAS, with a metric dictionary and QC log, are in the project repository.</p>
+    </div>
+  </div>
+  <div class="foot"><span>Executive KPI dashboard</span><span>12</span></div>
+</section>
+
+<script src="../outputs/report_data.js"></script>
+<script src="../../../assets/js/charts.js"></script>
+<script>
+const P = window.P6, na = P.noise_audit, M = P.metrics;
+const pct0 = v => Math.round(v * 100) + "%", pct1 = v => (v * 100).toFixed(1) + "%";
+const og = P.slices.find(s => s.slice === "Outdoor & Garden");
+const dc = P.revenue_decomposition;
+const V = {
+  signalShare: pct1(na.share_of_weeks_with_a_signal), noiseRatio: Math.round(na.weeks_that_moved_more_than_2pct / na.weeks_with_a_signal) + " times",
+  alertCount: P.alerts.length, decisionCount: P.alert_counts.high + P.alert_counts.medium,
+  metricWeeks: na.metric_weeks.toLocaleString("en-CA"), movedCount: na.weeks_that_moved_more_than_2pct.toLocaleString("en-CA"),
+  signalCount: na.weeks_with_a_signal, judgedWeeks: na.weeks_judged_per_metric,
+  ogDrop: pct0(Math.abs(og.change_13w_pct)), ogZ: Math.abs(og.z).toFixed(1),
+  rev52: (dc["52"].total_change_pct >= 0 ? "+" : "") + pct1(dc["52"].total_change_pct),
+  cust13: (dc["13"].contributions.active_customers >= 0 ? "+" : "") + pct1(dc["13"].contributions.active_customers),
+  bask13: pct1(Math.abs(dc["13"].contributions.avg_basket)),
+  asOf: P.as_of_date, minHistory: P.min_history_weeks,
+};
+document.querySelectorAll("[data-v]").forEach(e => { e.textContent = V[e.dataset.v] ?? "?"; });
+
+/* 3. how often metrics move more than 2% */
+const moved = P.metric_order.map(k => {
+  const v = M[k].series.value, n = v.length, from = P.min_history_weeks + 1;
+  let c = 0;
+  for (let i = from; i < n; i++) if (Math.abs(v[i] / v[i - 1] - 1) > 0.02) c++;
+  return { label: M[k].label.replace(" ", "\n"), value: c / (n - from), color: MM.C.context };
+});
+MM.bars("#moveChart", { width: 560, height: 350, fmt: v => pct0(v), maxBar: 36, data: moved });
+
+document.getElementById("metricTable").innerHTML = P.metric_order.slice(0, 5).map(k =>
+  `<tr><td>${M[k].label}</td><td>${M[k].owner}</td><td>${M[k].decision}</td></tr>`).join("");
+
+/* 5. the control chart */
+const ex = M.service_contacts, s = ex.series, n = s.value.length, from = P.min_history_weeks;
+const idx = [...Array(n - from).keys()].map(i => i + from);
+document.getElementById("exampleTitle").textContent = ex.label + ": weekly, against its seasonal baseline";
+MM.lines("#exampleChart", { width: 600, height: 360, rightPad: 110, zeroBase: false,
+  band: { lo: idx.map(i => s.lower[i]), hi: idx.map(i => s.upper[i]) }, bandColor: "#eaf0f7",
+  yFmt: v => Math.round(v).toLocaleString("en-CA"), xFmt: i => (s.weeks[Math.round(i)] || "").slice(0, 7),
+  series: [{ name: "Expected", color: "#94a3b8", points: idx.map(i => [i, s.expected[i]]) },
+           { name: "Actual", color: MM.C.focus, points: idx.map(i => [i, s.value[i]]), mark: idx.map(i => !!s.flag[i]) }] });
+
+/* 6. noise audit */
+MM.bars("#noiseChart", { width: 560, height: 350, fmt: v => v.toLocaleString("en-CA"), maxBar: 90,
+  data: [{ label: "Metric-weeks\njudged", value: na.metric_weeks, color: MM.C.context },
+         { label: "Moved more\nthan 2%", value: na.weeks_that_moved_more_than_2pct, color: MM.C.accent },
+         { label: "Real\nsignals", value: na.weeks_with_a_signal, color: MM.C.focus }] });
+document.getElementById("signalTable").innerHTML = P.metric_order
+  .map(k => ({ l: M[k].label, n: M[k].weeks_with_a_signal }))
+  .sort((a, b) => b.n - a.n).slice(0, 6)
+  .map(r => `<tr><td>${r.l}</td><td class="n">${r.n}</td><td class="n">${pct0(r.n / na.weeks_judged_per_metric)}</td></tr>`).join("");
+
+/* 7. outdoor and garden */
+MM.lines("#ogChart", { width: 560, height: 350, rightPad: 20, zeroBase: false, yFmt: MM.cadK,
+  xFmt: i => "wk " + Math.round(i), xTitle: "Last 26 weeks",
+  series: [{ name: "", color: MM.C.focus, points: og.series.map((v, i) => [i, v]) }] });
+
+/* 8. decomposition */
+const names = { active_customers: "Customers", orders_per_customer: "Visits each", avg_basket: "Basket size" };
+MM.bars("#decompChart", { width: 560, height: 350, fmt: v => pct1(v), maxBar: 54,
+  data: Object.entries(dc["13"].contributions).map(([k, v]) => ({ label: names[k].replace(" ", "\n"), value: v,
+    color: v >= 0 ? MM.C.focus : MM.C.accent, tip: `<b>${names[k]}</b><br>${pct1(v)} of the change over 13 weeks` }))
+    .concat([{ label: "Revenue", value: dc["13"].total_change_pct, color: MM.C.context }]) });
+document.getElementById("decompTable").innerHTML = ["4", "13", "52"].map(p =>
+  `<tr class="${p === "52" ? "hl" : ""}"><td>Last ${p} weeks</td><td class="n">${pct1(dc[p].total_change_pct)}</td>` +
+  Object.keys(names).map(k => `<td class="n">${pct1(dc[p].contributions[k])}</td>`).join("") + "</tr>").join("");
+
+/* 9. alerts */
+document.getElementById("alertList").innerHTML = P.alerts.slice(0, 4).map(a =>
+  `<div class="alertdemo ${a.severity === "info" ? "good" : ""}"><i></i><div class="b">
+    <b>${a.title}</b><p>${a.body.length > 125 ? a.body.slice(0, 125) + "..." : a.body}</p>
+    <div class="m">${a.kind} · ${a.owner}</div></div></div>`).join("");
+
+/* 10. models */
+document.getElementById("modelCards").innerHTML = Object.values(P.models).map(m => `
+  <div style="border:1px solid var(--line);border-radius:8px;padding:14px">
+    <div style="font-size:14px;font-weight:600">${m.title}</div>
+    <div style="font-size:10.5px;color:var(--muted);margin-bottom:8px">${m.source}</div>
+    <div style="font-family:Fraunces,Georgia,serif;font-size:24px;color:var(--navy);line-height:1.1">${m.headline}</div>
+    <div style="font-size:11.5px;color:var(--slate);margin:2px 0 10px">${m.headline_label}</div>
+    <div style="font-size:12px;border-top:1px solid var(--line);padding-top:8px;color:var(--navy);font-weight:600">${m.action}</div>
+  </div>`).join("");
+</script>
+</body>
+</html>

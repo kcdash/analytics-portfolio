@@ -14,7 +14,7 @@ Python, a README with model card or QC log, and an interactive or live demo.
 | 3 | [Segmentation & personas](projects/03-segmentation-personas/) | Customer & Marketing Science | Live |
 | 4 | [Demand forecasting](projects/04-demand-forecasting/) | Forecasting & Optimization | Live |
 | 5 | [Marketing mix model & budget optimiser](projects/05-marketing-mix-model/) | Customer & Marketing Science | Live |
-| 6 | Executive KPI dashboard | BI & Decision Products | Planned |
+| 6 | [Executive KPI dashboard](projects/06-executive-dashboard/) | BI & Decision Products | Live |
 | 7 | Conversational analytics agent | Agentic & Generative AI | Planned |
 | 8 | Auto-EDA agent | Agentic & Generative AI | Planned |
 | 9 | Data QC agent | Agentic & Generative AI | Planned |

@@ -1,0 +1,280 @@
+{
+  "as_of_date": "2026-10-26",
+  "models": {
+    "retention": {
+      "title": "Customers at risk",
+      "source": "Project 1: churn and retention value",
+      "headline": "$5,159,840",
+      "headline_label": "12-month margin at risk",
+      "detail": [
+        {
+          "label": "Active customers scored",
+          "value": "112,999"
+        },
+        {
+          "label": "Lapsing in six months",
+          "value": "17,611"
+        },
+        {
+          "label": "Risk in the top 10%",
+          "value": "47%"
+        },
+        {
+          "label": "Model accuracy",
+          "value": "AUC 0.83"
+        }
+      ],
+      "action": "Rank the monthly offer list by value at risk, not by risk alone.",
+      "value_at_stake": 5159840.370516265
+    },
+    "acquisition": {
+      "title": "Acquisition",
+      "source": "Project 2: acquisition propensity",
+      "headline": "$554,255",
+      "headline_label": "First-year margin available a year",
+      "detail": [
+        {
+          "label": "New members a week",
+          "value": "729"
+        },
+        {
+          "label": "Value of one",
+          "value": "$428"
+        },
+        {
+          "label": "Extra customers a year",
+          "value": "1,294"
+        },
+        {
+          "label": "Cost per customer",
+          "value": "$36, was $58"
+        }
+      ],
+      "action": "Order the outreach list by the propensity scorecard before the next campaign.",
+      "value_at_stake": 554255.4816687404
+    },
+    "personas": {
+      "title": "Who we can personalise to",
+      "source": "Project 3: segmentation and personas",
+      "headline": "19%",
+      "headline_label": "of active customers carry a persona",
+      "detail": [
+        {
+          "label": "Personas",
+          "value": "Sports, Electronics, Grocery & Toys, Home & Outdoor, Beauty & Apparel"
+        },
+        {
+          "label": "Still the same a year on",
+          "value": "82%"
+        },
+        {
+          "label": "Offer relevance",
+          "value": "2.3x"
+        },
+        {
+          "label": "With two years of data",
+          "value": "33%"
+        }
+      ],
+      "action": "Extend the purchase window to two years before the next content refresh.",
+      "value_at_stake": null
+    },
+    "forecast": {
+      "title": "Forecast against actual",
+      "source": "Project 4: demand forecasting",
+      "headline": "1.9%",
+      "headline_label": "error over the last 13 forecast weeks",
+      "detail": [
+        {
+          "label": "Method",
+          "value": "Last year and calendar combined"
+        },
+        {
+          "label": "Company level",
+          "value": "2.2%"
+        },
+        {
+          "label": "Store and category level",
+          "value": "23.1%"
+        },
+        {
+          "label": "Weeks forecast ahead",
+          "value": "13"
+        }
+      ],
+      "action": "Order to the 63% service level, not to the forecast itself.",
+      "value_at_stake": null,
+      "series": {
+        "weeks": [
+          "2026-07-13",
+          "2026-07-20",
+          "2026-07-27",
+          "2026-08-03",
+          "2026-08-10",
+          "2026-08-17",
+          "2026-08-24",
+          "2026-08-31",
+          "2026-09-07",
+          "2026-09-14",
+          "2026-09-21",
+          "2026-09-28",
+          "2026-10-05"
+        ],
+        "actual": [
+          2917143.860001315,
+          2905133.1400014265,
+          2969365.330001463,
+          3107664.1700019855,
+          3050824.9400016647,
+          3336297.2700024922,
+          3298692.2200022168,
+          3426257.430002719,
+          3164558.2400018666,
+          3072539.1500019343,
+          3050392.190001667,
+          2898573.550001576,
+          2704346.8800010066
+        ],
+        "forecast": [
+          2961281.4719284056,
+          3007319.1561226062,
+          3044673.21851945,
+          3060396.937748152,
+          3103769.6598949702,
+          3280419.2988474024,
+          3264150.4918598896,
+          3334738.5292003155,
+          3090880.3415597016,
+          3049233.3039639625,
+          2963998.3037239555,
+          2921277.366211421,
+          2739884.4422477707
+        ]
+      }
+    },
+    "media": {
+      "title": "Media",
+      "source": "Project 5: marketing mix model",
+      "headline": "$523,123",
+      "headline_label": "a year from reallocating the same budget",
+      "detail": [
+        {
+          "label": "Media spend a year",
+          "value": "$8.4M"
+        },
+        {
+          "label": "Media's share of sales",
+          "value": "11.1%"
+        },
+        {
+          "label": "Margin per media dollar",
+          "value": "$0.83"
+        },
+        {
+          "label": "Biggest move",
+          "value": "Flyer +48%, Display -38%"
+        }
+      ],
+      "action": "Run two-depth holdouts before acting on any channel-level number.",
+      "value_at_stake": 523123.21737953834
+    }
+  },
+  "alerts": [
+    {
+      "severity": "medium",
+      "kind": "Sustained change",
+      "metric": "Average basket",
+      "owner": "Merchandising",
+      "title": "Average basket is 5.3% down on the quarter",
+      "body": "The last 13 weeks averaged $176 against $186 in the 13 before. The gap is larger than normal week-to-week variation would produce.",
+      "good_news": false,
+      "score": 6.327626065629904
+    },
+    {
+      "severity": "low",
+      "kind": "Sustained change",
+      "metric": "New customers",
+      "owner": "Acquisition",
+      "title": "New customers is 10.0% up on the quarter",
+      "body": "The last 13 weeks averaged 708 against 644 in the 13 before. The gap is larger than normal week-to-week variation would produce.",
+      "good_news": true,
+      "score": 5.519589171897276
+    },
+    {
+      "severity": "medium",
+      "kind": "Where it is happening",
+      "metric": "Province: SK",
+      "owner": "Commercial",
+      "title": "SK is behaving unusually for the time of year",
+      "body": "SK revenue is 2.9 standard deviations above its own seasonal baseline (two of three weeks beyond two standard deviations). It is 1.7% of province revenue.",
+      "good_news": true,
+      "score": 4.314948223741349
+    },
+    {
+      "severity": "medium",
+      "kind": "Control signal",
+      "metric": "Service contacts",
+      "owner": "Customer service",
+      "title": "Service contacts is below its seasonal baseline",
+      "body": "Service contacts is 8 weeks in a row on one side of the baseline. The latest week is 755 against an expected 930. This is a pattern, not a single odd week.",
+      "good_news": true,
+      "score": 3.448901384160702
+    },
+    {
+      "severity": "medium",
+      "kind": "Model",
+      "metric": "Customers at risk",
+      "owner": "Marketing",
+      "title": "$5,159,840 of margin sits with customers likely to lapse",
+      "body": "The churn model expects 17,611 active customers to stop buying within six months. Nearly half that value sits with the top tenth, so the list is workable.",
+      "good_news": false,
+      "score": 3.0
+    },
+    {
+      "severity": "low",
+      "kind": "Sustained change",
+      "metric": "Active customers",
+      "owner": "Marketing",
+      "title": "Active customers is 4.2% up on the quarter",
+      "body": "The last 13 weeks averaged 15,607 against 14,974 in the 13 before. The gap is larger than normal week-to-week variation would produce.",
+      "good_news": true,
+      "score": 2.166005293818747
+    },
+    {
+      "severity": "low",
+      "kind": "Model",
+      "metric": "Media",
+      "owner": "Marketing",
+      "title": "$523,123 a year available from the same media budget",
+      "body": "The mix model, calibrated on in-market tests, puts more weight on flyer and email and less on display. The gain is real but modest, and depends on the tests being repeated.",
+      "good_news": true,
+      "score": 2.0
+    },
+    {
+      "severity": "medium",
+      "kind": "Control signal",
+      "metric": "Realised price",
+      "owner": "Merchandising",
+      "title": "Realised price is above its seasonal baseline",
+      "body": "Realised price is 8 weeks in a row on one side of the baseline. The latest week is 97.3% against an expected 96.7%. This is a pattern, not a single odd week.",
+      "good_news": true,
+      "score": 1.8174599903668787
+    },
+    {
+      "severity": "info",
+      "kind": "Not a problem",
+      "metric": "Category: Outdoor & Garden",
+      "owner": "Commercial",
+      "title": "Outdoor & Garden is down 45% and that is normal",
+      "body": "Outdoor & Garden revenue has fallen 45% against the previous quarter, which looks alarming on a standard report. Against its own seasonal pattern it is 0.1 standard deviations from where it should be, which is to say exactly where it should be. No action needed.",
+      "good_news": true,
+      "score": 0.5
+    }
+  ],
+  "alert_counts": {
+    "high": 0,
+    "medium": 5,
+    "low": 3,
+    "info": 1
+  }
+}
