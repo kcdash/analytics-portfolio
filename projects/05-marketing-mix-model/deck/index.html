@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Marketing mix model & budget optimiser · Maple & Main · Krish Dash</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/css/deck.css">
+<style>
+  .stack-chart { position: relative; }
+  .mini { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .mini > div { border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; }
+  .mini .ct2 { font-size: 12.5px; font-weight: 600; margin-bottom: 2px; }
+</style>
+</head>
+<body>
+<div class="deck-bar"><span>Marketing mix model &amp; budget optimiser · Maple &amp; Main</span><a href="deck.pdf">Download PDF</a><a href="../demo/">Open the planner</a><a href="../../../">Portfolio</a></div>
+
+<section class="slide title-slide">
+  <div class="kicker">Maple &amp; Main · Media investment</div>
+  <h1>What the mix model can tell you, what it cannot, and what to test</h1>
+  <p>A full marketing mix model on three years of weekly data, scored against the truth, with a budget optimiser that is judged on whether it would actually have worked.</p>
+  <div class="foot"><span>Krish Dash · Personal demonstration portfolio</span><span>Synthetic data. No client, employer or proprietary information.</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">Executive summary</div>
+  <h2>The model fits beautifully and cannot be trusted on its own. Six tests make it worth acting on.</h2>
+  <div class="body cols-3" style="margin-top:46px;flex:0 0 auto">
+    <div class="stat"><b data-v="idRange"></b><span>spread in media's measured contribution across equally good versions of the same model. The data alone cannot choose between them.</span></div>
+    <div class="stat"><b data-v="uncalErr"></b><span>average error in channel return on investment with no in-market test. After tests that measure the shape of each curve, <span data-v="calErr"></span>.</span></div>
+    <div class="stat"><b data-v="optGain"></b><span>a year from reallocating the same budget, once the curves are calibrated. Acting on the uncalibrated model instead would have <i>lost</i> <span data-v="optLoss"></span>.</span></div>
+  </div>
+  <div class="callout" style="margin-top:50px;font-size:19px;padding:22px 26px"><b>Recommendation:</b> treat the mix model as the allocation engine and in-market tests as its instrument. Run holdouts at two spend depths on every channel over a year, then move the budget: <span data-v="moveSummary"></span>.</div>
+  <div class="foot"><span>Marketing mix model</span><span>2</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">Approach</div>
+  <h2>Built the standard way, then stress-tested in ways a client rarely sees</h2>
+  <p class="sub"><span data-v="weeks"></span> weeks of sales against <span data-v="spend"></span> of media across six channels, <span data-v="period"></span>.</p>
+  <div class="body" style="margin-top:24px">
+    <div class="flow" style="grid-template-columns:repeat(5,1fr)">
+      <div><b>1. Shape the media</b>Carry-over and saturation searched per channel on out-of-time error, not assumed.<small>63 candidates per channel</small></div>
+      <div><b>2. Fit the structure</b>Sales as a base that media multiplies, so contributions add to sales exactly.<small>Positive effects only</small></div>
+      <div><b>3. Break it</b>Refit from several honest starting points and see whether the answer holds.<small>Identification test</small></div>
+      <div><b>4. Calibrate</b>In-market holdouts pin the channels the calendar hides.<small>Simulated geo tests</small></div>
+      <div><b>5. Decide</b>Optimise the budget, then score the recommendation on the true curves.<small>The honest test</small></div>
+    </div>
+    <table class="t" style="margin-top:4px">
+      <tr><th>Data used</th><th>Controls in the base</th><th>How results were validated</th></tr>
+      <tr><td>Weekly sales from every order line, media spend by channel, the trading calendar and realised price against list</td>
+          <td>Trend, three annual harmonics, holiday peak, back-to-school, discount depth</td>
+          <td>Four expanding-window folds, multi-start identification, and the response curves the data was generated from</td></tr>
+    </table>
+  </div>
+  <div class="foot"><span>Marketing mix model</span><span>3</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">The model</div>
+  <h2>Sales explained week by week, with media separated from the calendar</h2>
+  <div class="body cols-2" style="grid-template-columns:1.45fr 1fr">
+    <div>
+      <div class="chart-title">Weekly sales: base business and media contribution</div>
+      <div id="decompChart"></div>
+      <p class="chart-note">The gap between the two lines is what media produced. The base is what the model attributes to trend, season, holidays and price.</p>
+    </div>
+    <div>
+      <div class="mini">
+        <div><div class="ct2">Fit</div><b data-v="r2"></b> R<sup>2</sup></div>
+        <div><div class="ct2">Out-of-time error</div><b data-v="cvWape"></b></div>
+        <div><div class="ct2">Residual pattern</div><b data-v="dw"></b> DW</div>
+      </div>
+      <table class="t" style="margin-top:16px">
+        <tr><th>Channel</th><th class="n">Carry-over</th><th class="n">Half-saturation</th></tr>
+        <tbody id="transformTable"></tbody>
+      </table>
+      <p class="chart-note">Carry-over is the share of a week's pressure that survives into the next. Half-saturation is the weekly spend at which a channel delivers half its maximum effect.</p>
+    </div>
+  </div>
+  <div class="foot"><span>Marketing mix model</span><span>4</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">The standard output</div>
+  <h2>Contribution and return by channel: the slide every mix model ends on</h2>
+  <div class="body cols-2">
+    <div>
+      <div class="chart-title">Share of spend against share of media-driven sales</div>
+      <div id="contribChart"></div>
+      <p class="chart-note">Dark: share of the media budget. Light: share of the sales media produced, as the uncalibrated model sees it.</p>
+    </div>
+    <div>
+      <table class="t">
+        <tr><th>Channel</th><th class="n">Spend</th><th class="n">Return</th><th class="n">Next dollar</th></tr>
+        <tbody id="roiTable"></tbody>
+      </table>
+      <div class="callout" style="margin-top:14px">Read this way, the answer is obvious: cut TV and Display, pour everything into Flyer and Email. <b>That recommendation would have destroyed value.</b> The next four slides explain why.</div>
+    </div>
+  </div>
+  <div class="foot"><span>Marketing mix model</span><span>5</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">The problem</div>
+  <h2>Four versions of the same model, fitting equally well, disagree by <span data-v="idRatio"></span></h2>
+  <div class="body cols-2">
+    <div>
+      <div class="chart-title">Media's share of sales, by where the fit was started</div>
+      <div id="idChart"></div>
+      <p class="chart-note">Identical data, identical transforms, identical controls. Only the starting point differs.</p>
+    </div>
+    <div>
+      <table class="t">
+        <tr><th>Starting assumption</th><th class="n">Media contribution</th><th class="n">Fit</th></tr>
+        <tbody id="idTable"></tbody>
+      </table>
+      <div class="callout" style="margin-top:14px">The fit statistic cannot tell these apart: <span data-v="r2Spread"></span> separates the best from the worst. A mix model reports one of these answers and shows a confidence interval around it that reflects none of this.</div>
+    </div>
+  </div>
+  <div class="foot"><span>Marketing mix model</span><span>6</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">Why</div>
+  <h2>Media is planned around the calendar, so the calendar can explain the media</h2>
+  <div class="body cols-2">
+    <div>
+      <div class="chart-title">How much of each channel's pattern the calendar already explains</div>
+      <div id="colChart"></div>
+      <p class="chart-note">R-squared of each channel's saturated pressure on the trend, season, holiday and price terms.</p>
+    </div>
+    <div>
+      <p style="font-size:16px">Flyer drops are scheduled around the same peaks the model already controls for. <b><span data-v="flyerR2"></span></b> of the flyer variable is reproducible from the calendar alone, so the model cannot tell whether December sales came from the flyer or from December.</p>
+      <p style="font-size:16px">TV is the opposite: it runs in flights that cut across the season, so only <span data-v="tvR2"></span> of it is calendar. It is the one channel the data can speak to.</p>
+      <div class="callout">This is the test that should decide where to spend research money: <b>test the channels the calendar can imitate</b>, not the ones with the biggest budgets.</div>
+    </div>
+  </div>
+  <div class="foot"><span>Marketing mix model</span><span>7</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">The fix, part one</div>
+  <h2>Each in-market test buys a measurable amount of accuracy</h2>
+  <div class="body cols-2">
+    <div>
+      <div class="chart-title">Average error in channel return, by number of channels tested</div>
+      <div id="doseChart"></div>
+      <p class="chart-note">Channels are tested in order of how badly the calendar hides them. Error is measured against the true response curves.</p>
+    </div>
+    <div>
+      <table class="t">
+        <tr><th>Tests</th><th>Channel added</th><th class="n">Return error</th><th class="n">Total error</th></tr>
+        <tbody id="doseTable"></tbody>
+      </table>
+      <div class="callout" style="margin-top:12px">Two tests cut the error in channel returns by a third. Five bring the model within <span data-v="dose5"></span> of the truth. The fit statistic barely moves throughout: accuracy and fit are different things.</div>
+    </div>
+  </div>
+  <div class="foot"><span>Marketing mix model</span><span>8</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">The fix, part two</div>
+  <h2>Knowing what a channel is worth today says nothing about what happens if you move it</h2>
+  <div class="body cols-2">
+    <div>
+      <div class="chart-title">Where each channel saturates: model, calibrated model, and truth</div>
+      <div id="satChart"></div>
+      <p class="chart-note">Weekly spend at which a channel delivers half its maximum effect. The marker is today's spend.</p>
+    </div>
+    <div>
+      <p style="font-size:16px">A single holdout measures one point on a curve. Reallocation depends on the <i>slope</i> at that point, which one measurement cannot give.</p>
+      <p style="font-size:16px">The model alone puts TV's saturation at <span data-v="tvSatModel"></span> a week against a true <span data-v="tvSatTrue"></span>, so it believes TV has far more headroom than it does.</p>
+      <div class="callout">Holdouts run at <b>two different depths</b> on the same channel measure two points, which fixes both the height and the shape of the curve. It is the same test budget spent differently.</div>
+    </div>
+  </div>
+  <div class="foot"><span>Marketing mix model</span><span>9</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">Response curves</div>
+  <h2>The curves that drive every budget decision</h2>
+  <div class="body" style="margin-top:14px">
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px" id="curveGrid"></div>
+    <p class="chart-note">Annual incremental sales at a constant weekly spend. Navy: model plus two-depth tests. Grey: the truth. Amber marker: today's spend. The model alone is left out for readability; it sits far above both.</p>
+  </div>
+  <div class="foot"><span>Marketing mix model</span><span>10</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">The decision</div>
+  <h2>Every plan promises a gain. Only one delivers it.</h2>
+  <div class="body cols-2">
+    <div>
+      <div class="chart-title">What each version of the model promised, and what it would really have earned</div>
+      <div id="planChart"></div>
+      <p class="chart-note">Annual incremental sales from moving the same budget, judged on the true response curves. No budget is added in any plan.</p>
+    </div>
+    <div>
+      <table class="t">
+        <tr><th>Plan</th><th class="n">Promised</th><th class="n">Actual</th></tr>
+        <tbody id="planTable"></tbody>
+      </table>
+      <div class="callout" style="margin-top:12px">The uncalibrated model promised <span data-v="uncalClaim"></span> and would have lost <span data-v="optLoss"></span>. The version calibrated on two-depth tests promised <span data-v="calClaim"></span> and delivers <span data-v="optGain"></span>, which is <span data-v="optShare"></span> of everything that was available.</div>
+    </div>
+  </div>
+  <div class="foot"><span>Marketing mix model</span><span>11</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">The recommended plan</div>
+  <h2>Where the money should move</h2>
+  <div class="body cols-2">
+    <div>
+      <div class="chart-title">Change in weekly spend by channel</div>
+      <div id="moveChart"></div>
+      <p class="chart-note">Within a limit of half a channel's current spend in either direction, on an unchanged total budget of <span data-v="annualBudget"></span> a year.</p>
+    </div>
+    <div>
+      <table class="t">
+        <tr><th>Channel</th><th class="n">Now, a week</th><th class="n">Proposed</th><th class="n">Return</th></tr>
+        <tbody id="moveTable"></tbody>
+      </table>
+      <p class="chart-note">Return is incremental sales per dollar from the calibrated model; the true value is shown in the appendix.</p>
+      <div class="callout" style="margin-top:12px">Every channel is already past the half-saturation point, between <span data-v="satLow"></span> and <span data-v="satHigh"></span> of its maximum effect. There is no channel with large untapped headroom, which is why the gain is a reallocation of <span data-v="optShare2"></span>, not a doubling.</div>
+    </div>
+  </div>
+  <div class="foot"><span>Marketing mix model</span><span>12</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">Budget scale</div>
+  <h2>On this quarter's margin alone, the media budget roughly breaks even</h2>
+  <div class="body cols-2">
+    <div>
+      <div class="chart-title">Return on the media budget, by budget level</div>
+      <div id="scaleChart"></div>
+      <p class="chart-note">Incremental gross margin per dollar of media, at the best allocation for each budget level, on the true curves. One is break-even.</p>
+    </div>
+    <div>
+      <p style="font-size:16px">At today's budget, media returns <b><span data-v="marginRoi"></span></b> of gross margin per dollar spent in the same period. Cutting the budget raises that ratio and lowers total profit; adding to it does the reverse.</p>
+      <p style="font-size:16px">That is the wrong frame on its own. Media also recruits customers, and the acquisition work in this portfolio values a new customer at <b>$428</b> of first-year margin, with more beyond it.</p>
+      <div class="callout">Judge the <b>mix</b> on the immediate return, which is what this model measures well once calibrated. Judge the <b>scale</b> on lifetime value, which needs the acquisition and retention models, not this one.</div>
+    </div>
+  </div>
+  <div class="foot"><span>Marketing mix model</span><span>13</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">Recommendations</div>
+  <h2>Four actions</h2>
+  <div class="body" style="gap:0;margin-top:14px;display:block">
+    <div class="act"><i>1</i><div><b>Move the budget as set out on slide 12</b><span>An unchanged total, reallocated on calibrated curves. Review after one quarter against a holdout region so the move itself is measured.</span></div><em><span data-v="optGain"></span> a year</em></div>
+    <div class="act"><i>2</i><div><b>Run holdouts at two spend depths, not one</b><span>Same test budget, twice the information. Start with the channels the calendar can imitate: <span data-v="testOrder"></span>.</span></div><em>Turns a <span data-v="uncalErr"></span> error into <span data-v="calErr"></span></em></div>
+    <div class="act"><i>3</i><div><b>Stop reporting a single number for media contribution</b><span>Publish the range the data actually supports alongside the point estimate, and mark which channels are evidence-based and which are inferred.</span></div><em>Prevents the <span data-v="idRatio"></span> error</em></div>
+    <div class="act"><i>4</i><div><b>Separate the mix question from the scale question</b><span>This model answers where the next dollar goes. Whether there should be more dollars depends on customer lifetime value, which the acquisition and retention models carry.</span></div><em>Correct use of the tool</em></div>
+  </div>
+  <div class="foot"><span>Marketing mix model</span><span>14</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">Appendix</div>
+  <h2>Method, assumptions and limits</h2>
+  <div class="body cols-even" style="font-size:13.5px;gap:40px">
+    <div>
+      <p><b>Model.</b> Weekly sales = base x (1 + sum of channel lifts). The base is log-linear in trend, three annual harmonics, holiday and back-to-school flags, and realised price against list. Channel lift is a Hill saturation of geometrically adstocked spend. Channel effects are constrained to be positive.</p>
+      <p><b>Transforms.</b> Carry-over (nine values), saturation shape (five) and half-saturation point (seven) searched per channel by coordinate descent on four expanding-window folds.</p>
+      <p><b>Prior.</b> Without evidence to the contrary the split of contribution is pulled gently toward the split of spend, which stops the fit collapsing onto one channel.</p>
+      <p><b>Tests.</b> Holdouts are simulated from the true response curves with the sampling error a geo test of thirteen weeks would carry. In a real engagement these are read off the test, not generated.</p>
+      <p><b>Accuracy against truth.</b> Final model: average error in channel return <span data-v="calErr"></span>, total media contribution <span data-v="finalTotalErr"></span>.</p>
+    </div>
+    <div>
+      <table class="t" style="font-size:13px">
+        <tr><th>Channel</th><th class="n">Model return</th><th class="n">True return</th></tr>
+        <tbody id="truthTable"></tbody>
+      </table>
+      <p style="margin-top:12px"><b>Limits.</b> Weekly national data cannot see competitor activity, distribution changes or creative quality, none of which exist in this dataset either. Price is controlled but not modelled as a response. The optimiser assumes steady weekly spend and ignores flighting, minimum buys and contractual commitments.</p>
+      <p><b>Not tested.</b> Interaction between channels, long-term brand effects beyond the carry-over window, and the effect of media on the customer base rather than on the week's sales.</p>
+      <p><b>Synthetic data.</b> Maple &amp; Main is fictional. Its media response curves are known, which is the only reason the accuracy claims above can be made at all. Figures illustrate the method, not any real company.</p>
+      <p><b>Code.</b> SQL, Python and SAS, with a model card and QC log, are in the project repository.</p>
+    </div>
+  </div>
+  <div class="foot"><span>Marketing mix model</span><span>15</span></div>
+</section>
+
+<script src="../outputs/report_data.js"></script>
+<script src="../../../assets/js/charts.js"></script>
+<script>
+const P = window.P5, n0 = v => Math.round(v).toLocaleString("en-CA"), pct0 = v => Math.round(v * 100) + "%";
+const pct1 = v => (v * 100).toFixed(1) + "%", F = P.final_model, O = P.optimisation, CH = P.channels;
+const COLORS = { "TV": "#2a78d6", "Paid Search": "#eb6834", "Paid Social": "#1baf7a", "Display": "#eda100", "Flyer": "#6250d6", "Email": "#e87ba4" };
+const plans = O.plans, uncalPlan = plans[0], calPlan = plans[3], bestPlan = plans[4];
+const dose = P.dose, idn = P.identification;
+const V = {
+  idRange: "$" + (idn.range_incremental_revenue[0] / 1e6).toFixed(0) + "M to $" + (idn.range_incremental_revenue[1] / 1e6).toFixed(0) + "M",
+  idRatio: idn.ratio.toFixed(1) + " times", r2Spread: (idn.r2_spread * 100).toFixed(2) + " points of R-squared",
+  uncalErr: pct0(P.accuracy.uncalibrated.mean_absolute_roi_error), calErr: pct0(F.mean_absolute_roi_error),
+  optGain: MM.cadK(calPlan.true_gain), optLoss: MM.cadK(-uncalPlan.true_gain),
+  optShare: pct0(calPlan.share_of_achievable_gain), optShare2: pct1(calPlan.true_gain / O.current_annual_incremental_true),
+  uncalClaim: "$" + (uncalPlan.claimed_gain / 1e6).toFixed(1) + "M", calClaim: MM.cadK(calPlan.claimed_gain),
+  weeks: P.weeks, spend: "$" + (F.channels.reduce((a, c) => a + c.spend, 0) / 1e6).toFixed(1) + "M",
+  period: P.period[0] + " to " + P.period[1], r2: P.fit.r2.toFixed(3), cvWape: pct1(P.validation.mean_wape),
+  dw: P.fit.durbin_watson.toFixed(2),
+  flyerR2: pct0(P.collinearity.Flyer.r2_on_base_terms), tvR2: pct0(P.collinearity.TV.r2_on_base_terms),
+  dose5: pct0(dose[5].mean_absolute_roi_error),
+  tvSatModel: MM.cadK(P.curve_recovery.TV.saturation_weekly_mmm_only), tvSatTrue: MM.cadK(P.curve_recovery.TV.saturation_weekly_true),
+  annualBudget: "$" + (O.annual_budget / 1e6).toFixed(1) + "M",
+  marginRoi: "$" + O.current_annual_margin_roi_true.toFixed(2),
+  finalTotalErr: (F.total_error_vs_truth >= 0 ? "+" : "") + pct0(F.total_error_vs_truth),
+  testOrder: P.channels_needing_a_test.join(" and "),
+  satLow: pct0(Math.min(...F.channels.map(c => c.saturation_now))), satHigh: pct0(Math.max(...F.channels.map(c => c.saturation_now))),
+  moveSummary: F.channels.filter(c => Math.abs(c.recommended_change) > 0.1)
+    .map(c => (c.recommended_change > 0 ? "more " : "less ") + c.channel.toLowerCase()).join(", "),
+};
+document.querySelectorAll("[data-v]").forEach(e => { e.textContent = V[e.dataset.v] ?? "?"; });
+
+/* 4. decomposition */
+const D = P.decomposition, nW = D.weeks.length;
+MM.lines("#decompChart", { width: 640, height: 400, rightPad: 150, yFmt: MM.cadK, xTitle: "Week",
+  xFmt: i => (D.weeks[Math.round(i)] || "").slice(0, 7),
+  series: [{ name: "Actual sales", color: "#7a8699", points: D.revenue.map((v, i) => [i, v]) },
+           { name: "Base business", color: MM.C.focus, points: D.base.map((v, i) => [i, v]) }] });
+document.getElementById("transformTable").innerHTML = CH.map(c =>
+  `<tr><td>${c}</td><td class="n">${pct0(P.transforms[c].decay)}</td><td class="n">${MM.cadK(P.curve_recovery[c].saturation_weekly_estimated)}</td></tr>`).join("");
+
+/* 5. contribution and ROI (uncalibrated: the standard output) */
+MM.bars("#contribChart", { width: 600, height: 360, fmt: v => pct0(v), maxBar: 40,
+  data: P.uncalibrated.flatMap(r => [
+    { label: r.channel.replace("Paid ", ""), value: r.spend_share, color: MM.C.focus, tip: `<b>${r.channel}</b><br>${pct1(r.spend_share)} of spend` },
+    { label: "", value: r.contribution_share / P.uncalibrated.reduce((a, x) => a + x.contribution_share, 0), color: MM.C.context,
+      tip: `${pct1(r.contribution_share / P.uncalibrated.reduce((a, x) => a + x.contribution_share, 0))} of media-driven sales` }]) });
+document.getElementById("roiTable").innerHTML = P.uncalibrated.map(r =>
+  `<tr><td>${r.channel}</td><td class="n">${MM.cadK(r.spend)}</td><td class="n">$${r.roi.toFixed(2)}</td><td class="n">$${r.marginal_roi.toFixed(2)}</td></tr>`).join("");
+
+/* 6. identification */
+MM.bars("#idChart", { width: 600, height: 360, fmt: v => pct0(v), maxBar: 80,
+  data: idn.starts.map(s => ({ label: s.start.replace(/ (to begin with|like spend)/, "\n$1"), value: s.incremental_share,
+    color: MM.C.accent, tip: `<b>${s.start}</b><br>${MM.cad(s.incremental_revenue)}<br>R² ${s.r2.toFixed(4)}` })) });
+document.getElementById("idTable").innerHTML = idn.starts.map(s =>
+  `<tr><td>${s.start}</td><td class="n">$${(s.incremental_revenue / 1e6).toFixed(0)}M</td><td class="n">${s.r2.toFixed(3)}</td></tr>`).join("");
+
+/* 7. collinearity */
+MM.hbars("#colChart", { width: 560, row: 36, labelWidth: 120, fmt: v => pct0(v),
+  data: CH.map(c => ({ label: c, value: P.collinearity[c].r2_on_base_terms,
+    color: P.collinearity[c].r2_on_base_terms > 0.6 ? MM.C.accent : MM.C.focus })).sort((a, b) => b.value - a.value) });
+
+/* 8. dose response */
+MM.lines("#doseChart", { width: 600, height: 360, rightPad: 120, xFmt: v => v, yFmt: v => pct0(v),
+  xTitle: "Channels with an in-market test",
+  series: [{ name: "Return error", color: MM.C.focus, points: dose.map(r => [r.tests, r.mean_absolute_roi_error]) },
+           { name: "Total error", color: MM.C.accent, points: dose.map(r => [r.tests, Math.abs(r.total_error)]) }] });
+document.getElementById("doseTable").innerHTML = dose.filter(r => r.tests <= 5).map(r =>
+  `<tr class="${r.tests === 5 ? "hl" : ""}"><td>${r.tests}</td><td>${r.tests ? r.channels_tested[r.tests - 1] : "none"}</td><td class="n">${pct0(r.mean_absolute_roi_error)}</td><td class="n">${(r.total_error >= 0 ? "+" : "") + pct0(r.total_error)}</td></tr>`).join("");
+
+/* 9. saturation */
+MM.bars("#satChart", { width: 600, height: 370, fmt: MM.cadK, maxBar: 26, yTitle: "Weekly spend",
+  data: CH.flatMap(c => { const r = P.curve_recovery[c]; return [
+    { label: c.replace("Paid ", ""), value: r.saturation_weekly_mmm_only, color: MM.C.context, tip: `<b>${c}</b><br>Model alone: ${MM.cad(r.saturation_weekly_mmm_only)}` },
+    { label: "", value: r.saturation_weekly_estimated, color: MM.C.focus, tip: `With two-depth tests: ${MM.cad(r.saturation_weekly_estimated)}` },
+    { label: "", value: r.saturation_weekly_true, color: MM.C.accent, tip: `Truth: ${MM.cad(r.saturation_weekly_true)}` }]; }) });
+
+/* 10. response curves */
+document.getElementById("curveGrid").innerHTML = CH.map(c => `<div><div class="chart-title">${c}</div><div id="rc_${c.replace(/ /g, "")}"></div></div>`).join("");
+CH.forEach(c => {
+  const r = P.response_curves[c];
+  MM.lines("#rc_" + c.replace(/ /g, ""), { width: 380, height: 210, rightPad: 18, xFmt: MM.cadK, yFmt: MM.cadK, mark: r.current_weekly_spend,
+    series: [{ name: "", color: MM.C.focus, points: r.spend.map((s, i) => [s, r.with_curve_tests[i]]) },
+             { name: "", color: "#94a3b8", points: r.spend.map((s, i) => [s, r.truth[i]]) }] });
+});
+
+/* 11. plans */
+MM.bars("#planChart", { width: 600, height: 380, fmt: MM.cadK, maxBar: 54,
+  data: plans.filter(p => p.claimed_gain !== null).flatMap(p => [
+    { label: p.plan.replace("Model plus ", "").replace("Model alone, ", "").replace(" tests on every channel", "").replace(/ /g, "\n"), value: p.claimed_gain, color: MM.C.context, tip: `<b>${p.plan}</b><br>Promised ${MM.cad(p.claimed_gain)}` },
+    { label: "", value: p.true_gain, color: p.true_gain > 0 ? MM.C.focus : MM.C.accent, tip: `Actually worth ${MM.cad(p.true_gain)}` }]) });
+document.getElementById("planTable").innerHTML = plans.map(p =>
+  `<tr class="${p.plan.includes("two-depth") ? "hl" : ""}"><td>${p.plan}</td><td class="n">${p.claimed_gain === null ? "n/a" : MM.cadK(p.claimed_gain)}</td><td class="n">${MM.cadK(p.true_gain)}</td></tr>`).join("");
+
+/* 12. the move */
+MM.bars("#moveChart", { width: 600, height: 370, fmt: v => (v >= 0 ? "+" : "") + pct0(v), maxBar: 60,
+  data: F.channels.map(c => ({ label: c.channel.replace("Paid ", ""), value: c.recommended_change,
+    color: c.recommended_change >= 0 ? MM.C.focus : MM.C.accent,
+    tip: `<b>${c.channel}</b><br>${MM.cad(c.recommended_weekly_spend)} a week<br>${(c.recommended_change >= 0 ? "+" : "") + pct1(c.recommended_change)}` })) });
+document.getElementById("moveTable").innerHTML = F.channels.map(c =>
+  `<tr><td>${c.channel}</td><td class="n">${MM.cadK(O.current_allocation[c.channel])}</td><td class="n">${MM.cadK(c.recommended_weekly_spend)}</td><td class="n">$${c.roi.toFixed(2)}</td></tr>`).join("");
+
+/* 13. budget scale */
+MM.lines("#scaleChart", { width: 600, height: 370, rightPad: 130, xFmt: v => "$" + (v / 1e6).toFixed(1) + "M", yFmt: v => "$" + v.toFixed(2),
+  xTitle: "Annual media budget",
+  series: [{ name: "Margin per dollar", color: MM.C.focus, points: P.budget_scenarios.map(s => [s.annual_budget, s.true_margin_roi]) },
+           { name: "Break-even", color: "#94a3b8", points: P.budget_scenarios.map(s => [s.annual_budget, 1]) }] });
+
+document.getElementById("truthTable").innerHTML = F.channels.map(c =>
+  `<tr><td>${c.channel}</td><td class="n">$${c.roi.toFixed(2)}</td><td class="n">$${c.true_roi.toFixed(2)}</td></tr>`).join("");
+</script>
+</body>
+</html>

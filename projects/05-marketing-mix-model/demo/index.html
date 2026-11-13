@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Budget planner · Maple & Main · Krish Dash</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/css/site.css">
+<style>
+  .demo-head { background: linear-gradient(160deg, var(--navy), var(--navy-2)); color: #fff; padding: 44px 0 36px; }
+  .demo-head h1 { font-size: clamp(1.8rem, 4vw, 2.5rem); }
+  .demo-head p { color: #cbd5e1; max-width: 72ch; margin: 12px 0 0; }
+  .panel { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; }
+  .sim { display: grid; grid-template-columns: 360px 1fr; gap: 20px; align-items: start; }
+  .ch { margin-bottom: 14px; }
+  .ch label { display: grid; grid-template-columns: 1fr auto; font-size: .9rem; font-weight: 600; margin-bottom: 4px; }
+  .ch label b { font-variant-numeric: tabular-nums; }
+  .ch input[type=range] { width: 100%; }
+  .ch small { display: block; color: var(--slate); font-size: .76rem; margin-top: 2px; }
+  .sw { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 7px; }
+  .btns { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
+  .btns button { font: inherit; font-size: .85rem; padding: 7px 13px; border-radius: 8px; border: 1px solid #cbd5e1; background: #fff; cursor: pointer; font-weight: 600; }
+  .btns button.primary { background: var(--navy); color: #fff; border-color: var(--navy); }
+  .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 16px; }
+  .kpi { background: var(--bg-alt); border-radius: 8px; padding: 14px; }
+  .kpi span { display: block; font-size: .78rem; color: var(--slate); }
+  .kpi b { display: block; font-size: 1.3rem; margin-top: 2px; font-variant-numeric: tabular-nums; }
+  .kpi.main { background: var(--navy); } .kpi.main span { color: #cbd5e1; } .kpi.main b { color: var(--accent); }
+  .ct { font-weight: 600; font-size: .95rem; } .cn { color: var(--slate); font-size: .8rem; margin-top: 6px; }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  table.t2 { width: 100%; border-collapse: collapse; font-size: .88rem; }
+  table.t2 th { text-align: left; font-size: .72rem; text-transform: uppercase; letter-spacing: .05em; color: var(--slate); border-bottom: 2px solid var(--line); padding: 7px; }
+  table.t2 td { padding: 7px; border-bottom: 1px solid var(--line); } table.t2 .n { text-align: right; font-variant-numeric: tabular-nums; }
+  .warn { background: #fdf1dc; border-left: 4px solid var(--accent); padding: 12px 15px; border-radius: 0 8px 8px 0; font-size: .9rem; margin-top: 14px; }
+  h2.sec { margin-top: 0; }
+  @media (max-width: 900px) { .sim, .two { grid-template-columns: 1fr; } .kpis { grid-template-columns: 1fr 1fr; } }
+</style>
+</head>
+<body>
+<header class="nav"><div class="wrap nav-in"><a class="brand" href="../../../">Krish Dash</a>
+  <nav><a href="../deck/">Deck</a><a href="https://github.com/kcdash/analytics-portfolio/tree/main/projects/05-marketing-mix-model">Code</a><a class="btn btn-sm" href="../../../#work">All projects</a></nav></div></header>
+
+<section class="demo-head"><div class="wrap">
+  <p class="eyebrow">Project 5 · Marketing mix model &amp; budget optimiser</p>
+  <h1>Budget planner</h1>
+  <p>Move the media budget and see what the model says it buys. Then switch to the uncalibrated model and watch the same tool give confident advice that would lose money.</p>
+</div></section>
+
+<main>
+<section class="section" style="padding-top:36px"><div class="wrap">
+  <h2 class="sec">Plan the budget</h2>
+  <div class="sim">
+    <div class="panel">
+      <div class="btns">
+        <button id="b_current">Today's plan</button>
+        <button id="b_opt" class="primary">Optimise</button>
+        <button id="b_reset">Reset</button>
+      </div>
+      <div id="sliders"></div>
+      <div class="cn" id="budgetNote"></div>
+    </div>
+    <div>
+      <div class="kpis">
+        <div class="kpi main"><span>Incremental sales a year</span><b id="k_rev"></b></div>
+        <div class="kpi"><span>Against today's plan</span><b id="k_vs"></b></div>
+        <div class="kpi"><span>Media budget a year</span><b id="k_bud"></b></div>
+        <div class="kpi"><span>Gross margin per dollar</span><b id="k_roi"></b></div>
+      </div>
+      <div class="panel">
+        <div class="ct" id="curveTitle"></div>
+        <div id="curve"></div>
+        <div class="cn">The marker is the spend you have set. Flat means more money buys little; steep means there is headroom.</div>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<section class="section alt"><div class="wrap">
+  <h2 class="sec">Which model are you trusting?</h2>
+  <p class="section-lead">The same planner, driven by two versions of the same model. One has been calibrated with in-market tests at two spend depths; the other has not.</p>
+  <div class="btns" style="margin-bottom:18px">
+    <button id="m_cal" class="primary">Calibrated with tests</button>
+    <button id="m_unc">Model alone, no tests</button>
+  </div>
+  <div class="two">
+    <div class="panel"><div class="ct">What this model recommends</div><div id="recChart"></div>
+      <div class="cn" id="recNote"></div></div>
+    <div class="panel"><div class="ct">What each plan promised, and what it would really have earned</div>
+      <table class="t2" style="margin-top:8px"><thead><tr><th>Plan</th><th class="n">Promised</th><th class="n">Actual</th></tr></thead><tbody id="planTable"></tbody></table>
+      <div class="warn">Promised figures come from the model being used. Actual figures come from the response curves the synthetic data was built with, which is the only way to check whether a reallocation would have worked.</div></div>
+  </div>
+</div></section>
+
+<section class="section"><div class="wrap">
+  <h2 class="sec">Channel detail</h2>
+  <div class="panel" style="overflow-x:auto"><table class="t2" style="min-width:720px"><thead><tr>
+    <th>Channel</th><th class="n">Spend a week</th><th class="n">Share of sales</th><th class="n">Return</th><th class="n">True return</th>
+    <th class="n">Saturation now</th><th class="n">Carry-over</th><th class="n">Hidden by the calendar</th></tr></thead><tbody id="chTable"></tbody></table></div>
+  <p class="section-lead" style="margin-top:14px">"Hidden by the calendar" is how much of a channel's spend pattern can be reproduced from trend, season and holidays alone. The higher it is, the less the model can learn about that channel without an experiment.</p>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <p>Personal demonstration portfolio. All projects use synthetic data created to illustrate methods and contain no client, employer or proprietary information. Not affiliated with or endorsed by any current or former employer or client.</p>
+  <p>© 2026 Krish Dash</p>
+</div></footer>
+
+<script src="../outputs/report_data.js"></script>
+<script src="../../../assets/js/charts.js"></script>
+<script>
+const P = window.P5, $ = id => document.getElementById(id), CH = P.channels, PL = P.planner;
+const COLORS = { "TV": "#2a78d6", "Paid Search": "#eb6834", "Paid Social": "#1baf7a", "Display": "#eda100", "Flyer": "#6250d6", "Email": "#e87ba4" };
+const pct0 = v => Math.round(v * 100) + "%", pct1 = v => (v * 100).toFixed(1) + "%";
+const current = PL.current.slice(), spendNow = current.slice();
+let useCalibrated = true, selected = 0;
+
+/* the fitted curves, evaluated in the browser */
+function lift(i, x, cal) {
+  const beta = cal ? PL.beta[i] : uncalBeta[i], half = cal ? PL.halfs[i] : uncalHalf[i];
+  const ad = x / Math.max(1 - PL.decay[i], 1e-6), s = PL.shape[i];
+  return beta * Math.pow(ad, s) / (Math.pow(ad, s) + Math.pow(half, s));
+}
+/* the uncalibrated model's own curves, rebuilt from the fit output */
+const uncalBeta = CH.map(c => P.uncalibrated.find(r => r.channel === c).beta);
+const uncalHalf = CH.map((c, i) => {
+  const r = P.uncalibrated.find(x => x.channel === c);
+  return r.half_saturation_weekly_spend / Math.max(1 - PL.decay[i], 1e-6);
+});
+const annual = (x, cal) => 52 * PL.base_week * x.reduce((a, v, i) => a + lift(i, v, cal), 0);
+const trueAnnual = x => {
+  let t = 0;
+  CH.forEach((c, i) => {
+    const rc = P.response_curves[c], sp = rc.spend, tr = rc.truth;
+    let k = 0; while (k < sp.length - 2 && sp[k + 1] < x[i]) k++;
+    const f = (x[i] - sp[k]) / Math.max(sp[k + 1] - sp[k], 1e-9);
+    t += tr[k] + f * (tr[k + 1] - tr[k]);
+  });
+  return t;
+};
+
+$("sliders").innerHTML = CH.map((c, i) =>
+  `<div class="ch"><label><span><i class="sw" style="background:${COLORS[c]}"></i>${c}</span><b id="s${i}"></b></label>
+   <input type="range" id="r${i}" min="${Math.round(current[i] * 0.5)}" max="${Math.round(current[i] * 1.5)}" step="250" value="${Math.round(current[i])}">
+   <small id="n${i}"></small></div>`).join("");
+CH.forEach((c, i) => {
+  $("r" + i).addEventListener("input", () => { spendNow[i] = +$("r" + i).value; selected = i; render(); });
+  $("r" + i).addEventListener("focus", () => { selected = i; render(); });
+});
+$("b_current").onclick = () => { CH.forEach((c, i) => spendNow[i] = current[i]); sync(); };
+$("b_reset").onclick = () => { CH.forEach((c, i) => spendNow[i] = current[i]); sync(); };
+$("b_opt").onclick = () => {
+  const budget = current.reduce((a, b) => a + b, 0);
+  const lo = current.map(v => v * 0.5), hi = current.map(v => v * 1.5);
+  let x = current.slice();
+  for (let it = 0; it < 4000; it++) {                      // hill climb: move $250 to wherever it earns most
+    const step = 250;
+    let bestFrom = -1, bestTo = -1, bestGain = 1e-9;
+    for (let a = 0; a < CH.length; a++) {
+      if (x[a] - step < lo[a]) continue;
+      const loss = lift(a, x[a], useCalibrated) - lift(a, x[a] - step, useCalibrated);
+      for (let b = 0; b < CH.length; b++) {
+        if (a === b || x[b] + step > hi[b]) continue;
+        const gain = lift(b, x[b] + step, useCalibrated) - lift(b, x[b], useCalibrated);
+        if (gain - loss > bestGain) { bestGain = gain - loss; bestFrom = a; bestTo = b; }
+      }
+    }
+    if (bestFrom < 0) break;
+    x[bestFrom] -= step; x[bestTo] += step;
+  }
+  CH.forEach((c, i) => spendNow[i] = Math.round(x[i]));
+  sync();
+};
+function sync() { CH.forEach((c, i) => $("r" + i).value = Math.round(spendNow[i])); render(); }
+
+function render() {
+  const budget = spendNow.reduce((a, b) => a + b, 0);
+  const rev = annual(spendNow, useCalibrated), base = annual(current, useCalibrated);
+  CH.forEach((c, i) => {
+    $("s" + i).textContent = MM.cad(spendNow[i]);
+    const ch = spendNow[i] / current[i] - 1;
+    $("n" + i).textContent = (ch === 0 ? "as today" : (ch > 0 ? "+" : "") + pct0(ch) + " against today")
+      + " · saturation " + pct0(spendNow[i] / (spendNow[i] + P.curve_recovery[c].saturation_weekly_estimated));
+  });
+  $("budgetNote").textContent = `Weekly budget ${MM.cad(budget)}, against ${MM.cad(current.reduce((a, b) => a + b, 0))} today. Each channel may move by half its current spend.`;
+  $("k_rev").textContent = MM.cad(rev);
+  $("k_vs").textContent = (rev - base >= 0 ? "+" : "") + MM.cad(rev - base);
+  $("k_bud").textContent = MM.cad(budget * 52);
+  $("k_roi").textContent = "$" + (rev * P.margin_rate / (budget * 52)).toFixed(2);
+  const c = CH[selected], rc = P.response_curves[c];
+  $("curveTitle").textContent = c + ": annual incremental sales against weekly spend";
+  MM.lines("#curve", { width: 740, height: 340, rightPad: 150, xFmt: MM.cadK, yFmt: MM.cadK, mark: spendNow[selected],
+    markLabel: "your plan", xTitle: "Weekly spend",
+    series: [{ name: "Calibrated model", color: MM.C.focus, points: rc.spend.map((s, i) => [s, rc.with_curve_tests[i]]) },
+             { name: "Model alone", color: MM.C.accent, points: rc.spend.map((s, i) => [s, rc.model_only[i]]) },
+             { name: "Truth", color: "#94a3b8", points: rc.spend.map((s, i) => [s, rc.truth[i]]) }] });
+}
+
+function setModel(cal) {
+  useCalibrated = cal;
+  $("m_cal").className = cal ? "primary" : "";
+  $("m_unc").className = cal ? "" : "primary";
+  const plan = P.optimisation.plans[cal ? 3 : 0];
+  MM.bars("#recChart", { width: 520, height: 300, fmt: v => (v >= 0 ? "+" : "") + pct0(v), maxBar: 54,
+    data: CH.map(c => ({ label: c.replace("Paid ", ""), value: plan.change[c],
+      color: plan.change[c] >= 0 ? MM.C.focus : MM.C.accent,
+      tip: `<b>${c}</b><br>${MM.cad(plan.allocation[c])} a week<br>${(plan.change[c] >= 0 ? "+" : "") + pct1(plan.change[c])}` })) });
+  $("recNote").textContent = plan.plan + ": promises " + MM.cad(plan.claimed_gain) + " a year, actually worth " + MM.cad(plan.true_gain) + ".";
+  render();
+}
+$("m_cal").onclick = () => setModel(true);
+$("m_unc").onclick = () => setModel(false);
+
+$("planTable").innerHTML = P.optimisation.plans.map(p =>
+  `<tr><td>${p.plan}</td><td class="n">${p.claimed_gain === null ? "n/a" : MM.cadK(p.claimed_gain)}</td><td class="n" style="color:${p.true_gain < 0 ? "#9a4a0c" : "inherit"}">${MM.cadK(p.true_gain)}</td></tr>`).join("");
+$("chTable").innerHTML = P.final_model.channels.map(r =>
+  `<tr><td><i class="sw" style="background:${COLORS[r.channel]}"></i>${r.channel}</td>
+   <td class="n">${MM.cad(P.optimisation.current_allocation[r.channel])}</td><td class="n">${pct1(r.contribution_share)}</td>
+   <td class="n">$${r.roi.toFixed(2)}</td><td class="n">$${r.true_roi.toFixed(2)}</td><td class="n">${pct0(r.saturation_now)}</td>
+   <td class="n">${pct0(P.transforms[r.channel].decay)}</td><td class="n">${pct0(P.collinearity[r.channel].r2_on_base_terms)}</td></tr>`).join("");
+
+setModel(true);
+</script>
+</body>
+</html>
