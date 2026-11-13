@@ -374,7 +374,7 @@ def main():
     conv[cv] = True
     link = rng.choice(new_c, len(cv), replace=False)
     p_prov = rng.choice(list(PROV), NP_, p=[v[0] for v in PROV.values()])
-    p_prov[cv], p_age[cv] = prov[link], age_i[link]
+    p_prov[cv] = prov[link]      # the prospect keeps their own age band: it drove the conversion
     p_fsa = fsa(rng, p_prov)
     p_fsa[cv] = customers["postal_fsa"].to_numpy()[link]
     p_date = W0 + rng.integers(0, NW * 7 - 30, NP_) * DAY

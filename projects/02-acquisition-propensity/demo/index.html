@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Acquisition simulator · Maple & Main · Krish Dash</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/css/site.css">
+<style>
+  .demo-head { background: linear-gradient(160deg, var(--navy), var(--navy-2)); color: #fff; padding: 44px 0 36px; }
+  .demo-head h1 { font-size: clamp(1.8rem, 4vw, 2.5rem); }
+  .demo-head p { color: #cbd5e1; max-width: 70ch; margin: 12px 0 0; }
+  .panel { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; }
+  .sim { display: grid; grid-template-columns: 320px 1fr; gap: 20px; align-items: start; }
+  .ctl label { display: block; font-weight: 600; font-size: .9rem; margin: 16px 0 6px; }
+  .ctl label:first-child { margin-top: 0; }
+  .ctl select, .ctl input[type=range] { width: 100%; }
+  .ctl select, .ctl input[type=number] { padding: 8px 10px; border: 1px solid #cbd5e1; border-radius: 8px; font: inherit; background: #fff; }
+  .ctl output { float: right; font-weight: 600; color: var(--navy); }
+  .ctl small { display: block; color: var(--slate); font-size: .8rem; margin-top: 4px; line-height: 1.4; }
+  .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .check { display: flex; align-items: center; gap: 8px; font-weight: 500; font-size: .92rem; margin-top: 14px; }
+  .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 16px; }
+  .kpi { background: var(--bg-alt); border-radius: 8px; padding: 14px; }
+  .kpi span { display: block; font-size: .78rem; color: var(--slate); }
+  .kpi b { display: block; font-size: 1.35rem; margin-top: 2px; font-variant-numeric: tabular-nums; }
+  .kpi.main { background: var(--navy); } .kpi.main span { color: #cbd5e1; } .kpi.main b { color: var(--accent); }
+  .ct { font-weight: 600; font-size: .95rem; } .cn { color: var(--slate); font-size: .8rem; margin-top: 6px; }
+  .verdict { border-left: 4px solid var(--accent); background: var(--bg-alt); padding: 14px 16px; border-radius: 0 8px 8px 0; margin-top: 16px; }
+  .why { margin: 14px 0 0; padding: 0; list-style: none; font-size: .9rem; }
+  .why li { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid var(--line); }
+  .why b.up { color: #1f3a5f; } .why b.down { color: #9a4a0c; }
+  table.list { width: 100%; border-collapse: collapse; font-size: .9rem; }
+  table.list th { text-align: left; font-size: .74rem; text-transform: uppercase; letter-spacing: .05em; color: var(--slate); border-bottom: 2px solid var(--line); padding: 8px; }
+  table.list td { padding: 8px; border-bottom: 1px solid var(--line); } table.list .n { text-align: right; font-variant-numeric: tabular-nums; }
+  table.list input { width: 80px; text-align: right; padding: 5px 8px; border: 1px solid #cbd5e1; border-radius: 6px; font: inherit; }
+  h2 { margin-top: 0; }
+  @media (max-width: 900px) { .sim { grid-template-columns: 1fr; } .kpis { grid-template-columns: 1fr 1fr; } }
+</style>
+</head>
+<body>
+<header class="nav"><div class="wrap nav-in"><a class="brand" href="../../../">Krish Dash</a>
+  <nav><a href="../deck/">Deck</a><a href="https://github.com/kcdash/analytics-portfolio/tree/main/projects/02-acquisition-propensity">Code</a><a class="btn btn-sm" href="../../../#work">All projects</a></nav></div></header>
+
+<section class="demo-head"><div class="wrap">
+  <p class="eyebrow">Project 2 · Acquisition propensity &amp; look-alike</p>
+  <h1>Acquisition simulator</h1>
+  <p>Score a single prospect, then set an outreach budget and see how many customers a ranked list finds. All results use prospects the model never saw.</p>
+</div></section>
+
+<main>
+<section class="section" style="padding-top:36px"><div class="wrap">
+  <h2>Score a prospect</h2>
+  <div class="sim">
+    <div class="panel ctl">
+      <label for="f_src">Lead source</label><select id="f_src"></select>
+      <div class="row2">
+        <div><label for="f_age">Age band</label><select id="f_age"></select></div>
+        <div><label for="f_inc">Household income</label><select id="f_inc"></select></div>
+      </div>
+      <label for="f_vis">Web visits in the last 30 days <output id="o_vis"></output></label><input type="range" id="f_vis" min="0" max="8" value="1">
+      <label for="f_dist">Distance to nearest store <output id="o_dist"></output></label><input type="range" id="f_dist" min="0" max="60" value="12">
+      <label class="check"><input type="checkbox" id="f_kids"> Children at home</label>
+      <label class="check"><input type="checkbox" id="f_email"> Has opened a marketing email</label>
+    </div>
+    <div>
+      <div class="kpis">
+        <div class="kpi main"><span>Chance of converting</span><b id="s_p"></b></div>
+        <div class="kpi"><span>Score decile (1 is best)</span><b id="s_dec"></b></div>
+        <div class="kpi"><span>Expected first-year margin</span><b id="s_ev"></b></div>
+        <div class="kpi"><span>Pays back if outreach causes</span><b id="s_be"></b></div>
+      </div>
+      <div class="panel">
+        <div class="ct">What moves this prospect's score</div>
+        <ul class="why" id="s_why"></ul>
+        <div class="verdict" id="s_verdict"></div>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<section class="section alt"><div class="wrap">
+  <h2>Set the outreach budget</h2>
+  <div class="sim">
+    <div class="panel ctl">
+      <label for="rank">How is the list ordered?</label><select id="rank"></select>
+      <label for="share">Share of prospects contacted <output id="o_share"></output></label><input type="range" id="share" min="5" max="100" step="5" value="40">
+      <label for="inc">Conversions caused by outreach <output id="o_inc"></output></label><input type="range" id="inc" min="10" max="100" step="5" value="100">
+      <small>Unknown. No holdout has been run, so this is the assumption to test. Lower it to see which budgets still pay back.</small>
+      <label for="cost">Outreach cost per prospect <output id="o_cost"></output></label><input type="range" id="cost" min="1" max="25" step="0.5" value="6">
+      <label for="val">First-year margin per new customer <output id="o_val"></output></label><input type="range" id="val" min="150" max="800" step="10">
+      <small>Measured average is shown by default.</small>
+    </div>
+    <div>
+      <div class="kpis">
+        <div class="kpi main"><span>Net first-year return</span><b id="k_net"></b></div>
+        <div class="kpi"><span>Versus a random list</span><b id="k_vs"></b></div>
+        <div class="kpi"><span>Prospects contacted a year</span><b id="k_con"></b></div>
+        <div class="kpi"><span>Customers who convert</span><b id="k_cust"></b></div>
+        <div class="kpi"><span>Caused by outreach</span><b id="k_inc"></b></div>
+        <div class="kpi"><span>Outreach cost</span><b id="k_cost"></b></div>
+        <div class="kpi"><span>Cost per caused customer</span><b id="k_cac"></b></div>
+        <div class="kpi"><span>Best share to contact</span><b id="k_best"></b></div>
+      </div>
+      <div class="panel">
+        <div class="ct">Net first-year return, by share of prospects contacted</div>
+        <div id="curve"></div>
+        <div class="cn">CAD a year. Return is customers caused by outreach times first-year margin, less outreach cost. The vertical line is your selection.</div>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<section class="section"><div class="wrap">
+  <h2>Lead-source costs</h2>
+  <p class="section-lead">Cost per lead is an assumption. Enter your own prices to see what each source costs per new customer.</p>
+  <div class="panel" style="overflow-x:auto"><table class="list" style="min-width:640px"><thead><tr><th>Lead source</th><th class="n">Prospects a year</th><th class="n">Converts</th><th class="n">Cost per lead</th><th class="n">Cost per customer</th><th class="n">First-year margin per $1</th></tr></thead><tbody id="src"></tbody></table></div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <p>Personal demonstration portfolio. All projects use synthetic data created to illustrate methods and contain no client, employer or proprietary information. Not affiliated with or endorsed by any current or former employer or client.</p>
+  <p>© 2026 Krish Dash</p>
+</div></footer>
+
+<script src="../outputs/report_data.js"></script>
+<script src="../../../assets/js/charts.js"></script>
+<script>
+const P = window.P2, $ = id => document.getElementById(id), n0 = v => Math.round(v).toLocaleString("en-CA");
+const eff = Object.fromEntries(P.effects.map(e => [e.term, e.estimate])), V0 = P.value.first_year_margin_mean;
+
+/* ---- prospect scorer ---- */
+const fill = (id, key) => { $(id).innerHTML = [...P.levels[key]].sort((a, b) => key === "lead_source" ? a.localeCompare(b) : 0).map(v => `<option>${v}</option>`).join(""); };
+fill("f_src", "lead_source"); fill("f_age", "age_band"); fill("f_inc", "household_income_band");
+$("f_age").innerHTML = ["18-24", "25-34", "35-44", "45-54", "55-64", "65+"].map(v => `<option>${v}</option>`).join("");
+$("f_src").value = "Web lead"; $("f_age").value = "35-44"; $("f_inc").value = "75-100k";
+function score() {
+  const vis = +$("f_vis").value, dist = +$("f_dist").value;
+  $("o_vis").textContent = vis === 8 ? "8 or more" : vis; $("o_dist").textContent = dist + " km";
+  const parts = [
+    ["Lead source: " + $("f_src").value, eff["lead_source=" + $("f_src").value] || 0],
+    ["Age " + $("f_age").value, eff["age_band=" + $("f_age").value] || 0],
+    ["Income " + $("f_inc").value, eff["household_income_band=" + $("f_inc").value] || 0],
+    [vis + " web visit" + (vis === 1 ? "" : "s"), eff.web_visits_capped * vis],
+    [dist + " km from a store", eff.distance_to_store_km * dist / 10],
+    [$("f_kids").checked ? "Children at home" : "No children at home", $("f_kids").checked ? eff.has_children : 0],
+    [$("f_email").checked ? "Opened a marketing email" : "No email opened", $("f_email").checked ? eff.email_engaged_flag : 0]];
+  const z = P.scorecard.intercept + parts.reduce((a, p) => a + p[1], 0), p = 1 / (1 + Math.exp(-z));
+  const dec = 10 - P.decile_cuts.filter(c => p > c).length, be = P.cost_per_contact / (p * V0);
+  $("s_p").textContent = MM.pct(p); $("s_dec").textContent = dec; $("s_ev").textContent = "$" + (p * V0).toFixed(0);
+  $("s_be").textContent = be > 1 ? "Never" : MM.pct(be, 0);
+  $("s_why").innerHTML = parts.map(([l, v]) => `<li><span>${l}</span><b class="${v > 0.005 ? "up" : v < -0.005 ? "down" : ""}">${Math.abs(v) < 0.005 ? "No effect" : (v > 0 ? "Raises" : "Lowers") + " odds by " + MM.pct(Math.abs(Math.exp(v) - 1), 0)}</b></li>`).join("");
+  $("s_verdict").innerHTML = dec <= 3 ? "<b>Contact first.</b> Top-third prospect: outreach pays back even if it causes only a small share of conversions."
+    : dec <= 7 ? "<b>Contact if budget allows.</b> Mid-ranked prospect: pays back under most assumptions."
+    : "<b>Hold until the holdout test reports.</b> Low-ranked prospect: outreach pays back only if it causes a large share of conversions.";
+}
+["f_src", "f_age", "f_inc", "f_vis", "f_dist", "f_kids", "f_email"].forEach(id => $(id).addEventListener("input", score));
+score();
+
+/* ---- budget simulator ---- */
+const names = ["Propensity scorecard", "Look-alike index", "Random list"], total = P.curves["Random list"][19], scale = P.converters_per_year / total.converters;
+$("rank").innerHTML = names.map(n => `<option>${n}</option>`).join("");
+$("val").value = Math.round(V0 / 10) * 10;
+function econ(pt, a, c, v) {
+  const contacts = pt.contacts * scale, cust = pt.converters * scale;
+  return { contacts, cust, caused: cust * a, cost: contacts * c, net: cust * a * v - contacts * c };
+}
+function sim() {
+  const share = +$("share").value, a = $("inc").value / 100, c = +$("cost").value, v = +$("val").value, r = $("rank").value;
+  $("o_share").textContent = share + "%"; $("o_inc").textContent = $("inc").value + "%"; $("o_cost").textContent = "$" + c.toFixed(2); $("o_val").textContent = "$" + v;
+  const at = n => econ(P.curves[n].find(p => p.share === share), a, c, v), e = at(r), base = at("Random list");
+  const best = P.curves[r].map(p => [p.share, econ(p, a, c, v).net]).reduce((b, x) => x[1] > b[1] ? x : b);
+  $("k_net").textContent = MM.cad(e.net); $("k_vs").textContent = (e.net - base.net >= 0 ? "+" : "") + MM.cad(e.net - base.net);
+  $("k_con").textContent = n0(e.contacts); $("k_cust").textContent = n0(e.cust); $("k_inc").textContent = n0(e.caused);
+  $("k_cost").textContent = MM.cad(e.cost); $("k_cac").textContent = "$" + (e.cost / e.caused).toFixed(0); $("k_best").textContent = best[1] > 0 ? best[0] + "%" : "None";
+  MM.lines("#curve", { width: 760, height: 340, rightPad: 160, xFmt: x => x + "%", yFmt: MM.cadK, xTitle: "Share of prospects contacted", mark: share,
+    series: [["Propensity scorecard", MM.C.focus], ["Look-alike index", "#1baf7a"], ["Random list", "#94a3b8"]].map(([k, col]) =>
+      ({ name: k, color: col, points: [[0, 0]].concat(P.curves[k].map(p => [p.share, econ(p, a, c, v).net])) })) });
+  src();
+}
+["rank", "share", "inc", "cost", "val"].forEach(id => $(id).addEventListener("input", sim));
+
+/* ---- lead sources ---- */
+const cpl = Object.assign({}, P.cost_per_lead);
+function src() {
+  const c = +$("cost").value, v = +$("val").value;
+  $("src").innerHTML = P.sources.map(s => { const cac = (cpl[s.lead_source] + c) / s.conversion_rate;
+    return `<tr><td>${s.lead_source}</td><td class="n">${n0(s.prospects_per_year)}</td><td class="n">${MM.pct(s.conversion_rate)}</td>
+      <td class="n">$ <input type="number" min="0" step="0.5" value="${cpl[s.lead_source]}" data-s="${s.lead_source}"></td><td class="n">$${cac.toFixed(0)}</td><td class="n">$${(v / cac).toFixed(2)}</td></tr>`; }).join("");
+  document.querySelectorAll("#src input").forEach(i => i.addEventListener("change", () => { cpl[i.dataset.s] = +i.value || 0; src(); }));
+}
+sim();
+</script>
+</body>
+</html>

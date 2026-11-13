@@ -10,7 +10,7 @@ Python, a README with model card or QC log, and an interactive or live demo.
 | # | Project | Pillar | Status |
 |---|---|---|---|
 | 1 | [Churn & retention value](projects/01-churn-retention/) | Predictive Modelling | Live |
-| 2 | Acquisition propensity & look-alike | Predictive Modelling | Planned |
+| 2 | [Acquisition propensity & look-alike](projects/02-acquisition-propensity/) | Predictive Modelling | Live |
 | 3 | Segmentation & personas | Customer & Marketing Science | Planned |
 | 4 | Demand forecasting | Forecasting & Optimization | Planned |
 | 5 | Marketing mix model & budget optimizer | Customer & Marketing Science | Planned |

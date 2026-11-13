@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Acquisition propensity & look-alike · Maple & Main · Krish Dash</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/css/deck.css">
+</head>
+<body>
+<div class="deck-bar"><span>Acquisition propensity &amp; look-alike · Maple &amp; Main</span><a href="deck.pdf">Download PDF</a><a href="../demo/">Open the simulator</a><a href="../../../">Portfolio</a></div>
+
+<section class="slide title-slide">
+  <div class="kicker">Maple &amp; Main · Customer acquisition</div>
+  <h1>More new customers from the same outreach budget</h1>
+  <p>A propensity scorecard that finds <span data-v="extraPct"></span> more customers at a fixed budget, and the one number to measure before spending more.</p>
+  <div class="foot"><span>Krish Dash · Personal demonstration portfolio</span><span>Synthetic data. No client, employer or proprietary information.</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">Executive summary</div>
+  <h2>Rank prospects by propensity now. Test what outreach causes before raising the budget.</h2>
+  <div class="body cols-3" style="margin-top:50px;flex:0 0 auto">
+    <div class="stat"><b data-v="extraCust"></b><span>more new customers a year when outreach reaches 40% of prospects chosen by the scorecard instead of at random. Worth <span data-v="extraMargin"></span> in first-year margin.</span></div>
+    <div class="stat"><b data-v="ratio"></b><span>The top tenth of prospects converts at <span data-v="topRate"></span>, the bottom tenth at <span data-v="botRate"></span>. A simple scorecard captures all of the signal the data holds.</span></div>
+    <div class="stat"><b data-v="beBottom"></b><span>of bottom-tenth conversions must be caused by outreach for those contacts to pay back. Nobody has measured that share.</span></div>
+  </div>
+  <div class="callout" style="margin-top:54px;font-size:19px;padding:22px 26px"><b>Recommendation:</b> use the scorecard to order the outreach list today, buy lead lists filtered on profile instead of dropping sources, and run a 10% holdout for two quarters to learn how many conversions outreach really causes.</div>
+  <div class="foot"><span>Acquisition propensity &amp; look-alike</span><span>2</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">Approach</div>
+  <h2>From a prospect list to a budget decision</h2>
+  <p class="sub">Maple &amp; Main collects about <span data-v="perYear"></span> prospects a year from five lead sources. About one in ten becomes a loyalty member within 45 days.</p>
+  <div class="body" style="margin-top:30px">
+    <div class="flow" style="grid-template-columns:repeat(4,1fr)">
+      <div><b>1. Who converts?</b>Three ranking methods compared on a later period: a scorecard, gradient boosting, and a look-alike index.<small>SQL · Python · SAS</small></div>
+      <div><b>2. What is a customer worth?</b>First-year margin measured for <span data-v="valN"></span> prospects who became customers, including those who never ordered.<small>Linked to 2.3M orders</small></div>
+      <div><b>3. What does a ranked list buy?</b>Customers found at every budget level, against a random list.<small>Out-of-time test, <span data-v="testN"></span> prospects</small></div>
+      <div><b>4. What is still unknown?</b>Whether outreach causes the conversion. The break-even is worked out for each score band, with the test to measure it.<small>Sensitivity and test design</small></div>
+    </div>
+    <table class="t" style="margin-top:6px">
+      <tr><th>Data used</th><th>Checks before modelling</th><th>How results were validated</th></tr>
+      <tr><td>150,000 prospects with lead source, profile and web behaviour, linked to the customer and order files</td>
+          <td><span data-v="dropped"></span> prospects removed because their 45-day conversion window was not fully observed; eight integrity checks passed</td>
+          <td>Trained on 2024 to September 2025, tested on the following year, and compared with the conversion rule built into the data</td></tr>
+    </table>
+  </div>
+  <div class="foot"><span>Acquisition propensity &amp; look-alike</span><span>3</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">What drives conversion</div>
+  <h2>Email engagement, lead source and distance to a store matter most</h2>
+  <div class="body cols-2" style="grid-template-columns:1.5fr 1fr">
+    <div>
+      <div id="forest"></div>
+      <p class="chart-note">Effect on the log-odds of converting, with 95% intervals. Diamonds show the true effect built into the synthetic data.</p>
+    </div>
+    <div>
+      <ul style="font-size:16px">
+        <li>A prospect who has opened a marketing email has about <b><span data-v="orEmail"></span> times</b> the odds of converting.</li>
+        <li>Referrals and web leads convert best. Purchased lists convert worst.</li>
+        <li>Every 10 km from a store cuts the odds by about <b><span data-v="distCut"></span></b>.</li>
+        <li>Ages 25 to 44, households with children and higher incomes all convert more.</li>
+      </ul>
+      <div class="callout" style="margin-top:14px">All <span data-v="effN"></span> estimated effects fall within their margin of error of the true value. The scorecard has learned the real mechanism, not noise.</div>
+    </div>
+  </div>
+  <div class="foot"><span>Acquisition propensity &amp; look-alike</span><span>4</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">Model performance</div>
+  <h2>An AUC of <span data-v="auc"></span> looks modest. It is also the most this data can give.</h2>
+  <div class="body cols-2">
+    <div>
+      <div class="chart-title">Conversion rate by score decile, prospects from October 2025 to September 2026</div>
+      <div id="liftChart"></div>
+      <p class="chart-note">Decile 1 is the highest score. Average conversion is <span data-v="avgRate"></span>.</p>
+    </div>
+    <div>
+      <table class="t">
+        <tr><th>Ranking method</th><th class="n">AUC</th><th class="n">Share of achievable signal</th></tr>
+        <tr><td>Web visits only</td><td class="n" data-v="aucRule"></td><td class="n" data-v="sigRule"></td></tr>
+        <tr><td>Look-alike index</td><td class="n" data-v="aucLook"></td><td class="n" data-v="sigLook"></td></tr>
+        <tr><td>Gradient boosting</td><td class="n" data-v="aucGbm"></td><td class="n" data-v="sigGbm"></td></tr>
+        <tr class="hl"><td>Propensity scorecard</td><td class="n" data-v="auc"></td><td class="n" data-v="sigCard"></td></tr>
+        <tr><td>Ceiling: the true conversion rule</td><td class="n" data-v="aucCeil"></td><td class="n">100%</td></tr>
+      </table>
+      <ul style="margin-top:16px;font-size:15.5px">
+        <li>Conversion is partly chance. Even a perfect model would score <span data-v="aucCeil"></span> here.</li>
+        <li>The more complex model does slightly worse than the scorecard. More modelling will not help; new data might.</li>
+        <li>Conversion has been rising, so scores read low: <span data-v="predAfter"></span> predicted against <span data-v="avgRate"></span> actual. The ranking is unaffected; the baseline needs a quarterly refresh.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot"><span>Acquisition propensity &amp; look-alike</span><span>5</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">Business case</div>
+  <h2>At the same budget, the ranked list finds <span data-v="extraCust"></span> more customers a year</h2>
+  <div class="body cols-2">
+    <div>
+      <div class="chart-title">New customers found, by share of prospects contacted</div>
+      <div id="gainChart"></div>
+      <p class="chart-note">Prospects from the test year. The look-alike index sits almost exactly on the scorecard line.</p>
+    </div>
+    <div>
+      <table class="t">
+        <tr><th>Prospects contacted</th><th class="n">Random list</th><th class="n">Scorecard</th><th class="n">Extra first-year margin</th></tr>
+        <tbody id="budgetTable"></tbody>
+      </table>
+      <p class="chart-note">Customers a year. Margin uses the measured <span data-v="value"></span> first-year margin per new customer.</p>
+      <div class="callout" style="margin-top:14px">At 40% reach, outreach cost per new customer falls from <span data-v="cpcRandom"></span> to <span data-v="cpcCard"></span>. The look-alike index does as well as the scorecard, so a ranked list is possible even without records of who did not convert.</div>
+    </div>
+  </div>
+  <div class="foot"><span>Acquisition propensity &amp; look-alike</span><span>6</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">Lead sources</div>
+  <h2>Profile matters more than source: a good purchased-list name beats a weak referral</h2>
+  <div class="body cols-even">
+    <div>
+      <div class="chart-title">Conversion rate by lead source and score band</div>
+      <table class="t" style="margin-top:8px">
+        <tr><th>Lead source</th><th class="n">Bottom third</th><th class="n">Middle third</th><th class="n">Top third</th></tr>
+        <tbody id="mixTable"></tbody>
+      </table>
+      <p class="chart-note">Score band is the scorecard third across all prospects.</p>
+    </div>
+    <div>
+      <div class="chart-title">Cost to acquire a customer, by source</div>
+      <table class="t" style="margin-top:8px">
+        <tr><th>Lead source</th><th class="n">Converts</th><th class="n">Cost per lead</th><th class="n">Cost per customer</th></tr>
+        <tbody id="srcTable"></tbody>
+      </table>
+      <p class="chart-note">Cost per lead is an assumption, not data. Cost per customer adds <span data-v="cpc"></span> of outreach per prospect. Change both in the simulator.</p>
+      <div class="callout" style="margin-top:12px">Cutting purchased lists would lose good prospects. Buying them filtered on income, age, children and distance keeps the low price and lifts conversion.</div>
+    </div>
+  </div>
+  <div class="foot"><span>Acquisition propensity &amp; look-alike</span><span>7</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">The number nobody has measured</div>
+  <h2>Every contact pays back only if outreach causes the conversion</h2>
+  <div class="body cols-2">
+    <div>
+      <div class="chart-title">Share of conversions outreach must cause for a contact to break even</div>
+      <div id="beChart"></div>
+      <p class="chart-note">By score decile. Break-even is the <span data-v="cpc"></span> contact cost divided by conversion rate times <span data-v="value"></span> first-year margin.</p>
+    </div>
+    <div>
+      <p style="font-size:16px">Some prospects would have joined anyway. The data records who converted, not who converted <i>because</i> they were contacted. There has never been a holdout.</p>
+      <table class="t">
+        <tr><th>If outreach causes</th><th class="n">Net a year, contact all</th><th class="n">Deciles losing money</th></tr>
+        <tbody id="incTable"></tbody>
+      </table>
+      <div class="callout" style="margin-top:14px">The top deciles are safe under almost any assumption. The case for contacting the bottom third rests on a number that has not been measured.</div>
+    </div>
+  </div>
+  <div class="foot"><span>Acquisition propensity &amp; look-alike</span><span>8</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">Test design</div>
+  <h2>A 10% holdout for two quarters settles it</h2>
+  <div class="body cols-2">
+    <div>
+      <div class="chart-title">Smallest effect the test can detect, in conversion points</div>
+      <table class="t" style="margin-top:8px">
+        <tr><th>Holdout share</th><th class="n">One quarter</th><th class="n">Two quarters</th><th class="n">One year</th></tr>
+        <tbody id="mdeTable"></tbody>
+      </table>
+      <p class="chart-note">80% power, 5% two-sided significance, at <span data-v="perYear"></span> prospects a year and a <span data-v="avgRate"></span> conversion rate. In brackets: the smallest share of conversions caused by outreach that the test would detect.</p>
+    </div>
+    <div>
+      <ul style="font-size:16px">
+        <li><b>Design:</b> hold back a random 10% of prospects from outreach for 26 weeks. Compare 45-day conversion.</li>
+        <li><b>What it answers:</b> whether outreach causes at least <span data-v="mdeInc"></span> of conversions, and how that varies by score band.</li>
+        <li><b>Cost:</b> about <span data-v="heldBack"></span> prospects go uncontacted. If outreach is fully effective, that forgoes roughly <span data-v="testCost"></span> of first-year margin, less the contact cost saved.</li>
+        <li><b>Decision rule:</b> expand outreach to every score band whose measured incremental value exceeds the contact cost.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot"><span>Acquisition propensity &amp; look-alike</span><span>9</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">Recommendations</div>
+  <h2>Four actions</h2>
+  <div class="body" style="gap:0;margin-top:20px;display:block">
+    <div class="act"><i>1</i><div><b>Order the outreach list by the scorecard</b><span>It is a 17-term formula that runs in SQL. Refresh the baseline every quarter because conversion is drifting up.</span></div><em><span data-v="extraMargin"></span> a year<br><span style="font-weight:400;font-size:13px;color:#64748b">at 40% reach</span></em></div>
+    <div class="act"><i>2</i><div><b>Buy lead lists on profile, not just price</b><span>Filter purchased and partner lists on income, age, children and distance to a store before buying.</span></div><em>Depends on list pricing</em></div>
+    <div class="act"><i>3</i><div><b>Run the 10% holdout for two quarters</b><span>Until then, treat any plan to extend outreach to low-scoring prospects as unproven.</span></div><em>Decides the budget</em></div>
+    <div class="act"><i>4</i><div><b>Stop tuning the model; add new signals</b><span>The scorecard already captures all the signal in these inputs. Product interest, basket intent or postal-code demographics are the way to a better ranking.</span></div><em>Raises the ceiling</em></div>
+  </div>
+  <div class="foot"><span>Acquisition propensity &amp; look-alike</span><span>10</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">Appendix</div>
+  <h2>Method, assumptions and limits</h2>
+  <div class="body cols-even" style="font-size:14.5px;gap:48px">
+    <div>
+      <p><b>Population.</b> Prospects first contacted from 1 January 2024 to 15 September 2026. Later prospects are excluded because conversion can take 45 days.</p>
+      <p><b>Target.</b> Became a loyalty member within 45 days of first contact.</p>
+      <p><b>Validation.</b> Trained on <span data-v="trainN"></span> prospects to September 2025, tested on <span data-v="testN"></span> from the following year.</p>
+      <p><b>Scorecard.</b> Unregularised logistic regression on lead source, age band, income band, web visits (capped at 8), distance, children and email engagement.</p>
+      <p><b>Look-alike index.</b> For each trait, the share of converters with it divided by the share of all prospects with it; a prospect's score is the product of its indices.</p>
+      <p><b>Customer value.</b> Mean first-year margin of converted prospects with a full year of orders. <span data-v="never"></span> never ordered and are included at zero.</p>
+    </div>
+    <div>
+      <p><b>Assumed, not measured.</b> Outreach cost of <span data-v="cpc"></span> per prospect, and cost per lead by source. Both can be changed in the simulator.</p>
+      <p><b>Not known.</b> How many conversions outreach causes. All "extra customer" figures compare ranked and random lists of contacted prospects and assume outreach is what converts them.</p>
+      <p><b>Limits.</b> First-year margin understates lifetime value. Higher-scoring prospects become slightly more valuable customers (about 9% between bottom and top third); a single average value is used.</p>
+      <p><b>Synthetic data.</b> Maple &amp; Main is fictional. The data was generated with a known conversion rule, which is why the model can be compared with the truth. Figures illustrate the method, not any real company.</p>
+      <p><b>Code.</b> SQL, Python and SAS, with a model card and QC log, are in the project repository.</p>
+    </div>
+  </div>
+  <div class="foot"><span>Acquisition propensity &amp; look-alike</span><span>11</span></div>
+</section>
+
+<script src="../outputs/report_data.js"></script>
+<script src="../../../assets/js/charts.js"></script>
+<script>
+const P = window.P2, n0 = v => Math.round(v).toLocaleString("en-CA"), M = P.models, gt = P.ground_truth, sig = gt.share_of_signal_captured;
+const b40 = P.budget_scenarios.find(b => b.share === 40), dec = P.deciles, eff = Object.fromEntries(P.effects.map(e => [e.term, e]));
+const td = P.test_design.find(t => t.holdout_share === 0.1 && t.weeks === 26), dol = v => "$" + v.toFixed(0);
+const V = {
+  extraPct: MM.pct(b40.extra_customers / b40.customers_random, 0), extraCust: n0(b40.extra_customers), extraMargin: MM.cadK(b40.extra_first_year_margin),
+  ratio: (M.scorecard.top_decile_rate / M.scorecard.bottom_decile_rate).toFixed(0) + "x", topRate: MM.pct(M.scorecard.top_decile_rate, 0), botRate: MM.pct(M.scorecard.bottom_decile_rate, 0),
+  beBottom: MM.pct(dec[9].breakeven_incrementality, 0), perYear: n0(Math.round(P.prospects_per_year / 1000) * 1000), valN: n0(P.value.customers_measured),
+  testN: n0(P.rows.test), trainN: n0(P.rows.train), dropped: n0(P.qc["dropped: first contact before 2024-01-01 (converters only)"] + P.qc["dropped: first contact after 2026-09-15 (conversion window still open)"]),
+  orEmail: Math.exp(eff.email_engaged_flag.estimate).toFixed(1), distCut: MM.pct(1 - Math.exp(eff.distance_to_store_km.estimate), 0),
+  effN: gt.effects_within_95pct_interval === gt.effects_total ? gt.effects_total : gt.effects_within_95pct_interval + " of " + gt.effects_total,
+  auc: M.scorecard.auc.toFixed(2), aucRule: M.web_visits_rule.auc.toFixed(2), aucLook: M.lookalike.auc.toFixed(2), aucGbm: M.boosting.auc.toFixed(2), aucCeil: gt.auc_ceiling.toFixed(2),
+  sigRule: MM.pct(sig.web_visits_rule, 0), sigLook: MM.pct(sig.lookalike, 0), sigGbm: MM.pct(sig.boosting, 0), sigCard: MM.pct(Math.min(1, sig.scorecard), 0),
+  avgRate: MM.pct(P.conversion_rate.test), predAfter: MM.pct(P.scorecard.mean_predicted_after_refresh),
+  value: dol(P.value.first_year_margin_mean), cpcRandom: dol(b40.cost_per_customer_random), cpcCard: dol(b40.cost_per_customer_scorecard), cpc: "$" + P.cost_per_contact.toFixed(2),
+  mdeInc: MM.pct(td.smallest_incrementality_detectable, 0), heldBack: n0(Math.round(td.holdout_n / 100) * 100),
+  testCost: MM.cadK(td.holdout_n * P.conversion_rate.test * P.value.first_year_margin_mean), never: MM.pct(P.value.never_ordered, 0),
+};
+document.querySelectorAll("[data-v]").forEach(e => { e.textContent = V[e.dataset.v] ?? "?"; });
+
+MM.forest("#forest", { width: 640, row: 21, labelWidth: 235, legend: ["Estimate", "True effect"], xTitle: "Change in log-odds of converting",
+  data: P.effects.map(e => ({ label: e.label, value: e.estimate, lo: e.estimate - 1.96 * e.se, hi: e.estimate + 1.96 * e.se, ref: e.true })) });
+MM.bars("#liftChart", { width: 640, height: 390, fmt: v => MM.pct(v, 0), xTitle: "Score decile",
+  data: P.lift.map(d => ({ label: d.decile, value: d.conversion_rate, color: d.decile <= 3 ? MM.C.focus : MM.C.context,
+    tip: `<b>Decile ${d.decile}</b><br>Converts ${MM.pct(d.conversion_rate)}<br>${d.lift.toFixed(1)}x average<br>Cumulative capture ${MM.pct(d.cum_capture, 0)}` })) });
+const scale = P.converters_per_year / P.curves["Random list"][19].converters;
+MM.lines("#gainChart", { width: 640, height: 390, rightPad: 150, xFmt: v => v + "%", yFmt: v => n0(v), xTitle: "Share of prospects contacted", mark: 40,
+  series: [["Propensity scorecard", MM.C.focus], ["Look-alike index", "#1baf7a"], ["Random list", "#94a3b8"]].map(([k, c]) =>
+    ({ name: k, color: c, points: [[0, 0]].concat(P.curves[k].map(p => [p.share, p.converters * scale])) })) });
+document.getElementById("budgetTable").innerHTML = P.budget_scenarios.map(b =>
+  `<tr class="${b.share === 40 ? "hl" : ""}"><td>${b.share}% (${n0(b.contacts_per_year)})</td><td class="n">${n0(b.customers_random)}</td><td class="n">${n0(b.customers_scorecard)}</td><td class="n">${MM.cadK(b.extra_first_year_margin)}</td></tr>`).join("");
+const bands = ["Bottom third", "Middle third", "Top third"], srcs = [...new Set(P.source_by_score.map(r => r.lead_source))];
+document.getElementById("mixTable").innerHTML = srcs.map(s => `<tr><td>${s}</td>` + bands.map(b => {
+  const r = P.source_by_score.find(x => x.lead_source === s && x.band === b);
+  return `<td class="n" style="background:rgba(31,58,95,${(r.mean * 2.2).toFixed(2)});color:${r.mean > 0.13 ? "#fff" : "inherit"}">${MM.pct(r.mean)}</td>`; }).join("") + "</tr>").join("");
+document.getElementById("srcTable").innerHTML = [...P.sources].sort((a, b) => a.cost_per_customer - b.cost_per_customer).map(s =>
+  `<tr><td>${s.lead_source}</td><td class="n">${MM.pct(s.conversion_rate)}</td><td class="n">$${s.cost_per_lead.toFixed(0)}</td><td class="n">$${s.cost_per_customer.toFixed(0)}</td></tr>`).join("");
+MM.bars("#beChart", { width: 640, height: 380, fmt: v => MM.pct(v, 0), xTitle: "Score decile",
+  data: dec.map(d => ({ label: d.decile, value: d.breakeven_incrementality, color: d.decile >= 8 ? MM.C.accent : MM.C.context,
+    tip: `<b>Decile ${d.decile}</b><br>Converts ${MM.pct(d.conversion_rate)}<br>Breaks even if outreach causes ${MM.pct(d.breakeven_incrementality, 0)} of conversions` })) });
+document.getElementById("incTable").innerHTML = P.incrementality_scenarios.map(s =>
+  `<tr><td>${MM.pct(s.incrementality, 0)} of conversions</td><td class="n">${MM.cadK(s.net_contact_all)}</td><td class="n">${s.deciles_losing_money}</td></tr>`).join("");
+document.getElementById("mdeTable").innerHTML = [0.05, 0.1, 0.2].map(h => `<tr class="${h === 0.1 ? "hl" : ""}"><td>${MM.pct(h, 0)}</td>` + [13, 26, 52].map(w => {
+  const t = P.test_design.find(x => x.holdout_share === h && x.weeks === w);
+  return `<td class="n">${(t.mde_points * 100).toFixed(1)} (${MM.pct(t.smallest_incrementality_detectable, 0)})</td>`; }).join("") + "</tr>").join("");
+</script>
+</body>
+</html>

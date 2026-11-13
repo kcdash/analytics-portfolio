@@ -129,8 +129,39 @@ const MM = (() => {
     hit.addEventListener("mouseleave", () => { mark.setAttribute("visibility", "hidden"); tip(); });
   }
 
+  /* Forest plot: estimate with interval per row, optional reference marker. data: [{label, value, lo, hi, ref, tip}] */
+  function forest(target, o) {
+    const w = o.width || 640, row = o.row || 24, m = { t: 22, r: 16, b: o.xTitle ? 44 : 26, l: o.labelWidth || 230 };
+    const h = m.t + m.b + row * o.data.length, s = svgIn(target, w, h), fmt = o.fmt || (v => v.toFixed(2));
+    const all = o.data.flatMap(d => [d.lo, d.hi, d.ref ?? 0, 0]);
+    let lo = Math.min(...all), hi = Math.max(...all); const pad = (hi - lo) * 0.06; lo -= pad; hi += pad;
+    const x = v => m.l + (v - lo) / (hi - lo) * (w - m.l - m.r);
+    ticks(lo, hi, 6).forEach(t => {
+      el("line", { x1: x(t), x2: x(t), y1: m.t, y2: h - m.b, stroke: t === 0 ? BASE : GRID }, s);
+      el("text", { x: x(t), y: h - m.b + 15, "text-anchor": "middle", "font-size": 11, fill: MUTED }, s, fmt(t));
+    });
+    o.data.forEach((d, i) => {
+      const cy = m.t + row * (i + 0.5);
+      el("text", { x: m.l - 10, y: cy + 4, "text-anchor": "end", "font-size": 11.5, fill: INK }, s, d.label);
+      el("line", { x1: x(d.lo), x2: x(d.hi), y1: cy, y2: cy, stroke: C.focus, "stroke-width": 2 }, s);
+      const dot = el("circle", { cx: x(d.value), cy, r: 4.5, fill: C.focus, stroke: "#fff", "stroke-width": 2 }, s);
+      if (d.ref !== undefined) el("path", { d: `M${x(d.ref)},${cy - 7}l5,7l-5,7l-5,-7z`, fill: "none", stroke: C.accent, "stroke-width": 2 }, s);
+      const hit = el("rect", { x: 0, y: cy - row / 2, width: w, height: row, fill: "transparent" }, s);
+      hit.addEventListener("mousemove", e => { dot.setAttribute("r", 6); tip(d.tip || `<b>${d.label}</b><br>Estimate ${fmt(d.value)} (${fmt(d.lo)} to ${fmt(d.hi)})` + (d.ref !== undefined ? `<br>True ${fmt(d.ref)}` : ""), e); });
+      hit.addEventListener("mouseleave", () => { dot.setAttribute("r", 4.5); tip(); });
+    });
+    if (o.legend) {
+      el("circle", { cx: m.l + 6, cy: 9, r: 4.5, fill: C.focus }, s);
+      el("text", { x: m.l + 16, y: 13, "font-size": 11.5, fill: INK }, s, o.legend[0]);
+      const lx = m.l + 26 + o.legend[0].length * 6.4;
+      el("path", { d: `M${lx},2l5,7l-5,7l-5,-7z`, fill: "none", stroke: C.accent, "stroke-width": 2 }, s);
+      el("text", { x: lx + 11, y: 13, "font-size": 11.5, fill: INK }, s, o.legend[1]);
+    }
+    if (o.xTitle) el("text", { x: (m.l + w - m.r) / 2, y: h - 4, "text-anchor": "middle", "font-size": 11.5, fill: MUTED }, s, o.xTitle);
+  }
+
   const cad = v => (v < 0 ? "-$" : "$") + Math.abs(Math.round(v)).toLocaleString("en-CA");
   const cadK = v => (v < 0 ? "-$" : "$") + Math.abs(v / 1000).toFixed(0) + "k";
   const pct = (v, d = 1) => (v * 100).toFixed(d) + "%";
-  return { bars, hbars, lines, C, cad, cadK, pct };
+  return { bars, hbars, lines, forest, C, cad, cadK, pct };
 })();

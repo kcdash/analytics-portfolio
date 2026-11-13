@@ -1,0 +1,358 @@
+{
+  "rows": {
+    "train": 89433,
+    "test": 49937
+  },
+  "conversion_rate": {
+    "train": 0.08213970234700838,
+    "test": 0.10182830366261489
+  },
+  "period": {
+    "train": [
+      "2024-01-01",
+      "2025-09-30"
+    ],
+    "test": [
+      "2025-10-01",
+      "2026-09-15"
+    ]
+  },
+  "scorecard": {
+    "auc": 0.6846650594578687,
+    "top_decile_lift": 2.3341763902326846,
+    "top_decile_rate": 0.23768522226672006,
+    "bottom_decile_rate": 0.028634361233480177,
+    "capture_top_30pct": 0.5297935103244837,
+    "brier": 0.08757838957767815,
+    "mean_predicted_before_refresh": 0.08259931516943246,
+    "mean_predicted_after_refresh": 0.09286443399482704,
+    "actual_rate": 0.10182830366261489,
+    "intercept": -3.049968734404035,
+    "intercept_shift": 0.13373825479050372,
+    "lift_table": [
+      {
+        "decile": 1,
+        "prospects": 4994,
+        "converters": 1187,
+        "conversion_rate": 0.2377,
+        "lift": 2.3342,
+        "cum_capture": 0.2334
+      },
+      {
+        "decile": 2,
+        "prospects": 4994,
+        "converters": 859,
+        "conversion_rate": 0.172,
+        "lift": 1.6892,
+        "cum_capture": 0.4024
+      },
+      {
+        "decile": 3,
+        "prospects": 4993,
+        "converters": 648,
+        "conversion_rate": 0.1298,
+        "lift": 1.2745,
+        "cum_capture": 0.5298
+      },
+      {
+        "decile": 4,
+        "prospects": 4994,
+        "converters": 537,
+        "conversion_rate": 0.1075,
+        "lift": 1.056,
+        "cum_capture": 0.6354
+      },
+      {
+        "decile": 5,
+        "prospects": 4993,
+        "converters": 515,
+        "conversion_rate": 0.1031,
+        "lift": 1.0129,
+        "cum_capture": 0.7367
+      },
+      {
+        "decile": 6,
+        "prospects": 4994,
+        "converters": 383,
+        "conversion_rate": 0.0767,
+        "lift": 0.7532,
+        "cum_capture": 0.812
+      },
+      {
+        "decile": 7,
+        "prospects": 4994,
+        "converters": 323,
+        "conversion_rate": 0.0647,
+        "lift": 0.6352,
+        "cum_capture": 0.8755
+      },
+      {
+        "decile": 8,
+        "prospects": 4993,
+        "converters": 269,
+        "conversion_rate": 0.0539,
+        "lift": 0.5291,
+        "cum_capture": 0.9284
+      },
+      {
+        "decile": 9,
+        "prospects": 4994,
+        "converters": 221,
+        "conversion_rate": 0.0443,
+        "lift": 0.4346,
+        "cum_capture": 0.9719
+      },
+      {
+        "decile": 10,
+        "prospects": 4994,
+        "converters": 143,
+        "conversion_rate": 0.0286,
+        "lift": 0.2812,
+        "cum_capture": 1.0
+      }
+    ],
+    "calibration": [
+      {
+        "predicted": 0.0248,
+        "actual": 0.0286
+      },
+      {
+        "predicted": 0.0375,
+        "actual": 0.0443
+      },
+      {
+        "predicted": 0.0487,
+        "actual": 0.0539
+      },
+      {
+        "predicted": 0.0601,
+        "actual": 0.0647
+      },
+      {
+        "predicted": 0.0723,
+        "actual": 0.0767
+      },
+      {
+        "predicted": 0.0859,
+        "actual": 0.1031
+      },
+      {
+        "predicted": 0.1018,
+        "actual": 0.1075
+      },
+      {
+        "predicted": 0.1217,
+        "actual": 0.1298
+      },
+      {
+        "predicted": 0.1515,
+        "actual": 0.172
+      },
+      {
+        "predicted": 0.2243,
+        "actual": 0.2377
+      }
+    ]
+  },
+  "boosting": {
+    "auc": 0.6794078126588037,
+    "top_decile_lift": 2.322377689018366,
+    "top_decile_rate": 0.23648378053664398,
+    "bottom_decile_rate": 0.02943532238686424,
+    "capture_top_30pct": 0.5231071779744346
+  },
+  "lookalike": {
+    "auc": 0.6801029230101562,
+    "top_decile_lift": 2.224055178899045,
+    "top_decile_rate": 0.22647176611934322,
+    "bottom_decile_rate": 0.030036043251902282,
+    "capture_top_30pct": 0.5268436578171092,
+    "index": {
+      "lead_source": {
+        "Event": 0.856,
+        "Partner list": 0.879,
+        "Purchased list": 0.478,
+        "Referral": 1.433,
+        "Web lead": 1.451
+      },
+      "age_band": {
+        "35-44": 1.136,
+        "25-34": 1.14,
+        "45-54": 0.882,
+        "55-64": 0.842,
+        "65+": 0.919,
+        "18-24": 0.939
+      },
+      "income": {
+        "100-150k": 1.08,
+        "150k+": 1.24,
+        "50-75k": 0.888,
+        "75-100k": 1.028,
+        "<50k": 0.811
+      },
+      "children": {
+        "0": 0.906,
+        "1": 1.181
+      },
+      "email": {
+        "0": 0.81,
+        "1": 1.451
+      },
+      "visits": {
+        "0": 0.707,
+        "1": 0.823,
+        "2": 1.045,
+        "3": 1.214,
+        "4": 1.777
+      },
+      "distance": {
+        "0": 1.209,
+        "1": 1.114,
+        "2": 0.955,
+        "3": 0.857,
+        "4": 0.736,
+        "5": 0.546
+      }
+    }
+  },
+  "web_visits_rule": {
+    "auc": 0.5842371822073006,
+    "top_decile_lift": 1.714744576480961,
+    "top_decile_rate": 0.17460953143772526,
+    "bottom_decile_rate": 0.07208650380456548,
+    "capture_top_30pct": 0.4055063913470993
+  },
+  "ground_truth": {
+    "auc_ceiling": 0.684749142399594,
+    "share_of_signal_captured": {
+      "scorecard": 0.9995448804761249,
+      "boosting": 0.9710887440590251,
+      "lookalike": 0.9748511991498805,
+      "web_visits_rule": 0.45595438827588153
+    },
+    "corr_scorecard_vs_true_logit": 0.9972441148044936,
+    "effects_within_95pct_interval": 17,
+    "effects_total": 17
+  },
+  "effects": [
+    {
+      "term": "lead_source=Event",
+      "label": "Event (vs partner list)",
+      "estimate": -0.033636368775327906,
+      "se": 0.05125250483377555,
+      "true": 0.0
+    },
+    {
+      "term": "lead_source=Purchased list",
+      "label": "Purchased list (vs partner list)",
+      "estimate": -0.6545177880305042,
+      "se": 0.04360495906712149,
+      "true": -0.6
+    },
+    {
+      "term": "lead_source=Referral",
+      "label": "Referral (vs partner list)",
+      "estimate": 0.5467940770461918,
+      "se": 0.042010601520865554,
+      "true": 0.55
+    },
+    {
+      "term": "lead_source=Web lead",
+      "label": "Web lead (vs partner list)",
+      "estimate": 0.308745081059526,
+      "se": 0.03768280653491778,
+      "true": 0.35
+    },
+    {
+      "term": "age_band=18-24",
+      "label": "18-24 (vs age 45-54)",
+      "estimate": 0.05353398566656042,
+      "se": 0.05029544778808646,
+      "true": 0.0
+    },
+    {
+      "term": "age_band=25-34",
+      "label": "25-34 (vs age 45-54)",
+      "estimate": 0.27655445026655534,
+      "se": 0.03886138084177882,
+      "true": 0.3
+    },
+    {
+      "term": "age_band=35-44",
+      "label": "35-44 (vs age 45-54)",
+      "estimate": 0.2738698233013205,
+      "se": 0.03861487455712647,
+      "true": 0.3
+    },
+    {
+      "term": "age_band=55-64",
+      "label": "55-64 (vs age 45-54)",
+      "estimate": -0.0744895628774065,
+      "se": 0.045575144506266076,
+      "true": 0.0
+    },
+    {
+      "term": "age_band=65+",
+      "label": "65+ (vs age 45-54)",
+      "estimate": 0.02305234204502525,
+      "se": 0.04866134746608339,
+      "true": 0.0
+    },
+    {
+      "term": "household_income_band=50-75k",
+      "label": "50-75k income (vs under 50k)",
+      "estimate": 0.11782570745665621,
+      "se": 0.0434988079348521,
+      "true": 0.12
+    },
+    {
+      "term": "household_income_band=75-100k",
+      "label": "75-100k income (vs under 50k)",
+      "estimate": 0.2808346999476904,
+      "se": 0.04185511513332318,
+      "true": 0.24
+    },
+    {
+      "term": "household_income_band=100-150k",
+      "label": "100-150k income (vs under 50k)",
+      "estimate": 0.3393016427628864,
+      "se": 0.04350615355487025,
+      "true": 0.36
+    },
+    {
+      "term": "household_income_band=150k+",
+      "label": "150k+ income (vs under 50k)",
+      "estimate": 0.5023370709187117,
+      "se": 0.045687637278493724,
+      "true": 0.48
+    },
+    {
+      "term": "web_visits_capped",
+      "label": "Each web visit (up to 8)",
+      "estimate": 0.16218432302801855,
+      "se": 0.00872576387830658,
+      "true": 0.16
+    },
+    {
+      "term": "distance_to_store_km",
+      "label": "Each 10 km from a store",
+      "estimate": -0.26959570216471157,
+      "se": 0.016700279638373734,
+      "true": -0.25
+    },
+    {
+      "term": "has_children",
+      "label": "Children at home",
+      "estimate": 0.29660963193522516,
+      "se": 0.025385496340059304,
+      "true": 0.25
+    },
+    {
+      "term": "email_engaged_flag",
+      "label": "Opened a marketing email",
+      "estimate": 0.6610065756590868,
+      "se": 0.02524910567784246,
+      "true": 0.65
+    }
+  ]
+}
